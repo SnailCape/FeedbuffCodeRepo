@@ -20,6 +20,7 @@ namespace Cinkie_feedback_fr
         private void Form1_Load(object sender, EventArgs e)
         {
             FLMpanel.Hide();
+            FLMpanel.BringToFront();
         }
 
         private void FLMpbox_Click(object sender, EventArgs e)
@@ -28,6 +29,26 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }else
                 FLMpanel.Show();
+        }
+
+        private void FLMpanelZUYD_Click(object sender, EventArgs e)
+        {
+            if (FLMpanel.Visible)
+            {
+                FLMpanel.Hide();
+            }
+            else
+                FLMpanel.Show();
+        }
+
+        private void panelDA_LA_UserCourse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -86,5 +86,23 @@
   <ItemGroup>
     <None Include="Resources\Hamburger_icon.svg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoZUYDRodeLetters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoZUYD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgendaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FcwaHO8aAAEKhqS.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
