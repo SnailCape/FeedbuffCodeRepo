@@ -73,6 +73,16 @@ namespace Cinkie_feedback_fr.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ExitIcon {
+            get {
+                object obj = ResourceManager.GetObject("ExitIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FcwaHO8aAAEKhqS {
             get {
                 object obj = ResourceManager.GetObject("FcwaHO8aAAEKhqS", resourceCulture);
@@ -136,6 +146,16 @@ namespace Cinkie_feedback_fr.Properties {
         internal static System.Drawing.Bitmap pngegg {
             get {
                 object obj = ResourceManager.GetObject("pngegg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProgressIcon {
+            get {
+                object obj = ResourceManager.GetObject("ProgressIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
