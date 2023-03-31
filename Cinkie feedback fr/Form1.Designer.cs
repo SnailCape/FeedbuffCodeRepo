@@ -35,7 +35,7 @@
             this.FLMpbox = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Login_Panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LoginPanel_LB_Coeus = new System.Windows.Forms.Label();
             this.PanelLogin_BT_Login = new System.Windows.Forms.Button();
             this.PanelLogin_LLB_PasswordFOR = new System.Windows.Forms.LinkLabel();
             this.LoginPanel_LB_Password = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             // Login_Panel
             // 
             this.Login_Panel.BackColor = System.Drawing.Color.Silver;
-            this.Login_Panel.Controls.Add(this.label1);
+            this.Login_Panel.Controls.Add(this.LoginPanel_LB_Coeus);
             this.Login_Panel.Controls.Add(this.PanelLogin_BT_Login);
             this.Login_Panel.Controls.Add(this.PanelLogin_LLB_PasswordFOR);
             this.Login_Panel.Controls.Add(this.LoginPanel_LB_Password);
@@ -106,15 +106,15 @@
             this.Login_Panel.Size = new System.Drawing.Size(2542, 1281);
             this.Login_Panel.TabIndex = 1;
             // 
-            // label1
+            // LoginPanel_LB_Coeus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1189, 295);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 42);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Coeus";
+            this.LoginPanel_LB_Coeus.AutoSize = true;
+            this.LoginPanel_LB_Coeus.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginPanel_LB_Coeus.Location = new System.Drawing.Point(1189, 295);
+            this.LoginPanel_LB_Coeus.Name = "LoginPanel_LB_Coeus";
+            this.LoginPanel_LB_Coeus.Size = new System.Drawing.Size(132, 42);
+            this.LoginPanel_LB_Coeus.TabIndex = 6;
+            this.LoginPanel_LB_Coeus.Text = "Coeus";
             // 
             // PanelLogin_BT_Login
             // 
@@ -213,7 +213,7 @@
         private System.Windows.Forms.TextBox PanelLogin_TB_Password;
         private System.Windows.Forms.LinkLabel PanelLogin_LLB_PasswordFOR;
         private System.Windows.Forms.Button PanelLogin_BT_Login;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LoginPanel_LB_Coeus;
     }
 }
 
