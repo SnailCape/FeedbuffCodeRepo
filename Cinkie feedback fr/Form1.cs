@@ -20,7 +20,6 @@ namespace Cinkie_feedback_fr
         private void Form1_Load(object sender, EventArgs e)
         {
             FLMpanel.Hide();
-            int x = 8;
         }
 
         private void FLMpbox_Click(object sender, EventArgs e)
