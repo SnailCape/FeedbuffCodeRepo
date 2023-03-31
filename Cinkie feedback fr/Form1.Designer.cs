@@ -214,7 +214,7 @@
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsNotification2);
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsNotification1);
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsTitleLabel);
-            this.panelDA_PA_NotificationsPanel.Location = new System.Drawing.Point(1716, 20);
+            this.panelDA_PA_NotificationsPanel.Location = new System.Drawing.Point(1719, 10);
             this.panelDA_PA_NotificationsPanel.Name = "panelDA_PA_NotificationsPanel";
             this.panelDA_PA_NotificationsPanel.Size = new System.Drawing.Size(186, 764);
             this.panelDA_PA_NotificationsPanel.TabIndex = 7;
@@ -633,7 +633,7 @@
             this.PanelDA_LB_UserInfoName.Name = "PanelDA_LB_UserInfoName";
             this.PanelDA_LB_UserInfoName.Size = new System.Drawing.Size(149, 24);
             this.PanelDA_LB_UserInfoName.TabIndex = 1;
-            this.PanelDA_LB_UserInfoName.Text = "Norayr Gocer";
+            this.PanelDA_LB_UserInfoName.Text = "Sol Boomerguy";
             this.PanelDA_LB_UserInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelDA_PB_UserImage
@@ -777,7 +777,7 @@
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.FLMpanel.ResumeLayout(false);
