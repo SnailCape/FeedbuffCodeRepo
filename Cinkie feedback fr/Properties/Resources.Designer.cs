@@ -73,6 +73,16 @@ namespace Cinkie_feedback_fr.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FcwaHO8aAAEKhqS {
+            get {
+                object obj = ResourceManager.GetObject("FcwaHO8aAAEKhqS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hamburger_icon_svg {
             get {
                 object obj = ResourceManager.GetObject("Hamburger_icon.svg", resourceCulture);
