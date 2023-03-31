@@ -90,5 +90,11 @@ namespace Cinkie_feedback_fr
         {
             
         }
+
+        private void DigitalClockTimer_Tick(object sender, EventArgs e)
+        {
+            this.PanelDA_LA_ScoreboardTime.Text = DateTime.Now.ToString("HH:mm");
+            this.PanelDA_LA_ScoreboardDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
     }
 }
