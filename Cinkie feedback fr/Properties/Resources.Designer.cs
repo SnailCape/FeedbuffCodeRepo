@@ -79,5 +79,25 @@ namespace Cinkie_feedback_fr.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoZUYD1 {
+            get {
+                object obj = ResourceManager.GetObject("LogoZUYD1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoZUYDRodeLetters {
+            get {
+                object obj = ResourceManager.GetObject("LogoZUYDRodeLetters", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -29,5 +29,15 @@ namespace Cinkie_feedback_fr
             }else
                 FLMpanel.Show();
         }
+
+        private void FLMpanelZUYD_Click(object sender, EventArgs e)
+        {
+            if (FLMpanel.Visible)
+            {
+                FLMpanel.Hide();
+            }
+            else
+                FLMpanel.Show();
+        }
     }
 }
