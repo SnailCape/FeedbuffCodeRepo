@@ -56,8 +56,9 @@ namespace Cinkie_feedback_fr
             else
             {
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }                    
-
+                PanelLogin_TB_Password.Text = "";
+            }
+        }
         private void FLMpanelZUYD_Click(object sender, EventArgs e)
         {
             if (FLMpanel.Visible)

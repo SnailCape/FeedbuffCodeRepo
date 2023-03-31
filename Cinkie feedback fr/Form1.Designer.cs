@@ -31,10 +31,8 @@
 
             this.components = new System.ComponentModel.Container();
             this.FLMpanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.BGpanel = new System.Windows.Forms.Panel();
             this.FLMpbox = new System.Windows.Forms.PictureBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.LoginPanel_LB_Coeus = new System.Windows.Forms.Label();
             this.PanelLogin_BT_Login = new System.Windows.Forms.Button();
@@ -46,10 +44,9 @@
             this.FLMpanel.SuspendLayout();
             this.BGpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.Login_Panel.SuspendLayout();
 
-            this.BGpanel = new System.Windows.Forms.Panel();
+           
             this.PanelDA_LA_TasksExpPercentage = new System.Windows.Forms.Label();
             this.PanelDA_LA_TasksExpBar = new System.Windows.Forms.Label();
             this.panelDA_PA_UserScoreBoard = new System.Windows.Forms.Panel();
@@ -78,21 +75,18 @@
             this.panelDA_LA_UserName = new System.Windows.Forms.Label();
             this.panelDA_PB_UserImage = new System.Windows.Forms.PictureBox();
             this.BGflmPull = new System.Windows.Forms.PictureBox();
-            this.FLMpanel = new System.Windows.Forms.Panel();
             this.panelFLMweektaken = new System.Windows.Forms.Button();
             this.panelFMBDashboard = new System.Windows.Forms.Button();
             this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
             this.PanelDA_LA_ScoreboardScoreboard = new System.Windows.Forms.Label();
             this.PanelDA_LA_ScoreboardDate = new System.Windows.Forms.Label();
             this.PanelDA_LA_ScoreboardTime = new System.Windows.Forms.Label();
-            this.BGpanel.SuspendLayout();
             this.panelDA_PA_UserScoreBoard.SuspendLayout();
             this.panelDA_PA_DailyTasksBG.SuspendLayout();
             this.panelDA_PA_UserProgress.SuspendLayout();
             this.panelDA_PA_UserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDA_PB_UserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
-            this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
 
             this.SuspendLayout();
@@ -669,6 +663,7 @@
         private System.Windows.Forms.Button panelFMBDashboard;
         private System.Windows.Forms.Button panelFLMweektaken;
         private System.Windows.Forms.Panel FLMpanel;
+        private System.Windows.Forms.PictureBox FLMpbox;
         private System.Windows.Forms.Panel panelDA_PA_UserInfo;
         private System.Windows.Forms.Panel panelDA_PA_UserScoreBoard;
         private System.Windows.Forms.Panel panelDA_PA_DailyTasksBG;
