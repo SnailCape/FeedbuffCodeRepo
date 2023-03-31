@@ -16,14 +16,20 @@ namespace Cinkie_feedback_fr
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
+        /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
         }
-
+       
+        /// <summary>
+        /// FLM panel to be shown when the button is pressed
+        /// </summary>
         private void FLMpbox_Click(object sender, EventArgs e)
         {
             if (FLMpanel.Visible) {
@@ -32,6 +38,18 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Show();
         }
 
+        /// <summary>
+        /// Allows the FLM button to be hidden when the button is pressed
+        /// </summary>
+        private void FLMpanelZUYD_Click(object sender, EventArgs e)
+        {
+            if (FLMpanel.Visible)
+            {
+                FLMpanel.Hide();
+            }
+            else
+                FLMpanel.Show();
+        }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -60,25 +78,17 @@ namespace Cinkie_feedback_fr
                 PanelLogin_TB_Password.Text = "";
             }
         }
-        private void FLMpanelZUYD_Click(object sender, EventArgs e)
+
+
+        private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
-            if (FLMpanel.Visible)
-            {
-                FLMpanel.Hide();
-            }
-            else
-                FLMpanel.Show();
+            Login_Panel.Show();
+            FLMpanel.Hide();
         }
 
-        private void panelDA_LA_UserCourse_Click(object sender, EventArgs e)
+        private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-
+            
         }
     }
 }

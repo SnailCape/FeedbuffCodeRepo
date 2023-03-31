@@ -56,7 +56,7 @@
             this.labelDA_LA_TasksInProgress = new System.Windows.Forms.Label();
             this.panelDA_LA_TasksTasks = new System.Windows.Forms.Label();
             this.panelDA_PA_UserInfoPanel = new System.Windows.Forms.Panel();
-            this.panelDA_LA_UserCourse = new System.Windows.Forms.Label();
+            this.PanelDA_LA_UserCourse = new System.Windows.Forms.Label();
             this.panelDA_LA_UserStudentNumber = new System.Windows.Forms.Label();
             this.panelDA_LA_UserName = new System.Windows.Forms.Label();
             this.Login_Panel = new System.Windows.Forms.Panel();
@@ -67,7 +67,7 @@
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
-            this.panelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
             this.panelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
             this.panelFLM_BT_WeekTakenButton = new System.Windows.Forms.Button();
             this.panelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
@@ -98,7 +98,7 @@
             // 
             this.FLMpanel.BackColor = System.Drawing.Color.Red;
             this.FLMpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.FLMpanel.Controls.Add(this.panelFLM_BT_LogoutButton);
+            this.FLMpanel.Controls.Add(this.PanelFLM_BT_LogoutButton);
             this.FLMpanel.Controls.Add(this.panelFLM_BT_ProgressButton);
             this.FLMpanel.Controls.Add(this.panelFLM_BT_WeekTakenButton);
             this.FLMpanel.Controls.Add(this.panelFLM_BT_DashboardButton);
@@ -451,7 +451,7 @@
             // panelDA_PA_UserInfoPanel
             // 
             this.panelDA_PA_UserInfoPanel.BackColor = System.Drawing.Color.LightGray;
-            this.panelDA_PA_UserInfoPanel.Controls.Add(this.panelDA_LA_UserCourse);
+            this.panelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_LA_UserCourse);
             this.panelDA_PA_UserInfoPanel.Controls.Add(this.panelDA_LA_UserStudentNumber);
             this.panelDA_PA_UserInfoPanel.Controls.Add(this.panelDA_LA_UserName);
             this.panelDA_PA_UserInfoPanel.Controls.Add(this.panelDA_PB_UserImage);
@@ -461,18 +461,18 @@
             this.panelDA_PA_UserInfoPanel.Size = new System.Drawing.Size(403, 288);
             this.panelDA_PA_UserInfoPanel.TabIndex = 1;
             // 
-            // panelDA_LA_UserCourse
+            // PanelDA_LA_UserCourse
             // 
-            this.panelDA_LA_UserCourse.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelDA_LA_UserCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDA_LA_UserCourse.Location = new System.Drawing.Point(248, 188);
-            this.panelDA_LA_UserCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.panelDA_LA_UserCourse.Name = "panelDA_LA_UserCourse";
-            this.panelDA_LA_UserCourse.Size = new System.Drawing.Size(92, 24);
-            this.panelDA_LA_UserCourse.TabIndex = 3;
-            this.panelDA_LA_UserCourse.Text = "HBO-ICT";
-            this.panelDA_LA_UserCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.panelDA_LA_UserCourse.Click += new System.EventHandler(this.panelDA_LA_UserCourse_Click);
+            this.PanelDA_LA_UserCourse.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_LA_UserCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_LA_UserCourse.Location = new System.Drawing.Point(248, 188);
+            this.PanelDA_LA_UserCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_UserCourse.Name = "PanelDA_LA_UserCourse";
+            this.PanelDA_LA_UserCourse.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_LA_UserCourse.TabIndex = 3;
+            this.PanelDA_LA_UserCourse.Text = "HBO-ICT";
+            this.PanelDA_LA_UserCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PanelDA_LA_UserCourse.Click += new System.EventHandler(this.PanelDA_LA_UserCourse_Click);
             // 
             // panelDA_LA_UserStudentNumber
             // 
@@ -592,21 +592,22 @@
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
-            // panelFLM_BT_LogoutButton
+            // PanelFLM_BT_LogoutButton
             // 
-            this.panelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
-            this.panelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
-            this.panelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.panelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
-            this.panelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
-            this.panelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
-            this.panelFLM_BT_LogoutButton.Name = "panelFLM_BT_LogoutButton";
-            this.panelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
-            this.panelFLM_BT_LogoutButton.TabIndex = 4;
-            this.panelFLM_BT_LogoutButton.Text = "Logout";
-            this.panelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
+            this.PanelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
+            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
+            this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_LogoutButton.TabIndex = 4;
+            this.PanelFLM_BT_LogoutButton.Text = "Logout";
+            this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_LogoutButton.Click += new System.EventHandler(this.PanelFLM_BT_LogoutButton_Click);
             // 
             // panelFLM_BT_ProgressButton
             // 
@@ -814,7 +815,7 @@
         private System.Windows.Forms.PictureBox panelDA_PB_UserImage;
         private System.Windows.Forms.Label panelDA_LA_UserName;
         private System.Windows.Forms.Label panelDA_LA_UserStudentNumber;
-        private System.Windows.Forms.Label panelDA_LA_UserCourse;
+        private System.Windows.Forms.Label PanelDA_LA_UserCourse;
         private System.Windows.Forms.Label panelDA_LA_TasksTasks;
         private System.Windows.Forms.Label labelDA_LA_TasksInProgress;
         private System.Windows.Forms.Label PanelDA_LA_TasksExpBar;
@@ -838,7 +839,7 @@
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardDate;
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardTime;
         private System.Windows.Forms.Button panelFLM_BT_ProgressButton;
-        private System.Windows.Forms.Button panelFLM_BT_LogoutButton;
+        private System.Windows.Forms.Button PanelFLM_BT_LogoutButton;
         private System.Windows.Forms.Panel panelDA_PA_NotificationsPanel;
         private System.Windows.Forms.Label panelDA_PA_NotificationsTitleLabel;
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification1;
