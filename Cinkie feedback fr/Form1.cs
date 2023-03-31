@@ -19,6 +19,7 @@ namespace Cinkie_feedback_fr
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
         }
