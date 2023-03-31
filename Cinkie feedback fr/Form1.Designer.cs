@@ -41,7 +41,7 @@
             this.LoginPanel_LB_Password = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
-            this.PanalLogin_TB_Email = new System.Windows.Forms.TextBox();
+            this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.FLMpanel.SuspendLayout();
             this.BGpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
@@ -100,7 +100,7 @@
             this.Login_Panel.Controls.Add(this.LoginPanel_LB_Password);
             this.Login_Panel.Controls.Add(this.PanelLogin_TB_Password);
             this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
-            this.Login_Panel.Controls.Add(this.PanalLogin_TB_Email);
+            this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(2542, 1281);
@@ -125,6 +125,7 @@
             this.PanelLogin_BT_Login.TabIndex = 5;
             this.PanelLogin_BT_Login.Text = "Login";
             this.PanelLogin_BT_Login.UseVisualStyleBackColor = true;
+            this.PanelLogin_BT_Login.Click += new System.EventHandler(this.PanelLogin_BT_Login_Click);
             // 
             // PanelLogin_LLB_PasswordFOR
             // 
@@ -167,14 +168,14 @@
             this.PanelLogin_LB_Email.TabIndex = 1;
             this.PanelLogin_LB_Email.Text = "E-Mail";
             // 
-            // PanalLogin_TB_Email
+            // PanelLogin_TB_Email
             // 
-            this.PanalLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanalLogin_TB_Email.Location = new System.Drawing.Point(1039, 515);
-            this.PanalLogin_TB_Email.Multiline = true;
-            this.PanalLogin_TB_Email.Name = "PanalLogin_TB_Email";
-            this.PanalLogin_TB_Email.Size = new System.Drawing.Size(448, 40);
-            this.PanalLogin_TB_Email.TabIndex = 0;
+            this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_TB_Email.Location = new System.Drawing.Point(1039, 515);
+            this.PanelLogin_TB_Email.Multiline = true;
+            this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
+            this.PanelLogin_TB_Email.Size = new System.Drawing.Size(448, 40);
+            this.PanelLogin_TB_Email.TabIndex = 0;
             // 
             // Form1
             // 
@@ -208,7 +209,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Login_Panel;
         private System.Windows.Forms.Label PanelLogin_LB_Email;
-        private System.Windows.Forms.TextBox PanalLogin_TB_Email;
+        private System.Windows.Forms.TextBox PanelLogin_TB_Email;
         private System.Windows.Forms.Label LoginPanel_LB_Password;
         private System.Windows.Forms.TextBox PanelLogin_TB_Password;
         private System.Windows.Forms.LinkLabel PanelLogin_LLB_PasswordFOR;
