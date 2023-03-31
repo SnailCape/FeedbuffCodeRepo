@@ -29,5 +29,14 @@ namespace Cinkie_feedback_fr
             }else
                 FLMpanel.Show();
         }
+
+        private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Specify that the link was visited.
+            PanelLogin_LLB_PasswordFOR.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
+        }
     }
 }
