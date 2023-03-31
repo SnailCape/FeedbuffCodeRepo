@@ -79,7 +79,9 @@ namespace Cinkie_feedback_fr
             }
         }
 
-
+        /// <summary>
+        /// Hides the other panels and "logs" the user "out"
+        /// </summary>
         private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
             Login_Panel.Show();
@@ -90,7 +92,10 @@ namespace Cinkie_feedback_fr
         {
             
         }
-
+        
+        /// <summary>
+        /// Adds the date and time to the labels (currently at scoreboard)
+        /// </summary>
         private void DigitalClockTimer_Tick(object sender, EventArgs e)
         {
             this.PanelDA_LA_ScoreboardTime.Text = DateTime.Now.ToString("HH:mm");
