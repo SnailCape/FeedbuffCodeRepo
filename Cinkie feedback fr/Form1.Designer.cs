@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.FLMpanel = new System.Windows.Forms.Panel();
-            this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_WeekTakenButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
-            this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
             this.PanelDA_PA_DashBoardBackground = new System.Windows.Forms.Panel();
             this.panelDA_PA_NotificationsPanel = new System.Windows.Forms.Panel();
             this.panelDA_PA_NotificationsNotification3 = new System.Windows.Forms.Label();
@@ -70,8 +65,6 @@
             this.PanelDA_LB_UserCourse = new System.Windows.Forms.Label();
             this.PanelDA_LB_UserInfoStudentNumber = new System.Windows.Forms.Label();
             this.PanelDA_LB_UserInfoName = new System.Windows.Forms.Label();
-            this.PanelDA_PB_UserImage = new System.Windows.Forms.PictureBox();
-            this.BGflmPull = new System.Windows.Forms.PictureBox();
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.LoginPanel_LB_Coeus = new System.Windows.Forms.Label();
             this.PanelLogin_BT_Login = new System.Windows.Forms.Button();
@@ -80,19 +73,32 @@
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
-            this.FLMpbox = new System.Windows.Forms.PictureBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_WeekTakenButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
+            this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
+            this.PanelDA_PB_UserImage = new System.Windows.Forms.PictureBox();
+            this.BGflmPull = new System.Windows.Forms.PictureBox();
+            this.FLMpbox = new System.Windows.Forms.PictureBox();
+            this.PanelDA_PB_ScoreBoardUserName1 = new System.Windows.Forms.Label();
+            this.PanelDA_PB_ScoreBoardUserName2 = new System.Windows.Forms.Label();
+            this.PanelDA_PB_ScoreBoardUserName3 = new System.Windows.Forms.Label();
+            this.PanelDA_PB_ScoreBoardPercentage1 = new System.Windows.Forms.Label();
+            this.PanelDA_PB_ScoreBoardPercentage2 = new System.Windows.Forms.Label();
+            this.PanelDA_PB_ScoreBoardPercentage3 = new System.Windows.Forms.Label();
             this.FLMpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
             this.panelDA_PA_NotificationsPanel.SuspendLayout();
             this.PanelDA_PB_ScoreBoardPanel.SuspendLayout();
             this.panelDA_PA_DailyTasksPanel.SuspendLayout();
             this.PanelDA_PA_ProgressPanel.SuspendLayout();
             this.PanelDA_PA_UserInfoPanel.SuspendLayout();
+            this.Login_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
-            this.Login_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,85 +116,6 @@
             this.FLMpanel.Name = "FLMpanel";
             this.FLMpanel.Size = new System.Drawing.Size(126, 764);
             this.FLMpanel.TabIndex = 0;
-            // 
-            // PanelFLM_BT_LogoutButton
-            // 
-            this.PanelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
-            this.PanelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
-            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
-            this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_LogoutButton.TabIndex = 4;
-            this.PanelFLM_BT_LogoutButton.Text = "Logout";
-            this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
-            this.PanelFLM_BT_LogoutButton.Click += new System.EventHandler(this.PanelFLM_BT_LogoutButton_Click);
-            // 
-            // PanelFLM_BT_ProgressButton
-            // 
-            this.PanelFLM_BT_ProgressButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ProgressIcon;
-            this.PanelFLM_BT_ProgressButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_ProgressButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_ProgressButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_ProgressButton.Name = "PanelFLM_BT_ProgressButton";
-            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_ProgressButton.TabIndex = 3;
-            this.PanelFLM_BT_ProgressButton.Text = "Progress";
-            this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
-            // 
-            // PanelFLM_BT_WeekTakenButton
-            // 
-            this.PanelFLM_BT_WeekTakenButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
-            this.PanelFLM_BT_WeekTakenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_WeekTakenButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_WeekTakenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_WeekTakenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_WeekTakenButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_WeekTakenButton.Location = new System.Drawing.Point(0, 200);
-            this.PanelFLM_BT_WeekTakenButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_WeekTakenButton.Name = "PanelFLM_BT_WeekTakenButton";
-            this.PanelFLM_BT_WeekTakenButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_WeekTakenButton.TabIndex = 2;
-            this.PanelFLM_BT_WeekTakenButton.Text = "Weektaken";
-            this.PanelFLM_BT_WeekTakenButton.UseVisualStyleBackColor = true;
-            // 
-            // PanelFLM_BT_DashboardButton
-            // 
-            this.PanelFLM_BT_DashboardButton.BackColor = System.Drawing.Color.Red;
-            this.PanelFLM_BT_DashboardButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.HomeIcon;
-            this.PanelFLM_BT_DashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_DashboardButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_DashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_DashboardButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 110);
-            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_DashboardButton.Name = "PanelFLM_BT_DashboardButton";
-            this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_DashboardButton.TabIndex = 1;
-            this.PanelFLM_BT_DashboardButton.Text = "Dashboard";
-            this.PanelFLM_BT_DashboardButton.UseVisualStyleBackColor = false;
-            // 
-            // FLMpanelZUYD
-            // 
-            this.FLMpanelZUYD.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYD1;
-            this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
-            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
-            this.FLMpanelZUYD.Name = "FLMpanelZUYD";
-            this.FLMpanelZUYD.Size = new System.Drawing.Size(123, 89);
-            this.FLMpanelZUYD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FLMpanelZUYD.TabIndex = 0;
-            this.FLMpanelZUYD.TabStop = false;
-            this.FLMpanelZUYD.Click += new System.EventHandler(this.FLMpanelZUYD_Click);
             // 
             // PanelDA_PA_DashBoardBackground
             // 
@@ -288,6 +215,12 @@
             // PanelDA_PB_ScoreBoardPanel
             // 
             this.PanelDA_PB_ScoreBoardPanel.BackColor = System.Drawing.Color.LightGray;
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardPercentage3);
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardPercentage2);
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardPercentage1);
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardUserName3);
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardUserName2);
+            this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_PB_ScoreBoardUserName1);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardTime);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardDate);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LB_ScoreboardScoreboard);
@@ -636,31 +569,6 @@
             this.PanelDA_LB_UserInfoName.Text = "Sol Boomerguy";
             this.PanelDA_LB_UserInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PanelDA_PB_UserImage
-            // 
-            this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
-            this.PanelDA_PB_UserImage.Image = global::Cinkie_feedback_fr.Properties.Resources.FcwaHO8aAAEKhqS;
-            this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
-            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
-            this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(146, 228);
-            this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PanelDA_PB_UserImage.TabIndex = 0;
-            this.PanelDA_PB_UserImage.TabStop = false;
-            // 
-            // BGflmPull
-            // 
-            this.BGflmPull.BackColor = System.Drawing.Color.Silver;
-            this.BGflmPull.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYDRodeLetters;
-            this.BGflmPull.Location = new System.Drawing.Point(0, 10);
-            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
-            this.BGflmPull.Name = "BGflmPull";
-            this.BGflmPull.Size = new System.Drawing.Size(47, 45);
-            this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BGflmPull.TabIndex = 0;
-            this.BGflmPull.TabStop = false;
-            this.BGflmPull.Click += new System.EventHandler(this.FLMpbox_Click);
-            // 
             // Login_Panel
             // 
             this.Login_Panel.BackColor = System.Drawing.Color.Silver;
@@ -755,6 +663,115 @@
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
+            // DigitalClockTimer
+            // 
+            this.DigitalClockTimer.Enabled = true;
+            this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
+            // 
+            // PanelFLM_BT_LogoutButton
+            // 
+            this.PanelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
+            this.PanelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
+            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
+            this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_LogoutButton.TabIndex = 4;
+            this.PanelFLM_BT_LogoutButton.Text = "Logout";
+            this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_LogoutButton.Click += new System.EventHandler(this.PanelFLM_BT_LogoutButton_Click);
+            // 
+            // PanelFLM_BT_ProgressButton
+            // 
+            this.PanelFLM_BT_ProgressButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ProgressIcon;
+            this.PanelFLM_BT_ProgressButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_ProgressButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_ProgressButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 284);
+            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_ProgressButton.Name = "PanelFLM_BT_ProgressButton";
+            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_ProgressButton.TabIndex = 3;
+            this.PanelFLM_BT_ProgressButton.Text = "Progress";
+            this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
+            // 
+            // PanelFLM_BT_WeekTakenButton
+            // 
+            this.PanelFLM_BT_WeekTakenButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
+            this.PanelFLM_BT_WeekTakenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_WeekTakenButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_WeekTakenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_WeekTakenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_WeekTakenButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_WeekTakenButton.Location = new System.Drawing.Point(0, 200);
+            this.PanelFLM_BT_WeekTakenButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_WeekTakenButton.Name = "PanelFLM_BT_WeekTakenButton";
+            this.PanelFLM_BT_WeekTakenButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_WeekTakenButton.TabIndex = 2;
+            this.PanelFLM_BT_WeekTakenButton.Text = "Weektaken";
+            this.PanelFLM_BT_WeekTakenButton.UseVisualStyleBackColor = true;
+            // 
+            // PanelFLM_BT_DashboardButton
+            // 
+            this.PanelFLM_BT_DashboardButton.BackColor = System.Drawing.Color.Red;
+            this.PanelFLM_BT_DashboardButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.HomeIcon;
+            this.PanelFLM_BT_DashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_DashboardButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_DashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_DashboardButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 110);
+            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_DashboardButton.Name = "PanelFLM_BT_DashboardButton";
+            this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_DashboardButton.TabIndex = 1;
+            this.PanelFLM_BT_DashboardButton.Text = "Dashboard";
+            this.PanelFLM_BT_DashboardButton.UseVisualStyleBackColor = false;
+            // 
+            // FLMpanelZUYD
+            // 
+            this.FLMpanelZUYD.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYD1;
+            this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
+            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
+            this.FLMpanelZUYD.Name = "FLMpanelZUYD";
+            this.FLMpanelZUYD.Size = new System.Drawing.Size(123, 89);
+            this.FLMpanelZUYD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FLMpanelZUYD.TabIndex = 0;
+            this.FLMpanelZUYD.TabStop = false;
+            this.FLMpanelZUYD.Click += new System.EventHandler(this.FLMpanelZUYD_Click);
+            // 
+            // PanelDA_PB_UserImage
+            // 
+            this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
+            this.PanelDA_PB_UserImage.Image = global::Cinkie_feedback_fr.Properties.Resources.FcwaHO8aAAEKhqS;
+            this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
+            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
+            this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(146, 228);
+            this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PanelDA_PB_UserImage.TabIndex = 0;
+            this.PanelDA_PB_UserImage.TabStop = false;
+            // 
+            // BGflmPull
+            // 
+            this.BGflmPull.BackColor = System.Drawing.Color.Silver;
+            this.BGflmPull.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYDRodeLetters;
+            this.BGflmPull.Location = new System.Drawing.Point(0, 10);
+            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
+            this.BGflmPull.Name = "BGflmPull";
+            this.BGflmPull.Size = new System.Drawing.Size(47, 45);
+            this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BGflmPull.TabIndex = 0;
+            this.BGflmPull.TabStop = false;
+            this.BGflmPull.Click += new System.EventHandler(this.FLMpbox_Click);
+            // 
             // FLMpbox
             // 
             this.FLMpbox.Location = new System.Drawing.Point(0, 0);
@@ -763,10 +780,77 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
-            // DigitalClockTimer
+            // PanelDA_PB_ScoreBoardUserName1
             // 
-            this.DigitalClockTimer.Enabled = true;
-            this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
+            this.PanelDA_PB_ScoreBoardUserName1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardUserName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardUserName1.Location = new System.Drawing.Point(49, 70);
+            this.PanelDA_PB_ScoreBoardUserName1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName1.Name = "PanelDA_PB_ScoreBoardUserName1";
+            this.PanelDA_PB_ScoreBoardUserName1.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName1.TabIndex = 6;
+            this.PanelDA_PB_ScoreBoardUserName1.Text = "Levi";
+            this.PanelDA_PB_ScoreBoardUserName1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelDA_PB_ScoreBoardUserName2
+            // 
+            this.PanelDA_PB_ScoreBoardUserName2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardUserName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardUserName2.Location = new System.Drawing.Point(49, 135);
+            this.PanelDA_PB_ScoreBoardUserName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName2.Name = "PanelDA_PB_ScoreBoardUserName2";
+            this.PanelDA_PB_ScoreBoardUserName2.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName2.TabIndex = 14;
+            this.PanelDA_PB_ScoreBoardUserName2.Text = "Noah";
+            this.PanelDA_PB_ScoreBoardUserName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelDA_PB_ScoreBoardUserName3
+            // 
+            this.PanelDA_PB_ScoreBoardUserName3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardUserName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardUserName3.Location = new System.Drawing.Point(49, 205);
+            this.PanelDA_PB_ScoreBoardUserName3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName3.Name = "PanelDA_PB_ScoreBoardUserName3";
+            this.PanelDA_PB_ScoreBoardUserName3.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName3.TabIndex = 15;
+            this.PanelDA_PB_ScoreBoardUserName3.Text = "Rachel";
+            this.PanelDA_PB_ScoreBoardUserName3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelDA_PB_ScoreBoardPercentage1
+            // 
+            this.PanelDA_PB_ScoreBoardPercentage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardPercentage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardPercentage1.Location = new System.Drawing.Point(314, 70);
+            this.PanelDA_PB_ScoreBoardPercentage1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage1.Name = "PanelDA_PB_ScoreBoardPercentage1";
+            this.PanelDA_PB_ScoreBoardPercentage1.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage1.TabIndex = 6;
+            this.PanelDA_PB_ScoreBoardPercentage1.Text = "75%";
+            this.PanelDA_PB_ScoreBoardPercentage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelDA_PB_ScoreBoardPercentage2
+            // 
+            this.PanelDA_PB_ScoreBoardPercentage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardPercentage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardPercentage2.Location = new System.Drawing.Point(314, 135);
+            this.PanelDA_PB_ScoreBoardPercentage2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage2.Name = "PanelDA_PB_ScoreBoardPercentage2";
+            this.PanelDA_PB_ScoreBoardPercentage2.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage2.TabIndex = 16;
+            this.PanelDA_PB_ScoreBoardPercentage2.Text = "65%";
+            this.PanelDA_PB_ScoreBoardPercentage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelDA_PB_ScoreBoardPercentage3
+            // 
+            this.PanelDA_PB_ScoreBoardPercentage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelDA_PB_ScoreBoardPercentage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDA_PB_ScoreBoardPercentage3.Location = new System.Drawing.Point(314, 205);
+            this.PanelDA_PB_ScoreBoardPercentage3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage3.Name = "PanelDA_PB_ScoreBoardPercentage3";
+            this.PanelDA_PB_ScoreBoardPercentage3.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage3.TabIndex = 17;
+            this.PanelDA_PB_ScoreBoardPercentage3.Text = "55%";
+            this.PanelDA_PB_ScoreBoardPercentage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -781,17 +865,17 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.FLMpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).EndInit();
             this.PanelDA_PA_DashBoardBackground.ResumeLayout(false);
             this.panelDA_PA_NotificationsPanel.ResumeLayout(false);
             this.PanelDA_PB_ScoreBoardPanel.ResumeLayout(false);
             this.panelDA_PA_DailyTasksPanel.ResumeLayout(false);
             this.PanelDA_PA_ProgressPanel.ResumeLayout(false);
             this.PanelDA_PA_UserInfoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
             this.ResumeLayout(false);
 
@@ -853,6 +937,12 @@
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification3;
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification2;
         private System.Windows.Forms.Timer DigitalClockTimer;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage3;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage2;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage1;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName3;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
+        private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
     }
 }
 

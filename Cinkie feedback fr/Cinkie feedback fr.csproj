@@ -110,5 +110,20 @@
   <ItemGroup>
     <None Include="Resources\ExitIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oz Nigga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OzHop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oz bondage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oz stare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
