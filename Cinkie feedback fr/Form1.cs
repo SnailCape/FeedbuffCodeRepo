@@ -25,6 +25,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
+            PanelWG_PA_WeekGoalsBackground.Hide();
         }
        
         /// <summary>
@@ -32,9 +33,11 @@ namespace Cinkie_feedback_fr
         /// </summary>
         private void FLMpbox_Click(object sender, EventArgs e)
         {
-            if (FLMpanel.Visible) {
+            if (FLMpanel.Visible) 
+            {
                 FLMpanel.Hide();
-            }else
+            }
+            else
                 FLMpanel.Show();
         }
 
@@ -100,6 +103,18 @@ namespace Cinkie_feedback_fr
         {
             this.PanelDA_LA_ScoreboardTime.Text = DateTime.Now.ToString("HH:mm");
             this.PanelDA_LA_ScoreboardDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void PanelFLM_BT_WeekTakenButton_Click(object sender, EventArgs e)
+        {
+            PanelWG_PA_WeekGoalsBackground.Show();
+            panelDA_PA_NotificationsPanel.BringToFront();
+        }
+
+        private void PanelFLM_BT_DashboardButton_Click(object sender, EventArgs e)
+        {
+            PanelDA_PA_DashBoardBackground.Show();
+            PanelWG_PA_WeekGoalsBackground.Hide();
         }
     }
 }
