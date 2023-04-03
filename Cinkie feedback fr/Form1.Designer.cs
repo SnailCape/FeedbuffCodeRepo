@@ -200,7 +200,7 @@
             // PanelDA_PA_DashBoardBackground
             // 
             this.PanelDA_PA_DashBoardBackground.BackColor = System.Drawing.Color.Silver;
-            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelWG_PA_WeekGoalsBackground);
+            //this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.panelDA_PA_NotificationsPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpPercentage);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpBar);
@@ -916,7 +916,7 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName3;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
-        private System.Windows.Forms.Panel PanelWG_PA_WeekGoalsBackground;
+        private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
     }
 }
 

@@ -25,7 +25,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
-            PanelWG_PA_WeekGoalsBackground.Hide();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
         }
        
         /// <summary>
@@ -107,7 +107,7 @@ namespace Cinkie_feedback_fr
 
         private void PanelFLM_BT_WeekTakenButton_Click(object sender, EventArgs e)
         {
-            PanelWG_PA_WeekGoalsBackground.Show();
+            PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.BringToFront();
         }
 
