@@ -89,9 +89,6 @@
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
             this.PanelWG_PA_WeekGoalsBackground = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -104,8 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
-            this.PanelWG_PA_WeekGoalsBackground.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FLMpanel
@@ -833,37 +828,10 @@
             // 
             // PanelWG_PA_WeekGoalsBackground
             // 
-            this.PanelWG_PA_WeekGoalsBackground.Controls.Add(this.panel1);
             this.PanelWG_PA_WeekGoalsBackground.Location = new System.Drawing.Point(-1, 0);
             this.PanelWG_PA_WeekGoalsBackground.Name = "PanelWG_PA_WeekGoalsBackground";
             this.PanelWG_PA_WeekGoalsBackground.Size = new System.Drawing.Size(3200, 1661);
             this.PanelWG_PA_WeekGoalsBackground.TabIndex = 8;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Location = new System.Drawing.Point(328, 211);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1691, 650);
-            this.panel1.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 625);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1672, 22);
-            this.textBox1.TabIndex = 2;
             // 
             // Form1
             // 
@@ -891,9 +859,6 @@
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
-            this.PanelWG_PA_WeekGoalsBackground.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -961,9 +926,6 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeekGoalsBackground;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
