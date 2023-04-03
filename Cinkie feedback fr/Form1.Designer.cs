@@ -32,7 +32,7 @@
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_WeekTakenButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_WeeklyGoalsButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
             this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
             this.PanelDA_PA_DashBoardBackground = new System.Windows.Forms.Panel();
@@ -88,7 +88,6 @@
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
-            this.PanelWG_PA_WeekGoalsBackground = new System.Windows.Forms.Panel();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -109,7 +108,7 @@
             this.FLMpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_LogoutButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_ProgressButton);
-            this.FLMpanel.Controls.Add(this.PanelFLM_BT_WeekTakenButton);
+            this.FLMpanel.Controls.Add(this.PanelFLM_BT_WeeklyGoalsButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
             this.FLMpanel.Location = new System.Drawing.Point(1, 12);
@@ -151,22 +150,21 @@
             this.PanelFLM_BT_ProgressButton.Text = "Progress";
             this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
             // 
-            // PanelFLM_BT_WeekTakenButton
+            // PanelFLM_BT_WeeklyGoalsButton
             // 
-            this.PanelFLM_BT_WeekTakenButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
-            this.PanelFLM_BT_WeekTakenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_WeekTakenButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_WeekTakenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_WeekTakenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_WeekTakenButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_WeekTakenButton.Location = new System.Drawing.Point(0, 246);
-            this.PanelFLM_BT_WeekTakenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelFLM_BT_WeekTakenButton.Name = "PanelFLM_BT_WeekTakenButton";
-            this.PanelFLM_BT_WeekTakenButton.Size = new System.Drawing.Size(164, 78);
-            this.PanelFLM_BT_WeekTakenButton.TabIndex = 2;
-            this.PanelFLM_BT_WeekTakenButton.Text = "Weektaken";
-            this.PanelFLM_BT_WeekTakenButton.UseVisualStyleBackColor = true;
-            this.PanelFLM_BT_WeekTakenButton.Click += new System.EventHandler(this.PanelFLM_BT_WeekTakenButton_Click);
+            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
+            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_WeeklyGoalsButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_WeeklyGoalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_WeeklyGoalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_WeeklyGoalsButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_WeeklyGoalsButton.Location = new System.Drawing.Point(0, 246);
+            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_WeeklyGoalsButton.Name = "PanelFLM_BT_WeeklyGoalsButton";
+            this.PanelFLM_BT_WeeklyGoalsButton.Size = new System.Drawing.Size(164, 78);
+            this.PanelFLM_BT_WeeklyGoalsButton.TabIndex = 2;
+            this.PanelFLM_BT_WeeklyGoalsButton.Text = "Weekly Goals";
+            this.PanelFLM_BT_WeeklyGoalsButton.UseVisualStyleBackColor = true;
             // 
             // PanelFLM_BT_DashboardButton
             // 
@@ -826,13 +824,6 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
-            // PanelWG_PA_WeekGoalsBackground
-            // 
-            this.PanelWG_PA_WeekGoalsBackground.Location = new System.Drawing.Point(-1, 0);
-            this.PanelWG_PA_WeekGoalsBackground.Name = "PanelWG_PA_WeekGoalsBackground";
-            this.PanelWG_PA_WeekGoalsBackground.Size = new System.Drawing.Size(3200, 1661);
-            this.PanelWG_PA_WeekGoalsBackground.TabIndex = 8;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -878,7 +869,7 @@
         private System.Windows.Forms.PictureBox BGflmPull;
         private System.Windows.Forms.PictureBox FLMpanelZUYD;
         private System.Windows.Forms.Button PanelFLM_BT_DashboardButton;
-        private System.Windows.Forms.Button PanelFLM_BT_WeekTakenButton;
+        private System.Windows.Forms.Button PanelFLM_BT_WeeklyGoalsButton;
         private System.Windows.Forms.Panel FLMpanel;
         private System.Windows.Forms.PictureBox FLMpbox;
         private System.Windows.Forms.Panel PanelDA_PA_UserInfoPanel;
