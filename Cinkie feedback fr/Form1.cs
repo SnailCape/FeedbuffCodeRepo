@@ -28,18 +28,17 @@ namespace Cinkie_feedback_fr
         private void Form1_Load(object sender, EventArgs e)
         {
             Login_Panel.BringToFront();
-            Login_Panel.Hide();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Hide();
         }
-       
+
         /// <summary>
         /// FLM panel to be shown when the button is pressed
         /// </summary>
         private void FLMpbox_Click(object sender, EventArgs e)
         {
-            if (FLMpanel.Visible) 
+            if (FLMpanel.Visible)
             {
                 FLMpanel.Hide();
             }
@@ -58,6 +57,7 @@ namespace Cinkie_feedback_fr
             }
             else
                 FLMpanel.Show();
+                FLMpbox.Show();
         }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -77,7 +77,10 @@ namespace Cinkie_feedback_fr
 
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
-                Login_Panel.Visible = false;
+                PanelDA_PA_DashBoardBackground.BringToFront();
+                Login_Panel.SendToBack();
+                PanelRE_PA_RegistryBG.SendToBack();
+                FLMpanel.BringToFront();
                 PanelLogin_TB_Email.Text = "";
                 PanelLogin_TB_Password.Text = "";
             }
@@ -99,9 +102,9 @@ namespace Cinkie_feedback_fr
 
         private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
         /// </summary>
@@ -120,8 +123,10 @@ namespace Cinkie_feedback_fr
 
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
         {
+            PanelDA_PA_DashBoardBackground.Hide();
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.BringToFront();
+            BGflmPull.BringToFront();
         }
 
 
@@ -131,10 +136,11 @@ namespace Cinkie_feedback_fr
         }
 
         private void WeeklyGoalClick(object sender, EventArgs e)
-        { 
-            if (Check == false) {
+        {
+            if (Check == false)
+            {
                 Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
-                PopUpBox.Show(this);   
+                PopUpBox.Show(this);
                 this.BringToFront();
                 Check = true;
                 this.Activate();
@@ -146,62 +152,34 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-        private void PanelRE_BT_RegisterAccountButton_Click(object sender, EventArgs e)
-        {
-            PanelRE_BT_RegisterAccountButton.Hide();
-            PanelRE_TB_RegisterStudentName.Show();
-            PanelRE_TB_RegisterStudentSurname.Show();
-            PanelRE_CMB_RegisterStudentGender.Show();
-            PanelRE_TB_RegisterStudentEmail.Show();
-            PanelRE_TB_RegisterStudentStreet.Show();
-            PanelRE_TB_RegisterStudentCity.Show();
-            PanelRE_TB_RegisterStudentUnitNumber.Show();
-            PanelRE_TB_RegisterStudentPostalcode.Show();
-            PanelRE_LB_RegisterStudentNumber.Show();
-            PanelRE_CMB_RegisterStudentCourse.Show();
-            PanelRE_CMB_RegisterStudentLocation.Show();
-            PanelRE_TB_RegisterStudentPhonenumber.Show();
-            PanelRE_BT_RegisterSave.Show();
-            PanelRE_LB_StudentNameLabel.Show();
-            PanelRE_LB_StudentSurnameLabel.Show();
-            PanelRE_LB_StudentEmailLabel.Show();
-            PanelRE_LB_StudentStreetLabel.Show();
-            PanelRE_LB_StudentCityLabel.Show();
-            PanelRE_LB_StudentUnitNumberLabel.Show();
-            PanelRE_LB_StudentPostalcodeLabel.Show();
-            PanelRE_LB_StudentStreetLabel.Show();
-            PanelRE_LB_StudentCityLabel.Show();
-            PanelRE_LB_StudentGenderLabel.Show();
-            PanelRE_LB_StudentEmailLabel.Show();
-            PanelRE_LB_StudentNumberLabel.Show();
-            PanelRE_LB_StudentCourseLabel.Show();
-            PanelRE_LB_StudentLocationLabel.Show();
-            PanelRE_LB_StudentPhoneNumberLabel.Show();
-            PanelRE_LB_StudentLocationLabel.Show();
-
         }
 
-        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
-        {
-            PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
-        }
+            private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
+            {
+                PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
+            }
 
-        private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
-        {
-            PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
-        }
+            private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
+            {
+                PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
+            }
 
-        private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
-        {
-            PanelRE_PA_RegistryBG.Hide();
-            Login_Panel.Show();
-        }
+            private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
+            {
+                PanelRE_PA_RegistryBG.Hide();
+                Login_Panel.Show();
+            }
 
-        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
-        {
-            PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
+            private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+            {
+                PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
 
+            }
+
+        private void PanelLogin_BT_Register_Click(object sender, EventArgs e)
+        {
+            PanelRE_PA_RegistryBG.BringToFront();
+            PanelRE_PA_RegistryBG.Show();
         }
     }
 }
