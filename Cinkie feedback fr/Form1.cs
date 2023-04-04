@@ -126,6 +126,10 @@ namespace Cinkie_feedback_fr
             PanelRE_TB_RegisterStudentSurname.Show();
             PanelRE_CMB_RegisterStudentGender.Show();
             PanelRE_TB_RegisterStudentEmail.Show();
+            PanelRE_TB_RegisterStudentStreet.Show();
+            PanelRE_TB_RegisterStudentCity.Show();
+            PanelRE_TB_RegisterStudentUnitNumber.Show();
+            PanelRE_TB_RegisterStudentPostalcode.Show();
             PanelRE_LB_RegisterStudentNumber.Show();
             PanelRE_CMB_RegisterStudentCourse.Show();
             PanelRE_CMB_RegisterStudentLocation.Show();
@@ -134,6 +138,12 @@ namespace Cinkie_feedback_fr
             PanelRE_LB_StudentNameLabel.Show();
             PanelRE_LB_StudentSurnameLabel.Show();
             PanelRE_LB_StudentEmailLabel.Show();
+            PanelRE_LB_StudentStreetLabel.Show();
+            PanelRE_LB_StudentCityLabel.Show();
+            PanelRE_LB_StudentUnitNumberLabel.Show();
+            PanelRE_LB_StudentPostalcodeLabel.Show();
+            PanelRE_LB_StudentStreetLabel.Show();
+            PanelRE_LB_StudentCityLabel.Show();
             PanelRE_LB_StudentGenderLabel.Show();
             PanelRE_LB_StudentEmailLabel.Show();
             PanelRE_LB_StudentNumberLabel.Show();
