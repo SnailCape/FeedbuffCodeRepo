@@ -28,6 +28,7 @@ namespace Cinkie_feedback_fr
         private void Form1_Load(object sender, EventArgs e)
         {
             Login_Panel.BringToFront();
+            Login_Panel.Hide();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Hide();
@@ -123,6 +124,7 @@ namespace Cinkie_feedback_fr
             panelDA_PA_NotificationsPanel.BringToFront();
         }
 
+
         private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
         {
             WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
@@ -144,6 +146,62 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+        private void PanelRE_BT_RegisterAccountButton_Click(object sender, EventArgs e)
+        {
+            PanelRE_BT_RegisterAccountButton.Hide();
+            PanelRE_TB_RegisterStudentName.Show();
+            PanelRE_TB_RegisterStudentSurname.Show();
+            PanelRE_CMB_RegisterStudentGender.Show();
+            PanelRE_TB_RegisterStudentEmail.Show();
+            PanelRE_TB_RegisterStudentStreet.Show();
+            PanelRE_TB_RegisterStudentCity.Show();
+            PanelRE_TB_RegisterStudentUnitNumber.Show();
+            PanelRE_TB_RegisterStudentPostalcode.Show();
+            PanelRE_LB_RegisterStudentNumber.Show();
+            PanelRE_CMB_RegisterStudentCourse.Show();
+            PanelRE_CMB_RegisterStudentLocation.Show();
+            PanelRE_TB_RegisterStudentPhonenumber.Show();
+            PanelRE_BT_RegisterSave.Show();
+            PanelRE_LB_StudentNameLabel.Show();
+            PanelRE_LB_StudentSurnameLabel.Show();
+            PanelRE_LB_StudentEmailLabel.Show();
+            PanelRE_LB_StudentStreetLabel.Show();
+            PanelRE_LB_StudentCityLabel.Show();
+            PanelRE_LB_StudentUnitNumberLabel.Show();
+            PanelRE_LB_StudentPostalcodeLabel.Show();
+            PanelRE_LB_StudentStreetLabel.Show();
+            PanelRE_LB_StudentCityLabel.Show();
+            PanelRE_LB_StudentGenderLabel.Show();
+            PanelRE_LB_StudentEmailLabel.Show();
+            PanelRE_LB_StudentNumberLabel.Show();
+            PanelRE_LB_StudentCourseLabel.Show();
+            PanelRE_LB_StudentLocationLabel.Show();
+            PanelRE_LB_StudentPhoneNumberLabel.Show();
+            PanelRE_LB_StudentLocationLabel.Show();
+
+        }
+
+        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
+        }
+
+        private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
+        }
+
+        private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
+        {
+            PanelRE_PA_RegistryBG.Hide();
+            Login_Panel.Show();
+        }
+
+        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
+
         }
     }
 }
