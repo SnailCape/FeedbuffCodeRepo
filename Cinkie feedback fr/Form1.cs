@@ -12,11 +12,16 @@ namespace Cinkie_feedback_fr
 {
     public partial class Form1 : Form
     {
+        public static bool Check = false;
+        public Popup_FORM_WeeklyGoals PopUpBox;
+
         public Form1()
         {
             InitializeComponent();
+
+
         }
-        
+
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>
@@ -119,6 +124,29 @@ namespace Cinkie_feedback_fr
             panelDA_PA_NotificationsPanel.BringToFront();
         }
 
+
+        private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
+        {
+            WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
+        }
+
+        private void WeeklyGoalClick(object sender, EventArgs e)
+        { 
+            if (Check == false) {
+                Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
+                PopUpBox.Show(this);   
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         private void PanelRE_BT_RegisterAccountButton_Click(object sender, EventArgs e)
         {
             PanelRE_BT_RegisterAccountButton.Hide();
@@ -173,6 +201,7 @@ namespace Cinkie_feedback_fr
         private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
         {
             PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
+
         }
     }
 }
