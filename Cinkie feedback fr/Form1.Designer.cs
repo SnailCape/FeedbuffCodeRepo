@@ -89,6 +89,7 @@
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
+            this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -762,6 +763,7 @@
             // Login_Panel
             // 
             this.Login_Panel.BackColor = System.Drawing.Color.Silver;
+            this.Login_Panel.Controls.Add(this.PanelRE_PA_RegistryBG);
             this.Login_Panel.Controls.Add(this.LoginPanel_LB_Coeus);
             this.Login_Panel.Controls.Add(this.PanelLogin_BT_Login);
             this.Login_Panel.Controls.Add(this.PanelLogin_LLB_PasswordFOR);
@@ -772,7 +774,7 @@
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
             this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Login_Panel.Name = "Login_Panel";
-            this.Login_Panel.Size = new System.Drawing.Size(1906, 1041);
+            this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
             this.Login_Panel.TabIndex = 1;
             // 
             // LoginPanel_LB_Coeus
@@ -866,14 +868,21 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
+            // PanelRE_PA_RegistryBG
+            // 
+            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(3, 3);
+            this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
+            this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelRE_PA_RegistryBG.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.FLMpanel);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
-            this.Controls.Add(this.Login_Panel);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -958,6 +967,7 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
+        private System.Windows.Forms.Panel PanelRE_PA_RegistryBG;
     }
 }
 
