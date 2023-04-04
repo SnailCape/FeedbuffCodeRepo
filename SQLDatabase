@@ -1,0 +1,325 @@
+USE [master]
+GO
+/****** Object:  Database [COEUS_DB]    Script Date: 4-4-2023 13:14:27 ******/
+CREATE DATABASE [COEUS_DB]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'COEUS_DB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\COEUS_DB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'COEUS_DB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\COEUS_DB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [COEUS_DB] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [COEUS_DB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [COEUS_DB] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [COEUS_DB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [COEUS_DB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [COEUS_DB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [COEUS_DB] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [COEUS_DB] SET  MULTI_USER 
+GO
+ALTER DATABASE [COEUS_DB] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [COEUS_DB] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [COEUS_DB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [COEUS_DB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [COEUS_DB] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [COEUS_DB] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [COEUS_DB] SET QUERY_STORE = OFF
+GO
+USE [COEUS_DB]
+GO
+/****** Object:  Table [dbo].[ADRES]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ADRES](
+	[postcode] [varchar](50) NOT NULL,
+	[stad] [varchar](50) NOT NULL,
+	[straatnaam] [varchar](50) NOT NULL,
+	[huisnummer] [varchar](50) NOT NULL,
+	[land] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_ADRES] PRIMARY KEY CLUSTERED 
+(
+	[postcode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[DAILYTASK]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DAILYTASK](
+	[taskId] [int] IDENTITY(1,1) NOT NULL,
+	[goalId] [int] NOT NULL,
+	[status] [varchar](50) NOT NULL,
+	[tijdsduur] [varchar](50) NOT NULL,
+	[deadline] [varchar](50) NULL,
+	[titel] [varchar](50) NOT NULL,
+	[omschrijving] [varchar](max) NULL,
+ CONSTRAINT [PK_DAILYTASK] PRIMARY KEY CLUSTERED 
+(
+	[taskId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[DOCENT]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DOCENT](
+	[docentId] [int] IDENTITY(1,1) NOT NULL,
+	[oeId] [varchar](50) NOT NULL,
+	[postcode] [varchar](50) NOT NULL,
+	[voornaam] [varchar](50) NOT NULL,
+	[achternaam] [varchar](50) NOT NULL,
+	[geslacht] [varchar](1) NOT NULL,
+	[schoolLocatie] [varchar](50) NOT NULL,
+	[emailadres] [varchar](50) NOT NULL,
+	[telefoonnummer] [int] NULL,
+ CONSTRAINT [PK_DOCENT] PRIMARY KEY CLUSTERED 
+(
+	[docentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[FEEDBACK]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FEEDBACK](
+	[feedbackId] [int] IDENTITY(1,1) NOT NULL,
+	[oeId] [varchar](50) NOT NULL,
+	[omschrijving] [varchar](4000) NULL,
+ CONSTRAINT [PK_FEEDBACK] PRIMARY KEY CLUSTERED 
+(
+	[feedbackId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[KLAS]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[KLAS](
+	[klasId] [int] IDENTITY(1,1) NOT NULL,
+	[docentId] [int] NOT NULL,
+	[jaar] [int] NOT NULL,
+ CONSTRAINT [PK_KLAS] PRIMARY KEY CLUSTERED 
+(
+	[klasId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ONDERWIJSEENHEID]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ONDERWIJSEENHEID](
+	[oeId] [varchar](50) NOT NULL,
+	[naam] [varchar](50) NOT NULL,
+	[afdeling] [varchar](50) NOT NULL,
+	[europeanCredits] [int] NOT NULL,
+	[urenAantal] [int] NOT NULL,
+ CONSTRAINT [PK_ONDERWIJSEENHEID] PRIMARY KEY CLUSTERED 
+(
+	[oeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[STUDENT]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[STUDENT](
+	[studentId] [int] NOT NULL,
+	[klasId] [int] NOT NULL,
+	[postcode] [varchar](50) NOT NULL,
+	[voornaam] [varchar](50) NOT NULL,
+	[achternaam] [varchar](50) NOT NULL,
+	[geslacht] [varchar](1) NOT NULL,
+	[schoolLocatie] [varchar](50) NOT NULL,
+	[emailadres] [varchar](50) NOT NULL,
+	[telefoonnummer] [int] NULL,
+ CONSTRAINT [PK_STUDENT] PRIMARY KEY CLUSTERED 
+(
+	[studentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[WEEKLYGOAL]    Script Date: 4-4-2023 13:14:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[WEEKLYGOAL](
+	[goalId] [int] IDENTITY(1,1) NOT NULL,
+	[studentId] [int] NOT NULL,
+	[oeId] [varchar](50) NOT NULL,
+	[status] [varchar](50) NOT NULL,
+	[titel] [varchar](50) NOT NULL,
+	[omschrijving] [varchar](max) NULL,
+	[tijdsduur] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_WEEKLYGOAL] PRIMARY KEY CLUSTERED 
+(
+	[goalId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+INSERT [dbo].[ADRES] ([postcode], [stad], [straatnaam], [huisnummer], [land]) VALUES (N'0420WC', N'Amsterdam', N'Snoopie', N'420', N'Nederland')
+INSERT [dbo].[ADRES] ([postcode], [stad], [straatnaam], [huisnummer], [land]) VALUES (N'6214PV', N'Maastricht', N'Meester Ulrichweg', N'25C', N'Nederland')
+INSERT [dbo].[ADRES] ([postcode], [stad], [straatnaam], [huisnummer], [land]) VALUES (N'6443EB', N'Brunssum', N'Haansberg', N'61', N'Nederland')
+INSERT [dbo].[ADRES] ([postcode], [stad], [straatnaam], [huisnummer], [land]) VALUES (N'6467GS', N'Kerkrade', N'Op de Knip', N'49', N'Nederland')
+INSERT [dbo].[ADRES] ([postcode], [stad], [straatnaam], [huisnummer], [land]) VALUES (N'6969SX', N'Heerlen', N'Borstenstraat', N'69', N'Nederland')
+GO
+SET IDENTITY_INSERT [dbo].[DAILYTASK] ON 
+
+INSERT [dbo].[DAILYTASK] ([taskId], [goalId], [status], [tijdsduur], [deadline], [titel], [omschrijving]) VALUES (1, 1, N'to do', N'1 dag', NULL, N'Maak een Solution', N'Begin aan de code in Visual Studio Enterprise')
+INSERT [dbo].[DAILYTASK] ([taskId], [goalId], [status], [tijdsduur], [deadline], [titel], [omschrijving]) VALUES (3, 1, N'in progress', N'1 week', NULL, N'Dit is nog een test', NULL)
+INSERT [dbo].[DAILYTASK] ([taskId], [goalId], [status], [tijdsduur], [deadline], [titel], [omschrijving]) VALUES (4, 2, N'done', N'9 maanden', NULL, N'Wordt geboren', NULL)
+SET IDENTITY_INSERT [dbo].[DAILYTASK] OFF
+GO
+SET IDENTITY_INSERT [dbo].[DOCENT] ON 
+
+INSERT [dbo].[DOCENT] ([docentId], [oeId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (1, N'B1C2', N'0420WC', N'Test', N'Tester', N'M', N'Heerlen', N'TestTester@zuyd.nl', NULL)
+INSERT [dbo].[DOCENT] ([docentId], [oeId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (2, N'B1A3', N'0420WC', N'Testie', N'Tester', N'V', N'Heerlen', N'TestieTester@zuyd.nl', NULL)
+INSERT [dbo].[DOCENT] ([docentId], [oeId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (3, N'B1F3', N'0420WC', N'Teston', N'Tester', N'O', N'Heerlen', N'TestonTester@zuyd.nl', NULL)
+SET IDENTITY_INSERT [dbo].[DOCENT] OFF
+GO
+SET IDENTITY_INSERT [dbo].[FEEDBACK] ON 
+
+INSERT [dbo].[FEEDBACK] ([feedbackId], [oeId], [omschrijving]) VALUES (1, N'B1A3', N'Succes')
+INSERT [dbo].[FEEDBACK] ([feedbackId], [oeId], [omschrijving]) VALUES (2, N'B1F3', N'Je doet het goed!')
+INSERT [dbo].[FEEDBACK] ([feedbackId], [oeId], [omschrijving]) VALUES (3, N'B1C2', N'Kan beter...')
+SET IDENTITY_INSERT [dbo].[FEEDBACK] OFF
+GO
+SET IDENTITY_INSERT [dbo].[KLAS] ON 
+
+INSERT [dbo].[KLAS] ([klasId], [docentId], [jaar]) VALUES (1, 1, 2023)
+INSERT [dbo].[KLAS] ([klasId], [docentId], [jaar]) VALUES (2, 2, 2023)
+INSERT [dbo].[KLAS] ([klasId], [docentId], [jaar]) VALUES (3, 3, 2023)
+SET IDENTITY_INSERT [dbo].[KLAS] OFF
+GO
+INSERT [dbo].[ONDERWIJSEENHEID] ([oeId], [naam], [afdeling], [europeanCredits], [urenAantal]) VALUES (N'B1A3', N'Project management skills', N'HBO ICT', 5, 10)
+INSERT [dbo].[ONDERWIJSEENHEID] ([oeId], [naam], [afdeling], [europeanCredits], [urenAantal]) VALUES (N'B1C2', N'Introduction to Development', N'HBO ICT', 5, 10)
+INSERT [dbo].[ONDERWIJSEENHEID] ([oeId], [naam], [afdeling], [europeanCredits], [urenAantal]) VALUES (N'B1F3', N'Data Structure Basics', N'HBO ICT', 5, 10)
+GO
+INSERT [dbo].[STUDENT] ([studentId], [klasId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (2104321, 1, N'6969SX', N'Norayr', N'Gocer', N'M', N'Heerlen', N'2104321gocer@zuyd.nl', NULL)
+INSERT [dbo].[STUDENT] ([studentId], [klasId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (2202057, 1, N'6214PV', N'Rachel', N'Breve', N'V', N'Heerlen', N'2202057breve@zuyd.nl', NULL)
+INSERT [dbo].[STUDENT] ([studentId], [klasId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (2202261, 1, N'6443EB', N'Levi', N'Funk', N'M', N'Heerlen', N'2202261funk@zuyd.nl', 622724224)
+INSERT [dbo].[STUDENT] ([studentId], [klasId], [postcode], [voornaam], [achternaam], [geslacht], [schoolLocatie], [emailadres], [telefoonnummer]) VALUES (2203356, 1, N'6467GS', N'Noah', N'Lenkens', N'M', N'Heerlen', N'2203356lenkens@zuyd.nl', 622046759)
+GO
+SET IDENTITY_INSERT [dbo].[WEEKLYGOAL] ON 
+
+INSERT [dbo].[WEEKLYGOAL] ([goalId], [studentId], [oeId], [status], [titel], [omschrijving], [tijdsduur]) VALUES (1, 2202261, N'B1C2', N'to do', N'Maak een compleet werkend FeedBUF systeem', N'nee', N'20 Dagen')
+INSERT [dbo].[WEEKLYGOAL] ([goalId], [studentId], [oeId], [status], [titel], [omschrijving], [tijdsduur]) VALUES (2, 2202057, N'B1A3', N'in progress', N'Maak een PvA', N'Nee wil ik niet', N'5 Dagen')
+INSERT [dbo].[WEEKLYGOAL] ([goalId], [studentId], [oeId], [status], [titel], [omschrijving], [tijdsduur]) VALUES (6, 2104321, N'B1F3', N'completed', N'Wees levend', N'adem in een reguliere tijdsperiode', N'Levenslang')
+SET IDENTITY_INSERT [dbo].[WEEKLYGOAL] OFF
+GO
+ALTER TABLE [dbo].[DAILYTASK]  WITH CHECK ADD  CONSTRAINT [FK_DAILYTASK_WEEKLYGOAL] FOREIGN KEY([goalId])
+REFERENCES [dbo].[WEEKLYGOAL] ([goalId])
+GO
+ALTER TABLE [dbo].[DAILYTASK] CHECK CONSTRAINT [FK_DAILYTASK_WEEKLYGOAL]
+GO
+ALTER TABLE [dbo].[DOCENT]  WITH CHECK ADD  CONSTRAINT [FK_DOCENT_ADRES] FOREIGN KEY([postcode])
+REFERENCES [dbo].[ADRES] ([postcode])
+GO
+ALTER TABLE [dbo].[DOCENT] CHECK CONSTRAINT [FK_DOCENT_ADRES]
+GO
+ALTER TABLE [dbo].[DOCENT]  WITH CHECK ADD  CONSTRAINT [FK_DOCENT_ONDERWIJSEENHEID] FOREIGN KEY([oeId])
+REFERENCES [dbo].[ONDERWIJSEENHEID] ([oeId])
+GO
+ALTER TABLE [dbo].[DOCENT] CHECK CONSTRAINT [FK_DOCENT_ONDERWIJSEENHEID]
+GO
+ALTER TABLE [dbo].[FEEDBACK]  WITH CHECK ADD  CONSTRAINT [FK_FEEDBACK_ONDERWIJSEENHEID] FOREIGN KEY([oeId])
+REFERENCES [dbo].[ONDERWIJSEENHEID] ([oeId])
+GO
+ALTER TABLE [dbo].[FEEDBACK] CHECK CONSTRAINT [FK_FEEDBACK_ONDERWIJSEENHEID]
+GO
+ALTER TABLE [dbo].[KLAS]  WITH CHECK ADD  CONSTRAINT [FK_KLAS_DOCENT] FOREIGN KEY([docentId])
+REFERENCES [dbo].[DOCENT] ([docentId])
+GO
+ALTER TABLE [dbo].[KLAS] CHECK CONSTRAINT [FK_KLAS_DOCENT]
+GO
+ALTER TABLE [dbo].[STUDENT]  WITH CHECK ADD  CONSTRAINT [FK_STUDENT_ADRES] FOREIGN KEY([postcode])
+REFERENCES [dbo].[ADRES] ([postcode])
+GO
+ALTER TABLE [dbo].[STUDENT] CHECK CONSTRAINT [FK_STUDENT_ADRES]
+GO
+ALTER TABLE [dbo].[STUDENT]  WITH CHECK ADD  CONSTRAINT [FK_STUDENT_KLAS] FOREIGN KEY([klasId])
+REFERENCES [dbo].[KLAS] ([klasId])
+GO
+ALTER TABLE [dbo].[STUDENT] CHECK CONSTRAINT [FK_STUDENT_KLAS]
+GO
+ALTER TABLE [dbo].[WEEKLYGOAL]  WITH CHECK ADD  CONSTRAINT [FK_WEEKLYGOAL_ONDERWIJSEENHEID] FOREIGN KEY([oeId])
+REFERENCES [dbo].[ONDERWIJSEENHEID] ([oeId])
+GO
+ALTER TABLE [dbo].[WEEKLYGOAL] CHECK CONSTRAINT [FK_WEEKLYGOAL_ONDERWIJSEENHEID]
+GO
+ALTER TABLE [dbo].[WEEKLYGOAL]  WITH CHECK ADD  CONSTRAINT [FK_WEEKLYGOAL_STUDENT] FOREIGN KEY([studentId])
+REFERENCES [dbo].[STUDENT] ([studentId])
+GO
+ALTER TABLE [dbo].[WEEKLYGOAL] CHECK CONSTRAINT [FK_WEEKLYGOAL_STUDENT]
+GO
+USE [master]
+GO
+ALTER DATABASE [COEUS_DB] SET  READ_WRITE 
+GO
