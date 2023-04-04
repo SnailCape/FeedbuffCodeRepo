@@ -87,8 +87,35 @@
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
+            this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
+            this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
+            this.PanelRE_BT_RegisterAccountButton = new System.Windows.Forms.Button();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
+            this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentEmail = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentPhonenumber = new System.Windows.Forms.TextBox();
+            this.PanelRE_LB_StudentNameLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentSurnameLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentEmailLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentPhoneNumberLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentGenderLabel = new System.Windows.Forms.Label();
+            this.PanelRE_CMB_RegisterStudentGender = new System.Windows.Forms.ComboBox();
+            this.PanelRE_LB_RegisterStudentNumber = new System.Windows.Forms.TextBox();
+            this.PanelRE_LB_StudentNumberLabel = new System.Windows.Forms.Label();
+            this.PanelRE_CMB_RegisterStudentLocation = new System.Windows.Forms.ComboBox();
+            this.PanelRE_LB_StudentLocationLabel = new System.Windows.Forms.Label();
+            this.PanelRE_BT_RegisterSave = new System.Windows.Forms.Button();
+            this.PanelRE_CMB_RegisterStudentCourse = new System.Windows.Forms.ComboBox();
+            this.PanelRE_LB_StudentCourseLabel = new System.Windows.Forms.Label();
+            this.PanelRE_TB_RegisterStudentStreet = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentPostalcode = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentCity = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentUnitNumber = new System.Windows.Forms.TextBox();
+            this.PanelRE_LB_StudentStreetLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentCityLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentUnitNumberLabel = new System.Windows.Forms.Label();
+            this.PanelRE_LB_StudentPostalcodeLabel = new System.Windows.Forms.Label();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -100,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
+            this.PanelRE_PA_RegistryBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -772,7 +800,7 @@
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
             this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Login_Panel.Name = "Login_Panel";
-            this.Login_Panel.Size = new System.Drawing.Size(1906, 1041);
+            this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
             this.Login_Panel.TabIndex = 1;
             // 
             // LoginPanel_LB_Coeus
@@ -853,6 +881,63 @@
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
+            // PanelRE_PA_RegistryBG
+            // 
+            this.PanelRE_PA_RegistryBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPostalcodeLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentUnitNumberLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCityLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentStreetLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentUnitNumber);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentCity);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentPostalcode);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentStreet);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCourseLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentCourse);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_BT_RegisterSave);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentLocationLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentLocation);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentNumberLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_RegisterStudentNumber);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentGender);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentGenderLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPhoneNumberLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentEmailLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentSurnameLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentNameLabel);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentPhonenumber);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentEmail);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentSurname);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentName);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_BT_RegisterAccountButton);
+            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(3, 3);
+            this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
+            this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelRE_PA_RegistryBG.TabIndex = 7;
+            // 
+            // PanelRE_TB_RegisterStudentName
+            // 
+            this.PanelRE_TB_RegisterStudentName.Location = new System.Drawing.Point(801, 256);
+            this.PanelRE_TB_RegisterStudentName.Name = "PanelRE_TB_RegisterStudentName";
+            this.PanelRE_TB_RegisterStudentName.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentName.TabIndex = 1;
+            this.PanelRE_TB_RegisterStudentName.Visible = false;
+            // 
+            // PanelRE_BT_RegisterAccountButton
+            // 
+            this.PanelRE_BT_RegisterAccountButton.BackColor = System.Drawing.Color.Red;
+            this.PanelRE_BT_RegisterAccountButton.FlatAppearance.BorderSize = 0;
+            this.PanelRE_BT_RegisterAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelRE_BT_RegisterAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelRE_BT_RegisterAccountButton.ForeColor = System.Drawing.Color.White;
+            this.PanelRE_BT_RegisterAccountButton.Location = new System.Drawing.Point(768, 404);
+            this.PanelRE_BT_RegisterAccountButton.Name = "PanelRE_BT_RegisterAccountButton";
+            this.PanelRE_BT_RegisterAccountButton.Size = new System.Drawing.Size(378, 235);
+            this.PanelRE_BT_RegisterAccountButton.TabIndex = 0;
+            this.PanelRE_BT_RegisterAccountButton.Text = "Register Account!";
+            this.PanelRE_BT_RegisterAccountButton.UseVisualStyleBackColor = false;
+            this.PanelRE_BT_RegisterAccountButton.Click += new System.EventHandler(this.PanelRE_BT_RegisterAccountButton_Click);
+            // 
             // DigitalClockTimer
             // 
             this.DigitalClockTimer.Enabled = true;
@@ -866,14 +951,251 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
+            // PanelRE_TB_RegisterStudentSurname
+            // 
+            this.PanelRE_TB_RegisterStudentSurname.Location = new System.Drawing.Point(801, 303);
+            this.PanelRE_TB_RegisterStudentSurname.Name = "PanelRE_TB_RegisterStudentSurname";
+            this.PanelRE_TB_RegisterStudentSurname.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentSurname.TabIndex = 2;
+            this.PanelRE_TB_RegisterStudentSurname.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentEmail
+            // 
+            this.PanelRE_TB_RegisterStudentEmail.Location = new System.Drawing.Point(801, 405);
+            this.PanelRE_TB_RegisterStudentEmail.Name = "PanelRE_TB_RegisterStudentEmail";
+            this.PanelRE_TB_RegisterStudentEmail.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentEmail.TabIndex = 3;
+            this.PanelRE_TB_RegisterStudentEmail.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentPhonenumber
+            // 
+            this.PanelRE_TB_RegisterStudentPhonenumber.Location = new System.Drawing.Point(801, 755);
+            this.PanelRE_TB_RegisterStudentPhonenumber.Name = "PanelRE_TB_RegisterStudentPhonenumber";
+            this.PanelRE_TB_RegisterStudentPhonenumber.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentPhonenumber.TabIndex = 4;
+            this.PanelRE_TB_RegisterStudentPhonenumber.Visible = false;
+            // 
+            // PanelRE_LB_StudentNameLabel
+            // 
+            this.PanelRE_LB_StudentNameLabel.AutoSize = true;
+            this.PanelRE_LB_StudentNameLabel.Location = new System.Drawing.Point(643, 256);
+            this.PanelRE_LB_StudentNameLabel.Name = "PanelRE_LB_StudentNameLabel";
+            this.PanelRE_LB_StudentNameLabel.Size = new System.Drawing.Size(73, 13);
+            this.PanelRE_LB_StudentNameLabel.TabIndex = 5;
+            this.PanelRE_LB_StudentNameLabel.Text = "Student name";
+            this.PanelRE_LB_StudentNameLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentSurnameLabel
+            // 
+            this.PanelRE_LB_StudentSurnameLabel.AutoSize = true;
+            this.PanelRE_LB_StudentSurnameLabel.Location = new System.Drawing.Point(643, 308);
+            this.PanelRE_LB_StudentSurnameLabel.Name = "PanelRE_LB_StudentSurnameLabel";
+            this.PanelRE_LB_StudentSurnameLabel.Size = new System.Drawing.Size(87, 13);
+            this.PanelRE_LB_StudentSurnameLabel.TabIndex = 6;
+            this.PanelRE_LB_StudentSurnameLabel.Text = "Student surname";
+            this.PanelRE_LB_StudentSurnameLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentEmailLabel
+            // 
+            this.PanelRE_LB_StudentEmailLabel.AutoSize = true;
+            this.PanelRE_LB_StudentEmailLabel.Location = new System.Drawing.Point(643, 408);
+            this.PanelRE_LB_StudentEmailLabel.Name = "PanelRE_LB_StudentEmailLabel";
+            this.PanelRE_LB_StudentEmailLabel.Size = new System.Drawing.Size(71, 13);
+            this.PanelRE_LB_StudentEmailLabel.TabIndex = 7;
+            this.PanelRE_LB_StudentEmailLabel.Text = "Student email";
+            this.PanelRE_LB_StudentEmailLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentPhoneNumberLabel
+            // 
+            this.PanelRE_LB_StudentPhoneNumberLabel.AutoSize = true;
+            this.PanelRE_LB_StudentPhoneNumberLabel.Location = new System.Drawing.Point(643, 760);
+            this.PanelRE_LB_StudentPhoneNumberLabel.Name = "PanelRE_LB_StudentPhoneNumberLabel";
+            this.PanelRE_LB_StudentPhoneNumberLabel.Size = new System.Drawing.Size(115, 13);
+            this.PanelRE_LB_StudentPhoneNumberLabel.TabIndex = 8;
+            this.PanelRE_LB_StudentPhoneNumberLabel.Text = "Student phone number";
+            this.PanelRE_LB_StudentPhoneNumberLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentGenderLabel
+            // 
+            this.PanelRE_LB_StudentGenderLabel.AutoSize = true;
+            this.PanelRE_LB_StudentGenderLabel.Location = new System.Drawing.Point(643, 359);
+            this.PanelRE_LB_StudentGenderLabel.Name = "PanelRE_LB_StudentGenderLabel";
+            this.PanelRE_LB_StudentGenderLabel.Size = new System.Drawing.Size(80, 13);
+            this.PanelRE_LB_StudentGenderLabel.TabIndex = 10;
+            this.PanelRE_LB_StudentGenderLabel.Text = "Student gender";
+            this.PanelRE_LB_StudentGenderLabel.Visible = false;
+            // 
+            // PanelRE_CMB_RegisterStudentGender
+            // 
+            this.PanelRE_CMB_RegisterStudentGender.AllowDrop = true;
+            this.PanelRE_CMB_RegisterStudentGender.FormattingEnabled = true;
+            this.PanelRE_CMB_RegisterStudentGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.PanelRE_CMB_RegisterStudentGender.Location = new System.Drawing.Point(801, 356);
+            this.PanelRE_CMB_RegisterStudentGender.Name = "PanelRE_CMB_RegisterStudentGender";
+            this.PanelRE_CMB_RegisterStudentGender.Size = new System.Drawing.Size(378, 21);
+            this.PanelRE_CMB_RegisterStudentGender.TabIndex = 11;
+            this.PanelRE_CMB_RegisterStudentGender.Visible = false;
+            this.PanelRE_CMB_RegisterStudentGender.Click += new System.EventHandler(this.PanelRE_CMB_RegisterGender_Click);
+            // 
+            // PanelRE_LB_RegisterStudentNumber
+            // 
+            this.PanelRE_LB_RegisterStudentNumber.Location = new System.Drawing.Point(801, 655);
+            this.PanelRE_LB_RegisterStudentNumber.Name = "PanelRE_LB_RegisterStudentNumber";
+            this.PanelRE_LB_RegisterStudentNumber.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_LB_RegisterStudentNumber.TabIndex = 12;
+            this.PanelRE_LB_RegisterStudentNumber.Visible = false;
+            // 
+            // PanelRE_LB_StudentNumberLabel
+            // 
+            this.PanelRE_LB_StudentNumberLabel.AutoSize = true;
+            this.PanelRE_LB_StudentNumberLabel.Location = new System.Drawing.Point(643, 656);
+            this.PanelRE_LB_StudentNumberLabel.Name = "PanelRE_LB_StudentNumberLabel";
+            this.PanelRE_LB_StudentNumberLabel.Size = new System.Drawing.Size(82, 13);
+            this.PanelRE_LB_StudentNumberLabel.TabIndex = 13;
+            this.PanelRE_LB_StudentNumberLabel.Text = "Student number";
+            this.PanelRE_LB_StudentNumberLabel.Visible = false;
+            // 
+            // PanelRE_CMB_RegisterStudentLocation
+            // 
+            this.PanelRE_CMB_RegisterStudentLocation.FormattingEnabled = true;
+            this.PanelRE_CMB_RegisterStudentLocation.Items.AddRange(new object[] {
+            "Heerlen",
+            "Maastricht",
+            "Geleen"});
+            this.PanelRE_CMB_RegisterStudentLocation.Location = new System.Drawing.Point(801, 805);
+            this.PanelRE_CMB_RegisterStudentLocation.Name = "PanelRE_CMB_RegisterStudentLocation";
+            this.PanelRE_CMB_RegisterStudentLocation.Size = new System.Drawing.Size(378, 21);
+            this.PanelRE_CMB_RegisterStudentLocation.TabIndex = 14;
+            this.PanelRE_CMB_RegisterStudentLocation.Visible = false;
+            this.PanelRE_CMB_RegisterStudentLocation.Click += new System.EventHandler(this.PanelRE_CMB_RegisterStudentLocation_Click);
+            // 
+            // PanelRE_LB_StudentLocationLabel
+            // 
+            this.PanelRE_LB_StudentLocationLabel.AutoSize = true;
+            this.PanelRE_LB_StudentLocationLabel.Location = new System.Drawing.Point(643, 808);
+            this.PanelRE_LB_StudentLocationLabel.Name = "PanelRE_LB_StudentLocationLabel";
+            this.PanelRE_LB_StudentLocationLabel.Size = new System.Drawing.Size(117, 13);
+            this.PanelRE_LB_StudentLocationLabel.TabIndex = 15;
+            this.PanelRE_LB_StudentLocationLabel.Text = "Student ZUYD location";
+            this.PanelRE_LB_StudentLocationLabel.Visible = false;
+            // 
+            // PanelRE_BT_RegisterSave
+            // 
+            this.PanelRE_BT_RegisterSave.Location = new System.Drawing.Point(915, 852);
+            this.PanelRE_BT_RegisterSave.Name = "PanelRE_BT_RegisterSave";
+            this.PanelRE_BT_RegisterSave.Size = new System.Drawing.Size(149, 33);
+            this.PanelRE_BT_RegisterSave.TabIndex = 16;
+            this.PanelRE_BT_RegisterSave.Text = "Save";
+            this.PanelRE_BT_RegisterSave.UseVisualStyleBackColor = true;
+            this.PanelRE_BT_RegisterSave.Visible = false;
+            this.PanelRE_BT_RegisterSave.Click += new System.EventHandler(this.PanelRE_BT_RegisterSave_Click);
+            // 
+            // PanelRE_CMB_RegisterStudentCourse
+            // 
+            this.PanelRE_CMB_RegisterStudentCourse.FormattingEnabled = true;
+            this.PanelRE_CMB_RegisterStudentCourse.Items.AddRange(new object[] {
+            "HBO-ICT"});
+            this.PanelRE_CMB_RegisterStudentCourse.Location = new System.Drawing.Point(801, 705);
+            this.PanelRE_CMB_RegisterStudentCourse.Name = "PanelRE_CMB_RegisterStudentCourse";
+            this.PanelRE_CMB_RegisterStudentCourse.Size = new System.Drawing.Size(378, 21);
+            this.PanelRE_CMB_RegisterStudentCourse.TabIndex = 17;
+            this.PanelRE_CMB_RegisterStudentCourse.Visible = false;
+            this.PanelRE_CMB_RegisterStudentCourse.Click += new System.EventHandler(this.PanelRE_CMB_RegisterStudentCourse_Click);
+            // 
+            // PanelRE_LB_StudentCourseLabel
+            // 
+            this.PanelRE_LB_StudentCourseLabel.AutoSize = true;
+            this.PanelRE_LB_StudentCourseLabel.Location = new System.Drawing.Point(643, 710);
+            this.PanelRE_LB_StudentCourseLabel.Name = "PanelRE_LB_StudentCourseLabel";
+            this.PanelRE_LB_StudentCourseLabel.Size = new System.Drawing.Size(79, 13);
+            this.PanelRE_LB_StudentCourseLabel.TabIndex = 18;
+            this.PanelRE_LB_StudentCourseLabel.Text = "Student course";
+            this.PanelRE_LB_StudentCourseLabel.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentStreet
+            // 
+            this.PanelRE_TB_RegisterStudentStreet.Location = new System.Drawing.Point(801, 456);
+            this.PanelRE_TB_RegisterStudentStreet.Name = "PanelRE_TB_RegisterStudentStreet";
+            this.PanelRE_TB_RegisterStudentStreet.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentStreet.TabIndex = 19;
+            this.PanelRE_TB_RegisterStudentStreet.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentPostalcode
+            // 
+            this.PanelRE_TB_RegisterStudentPostalcode.Location = new System.Drawing.Point(801, 605);
+            this.PanelRE_TB_RegisterStudentPostalcode.Name = "PanelRE_TB_RegisterStudentPostalcode";
+            this.PanelRE_TB_RegisterStudentPostalcode.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentPostalcode.TabIndex = 20;
+            this.PanelRE_TB_RegisterStudentPostalcode.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentCity
+            // 
+            this.PanelRE_TB_RegisterStudentCity.Location = new System.Drawing.Point(801, 505);
+            this.PanelRE_TB_RegisterStudentCity.Name = "PanelRE_TB_RegisterStudentCity";
+            this.PanelRE_TB_RegisterStudentCity.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentCity.TabIndex = 21;
+            this.PanelRE_TB_RegisterStudentCity.Visible = false;
+            // 
+            // PanelRE_TB_RegisterStudentUnitNumber
+            // 
+            this.PanelRE_TB_RegisterStudentUnitNumber.Location = new System.Drawing.Point(801, 556);
+            this.PanelRE_TB_RegisterStudentUnitNumber.Name = "PanelRE_TB_RegisterStudentUnitNumber";
+            this.PanelRE_TB_RegisterStudentUnitNumber.Size = new System.Drawing.Size(378, 20);
+            this.PanelRE_TB_RegisterStudentUnitNumber.TabIndex = 22;
+            this.PanelRE_TB_RegisterStudentUnitNumber.Visible = false;
+            // 
+            // PanelRE_LB_StudentStreetLabel
+            // 
+            this.PanelRE_LB_StudentStreetLabel.AutoSize = true;
+            this.PanelRE_LB_StudentStreetLabel.Location = new System.Drawing.Point(643, 459);
+            this.PanelRE_LB_StudentStreetLabel.Name = "PanelRE_LB_StudentStreetLabel";
+            this.PanelRE_LB_StudentStreetLabel.Size = new System.Drawing.Size(73, 13);
+            this.PanelRE_LB_StudentStreetLabel.TabIndex = 23;
+            this.PanelRE_LB_StudentStreetLabel.Text = "Student street";
+            this.PanelRE_LB_StudentStreetLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentCityLabel
+            // 
+            this.PanelRE_LB_StudentCityLabel.AutoSize = true;
+            this.PanelRE_LB_StudentCityLabel.Location = new System.Drawing.Point(643, 508);
+            this.PanelRE_LB_StudentCityLabel.Name = "PanelRE_LB_StudentCityLabel";
+            this.PanelRE_LB_StudentCityLabel.Size = new System.Drawing.Size(63, 13);
+            this.PanelRE_LB_StudentCityLabel.TabIndex = 24;
+            this.PanelRE_LB_StudentCityLabel.Text = "Student city";
+            this.PanelRE_LB_StudentCityLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentUnitNumberLabel
+            // 
+            this.PanelRE_LB_StudentUnitNumberLabel.AutoSize = true;
+            this.PanelRE_LB_StudentUnitNumberLabel.Location = new System.Drawing.Point(643, 559);
+            this.PanelRE_LB_StudentUnitNumberLabel.Name = "PanelRE_LB_StudentUnitNumberLabel";
+            this.PanelRE_LB_StudentUnitNumberLabel.Size = new System.Drawing.Size(102, 13);
+            this.PanelRE_LB_StudentUnitNumberLabel.TabIndex = 25;
+            this.PanelRE_LB_StudentUnitNumberLabel.Text = "Student unit number";
+            this.PanelRE_LB_StudentUnitNumberLabel.Visible = false;
+            // 
+            // PanelRE_LB_StudentPostalcodeLabel
+            // 
+            this.PanelRE_LB_StudentPostalcodeLabel.AutoSize = true;
+            this.PanelRE_LB_StudentPostalcodeLabel.Location = new System.Drawing.Point(643, 612);
+            this.PanelRE_LB_StudentPostalcodeLabel.Name = "PanelRE_LB_StudentPostalcodeLabel";
+            this.PanelRE_LB_StudentPostalcodeLabel.Size = new System.Drawing.Size(99, 13);
+            this.PanelRE_LB_StudentPostalcodeLabel.TabIndex = 26;
+            this.PanelRE_LB_StudentPostalcodeLabel.Text = "Student postalcode";
+            this.PanelRE_LB_StudentPostalcodeLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PanelRE_PA_RegistryBG);
+            this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.FLMpanel);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
-            this.Controls.Add(this.Login_Panel);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -890,6 +1212,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            this.PanelRE_PA_RegistryBG.ResumeLayout(false);
+            this.PanelRE_PA_RegistryBG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
             this.ResumeLayout(false);
 
@@ -958,6 +1282,33 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
+        private System.Windows.Forms.Panel PanelRE_PA_RegistryBG;
+        private System.Windows.Forms.Button PanelRE_BT_RegisterAccountButton;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentName;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPhonenumber;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentEmail;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentSurname;
+        private System.Windows.Forms.Label PanelRE_LB_StudentSurnameLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentNameLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentEmailLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentPhoneNumberLabel;
+        private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentGender;
+        private System.Windows.Forms.Label PanelRE_LB_StudentGenderLabel;
+        private System.Windows.Forms.TextBox PanelRE_LB_RegisterStudentNumber;
+        private System.Windows.Forms.Label PanelRE_LB_StudentNumberLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentLocationLabel;
+        private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentLocation;
+        private System.Windows.Forms.Button PanelRE_BT_RegisterSave;
+        private System.Windows.Forms.Label PanelRE_LB_StudentCourseLabel;
+        private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentCourse;
+        private System.Windows.Forms.Label PanelRE_LB_StudentPostalcodeLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentUnitNumberLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentCityLabel;
+        private System.Windows.Forms.Label PanelRE_LB_StudentStreetLabel;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentUnitNumber;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentCity;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPostalcode;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentStreet;
     }
 }
 
