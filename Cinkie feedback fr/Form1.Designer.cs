@@ -87,9 +87,10 @@
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
+            this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
+            this.PanelRE_BT_RegisterAccountButton = new System.Windows.Forms.Button();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
-            this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
+            this.PanelRE_PA_RegistryBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -763,7 +765,6 @@
             // Login_Panel
             // 
             this.Login_Panel.BackColor = System.Drawing.Color.Silver;
-            this.Login_Panel.Controls.Add(this.PanelRE_PA_RegistryBG);
             this.Login_Panel.Controls.Add(this.LoginPanel_LB_Coeus);
             this.Login_Panel.Controls.Add(this.PanelLogin_BT_Login);
             this.Login_Panel.Controls.Add(this.PanelLogin_LLB_PasswordFOR);
@@ -855,6 +856,25 @@
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
+            // PanelRE_PA_RegistryBG
+            // 
+            this.PanelRE_PA_RegistryBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_BT_RegisterAccountButton);
+            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(3, 3);
+            this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
+            this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelRE_PA_RegistryBG.TabIndex = 7;
+            // 
+            // PanelRE_BT_RegisterAccountButton
+            // 
+            this.PanelRE_BT_RegisterAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelRE_BT_RegisterAccountButton.Location = new System.Drawing.Point(768, 345);
+            this.PanelRE_BT_RegisterAccountButton.Name = "PanelRE_BT_RegisterAccountButton";
+            this.PanelRE_BT_RegisterAccountButton.Size = new System.Drawing.Size(378, 235);
+            this.PanelRE_BT_RegisterAccountButton.TabIndex = 0;
+            this.PanelRE_BT_RegisterAccountButton.Text = "Register Account!";
+            this.PanelRE_BT_RegisterAccountButton.UseVisualStyleBackColor = true;
+            // 
             // DigitalClockTimer
             // 
             this.DigitalClockTimer.Enabled = true;
@@ -868,18 +888,12 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
-            // PanelRE_PA_RegistryBG
-            // 
-            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(3, 3);
-            this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
-            this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
-            this.PanelRE_PA_RegistryBG.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PanelRE_PA_RegistryBG);
             this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.FLMpanel);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
@@ -899,6 +913,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            this.PanelRE_PA_RegistryBG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
             this.ResumeLayout(false);
 
@@ -968,6 +983,7 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
         private System.Windows.Forms.Panel PanelRE_PA_RegistryBG;
+        private System.Windows.Forms.Button PanelRE_BT_RegisterAccountButton;
     }
 }
 
