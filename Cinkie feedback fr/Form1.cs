@@ -127,6 +127,7 @@ namespace Cinkie_feedback_fr
             PanelRE_CMB_RegisterStudentGender.Show();
             PanelRE_TB_RegisterStudentEmail.Show();
             PanelRE_LB_RegisterStudentNumber.Show();
+            PanelRE_CMB_RegisterStudentCourse.Show();
             PanelRE_CMB_RegisterStudentLocation.Show();
             PanelRE_TB_RegisterStudentPhonenumber.Show();
             PanelRE_BT_RegisterSave.Show();
@@ -136,6 +137,7 @@ namespace Cinkie_feedback_fr
             PanelRE_LB_StudentGenderLabel.Show();
             PanelRE_LB_StudentEmailLabel.Show();
             PanelRE_LB_StudentNumberLabel.Show();
+            PanelRE_LB_StudentCourseLabel.Show();
             PanelRE_LB_StudentLocationLabel.Show();
             PanelRE_LB_StudentPhoneNumberLabel.Show();
             PanelRE_LB_StudentLocationLabel.Show();
@@ -156,6 +158,11 @@ namespace Cinkie_feedback_fr
         {
             PanelRE_PA_RegistryBG.Hide();
             Login_Panel.Show();
+        }
+
+        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
         }
     }
 }
