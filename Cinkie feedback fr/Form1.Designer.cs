@@ -89,9 +89,23 @@
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.FLMpbox = new System.Windows.Forms.PictureBox();
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal = new System.Windows.Forms.Panel();
+            this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Tuesday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Wednesday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Thursday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Saturday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Sunday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_ShowAll = new System.Windows.Forms.Button();
+            this.WeeklyGoals_TB_FillInWeeklyGoal = new System.Windows.Forms.TextBox();
+            this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
+            this.PanelWG_PA_WeeklyGoalsBackground.SuspendLayout();
             this.panelDA_PA_NotificationsPanel.SuspendLayout();
             this.PanelDA_PB_ScoreBoardPanel.SuspendLayout();
             this.panelDA_PA_DailyTasksPanel.SuspendLayout();
@@ -101,6 +115,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FLMpanel
@@ -112,10 +128,10 @@
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_WeeklyGoalsButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
-            this.FLMpanel.Location = new System.Drawing.Point(1, 10);
-            this.FLMpanel.Margin = new System.Windows.Forms.Padding(2);
+            this.FLMpanel.Location = new System.Drawing.Point(1, 12);
+            this.FLMpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FLMpanel.Name = "FLMpanel";
-            this.FLMpanel.Size = new System.Drawing.Size(126, 764);
+            this.FLMpanel.Size = new System.Drawing.Size(167, 939);
             this.FLMpanel.TabIndex = 0;
             // 
             // PanelFLM_BT_LogoutButton
@@ -126,10 +142,10 @@
             this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
-            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-3, 854);
+            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
-            this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(164, 78);
             this.PanelFLM_BT_LogoutButton.TabIndex = 4;
             this.PanelFLM_BT_LogoutButton.Text = "Logout";
             this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
@@ -143,10 +159,10 @@
             this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PanelFLM_BT_ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_ProgressButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 350);
+            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFLM_BT_ProgressButton.Name = "PanelFLM_BT_ProgressButton";
-            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(164, 78);
             this.PanelFLM_BT_ProgressButton.TabIndex = 3;
             this.PanelFLM_BT_ProgressButton.Text = "Progress";
             this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
@@ -159,10 +175,10 @@
             this.PanelFLM_BT_WeeklyGoalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PanelFLM_BT_WeeklyGoalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_WeeklyGoalsButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_WeeklyGoalsButton.Location = new System.Drawing.Point(0, 200);
-            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_WeeklyGoalsButton.Location = new System.Drawing.Point(0, 246);
+            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFLM_BT_WeeklyGoalsButton.Name = "PanelFLM_BT_WeeklyGoalsButton";
-            this.PanelFLM_BT_WeeklyGoalsButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_WeeklyGoalsButton.Size = new System.Drawing.Size(164, 78);
             this.PanelFLM_BT_WeeklyGoalsButton.TabIndex = 2;
             this.PanelFLM_BT_WeeklyGoalsButton.Text = "Weekly Goals";
             this.PanelFLM_BT_WeeklyGoalsButton.UseVisualStyleBackColor = true;
@@ -178,10 +194,10 @@
             this.PanelFLM_BT_DashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_DashboardButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 110);
-            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 135);
+            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFLM_BT_DashboardButton.Name = "PanelFLM_BT_DashboardButton";
-            this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(164, 78);
             this.PanelFLM_BT_DashboardButton.TabIndex = 1;
             this.PanelFLM_BT_DashboardButton.Text = "Dashboard";
             this.PanelFLM_BT_DashboardButton.UseVisualStyleBackColor = false;
@@ -190,10 +206,10 @@
             // FLMpanelZUYD
             // 
             this.FLMpanelZUYD.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYD1;
-            this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
-            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
+            this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 12);
+            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FLMpanelZUYD.Name = "FLMpanelZUYD";
-            this.FLMpanelZUYD.Size = new System.Drawing.Size(123, 89);
+            this.FLMpanelZUYD.Size = new System.Drawing.Size(164, 110);
             this.FLMpanelZUYD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.FLMpanelZUYD.TabIndex = 0;
             this.FLMpanelZUYD.TabStop = false;
@@ -212,9 +228,9 @@
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_UserInfoPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.BGflmPull);
             this.PanelDA_PA_DashBoardBackground.Location = new System.Drawing.Point(1, 0);
-            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelDA_PA_DashBoardBackground.Name = "PanelDA_PA_DashBoardBackground";
-            this.PanelDA_PA_DashBoardBackground.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelDA_PA_DashBoardBackground.Size = new System.Drawing.Size(2560, 1329);
             this.PanelDA_PA_DashBoardBackground.TabIndex = 0;
             // 
             // PanelWG_PA_WeeklyGoalsBackground
@@ -222,9 +238,11 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWeeklyGoals_PN_CompleteWeeklyGoal);
             this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(-1, 0);
+            this.PanelWG_PA_WeeklyGoalsBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
-            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(2560, 1329);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
             // panelDA_PA_NotificationsPanel
@@ -234,18 +252,20 @@
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsNotification2);
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsNotification1);
             this.panelDA_PA_NotificationsPanel.Controls.Add(this.panelDA_PA_NotificationsTitleLabel);
-            this.panelDA_PA_NotificationsPanel.Location = new System.Drawing.Point(1719, 10);
+            this.panelDA_PA_NotificationsPanel.Location = new System.Drawing.Point(2292, 12);
+            this.panelDA_PA_NotificationsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDA_PA_NotificationsPanel.Name = "panelDA_PA_NotificationsPanel";
-            this.panelDA_PA_NotificationsPanel.Size = new System.Drawing.Size(186, 764);
+            this.panelDA_PA_NotificationsPanel.Size = new System.Drawing.Size(248, 940);
             this.panelDA_PA_NotificationsPanel.TabIndex = 7;
             // 
             // panelDA_PA_NotificationsNotification3
             // 
             this.panelDA_PA_NotificationsNotification3.BackColor = System.Drawing.Color.White;
             this.panelDA_PA_NotificationsNotification3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDA_PA_NotificationsNotification3.Location = new System.Drawing.Point(3, 139);
+            this.panelDA_PA_NotificationsNotification3.Location = new System.Drawing.Point(4, 171);
+            this.panelDA_PA_NotificationsNotification3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDA_PA_NotificationsNotification3.Name = "panelDA_PA_NotificationsNotification3";
-            this.panelDA_PA_NotificationsNotification3.Size = new System.Drawing.Size(179, 27);
+            this.panelDA_PA_NotificationsNotification3.Size = new System.Drawing.Size(239, 33);
             this.panelDA_PA_NotificationsNotification3.TabIndex = 3;
             this.panelDA_PA_NotificationsNotification3.Text = "Notification 3";
             this.panelDA_PA_NotificationsNotification3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,9 +274,10 @@
             // 
             this.panelDA_PA_NotificationsNotification2.BackColor = System.Drawing.Color.White;
             this.panelDA_PA_NotificationsNotification2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDA_PA_NotificationsNotification2.Location = new System.Drawing.Point(3, 95);
+            this.panelDA_PA_NotificationsNotification2.Location = new System.Drawing.Point(4, 117);
+            this.panelDA_PA_NotificationsNotification2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDA_PA_NotificationsNotification2.Name = "panelDA_PA_NotificationsNotification2";
-            this.panelDA_PA_NotificationsNotification2.Size = new System.Drawing.Size(179, 27);
+            this.panelDA_PA_NotificationsNotification2.Size = new System.Drawing.Size(239, 33);
             this.panelDA_PA_NotificationsNotification2.TabIndex = 2;
             this.panelDA_PA_NotificationsNotification2.Text = "Notification 2";
             this.panelDA_PA_NotificationsNotification2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,9 +286,10 @@
             // 
             this.panelDA_PA_NotificationsNotification1.BackColor = System.Drawing.Color.White;
             this.panelDA_PA_NotificationsNotification1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDA_PA_NotificationsNotification1.Location = new System.Drawing.Point(3, 51);
+            this.panelDA_PA_NotificationsNotification1.Location = new System.Drawing.Point(4, 63);
+            this.panelDA_PA_NotificationsNotification1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDA_PA_NotificationsNotification1.Name = "panelDA_PA_NotificationsNotification1";
-            this.panelDA_PA_NotificationsNotification1.Size = new System.Drawing.Size(179, 27);
+            this.panelDA_PA_NotificationsNotification1.Size = new System.Drawing.Size(239, 33);
             this.panelDA_PA_NotificationsNotification1.TabIndex = 1;
             this.panelDA_PA_NotificationsNotification1.Text = "Notification 1";
             this.panelDA_PA_NotificationsNotification1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,8 +300,9 @@
             this.panelDA_PA_NotificationsTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDA_PA_NotificationsTitleLabel.ForeColor = System.Drawing.Color.White;
             this.panelDA_PA_NotificationsTitleLabel.Location = new System.Drawing.Point(0, 0);
+            this.panelDA_PA_NotificationsTitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.panelDA_PA_NotificationsTitleLabel.Name = "panelDA_PA_NotificationsTitleLabel";
-            this.panelDA_PA_NotificationsTitleLabel.Size = new System.Drawing.Size(186, 35);
+            this.panelDA_PA_NotificationsTitleLabel.Size = new System.Drawing.Size(248, 43);
             this.panelDA_PA_NotificationsTitleLabel.TabIndex = 0;
             this.panelDA_PA_NotificationsTitleLabel.Text = "Notifications";
             this.panelDA_PA_NotificationsTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,10 +311,9 @@
             // 
             this.PanelDA_LA_TasksExpPercentage.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LA_TasksExpPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LA_TasksExpPercentage.Location = new System.Drawing.Point(1441, 373);
-            this.PanelDA_LA_TasksExpPercentage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_TasksExpPercentage.Location = new System.Drawing.Point(1921, 459);
             this.PanelDA_LA_TasksExpPercentage.Name = "PanelDA_LA_TasksExpPercentage";
-            this.PanelDA_LA_TasksExpPercentage.Size = new System.Drawing.Size(75, 19);
+            this.PanelDA_LA_TasksExpPercentage.Size = new System.Drawing.Size(100, 23);
             this.PanelDA_LA_TasksExpPercentage.TabIndex = 6;
             this.PanelDA_LA_TasksExpPercentage.Text = "EXP%";
             this.PanelDA_LA_TasksExpPercentage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,10 +321,9 @@
             // PanelDA_LA_TasksExpBar
             // 
             this.PanelDA_LA_TasksExpBar.BackColor = System.Drawing.Color.LimeGreen;
-            this.PanelDA_LA_TasksExpBar.Location = new System.Drawing.Point(1113, 373);
-            this.PanelDA_LA_TasksExpBar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_TasksExpBar.Location = new System.Drawing.Point(1484, 459);
             this.PanelDA_LA_TasksExpBar.Name = "PanelDA_LA_TasksExpBar";
-            this.PanelDA_LA_TasksExpBar.Size = new System.Drawing.Size(403, 19);
+            this.PanelDA_LA_TasksExpBar.Size = new System.Drawing.Size(537, 23);
             this.PanelDA_LA_TasksExpBar.TabIndex = 5;
             // 
             // PanelDA_PB_ScoreBoardPanel
@@ -317,20 +338,19 @@
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardTime);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardDate);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LB_ScoreboardScoreboard);
-            this.PanelDA_PB_ScoreBoardPanel.Location = new System.Drawing.Point(1113, 417);
-            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PB_ScoreBoardPanel.Location = new System.Drawing.Point(1484, 513);
+            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelDA_PB_ScoreBoardPanel.Name = "PanelDA_PB_ScoreBoardPanel";
-            this.PanelDA_PB_ScoreBoardPanel.Size = new System.Drawing.Size(403, 379);
+            this.PanelDA_PB_ScoreBoardPanel.Size = new System.Drawing.Size(537, 466);
             this.PanelDA_PB_ScoreBoardPanel.TabIndex = 4;
             // 
             // PanelDA_PB_ScoreBoardPercentage3
             // 
             this.PanelDA_PB_ScoreBoardPercentage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardPercentage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardPercentage3.Location = new System.Drawing.Point(314, 205);
-            this.PanelDA_PB_ScoreBoardPercentage3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage3.Location = new System.Drawing.Point(419, 252);
             this.PanelDA_PB_ScoreBoardPercentage3.Name = "PanelDA_PB_ScoreBoardPercentage3";
-            this.PanelDA_PB_ScoreBoardPercentage3.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage3.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_PB_ScoreBoardPercentage3.TabIndex = 17;
             this.PanelDA_PB_ScoreBoardPercentage3.Text = "55%";
             this.PanelDA_PB_ScoreBoardPercentage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,10 +359,9 @@
             // 
             this.PanelDA_PB_ScoreBoardPercentage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardPercentage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardPercentage2.Location = new System.Drawing.Point(314, 135);
-            this.PanelDA_PB_ScoreBoardPercentage2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage2.Location = new System.Drawing.Point(419, 166);
             this.PanelDA_PB_ScoreBoardPercentage2.Name = "PanelDA_PB_ScoreBoardPercentage2";
-            this.PanelDA_PB_ScoreBoardPercentage2.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage2.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_PB_ScoreBoardPercentage2.TabIndex = 16;
             this.PanelDA_PB_ScoreBoardPercentage2.Text = "65%";
             this.PanelDA_PB_ScoreBoardPercentage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,10 +370,9 @@
             // 
             this.PanelDA_PB_ScoreBoardPercentage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardPercentage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardPercentage1.Location = new System.Drawing.Point(314, 70);
-            this.PanelDA_PB_ScoreBoardPercentage1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardPercentage1.Location = new System.Drawing.Point(419, 86);
             this.PanelDA_PB_ScoreBoardPercentage1.Name = "PanelDA_PB_ScoreBoardPercentage1";
-            this.PanelDA_PB_ScoreBoardPercentage1.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_PB_ScoreBoardPercentage1.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_PB_ScoreBoardPercentage1.TabIndex = 6;
             this.PanelDA_PB_ScoreBoardPercentage1.Text = "75%";
             this.PanelDA_PB_ScoreBoardPercentage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,10 +381,9 @@
             // 
             this.PanelDA_PB_ScoreBoardUserName3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardUserName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardUserName3.Location = new System.Drawing.Point(49, 205);
-            this.PanelDA_PB_ScoreBoardUserName3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName3.Location = new System.Drawing.Point(65, 252);
             this.PanelDA_PB_ScoreBoardUserName3.Name = "PanelDA_PB_ScoreBoardUserName3";
-            this.PanelDA_PB_ScoreBoardUserName3.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName3.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_PB_ScoreBoardUserName3.TabIndex = 15;
             this.PanelDA_PB_ScoreBoardUserName3.Text = "Rachel";
             this.PanelDA_PB_ScoreBoardUserName3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,10 +392,9 @@
             // 
             this.PanelDA_PB_ScoreBoardUserName2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardUserName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardUserName2.Location = new System.Drawing.Point(49, 135);
-            this.PanelDA_PB_ScoreBoardUserName2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName2.Location = new System.Drawing.Point(65, 166);
             this.PanelDA_PB_ScoreBoardUserName2.Name = "PanelDA_PB_ScoreBoardUserName2";
-            this.PanelDA_PB_ScoreBoardUserName2.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName2.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_PB_ScoreBoardUserName2.TabIndex = 14;
             this.PanelDA_PB_ScoreBoardUserName2.Text = "Noah";
             this.PanelDA_PB_ScoreBoardUserName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -387,10 +403,9 @@
             // 
             this.PanelDA_PB_ScoreBoardUserName1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_PB_ScoreBoardUserName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_PB_ScoreBoardUserName1.Location = new System.Drawing.Point(49, 70);
-            this.PanelDA_PB_ScoreBoardUserName1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_PB_ScoreBoardUserName1.Location = new System.Drawing.Point(65, 86);
             this.PanelDA_PB_ScoreBoardUserName1.Name = "PanelDA_PB_ScoreBoardUserName1";
-            this.PanelDA_PB_ScoreBoardUserName1.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_PB_ScoreBoardUserName1.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_PB_ScoreBoardUserName1.TabIndex = 6;
             this.PanelDA_PB_ScoreBoardUserName1.Text = "Levi";
             this.PanelDA_PB_ScoreBoardUserName1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,10 +415,9 @@
             this.PanelDA_LA_ScoreboardTime.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LA_ScoreboardTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LA_ScoreboardTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LA_ScoreboardTime.Location = new System.Drawing.Point(233, 347);
-            this.PanelDA_LA_ScoreboardTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_ScoreboardTime.Location = new System.Drawing.Point(311, 427);
             this.PanelDA_LA_ScoreboardTime.Name = "PanelDA_LA_ScoreboardTime";
-            this.PanelDA_LA_ScoreboardTime.Size = new System.Drawing.Size(170, 33);
+            this.PanelDA_LA_ScoreboardTime.Size = new System.Drawing.Size(226, 40);
             this.PanelDA_LA_ScoreboardTime.TabIndex = 13;
             this.PanelDA_LA_ScoreboardTime.Text = "Time: 0:0";
             this.PanelDA_LA_ScoreboardTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,10 +427,9 @@
             this.PanelDA_LA_ScoreboardDate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LA_ScoreboardDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LA_ScoreboardDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LA_ScoreboardDate.Location = new System.Drawing.Point(0, 347);
-            this.PanelDA_LA_ScoreboardDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_ScoreboardDate.Location = new System.Drawing.Point(0, 427);
             this.PanelDA_LA_ScoreboardDate.Name = "PanelDA_LA_ScoreboardDate";
-            this.PanelDA_LA_ScoreboardDate.Size = new System.Drawing.Size(170, 33);
+            this.PanelDA_LA_ScoreboardDate.Size = new System.Drawing.Size(226, 40);
             this.PanelDA_LA_ScoreboardDate.TabIndex = 12;
             this.PanelDA_LA_ScoreboardDate.Text = "Date: 0/0/0";
             this.PanelDA_LA_ScoreboardDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,9 +440,8 @@
             this.PanelDA_LB_ScoreboardScoreboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_ScoreboardScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelDA_LB_ScoreboardScoreboard.Location = new System.Drawing.Point(0, 0);
-            this.PanelDA_LB_ScoreboardScoreboard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PanelDA_LB_ScoreboardScoreboard.Name = "PanelDA_LB_ScoreboardScoreboard";
-            this.PanelDA_LB_ScoreboardScoreboard.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_ScoreboardScoreboard.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_ScoreboardScoreboard.TabIndex = 11;
             this.PanelDA_LB_ScoreboardScoreboard.Text = "Scoreboard:";
             this.PanelDA_LB_ScoreboardScoreboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,10 +460,10 @@
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksTask2);
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksTask1);
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksDailyTasks);
-            this.panelDA_PA_DailyTasksPanel.Location = new System.Drawing.Point(364, 418);
-            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDA_PA_DailyTasksPanel.Location = new System.Drawing.Point(485, 514);
+            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDA_PA_DailyTasksPanel.Name = "panelDA_PA_DailyTasksPanel";
-            this.panelDA_PA_DailyTasksPanel.Size = new System.Drawing.Size(403, 379);
+            this.panelDA_PA_DailyTasksPanel.Size = new System.Drawing.Size(537, 466);
             this.panelDA_PA_DailyTasksPanel.TabIndex = 3;
             // 
             // PanelDA_LA_DailyTasksTask10
@@ -459,10 +471,9 @@
             this.PanelDA_LA_DailyTasksTask10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LA_DailyTasksTask10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LA_DailyTasksTask10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LA_DailyTasksTask10.Location = new System.Drawing.Point(0, 325);
-            this.PanelDA_LA_DailyTasksTask10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LA_DailyTasksTask10.Location = new System.Drawing.Point(0, 400);
             this.PanelDA_LA_DailyTasksTask10.Name = "PanelDA_LA_DailyTasksTask10";
-            this.PanelDA_LA_DailyTasksTask10.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LA_DailyTasksTask10.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LA_DailyTasksTask10.TabIndex = 10;
             this.PanelDA_LA_DailyTasksTask10.Text = "DO SOMETHING";
             this.PanelDA_LA_DailyTasksTask10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,10 +483,9 @@
             this.PanelDA_LB_DailyTasksTask9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask9.Location = new System.Drawing.Point(0, 292);
-            this.PanelDA_LB_DailyTasksTask9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask9.Location = new System.Drawing.Point(0, 359);
             this.PanelDA_LB_DailyTasksTask9.Name = "PanelDA_LB_DailyTasksTask9";
-            this.PanelDA_LB_DailyTasksTask9.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask9.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask9.TabIndex = 9;
             this.PanelDA_LB_DailyTasksTask9.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -485,10 +495,9 @@
             this.PanelDA_LB_DailyTasksTask8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask8.Location = new System.Drawing.Point(0, 260);
-            this.PanelDA_LB_DailyTasksTask8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask8.Location = new System.Drawing.Point(0, 320);
             this.PanelDA_LB_DailyTasksTask8.Name = "PanelDA_LB_DailyTasksTask8";
-            this.PanelDA_LB_DailyTasksTask8.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask8.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask8.TabIndex = 8;
             this.PanelDA_LB_DailyTasksTask8.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -498,10 +507,9 @@
             this.PanelDA_LB_DailyTasksTask7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask7.Location = new System.Drawing.Point(0, 228);
-            this.PanelDA_LB_DailyTasksTask7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask7.Location = new System.Drawing.Point(0, 281);
             this.PanelDA_LB_DailyTasksTask7.Name = "PanelDA_LB_DailyTasksTask7";
-            this.PanelDA_LB_DailyTasksTask7.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask7.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask7.TabIndex = 7;
             this.PanelDA_LB_DailyTasksTask7.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -511,10 +519,9 @@
             this.PanelDA_LB_DailyTasksTask6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask6.Location = new System.Drawing.Point(0, 195);
-            this.PanelDA_LB_DailyTasksTask6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask6.Location = new System.Drawing.Point(0, 240);
             this.PanelDA_LB_DailyTasksTask6.Name = "PanelDA_LB_DailyTasksTask6";
-            this.PanelDA_LB_DailyTasksTask6.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask6.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask6.TabIndex = 6;
             this.PanelDA_LB_DailyTasksTask6.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,10 +531,9 @@
             this.PanelDA_LB_DailyTasksTask5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask5.Location = new System.Drawing.Point(0, 162);
-            this.PanelDA_LB_DailyTasksTask5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask5.Location = new System.Drawing.Point(0, 199);
             this.PanelDA_LB_DailyTasksTask5.Name = "PanelDA_LB_DailyTasksTask5";
-            this.PanelDA_LB_DailyTasksTask5.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask5.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask5.TabIndex = 5;
             this.PanelDA_LB_DailyTasksTask5.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -537,10 +543,9 @@
             this.PanelDA_LB_DailyTasksTask4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask4.Location = new System.Drawing.Point(0, 130);
-            this.PanelDA_LB_DailyTasksTask4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask4.Location = new System.Drawing.Point(0, 160);
             this.PanelDA_LB_DailyTasksTask4.Name = "PanelDA_LB_DailyTasksTask4";
-            this.PanelDA_LB_DailyTasksTask4.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask4.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask4.TabIndex = 4;
             this.PanelDA_LB_DailyTasksTask4.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -550,10 +555,9 @@
             this.PanelDA_LB_DailyTasksTask3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask3.Location = new System.Drawing.Point(0, 98);
-            this.PanelDA_LB_DailyTasksTask3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask3.Location = new System.Drawing.Point(0, 121);
             this.PanelDA_LB_DailyTasksTask3.Name = "PanelDA_LB_DailyTasksTask3";
-            this.PanelDA_LB_DailyTasksTask3.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask3.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask3.TabIndex = 3;
             this.PanelDA_LB_DailyTasksTask3.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -563,10 +567,9 @@
             this.PanelDA_LB_DailyTasksTask2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask2.Location = new System.Drawing.Point(0, 65);
-            this.PanelDA_LB_DailyTasksTask2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask2.Location = new System.Drawing.Point(0, 80);
             this.PanelDA_LB_DailyTasksTask2.Name = "PanelDA_LB_DailyTasksTask2";
-            this.PanelDA_LB_DailyTasksTask2.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask2.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask2.TabIndex = 2;
             this.PanelDA_LB_DailyTasksTask2.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -576,10 +579,9 @@
             this.PanelDA_LB_DailyTasksTask1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_DailyTasksTask1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksTask1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_DailyTasksTask1.Location = new System.Drawing.Point(0, 32);
-            this.PanelDA_LB_DailyTasksTask1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_DailyTasksTask1.Location = new System.Drawing.Point(0, 39);
             this.PanelDA_LB_DailyTasksTask1.Name = "PanelDA_LB_DailyTasksTask1";
-            this.PanelDA_LB_DailyTasksTask1.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksTask1.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksTask1.TabIndex = 1;
             this.PanelDA_LB_DailyTasksTask1.Text = "DO SOMETHING";
             this.PanelDA_LB_DailyTasksTask1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -590,9 +592,8 @@
             this.PanelDA_LB_DailyTasksDailyTasks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelDA_LB_DailyTasksDailyTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelDA_LB_DailyTasksDailyTasks.Location = new System.Drawing.Point(0, 0);
-            this.PanelDA_LB_DailyTasksDailyTasks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PanelDA_LB_DailyTasksDailyTasks.Name = "PanelDA_LB_DailyTasksDailyTasks";
-            this.PanelDA_LB_DailyTasksDailyTasks.Size = new System.Drawing.Size(403, 33);
+            this.PanelDA_LB_DailyTasksDailyTasks.Size = new System.Drawing.Size(537, 40);
             this.PanelDA_LB_DailyTasksDailyTasks.TabIndex = 0;
             this.PanelDA_LB_DailyTasksDailyTasks.Text = "Daily Tasks:";
             this.PanelDA_LB_DailyTasksDailyTasks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,20 +607,19 @@
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksCompleted);
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksInProgress);
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksTasks);
-            this.PanelDA_PA_ProgressPanel.Location = new System.Drawing.Point(1113, 71);
-            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PA_ProgressPanel.Location = new System.Drawing.Point(1484, 87);
+            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelDA_PA_ProgressPanel.Name = "PanelDA_PA_ProgressPanel";
-            this.PanelDA_PA_ProgressPanel.Size = new System.Drawing.Size(403, 288);
+            this.PanelDA_PA_ProgressPanel.Size = new System.Drawing.Size(537, 354);
             this.PanelDA_PA_ProgressPanel.TabIndex = 2;
             // 
             // PanelDA_LB_TasksCompletedAmount
             // 
             this.PanelDA_LB_TasksCompletedAmount.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksCompletedAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksCompletedAmount.Location = new System.Drawing.Point(314, 188);
-            this.PanelDA_LB_TasksCompletedAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksCompletedAmount.Location = new System.Drawing.Point(419, 231);
             this.PanelDA_LB_TasksCompletedAmount.Name = "PanelDA_LB_TasksCompletedAmount";
-            this.PanelDA_LB_TasksCompletedAmount.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_LB_TasksCompletedAmount.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_LB_TasksCompletedAmount.TabIndex = 5;
             this.PanelDA_LB_TasksCompletedAmount.Text = "7";
             this.PanelDA_LB_TasksCompletedAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -628,10 +628,9 @@
             // 
             this.PanelDA_LB_TasksInProgressAmount.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksInProgressAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksInProgressAmount.Location = new System.Drawing.Point(314, 141);
-            this.PanelDA_LB_TasksInProgressAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksInProgressAmount.Location = new System.Drawing.Point(419, 174);
             this.PanelDA_LB_TasksInProgressAmount.Name = "PanelDA_LB_TasksInProgressAmount";
-            this.PanelDA_LB_TasksInProgressAmount.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_LB_TasksInProgressAmount.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_LB_TasksInProgressAmount.TabIndex = 4;
             this.PanelDA_LB_TasksInProgressAmount.Text = "3";
             this.PanelDA_LB_TasksInProgressAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,10 +639,9 @@
             // 
             this.PanelDA_LB_TasksTasksAmount.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksTasksAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksTasksAmount.Location = new System.Drawing.Point(314, 89);
-            this.PanelDA_LB_TasksTasksAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksTasksAmount.Location = new System.Drawing.Point(419, 110);
             this.PanelDA_LB_TasksTasksAmount.Name = "PanelDA_LB_TasksTasksAmount";
-            this.PanelDA_LB_TasksTasksAmount.Size = new System.Drawing.Size(44, 24);
+            this.PanelDA_LB_TasksTasksAmount.Size = new System.Drawing.Size(59, 30);
             this.PanelDA_LB_TasksTasksAmount.TabIndex = 3;
             this.PanelDA_LB_TasksTasksAmount.Text = "10";
             this.PanelDA_LB_TasksTasksAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,10 +650,9 @@
             // 
             this.PanelDA_LB_TasksCompleted.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksCompleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksCompleted.Location = new System.Drawing.Point(49, 188);
-            this.PanelDA_LB_TasksCompleted.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksCompleted.Location = new System.Drawing.Point(65, 231);
             this.PanelDA_LB_TasksCompleted.Name = "PanelDA_LB_TasksCompleted";
-            this.PanelDA_LB_TasksCompleted.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_LB_TasksCompleted.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_LB_TasksCompleted.TabIndex = 2;
             this.PanelDA_LB_TasksCompleted.Text = "Completed: ";
             this.PanelDA_LB_TasksCompleted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -664,10 +661,9 @@
             // 
             this.PanelDA_LB_TasksInProgress.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksInProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksInProgress.Location = new System.Drawing.Point(49, 141);
-            this.PanelDA_LB_TasksInProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksInProgress.Location = new System.Drawing.Point(65, 174);
             this.PanelDA_LB_TasksInProgress.Name = "PanelDA_LB_TasksInProgress";
-            this.PanelDA_LB_TasksInProgress.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_LB_TasksInProgress.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_LB_TasksInProgress.TabIndex = 1;
             this.PanelDA_LB_TasksInProgress.Text = "In progress:";
             this.PanelDA_LB_TasksInProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -676,10 +672,9 @@
             // 
             this.PanelDA_LB_TasksTasks.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_TasksTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_TasksTasks.Location = new System.Drawing.Point(49, 89);
-            this.PanelDA_LB_TasksTasks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_TasksTasks.Location = new System.Drawing.Point(65, 110);
             this.PanelDA_LB_TasksTasks.Name = "PanelDA_LB_TasksTasks";
-            this.PanelDA_LB_TasksTasks.Size = new System.Drawing.Size(92, 24);
+            this.PanelDA_LB_TasksTasks.Size = new System.Drawing.Size(123, 30);
             this.PanelDA_LB_TasksTasks.TabIndex = 0;
             this.PanelDA_LB_TasksTasks.Text = "Tasks:";
             this.PanelDA_LB_TasksTasks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -691,20 +686,19 @@
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_LB_UserInfoStudentNumber);
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_LB_UserInfoName);
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_PB_UserImage);
-            this.PanelDA_PA_UserInfoPanel.Location = new System.Drawing.Point(364, 82);
-            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PA_UserInfoPanel.Location = new System.Drawing.Point(485, 101);
+            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelDA_PA_UserInfoPanel.Name = "PanelDA_PA_UserInfoPanel";
-            this.PanelDA_PA_UserInfoPanel.Size = new System.Drawing.Size(403, 288);
+            this.PanelDA_PA_UserInfoPanel.Size = new System.Drawing.Size(537, 354);
             this.PanelDA_PA_UserInfoPanel.TabIndex = 1;
             // 
             // PanelDA_LB_UserCourse
             // 
             this.PanelDA_LB_UserCourse.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_UserCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_UserCourse.Location = new System.Drawing.Point(221, 187);
-            this.PanelDA_LB_UserCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_UserCourse.Location = new System.Drawing.Point(295, 230);
             this.PanelDA_LB_UserCourse.Name = "PanelDA_LB_UserCourse";
-            this.PanelDA_LB_UserCourse.Size = new System.Drawing.Size(149, 24);
+            this.PanelDA_LB_UserCourse.Size = new System.Drawing.Size(199, 30);
             this.PanelDA_LB_UserCourse.TabIndex = 3;
             this.PanelDA_LB_UserCourse.Text = "HBO-ICT";
             this.PanelDA_LB_UserCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -714,10 +708,9 @@
             // 
             this.PanelDA_LB_UserInfoStudentNumber.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_UserInfoStudentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_UserInfoStudentNumber.Location = new System.Drawing.Point(221, 137);
-            this.PanelDA_LB_UserInfoStudentNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_UserInfoStudentNumber.Location = new System.Drawing.Point(295, 169);
             this.PanelDA_LB_UserInfoStudentNumber.Name = "PanelDA_LB_UserInfoStudentNumber";
-            this.PanelDA_LB_UserInfoStudentNumber.Size = new System.Drawing.Size(149, 24);
+            this.PanelDA_LB_UserInfoStudentNumber.Size = new System.Drawing.Size(199, 30);
             this.PanelDA_LB_UserInfoStudentNumber.TabIndex = 2;
             this.PanelDA_LB_UserInfoStudentNumber.Text = "2104321";
             this.PanelDA_LB_UserInfoStudentNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -726,10 +719,9 @@
             // 
             this.PanelDA_LB_UserInfoName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDA_LB_UserInfoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelDA_LB_UserInfoName.Location = new System.Drawing.Point(221, 89);
-            this.PanelDA_LB_UserInfoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelDA_LB_UserInfoName.Location = new System.Drawing.Point(295, 110);
             this.PanelDA_LB_UserInfoName.Name = "PanelDA_LB_UserInfoName";
-            this.PanelDA_LB_UserInfoName.Size = new System.Drawing.Size(149, 24);
+            this.PanelDA_LB_UserInfoName.Size = new System.Drawing.Size(199, 30);
             this.PanelDA_LB_UserInfoName.TabIndex = 1;
             this.PanelDA_LB_UserInfoName.Text = "Sol Boomerguy";
             this.PanelDA_LB_UserInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -738,10 +730,10 @@
             // 
             this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
             this.PanelDA_PB_UserImage.Image = global::Cinkie_feedback_fr.Properties.Resources.FcwaHO8aAAEKhqS;
-            this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
-            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(19, 33);
+            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
-            this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(146, 228);
+            this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(195, 281);
             this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PanelDA_PB_UserImage.TabIndex = 0;
             this.PanelDA_PB_UserImage.TabStop = false;
@@ -750,10 +742,10 @@
             // 
             this.BGflmPull.BackColor = System.Drawing.Color.Silver;
             this.BGflmPull.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYDRodeLetters;
-            this.BGflmPull.Location = new System.Drawing.Point(0, 10);
-            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
+            this.BGflmPull.Location = new System.Drawing.Point(0, 12);
+            this.BGflmPull.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BGflmPull.Name = "BGflmPull";
-            this.BGflmPull.Size = new System.Drawing.Size(47, 45);
+            this.BGflmPull.Size = new System.Drawing.Size(63, 55);
             this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BGflmPull.TabIndex = 0;
             this.BGflmPull.TabStop = false;
@@ -770,29 +762,28 @@
             this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
             this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Login_Panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Login_Panel.Name = "Login_Panel";
-            this.Login_Panel.Size = new System.Drawing.Size(1906, 1041);
+            this.Login_Panel.Size = new System.Drawing.Size(2541, 1281);
             this.Login_Panel.TabIndex = 1;
             // 
             // LoginPanel_LB_Coeus
             // 
             this.LoginPanel_LB_Coeus.AutoSize = true;
             this.LoginPanel_LB_Coeus.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPanel_LB_Coeus.Location = new System.Drawing.Point(892, 240);
-            this.LoginPanel_LB_Coeus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginPanel_LB_Coeus.Location = new System.Drawing.Point(1189, 295);
             this.LoginPanel_LB_Coeus.Name = "LoginPanel_LB_Coeus";
-            this.LoginPanel_LB_Coeus.Size = new System.Drawing.Size(106, 36);
+            this.LoginPanel_LB_Coeus.Size = new System.Drawing.Size(132, 42);
             this.LoginPanel_LB_Coeus.TabIndex = 6;
             this.LoginPanel_LB_Coeus.Text = "Coeus";
             // 
             // PanelLogin_BT_Login
             // 
             this.PanelLogin_BT_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_BT_Login.Location = new System.Drawing.Point(830, 715);
-            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_BT_Login.Location = new System.Drawing.Point(1107, 880);
+            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelLogin_BT_Login.Name = "PanelLogin_BT_Login";
-            this.PanelLogin_BT_Login.Size = new System.Drawing.Size(236, 46);
+            this.PanelLogin_BT_Login.Size = new System.Drawing.Size(315, 57);
             this.PanelLogin_BT_Login.TabIndex = 5;
             this.PanelLogin_BT_Login.Text = "Login";
             this.PanelLogin_BT_Login.UseVisualStyleBackColor = true;
@@ -801,10 +792,9 @@
             // PanelLogin_LLB_PasswordFOR
             // 
             this.PanelLogin_LLB_PasswordFOR.AutoSize = true;
-            this.PanelLogin_LLB_PasswordFOR.Location = new System.Drawing.Point(788, 656);
-            this.PanelLogin_LLB_PasswordFOR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelLogin_LLB_PasswordFOR.Location = new System.Drawing.Point(1051, 807);
             this.PanelLogin_LLB_PasswordFOR.Name = "PanelLogin_LLB_PasswordFOR";
-            this.PanelLogin_LLB_PasswordFOR.Size = new System.Drawing.Size(107, 13);
+            this.PanelLogin_LLB_PasswordFOR.Size = new System.Drawing.Size(134, 16);
             this.PanelLogin_LLB_PasswordFOR.TabIndex = 4;
             this.PanelLogin_LLB_PasswordFOR.TabStop = true;
             this.PanelLogin_LLB_PasswordFOR.Text = "Password Forgotten?";
@@ -814,43 +804,41 @@
             // 
             this.LoginPanel_LB_Password.AutoSize = true;
             this.LoginPanel_LB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPanel_LB_Password.Location = new System.Drawing.Point(786, 573);
-            this.LoginPanel_LB_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginPanel_LB_Password.Location = new System.Drawing.Point(1048, 705);
             this.LoginPanel_LB_Password.Name = "LoginPanel_LB_Password";
-            this.LoginPanel_LB_Password.Size = new System.Drawing.Size(78, 20);
+            this.LoginPanel_LB_Password.Size = new System.Drawing.Size(98, 25);
             this.LoginPanel_LB_Password.TabIndex = 3;
             this.LoginPanel_LB_Password.Text = "Password";
             // 
             // PanelLogin_TB_Password
             // 
             this.PanelLogin_TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_TB_Password.Location = new System.Drawing.Point(779, 604);
-            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_TB_Password.Location = new System.Drawing.Point(1039, 743);
+            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelLogin_TB_Password.Multiline = true;
             this.PanelLogin_TB_Password.Name = "PanelLogin_TB_Password";
             this.PanelLogin_TB_Password.PasswordChar = '*';
-            this.PanelLogin_TB_Password.Size = new System.Drawing.Size(337, 33);
+            this.PanelLogin_TB_Password.Size = new System.Drawing.Size(448, 40);
             this.PanelLogin_TB_Password.TabIndex = 2;
             // 
             // PanelLogin_LB_Email
             // 
             this.PanelLogin_LB_Email.AutoSize = true;
             this.PanelLogin_LB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_LB_Email.Location = new System.Drawing.Point(786, 384);
-            this.PanelLogin_LB_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelLogin_LB_Email.Location = new System.Drawing.Point(1048, 473);
             this.PanelLogin_LB_Email.Name = "PanelLogin_LB_Email";
-            this.PanelLogin_LB_Email.Size = new System.Drawing.Size(53, 20);
+            this.PanelLogin_LB_Email.Size = new System.Drawing.Size(68, 25);
             this.PanelLogin_LB_Email.TabIndex = 1;
             this.PanelLogin_LB_Email.Text = "E-Mail";
             // 
             // PanelLogin_TB_Email
             // 
             this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_TB_Email.Location = new System.Drawing.Point(779, 418);
-            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_TB_Email.Location = new System.Drawing.Point(1039, 514);
+            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelLogin_TB_Email.Multiline = true;
             this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
-            this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
+            this.PanelLogin_TB_Email.Size = new System.Drawing.Size(448, 40);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
             // DigitalClockTimer
@@ -866,14 +854,141 @@
             this.FLMpbox.TabIndex = 0;
             this.FLMpbox.TabStop = false;
             // 
+            // PanelWeeklyGoals_PN_CompleteWeeklyGoal
+            // 
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.panel1);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_TB_FillInWeeklyGoal);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_ShowAll);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Sunday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Saturday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Friday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Thursday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Wednesday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Tuesday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Monday);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Location = new System.Drawing.Point(235, 124);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Name = "PanelWeeklyGoals_PN_CompleteWeeklyGoal";
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Size = new System.Drawing.Size(1438, 638);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.TabIndex = 0;
+            // 
+            // WeeklyGoals_BTN_Monday
+            // 
+            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(95, 59);
+            this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
+            this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Monday.TabIndex = 1;
+            this.WeeklyGoals_BTN_Monday.Text = "Monday";
+            this.WeeklyGoals_BTN_Monday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Tuesday
+            // 
+            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(244, 59);
+            this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
+            this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Tuesday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Tuesday.Text = "Tuesday";
+            this.WeeklyGoals_BTN_Tuesday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Wednesday
+            // 
+            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(393, 59);
+            this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
+            this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Wednesday.TabIndex = 3;
+            this.WeeklyGoals_BTN_Wednesday.Text = "Wednesday";
+            this.WeeklyGoals_BTN_Wednesday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Thursday
+            // 
+            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(542, 59);
+            this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
+            this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Thursday.TabIndex = 4;
+            this.WeeklyGoals_BTN_Thursday.Text = "Thursday";
+            this.WeeklyGoals_BTN_Thursday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Friday
+            // 
+            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(691, 59);
+            this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
+            this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Friday.TabIndex = 5;
+            this.WeeklyGoals_BTN_Friday.Text = "Friday";
+            this.WeeklyGoals_BTN_Friday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Saturday
+            // 
+            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(840, 59);
+            this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
+            this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Saturday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Saturday.Text = "Saturday";
+            this.WeeklyGoals_BTN_Saturday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Sunday
+            // 
+            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(989, 59);
+            this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
+            this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_Sunday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Sunday.Text = "Sunday";
+            this.WeeklyGoals_BTN_Sunday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_ShowAll
+            // 
+            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1138, 59);
+            this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
+            this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(150, 58);
+            this.WeeklyGoals_BTN_ShowAll.TabIndex = 6;
+            this.WeeklyGoals_BTN_ShowAll.Text = "Show All";
+            this.WeeklyGoals_BTN_ShowAll.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_TB_FillInWeeklyGoal
+            // 
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Location = new System.Drawing.Point(95, 571);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Name = "WeeklyGoals_TB_FillInWeeklyGoal";
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Size = new System.Drawing.Size(969, 22);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.TabIndex = 0;
+            // 
+            // WeeklyGoals_BTN_AddWeekGoal
+            // 
+            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1070, 569);
+            this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
+            this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(102, 26);
+            this.WeeklyGoals_BTN_AddWeekGoal.TabIndex = 7;
+            this.WeeklyGoals_BTN_AddWeekGoal.Text = "Add Goal";
+            this.WeeklyGoals_BTN_AddWeekGoal.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_AddWeekGoal.Click += new System.EventHandler(this.WeeklyGoals_BTN_AddWeekGoal_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
+            this.panel1.Location = new System.Drawing.Point(85, 114);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1212, 451);
+            this.panel1.TabIndex = 8;
+            // 
+            // WeeklyGoals_LB_SetWeeklyGoal
+            // 
+            this.WeeklyGoals_LB_SetWeeklyGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(5, 6);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Name = "WeeklyGoals_LB_SetWeeklyGoal";
+            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(352, 47);
+            this.WeeklyGoals_LB_SetWeeklyGoal.TabIndex = 0;
+            this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Fill in your WeeklyGoal";
+            this.WeeklyGoals_LB_SetWeeklyGoal.Click += new System.EventHandler(this.WeeklyGoalClick);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 862);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.FLMpanel);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -881,6 +996,7 @@
             this.FLMpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).EndInit();
             this.PanelDA_PA_DashBoardBackground.ResumeLayout(false);
+            this.PanelWG_PA_WeeklyGoalsBackground.ResumeLayout(false);
             this.panelDA_PA_NotificationsPanel.ResumeLayout(false);
             this.PanelDA_PB_ScoreBoardPanel.ResumeLayout(false);
             this.panelDA_PA_DailyTasksPanel.ResumeLayout(false);
@@ -891,6 +1007,9 @@
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.ResumeLayout(false);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -958,6 +1077,19 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
+        private System.Windows.Forms.Panel PanelWeeklyGoals_PN_CompleteWeeklyGoal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label WeeklyGoals_LB_SetWeeklyGoal;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_AddWeekGoal;
+        private System.Windows.Forms.TextBox WeeklyGoals_TB_FillInWeeklyGoal;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_ShowAll;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Sunday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Saturday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Friday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Thursday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Wednesday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Tuesday;
+        private System.Windows.Forms.Button WeeklyGoals_BTN_Monday;
     }
 }
 
