@@ -12,7 +12,7 @@ namespace Cinkie_feedback_fr
 {
     public partial class Form1 : Form
     {
-        public bool Check = false;
+        public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
 
         public Form1()
@@ -129,10 +129,10 @@ namespace Cinkie_feedback_fr
         }
 
         private void WeeklyGoalClick(object sender, EventArgs e)
-        {
+        { 
             if (Check == false) {
                 Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
-                PopUpBox.Show(this);
+                PopUpBox.Show(this);   
                 this.BringToFront();
                 Check = true;
                 this.Activate();
@@ -144,10 +144,6 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-            
-
-
         }
     }
 }

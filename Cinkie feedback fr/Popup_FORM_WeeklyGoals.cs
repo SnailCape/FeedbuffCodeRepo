@@ -17,12 +17,20 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_WeeklyGoals(Form frm)
         {
             InitializeComponent();
-            this.Text = "Weekly Goal"; 
+            this.Text = "Weekly Goal";
         }
 
         public void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
+            Form1.Check = false;
+            
         }
+
+        //private void PopUpBoxClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    form1.Check = false;
+        //}
+
     }
 }
