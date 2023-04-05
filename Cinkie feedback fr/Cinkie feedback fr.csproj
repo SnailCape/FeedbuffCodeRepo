@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Class.cs" />
+    <Compile Include="Classes\DailyTask.cs" />
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\StudyUnit.cs" />
+    <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Classes\WeeklyGoal.cs" />
+    <Compile Include="DAL\DAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,5 +142,6 @@
   <ItemGroup>
     <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

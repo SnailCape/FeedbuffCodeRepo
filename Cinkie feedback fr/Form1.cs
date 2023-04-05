@@ -43,7 +43,9 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
+            }
         }
 
         /// <summary>
@@ -56,8 +58,10 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
                 FLMpbox.Show();
+            }
         }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
