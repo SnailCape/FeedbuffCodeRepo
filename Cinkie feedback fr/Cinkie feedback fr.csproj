@@ -54,6 +54,7 @@
     <Compile Include="Classes\Teacher.cs" />
     <Compile Include="Classes\WeeklyGoal.cs" />
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="Classes\Feedback.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -70,5 +70,15 @@ namespace Cinkie_feedback_fr.DAL
             List<Classes.WeeklyGoal> weeklyGoals = new List<Classes.WeeklyGoal>();
             return weeklyGoals;
         }
+
+        /// <summary>
+        /// Get a list of all the feedback in the database
+        /// </summary>
+        /// <returns></returns>
+        public List<Classes.Feedback> ReadFeedback()
+        {
+            List<Classes.Feedback> feedback = new List<Classes.Feedback>();
+            return feedback;
+        }
     }
 }

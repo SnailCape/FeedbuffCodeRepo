@@ -12,6 +12,7 @@ namespace Cinkie_feedback_fr.Classes
         public int DailyTaskId { get; set; }
         public Student student { get; set; }
         public StudyUnit studyUnit { get; set; }
+        public WeeklyGoal weeklyGoal { get; set; }
         public string Status { get; set; }
         public string Titel { get; set; }
         public string Description { get; set; }
@@ -20,11 +21,13 @@ namespace Cinkie_feedback_fr.Classes
 
         public DailyTask() { }
         public DailyTask(int dailyTaskId, Student student, StudyUnit studyUnit,
-                         string status, string titel, string description, int weeknumber)
+                         string status, string titel, string description,
+                         int weeknumber, WeeklyGoal weeklyGoal)
         {
             DailyTaskId = dailyTaskId;
             this.student = student;
             this.studyUnit = studyUnit;
+            this.weeklyGoal = weeklyGoal;
             Status = status;
             Titel = titel;
             Description = description;
