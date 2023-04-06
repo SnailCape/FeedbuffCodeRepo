@@ -18,24 +18,39 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
-            //GetAllDataFromDatabase();
+            GetAllDataFromDatabase();
 
         }
 
         /// <summary>
         /// Collect all data from the database
         /// </summary>
-        /*private void GetAllDataFromDatabase()
+        private void GetAllDataFromDatabase()
         {
-            Classes.Class.GetClassesFromDB();
-            Classes.DailyTask.GetDailyTasksFromDB();
-            Classes.Feedback.GetFeedbackFromDB();
-            Classes.Student.GetStudentsFromDB();
-            Classes.StudyUnit.GetStudyUnitsFromDB();
-            Classes.Teacher.GetTeachersFromDB();
-            Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
+            // Make an instance of every object
+            FeedBUFClasses.DailyTask dailytask = new FeedBUFClasses.DailyTask();
+            FeedBUFClasses.Feedback feedback = new FeedBUFClasses.Feedback();
+            FeedBUFClasses.SchoolClass schoolclass = new FeedBUFClasses.SchoolClass();
+            FeedBUFClasses.Student student = new FeedBUFClasses.Student();
+            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit();
+            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher();
+            FeedBUFClasses.WeeklyGoal weeklygoal = new FeedBUFClasses.WeeklyGoal();
+
+            // Get all data
+            dailytask.GetDailyTasksFromDB();
+            feedback.GetFeedbackFromDB();
+            schoolclass.GetClassesFromDB();
+            student.GetStudentsFromDB();
+            studyunit.GetStudyUnitsFromDB();
+            teacher.GetTeachersFromDB();
+            weeklygoal.GetWeeklyGoalsFromDB();
+
+            // Connect incomplete data
+            student.ConnectStudentsWithClasses();
+            weeklygoal.ConnectGoalWithStudent();
+            dailytask.ConnectTaskWithGoal();
         }
-    */
+
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>

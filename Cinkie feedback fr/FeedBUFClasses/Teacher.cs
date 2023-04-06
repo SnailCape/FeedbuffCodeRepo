@@ -25,6 +25,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public StudyUnit studyUnit { get; set; }
         public List<Teacher> listTeachers = new List<Teacher>();
 
+        public Teacher() { }
         public Teacher(int teacherId, string firstName, string lastName,
                        string gender, string email, string phonenumber,
                        string postalCode, string country, string streetname,
