@@ -105,8 +105,10 @@
             this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
             this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
+
             this.WeekGoals_Listview_Tasks = new System.Windows.Forms.ListView();
             this.WeekGoals_BTN_AddTask = new System.Windows.Forms.Button();
+
             this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Tuesday = new System.Windows.Forms.Button();
@@ -129,6 +131,7 @@
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.PanelFB_PA_FeedbackBG = new System.Windows.Forms.Panel();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -192,6 +195,7 @@
             this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
             this.PanelFLM_BT_FeedbackButton.Text = "Feedback";
             this.PanelFLM_BT_FeedbackButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_FeedbackButton.Click += new System.EventHandler(this.PanelFLM_BT_FeedbackButton_Click);
             // 
             // PanelFLM_BT_WeeklyGoalsButton
             // 
@@ -714,7 +718,6 @@
             this.PanelDA_LB_UserCourse.TabIndex = 3;
             this.PanelDA_LB_UserCourse.Text = "HBO-ICT";
             this.PanelDA_LB_UserCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PanelDA_LB_UserCourse.Click += new System.EventHandler(this.PanelDA_LA_UserCourse_Click);
             // 
             // PanelDA_LB_UserInfoStudentNumber
             // 
@@ -1040,6 +1043,7 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(2560, 1329);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
+
             // WeekGoals_Listview_Tasks
             // 
             this.WeekGoals_Listview_Tasks.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -1061,6 +1065,8 @@
             this.WeekGoals_BTN_AddTask.Text = "Add Task";
             this.WeekGoals_BTN_AddTask.UseVisualStyleBackColor = true;
             this.WeekGoals_BTN_AddTask.Click += new System.EventHandler(this.WeekGoals_BTN_AddTask_Click);
+
+
             // 
             // WeeklyGoals_BTN_AddWeekGoal
             // 
@@ -1302,18 +1308,35 @@
             this.DigitalClockTimer.Enabled = true;
             this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
             // 
+            // PanelFB_PA_FeedbackBG
+            // 
+            this.PanelFB_PA_FeedbackBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelFB_PA_FeedbackBG.Location = new System.Drawing.Point(0, 0);
+            this.PanelFB_PA_FeedbackBG.Name = "PanelFB_PA_FeedbackBG";
+            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelFB_PA_FeedbackBG.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.FLMpanel);
+
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PanelFB_PA_FeedbackBG);
+
             this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Controls.Add(this.BGflmPull);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
             this.Controls.Add(this.Login_Panel);
+
             this.Margin = new System.Windows.Forms.Padding(4);
+
+            this.Controls.Add(this.FLMpanel);
+
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1437,9 +1460,12 @@
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPostalcode;
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentStreet;
         private System.Windows.Forms.Button PanelLogin_BT_Register;
+
         private System.Windows.Forms.Button WeekGoals_BTN_AddTask;
         public System.Windows.Forms.Label WeeklyGoals_LB_SetWeeklyGoal;
         public System.Windows.Forms.ListView WeekGoals_Listview_Tasks;
+        private System.Windows.Forms.Panel PanelFB_PA_FeedbackBG;
+
     }
 }
 
