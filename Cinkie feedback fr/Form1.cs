@@ -57,7 +57,6 @@ namespace Cinkie_feedback_fr
             }
             else
                 FLMpanel.Show();
-                FLMpbox.Show();
         }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -78,6 +77,7 @@ namespace Cinkie_feedback_fr
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 PanelDA_PA_DashBoardBackground.BringToFront();
+                PanelDA_PA_DashBoardBackground.Show();
                 BGflmPull.BringToFront();
                 Login_Panel.Hide();
                 PanelRE_PA_RegistryBG.Hide();
@@ -100,7 +100,10 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             Login_Panel.Show();
             PanelDA_PA_DashBoardBackground.Hide();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
             FLMpanel.Hide();
+            PanelRE_PA_RegistryBG.BringToFront();
+
         }
 
         private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
@@ -131,8 +134,7 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.Show();
             BGflmPull.BringToFront();
-            FLMpbox.BringToFront();
-            
+            FLMpanel.BringToFront();
 
         }
 
@@ -170,7 +172,11 @@ namespace Cinkie_feedback_fr
 
             }
         }
-
+            /// <summary>
+            /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
             private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
             {
                 PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
@@ -195,12 +201,17 @@ namespace Cinkie_feedback_fr
 
             }
         
-
+        /// <summary>
+        /// Brings you to the "account registration" panel 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_BT_Register_Click(object sender, EventArgs e)
         {
             Login_Panel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
-            PanelRE_PA_RegistryBG.BringToFront();
+            PanelRE_PA_RegistryBG.Show();
+            BGflmPull.SendToBack();
         }
     }
 }
