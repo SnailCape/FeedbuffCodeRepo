@@ -18,14 +18,14 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
-            GetAllDataFromDatabase();
+            //GetAllDataFromDatabase();
 
         }
 
         /// <summary>
         /// Collect all data from the database
         /// </summary>
-        private void GetAllDataFromDatabase()
+        /*private void GetAllDataFromDatabase()
         {
             Classes.Class.GetClassesFromDB();
             Classes.DailyTask.GetDailyTasksFromDB();
@@ -35,7 +35,7 @@ namespace Cinkie_feedback_fr
             Classes.Teacher.GetTeachersFromDB();
             Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
         }
-
+    */
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>
@@ -75,7 +75,7 @@ namespace Cinkie_feedback_fr
             {
                 FLMpanel.Show();
 
-                FLMpbox.Show();
+                
             }
 
         }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Cinkie_feedback_fr.DAL
 {
     internal class DAL
     {
-        public string connectionstring = "Data Source=localhost;Initial Catalog=COEUS_DB;Integrated Security=True";
+        public string connectionString = "Data Source=localhost;Initial Catalog=COEUS_DB;Integrated Security=True";
         public DAL() { }
 
         /// <summary>
@@ -25,7 +26,7 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @$"SELECT STUDENT.studentId, STUDENT.klasId, STUDENT.voornaam, STUDENT.achternaam, STUDENT.geslacht, STUDENT.emailadres, STUDENT.telefoonnummer, STUDENT.postcode, STUDENT.land, ADRES.stad, ADRES.straatnaam, ADRES.huisnummer, STUDENT.schoolLocatie FROM STUDENT JOIN ADRES ON STUDENT.postcode = ADRES.postcode";
+                    command.CommandText = "SELECT STUDENT.studentId, STUDENT.klasId, STUDENT.voornaam, STUDENT.achternaam, STUDENT.geslacht, STUDENT.emailadres, STUDENT.telefoonnummer, STUDENT.postcode, STUDENT.land, ADRES.stad, ADRES.straatnaam, ADRES.huisnummer, STUDENT.schoolLocatie FROM STUDENT JOIN ADRES ON STUDENT.postcode = ADRES.postcode";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
@@ -88,7 +89,7 @@ namespace Cinkie_feedback_fr.DAL
                             string city = dataReader[9].ToString();
                             string streetname = dataReader[10].ToString();
                             string housenumber = dataReader[11].ToString();
-                            int studyUnitId = Int32.Parse(dataReader[12].ToString());
+                            string studyUnitId = dataReader[12].ToString();
                             string studyUnitName = dataReader[13].ToString();
                             string studyUnitDepartment = dataReader[14].ToString();
                             int studyUnitEC = Int32.Parse(dataReader[15].ToString());
@@ -147,7 +148,7 @@ namespace Cinkie_feedback_fr.DAL
                             int studyUnitHours = Int32.Parse(dataReader[18].ToString());
 
                             Classes.StudyUnit studyUnit = new Classes.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
-                            Classes.Teacher teacher = new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname`, city, housenumber, schoollocation, false, studyUnit);
+                            Classes.Teacher teacher = new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname, city, housenumber, schoollocation, false, studyUnit);
 
                             classes.Add(new Classes.Class(classId, teacher, year));
                         }
@@ -179,8 +180,8 @@ namespace Cinkie_feedback_fr.DAL
                     {
                         while (dataReader.Read())
                         {
-                            studyUnits.Add(new Classes.StudyUnit(dataReader[0].ToString(), dataReader[1].ToString,
-                                                                 dataReader[2].ToString(), Int32.Parse(dataReader[3].ToString),
+                            studyUnits.Add(new Classes.StudyUnit(dataReader[0].ToString(), dataReader[1].ToString(),
+                                                                 dataReader[2].ToString(), Int32.Parse(dataReader[3].ToString()),
                                                                  Int32.Parse(dataReader[4].ToString())
                                                                  ));
                         }
