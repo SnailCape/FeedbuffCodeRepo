@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cinkie_feedback_fr.Classes
+namespace Cinkie_feedback_fr.ClassScripts
 {
     internal class Feedback
     {

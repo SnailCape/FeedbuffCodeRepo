@@ -147,7 +147,7 @@ namespace Cinkie_feedback_fr.DAL
                             int studyUnitHours = Int32.Parse(dataReader[18].ToString());
 
                             Classes.StudyUnit studyUnit = new Classes.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
-                            Classes.Teacher teacher = new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname`, city, housenumber, schoollocation, false, studyUnit);
+                            Classes.Teacher teacher = new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname, city, housenumber, schoollocation, false, studyUnit);
 
                             classes.Add(new Classes.Class(classId, teacher, year));
                         }
