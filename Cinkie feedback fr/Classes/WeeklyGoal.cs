@@ -38,5 +38,14 @@ namespace Cinkie_feedback_fr.Classes
             listWeeklyGoals.Clear();
             listWeeklyGoals = dal.ReadWeeklyGoals();
         }
+
+        /// <summary>
+        /// Get a list of all weekly goals saved into the class
+        /// </summary>
+        /// <returns></returns>
+        public void GetWeeklyGoalsFromClass()
+        {
+            return listWeeklyGoals;
+        }
     }
 }
