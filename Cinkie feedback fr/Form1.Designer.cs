@@ -1053,7 +1053,6 @@
             // PanelRE_PA_RegistryBG
             // 
             this.PanelRE_PA_RegistryBG.BackColor = System.Drawing.Color.Silver;
-            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPostalcodeLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentUnitNumberLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCityLabel);
@@ -1352,6 +1351,7 @@
             this.Controls.Add(this.FLMpbox);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
+            this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
