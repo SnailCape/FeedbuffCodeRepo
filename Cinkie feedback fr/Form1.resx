@@ -272,7 +272,7 @@
         YII=
 </value>
   </data>
-  <data name="PanelFLM_BT_ProgressButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PanelFLM_BT_FeedbackButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAADVCAYAAAAM2Y9oAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wQAADsEBuJFr7QAAJ0NJREFUeF7tnQt4VcXV90kIIRACBBAQjyIXuVgqfoCI1pYKVLygUkFetbQqSi0o

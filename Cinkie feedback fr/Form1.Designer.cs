@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_FeedbackButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_WeeklyGoalsButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
             this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
@@ -151,7 +151,7 @@
             this.FLMpanel.BackColor = System.Drawing.Color.Red;
             this.FLMpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_LogoutButton);
-            this.FLMpanel.Controls.Add(this.PanelFLM_BT_ProgressButton);
+            this.FLMpanel.Controls.Add(this.PanelFLM_BT_FeedbackButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_WeeklyGoalsButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
@@ -178,21 +178,21 @@
             this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
             this.PanelFLM_BT_LogoutButton.Click += new System.EventHandler(this.PanelFLM_BT_LogoutButton_Click);
             // 
-            // PanelFLM_BT_ProgressButton
+            // PanelFLM_BT_FeedbackButton
             // 
-            this.PanelFLM_BT_ProgressButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_ProgressButton.BackgroundImage")));
-            this.PanelFLM_BT_ProgressButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_ProgressButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_ProgressButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_ProgressButton.Name = "PanelFLM_BT_ProgressButton";
-            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_ProgressButton.TabIndex = 3;
-            this.PanelFLM_BT_ProgressButton.Text = "Progress";
-            this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_FeedbackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_FeedbackButton.BackgroundImage")));
+            this.PanelFLM_BT_FeedbackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_FeedbackButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_FeedbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_FeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_FeedbackButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_FeedbackButton.Location = new System.Drawing.Point(0, 284);
+            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_FeedbackButton.Name = "PanelFLM_BT_FeedbackButton";
+            this.PanelFLM_BT_FeedbackButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
+            this.PanelFLM_BT_FeedbackButton.Text = "Feedback";
+            this.PanelFLM_BT_FeedbackButton.UseVisualStyleBackColor = true;
             // 
             // PanelFLM_BT_WeeklyGoalsButton
             // 
@@ -1081,7 +1081,9 @@
             // 
             // button1
             // 
+
             this.button1.Location = new System.Drawing.Point(1248, 823);
+
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 36);
@@ -1205,7 +1207,9 @@
             // ListViewWG_LW_DailyTasks
             // 
             this.ListViewWG_LW_DailyTasks.HideSelection = false;
+
             this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(433, 453);
+
             this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
             this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
             this.ListViewWG_LW_DailyTasks.TabIndex = 9;
@@ -1431,7 +1435,7 @@
         private System.Windows.Forms.Label PanelDA_LB_ScoreboardScoreboard;
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardDate;
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardTime;
-        private System.Windows.Forms.Button PanelFLM_BT_ProgressButton;
+        private System.Windows.Forms.Button PanelFLM_BT_FeedbackButton;
         private System.Windows.Forms.Button PanelFLM_BT_LogoutButton;
         private System.Windows.Forms.Panel panelDA_PA_NotificationsPanel;
         private System.Windows.Forms.Label panelDA_PA_NotificationsTitleLabel;
