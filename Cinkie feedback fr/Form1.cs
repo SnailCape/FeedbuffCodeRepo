@@ -18,10 +18,24 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
-
+            //GetAllDataFromDatabase();
 
         }
 
+        /// <summary>
+        /// Collect all data from the database
+        /// </summary>
+        /*private void GetAllDataFromDatabase()
+        {
+            Classes.Class.GetClassesFromDB();
+            Classes.DailyTask.GetDailyTasksFromDB();
+            Classes.Feedback.GetFeedbackFromDB();
+            Classes.Student.GetStudentsFromDB();
+            Classes.StudyUnit.GetStudyUnitsFromDB();
+            Classes.Teacher.GetTeachersFromDB();
+            Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
+        }
+    */
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>
@@ -43,7 +57,9 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
+            }
         }
 
         /// <summary>
@@ -56,8 +72,12 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
-                FLMpbox.Show();
+
+                
+            }
+
         }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -78,8 +98,10 @@ namespace Cinkie_feedback_fr
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 PanelDA_PA_DashBoardBackground.BringToFront();
-                Login_Panel.SendToBack();
-                PanelRE_PA_RegistryBG.SendToBack();
+                PanelDA_PA_DashBoardBackground.Show();
+                BGflmPull.BringToFront();
+                Login_Panel.Hide();
+                PanelRE_PA_RegistryBG.Hide();
                 FLMpanel.BringToFront();
                 PanelLogin_TB_Email.Text = "";
                 PanelLogin_TB_Password.Text = "";
@@ -96,8 +118,13 @@ namespace Cinkie_feedback_fr
         /// </summary>
         private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
+            Login_Panel.BringToFront();
             Login_Panel.Show();
+            PanelDA_PA_DashBoardBackground.Hide();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
             FLMpanel.Hide();
+            PanelRE_PA_RegistryBG.BringToFront();
+
         }
 
         private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
@@ -124,15 +151,28 @@ namespace Cinkie_feedback_fr
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
         {
             PanelDA_PA_DashBoardBackground.Hide();
+            PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
-            panelDA_PA_NotificationsPanel.BringToFront();
+            panelDA_PA_NotificationsPanel.Show();
             BGflmPull.BringToFront();
+            FLMpanel.BringToFront();
+
         }
 
 
         private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
         {
-            WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
+            if (WeeklyGoals_TB_FillInWeeklyGoal.Text != "" && WeeklyGoals_LB_SetWeeklyGoal.Text != "Fill in your WeeklyGoal" && WeeklyGoals_TB_FillInWeeklyGoal.Text != "This field cannot be empty")
+            {
+                WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
+                WeeklyGoals_TB_FillInWeeklyGoal.Visible = false;
+                WeeklyGoals_BTN_AddWeekGoal.Visible= false;
+            }
+            else
+            {
+                WeeklyGoals_TB_FillInWeeklyGoal.Text = "This field cannot be empty";
+            }
+            
         }
 
         private void WeeklyGoalClick(object sender, EventArgs e)
@@ -153,7 +193,11 @@ namespace Cinkie_feedback_fr
 
             }
         }
-
+            /// <summary>
+            /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
             private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
             {
                 PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
@@ -166,8 +210,10 @@ namespace Cinkie_feedback_fr
 
             private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
             {
-                PanelRE_PA_RegistryBG.Hide();
-                Login_Panel.Show();
+            
+            Login_Panel.Show();
+            PanelRE_PA_RegistryBG.SendToBack();
+
             }
 
             private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
@@ -175,11 +221,59 @@ namespace Cinkie_feedback_fr
                 PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
 
             }
-
+        
+        /// <summary>
+        /// Brings you to the "account registration" panel 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_BT_Register_Click(object sender, EventArgs e)
         {
+            Login_Panel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
             PanelRE_PA_RegistryBG.Show();
+            BGflmPull.SendToBack();
+        }
+
+        private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
