@@ -18,8 +18,22 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
+            GetAllDataFromDatabase();
 
+        }
 
+        /// <summary>
+        /// Collect all data from the database
+        /// </summary>
+        private void GetAllDataFromDatabase()
+        {
+            Classes.Class.GetClassesFromDB();
+            Classes.DailyTask.GetDailyTasksFromDB();
+            Classes.Feedback.GetFeedbackFromDB();
+            Classes.Student.GetStudentsFromDB();
+            Classes.StudyUnit.GetStudyUnitsFromDB();
+            Classes.Teacher.GetTeachersFromDB();
+            Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
         }
 
         /// <summary>
@@ -43,7 +57,9 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
+            }
         }
 
         /// <summary>
@@ -56,7 +72,12 @@ namespace Cinkie_feedback_fr
                 FLMpanel.Hide();
             }
             else
+            {
                 FLMpanel.Show();
+
+                FLMpbox.Show();
+            }
+
         }
 
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
