@@ -122,13 +122,10 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.Hide();
             FLMpanel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
+            PanelFB_PA_FeedbackBG.Hide();
 
         }
 
-        private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
@@ -144,6 +141,7 @@ namespace Cinkie_feedback_fr
         {
             PanelDA_PA_DashBoardBackground.Show();
             PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelFB_PA_FeedbackBG.Hide();
         }
 
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
@@ -152,9 +150,20 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.Show();
+            panelDA_PA_NotificationsPanel.BringToFront();
             BGflmPull.BringToFront();
             FLMpanel.BringToFront();
 
+        }
+        private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
+        {
+            PanelFB_PA_FeedbackBG.Show();
+            PanelFB_PA_FeedbackBG.BringToFront();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelDA_PA_DashBoardBackground.Hide();
+            BGflmPull.BringToFront();
+            BGflmPull.Show();
+            FLMpanel.BringToFront();
         }
 
 
@@ -273,5 +282,7 @@ namespace Cinkie_feedback_fr
         {
             
         }
+
+        
     }
 }

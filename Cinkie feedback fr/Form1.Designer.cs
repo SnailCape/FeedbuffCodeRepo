@@ -105,6 +105,7 @@
             this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
             this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
+            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
@@ -117,7 +118,6 @@
             this.WeeklyGoals_BTN_Saturday = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
             this.PanelWG_PA_ShowWeeklyGoal = new System.Windows.Forms.Panel();
-            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
             this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
             this.BGflmPull = new System.Windows.Forms.PictureBox();
             this.Login_Panel = new System.Windows.Forms.Panel();
@@ -130,6 +130,7 @@
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.PanelFB_PA_FeedbackBG = new System.Windows.Forms.Panel();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -193,6 +194,7 @@
             this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
             this.PanelFLM_BT_FeedbackButton.Text = "Feedback";
             this.PanelFLM_BT_FeedbackButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_FeedbackButton.Click += new System.EventHandler(this.PanelFLM_BT_FeedbackButton_Click);
             // 
             // PanelFLM_BT_WeeklyGoalsButton
             // 
@@ -739,7 +741,6 @@
             this.PanelDA_LB_UserCourse.TabIndex = 3;
             this.PanelDA_LB_UserCourse.Text = "HBO-ICT";
             this.PanelDA_LB_UserCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PanelDA_LB_UserCourse.Click += new System.EventHandler(this.PanelDA_LA_UserCourse_Click);
             // 
             // PanelDA_LB_UserInfoStudentNumber
             // 
@@ -1079,11 +1080,19 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
+            // ListViewWG_LW_DailyTasks
+            // 
+            this.ListViewWG_LW_DailyTasks.HideSelection = false;
+            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(433, 453);
+            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
+            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
+            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
+            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
+            this.ListViewWG_LW_DailyTasks.Visible = false;
+            // 
             // button1
             // 
-
             this.button1.Location = new System.Drawing.Point(1248, 823);
-
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 36);
@@ -1203,18 +1212,6 @@
             this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
             this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(924, 134);
             this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
-            // 
-            // ListViewWG_LW_DailyTasks
-            // 
-            this.ListViewWG_LW_DailyTasks.HideSelection = false;
-
-            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(433, 453);
-
-            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
-            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
-            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
-            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
-            this.ListViewWG_LW_DailyTasks.Visible = false;
             // 
             // WeeklyGoals_LB_SetWeeklyGoal
             // 
@@ -1352,17 +1349,26 @@
             this.DigitalClockTimer.Enabled = true;
             this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
             // 
+            // PanelFB_PA_FeedbackBG
+            // 
+            this.PanelFB_PA_FeedbackBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelFB_PA_FeedbackBG.Location = new System.Drawing.Point(0, 0);
+            this.PanelFB_PA_FeedbackBG.Name = "PanelFB_PA_FeedbackBG";
+            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelFB_PA_FeedbackBG.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.FLMpanel);
+            this.Controls.Add(this.PanelFB_PA_FeedbackBG);
             this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Controls.Add(this.BGflmPull);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
             this.Controls.Add(this.Login_Panel);
+            this.Controls.Add(this.FLMpanel);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1491,6 +1497,7 @@
         private System.Windows.Forms.Button PanelLogin_BT_Register;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView ListViewWG_LW_DailyTasks;
+        private System.Windows.Forms.Panel PanelFB_PA_FeedbackBG;
     }
 }
 
