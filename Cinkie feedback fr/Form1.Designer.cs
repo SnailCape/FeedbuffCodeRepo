@@ -29,27 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
-            this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
+            this.PanelFLM_BT_FeedbackButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_WeeklyGoalsButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_DashboardButton = new System.Windows.Forms.Button();
             this.FLMpanelZUYD = new System.Windows.Forms.PictureBox();
             this.PanelDA_PA_DashBoardBackground = new System.Windows.Forms.Panel();
-            this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal = new System.Windows.Forms.Panel();
-            this.PanelWG_PA_ShowWeeklyGoal = new System.Windows.Forms.Panel();
-            this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
-            this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
-            this.WeeklyGoals_TB_FillInWeeklyGoal = new System.Windows.Forms.TextBox();
-            this.WeeklyGoals_BTN_ShowAll = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Sunday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Saturday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Thursday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Wednesday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Tuesday = new System.Windows.Forms.Button();
-            this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
             this.panelDA_PA_NotificationsPanel = new System.Windows.Forms.Panel();
             this.panelDA_PA_NotificationsNotification3 = new System.Windows.Forms.Label();
             this.panelDA_PA_NotificationsNotification2 = new System.Windows.Forms.Label();
@@ -91,16 +78,6 @@
             this.PanelDA_LB_UserInfoStudentNumber = new System.Windows.Forms.Label();
             this.PanelDA_LB_UserInfoName = new System.Windows.Forms.Label();
             this.PanelDA_PB_UserImage = new System.Windows.Forms.PictureBox();
-            this.BGflmPull = new System.Windows.Forms.PictureBox();
-            this.Login_Panel = new System.Windows.Forms.Panel();
-            this.PanelLogin_BT_Register = new System.Windows.Forms.Button();
-            this.LoginPanel_LB_Coeus = new System.Windows.Forms.Label();
-            this.PanelLogin_BT_Login = new System.Windows.Forms.Button();
-            this.PanelLogin_LLB_PasswordFOR = new System.Windows.Forms.LinkLabel();
-            this.LoginPanel_LB_Password = new System.Windows.Forms.Label();
-            this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
-            this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
-            this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
             this.PanelRE_LB_StudentPostalcodeLabel = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentUnitNumberLabel = new System.Windows.Forms.Label();
@@ -127,24 +104,46 @@
             this.PanelRE_TB_RegisterStudentEmail = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
+            this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_TB_FillInWeeklyGoal = new System.Windows.Forms.TextBox();
+            this.WeeklyGoals_BTN_Tuesday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_ShowAll = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Wednesday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Sunday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Thursday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Saturday = new System.Windows.Forms.Button();
+            this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
+            this.PanelWG_PA_ShowWeeklyGoal = new System.Windows.Forms.Panel();
+            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
+            this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
+            this.BGflmPull = new System.Windows.Forms.PictureBox();
+            this.Login_Panel = new System.Windows.Forms.Panel();
+            this.PanelLogin_BT_Register = new System.Windows.Forms.Button();
+            this.LoginPanel_LB_Coeus = new System.Windows.Forms.Label();
+            this.PanelLogin_BT_Login = new System.Windows.Forms.Button();
+            this.PanelLogin_LLB_PasswordFOR = new System.Windows.Forms.LinkLabel();
+            this.LoginPanel_LB_Password = new System.Windows.Forms.Label();
+            this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
+            this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
+            this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
-            this.FLMpbox = new System.Windows.Forms.PictureBox();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
-            this.PanelWG_PA_WeeklyGoalsBackground.SuspendLayout();
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.SuspendLayout();
-            this.PanelWG_PA_ShowWeeklyGoal.SuspendLayout();
             this.panelDA_PA_NotificationsPanel.SuspendLayout();
             this.PanelDA_PB_ScoreBoardPanel.SuspendLayout();
             this.panelDA_PA_DailyTasksPanel.SuspendLayout();
             this.PanelDA_PA_ProgressPanel.SuspendLayout();
             this.PanelDA_PA_UserInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).BeginInit();
+            this.PanelRE_PA_RegistryBG.SuspendLayout();
+            this.PanelWG_PA_WeeklyGoalsBackground.SuspendLayout();
+            this.PanelWG_PA_ShowWeeklyGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
-            this.PanelRE_PA_RegistryBG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).BeginInit();
             this.SuspendLayout();
             // 
             // FLMpanel
@@ -152,7 +151,7 @@
             this.FLMpanel.BackColor = System.Drawing.Color.Red;
             this.FLMpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_LogoutButton);
-            this.FLMpanel.Controls.Add(this.PanelFLM_BT_ProgressButton);
+            this.FLMpanel.Controls.Add(this.PanelFLM_BT_FeedbackButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_WeeklyGoalsButton);
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
@@ -164,7 +163,7 @@
             // 
             // PanelFLM_BT_LogoutButton
             // 
-            this.PanelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
+            this.PanelFLM_BT_LogoutButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_LogoutButton.BackgroundImage")));
             this.PanelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -179,25 +178,25 @@
             this.PanelFLM_BT_LogoutButton.UseVisualStyleBackColor = true;
             this.PanelFLM_BT_LogoutButton.Click += new System.EventHandler(this.PanelFLM_BT_LogoutButton_Click);
             // 
-            // PanelFLM_BT_ProgressButton
+            // PanelFLM_BT_FeedbackButton
             // 
-            this.PanelFLM_BT_ProgressButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ProgressIcon;
-            this.PanelFLM_BT_ProgressButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelFLM_BT_ProgressButton.FlatAppearance.BorderSize = 0;
-            this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PanelFLM_BT_ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelFLM_BT_ProgressButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PanelFLM_BT_ProgressButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_ProgressButton.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelFLM_BT_ProgressButton.Name = "PanelFLM_BT_ProgressButton";
-            this.PanelFLM_BT_ProgressButton.Size = new System.Drawing.Size(123, 63);
-            this.PanelFLM_BT_ProgressButton.TabIndex = 3;
-            this.PanelFLM_BT_ProgressButton.Text = "Progress";
-            this.PanelFLM_BT_ProgressButton.UseVisualStyleBackColor = true;
+            this.PanelFLM_BT_FeedbackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_FeedbackButton.BackgroundImage")));
+            this.PanelFLM_BT_FeedbackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelFLM_BT_FeedbackButton.FlatAppearance.BorderSize = 0;
+            this.PanelFLM_BT_FeedbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PanelFLM_BT_FeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelFLM_BT_FeedbackButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PanelFLM_BT_FeedbackButton.Location = new System.Drawing.Point(0, 284);
+            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFLM_BT_FeedbackButton.Name = "PanelFLM_BT_FeedbackButton";
+            this.PanelFLM_BT_FeedbackButton.Size = new System.Drawing.Size(123, 63);
+            this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
+            this.PanelFLM_BT_FeedbackButton.Text = "Feedback";
+            this.PanelFLM_BT_FeedbackButton.UseVisualStyleBackColor = true;
             // 
             // PanelFLM_BT_WeeklyGoalsButton
             // 
-            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
+            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_WeeklyGoalsButton.BackgroundImage")));
             this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_WeeklyGoalsButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_WeeklyGoalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,7 +214,7 @@
             // PanelFLM_BT_DashboardButton
             // 
             this.PanelFLM_BT_DashboardButton.BackColor = System.Drawing.Color.Red;
-            this.PanelFLM_BT_DashboardButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.HomeIcon;
+            this.PanelFLM_BT_DashboardButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_DashboardButton.BackgroundImage")));
             this.PanelFLM_BT_DashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_DashboardButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -233,7 +232,7 @@
             // 
             // FLMpanelZUYD
             // 
-            this.FLMpanelZUYD.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYD1;
+            this.FLMpanelZUYD.Image = ((System.Drawing.Image)(resources.GetObject("FLMpanelZUYD.Image")));
             this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
             this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanelZUYD.Name = "FLMpanelZUYD";
@@ -246,7 +245,6 @@
             // PanelDA_PA_DashBoardBackground
             // 
             this.PanelDA_PA_DashBoardBackground.BackColor = System.Drawing.Color.Silver;
-            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.panelDA_PA_NotificationsPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpPercentage);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpBar);
@@ -254,162 +252,11 @@
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.panelDA_PA_DailyTasksPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_ProgressPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_UserInfoPanel);
-            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.BGflmPull);
             this.PanelDA_PA_DashBoardBackground.Location = new System.Drawing.Point(1, 0);
             this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_DashBoardBackground.Name = "PanelDA_PA_DashBoardBackground";
             this.PanelDA_PA_DashBoardBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelDA_PA_DashBoardBackground.TabIndex = 0;
-            // 
-            // PanelWG_PA_WeeklyGoalsBackground
-            // 
-            this.PanelWG_PA_WeeklyGoalsBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWeeklyGoals_PN_CompleteWeeklyGoal);
-            this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(-1, 0);
-            this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
-            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
-            this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
-            // 
-            // PanelWeeklyGoals_PN_CompleteWeeklyGoal
-            // 
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.PanelWG_PA_ShowWeeklyGoal);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_TB_FillInWeeklyGoal);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_ShowAll);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Sunday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Saturday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Friday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Thursday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Wednesday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Tuesday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Monday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Location = new System.Drawing.Point(176, 101);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Name = "PanelWeeklyGoals_PN_CompleteWeeklyGoal";
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Size = new System.Drawing.Size(1078, 518);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.TabIndex = 0;
-            // 
-            // PanelWG_PA_ShowWeeklyGoal
-            // 
-            this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
-            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(64, 93);
-            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
-            this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(909, 366);
-            this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
-            // 
-            // WeeklyGoals_LB_SetWeeklyGoal
-            // 
-            this.WeeklyGoals_LB_SetWeeklyGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(4, 5);
-            this.WeeklyGoals_LB_SetWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.WeeklyGoals_LB_SetWeeklyGoal.Name = "WeeklyGoals_LB_SetWeeklyGoal";
-            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(264, 38);
-            this.WeeklyGoals_LB_SetWeeklyGoal.TabIndex = 0;
-            this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Fill in your WeeklyGoal";
-            this.WeeklyGoals_LB_SetWeeklyGoal.Click += new System.EventHandler(this.WeeklyGoalClick);
-            // 
-            // WeeklyGoals_BTN_AddWeekGoal
-            // 
-            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(802, 462);
-            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
-            this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(76, 21);
-            this.WeeklyGoals_BTN_AddWeekGoal.TabIndex = 7;
-            this.WeeklyGoals_BTN_AddWeekGoal.Text = "Add Goal";
-            this.WeeklyGoals_BTN_AddWeekGoal.UseVisualStyleBackColor = true;
-            this.WeeklyGoals_BTN_AddWeekGoal.Click += new System.EventHandler(this.WeeklyGoals_BTN_AddWeekGoal_Click);
-            // 
-            // WeeklyGoals_TB_FillInWeeklyGoal
-            // 
-            this.WeeklyGoals_TB_FillInWeeklyGoal.Location = new System.Drawing.Point(71, 464);
-            this.WeeklyGoals_TB_FillInWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_TB_FillInWeeklyGoal.Name = "WeeklyGoals_TB_FillInWeeklyGoal";
-            this.WeeklyGoals_TB_FillInWeeklyGoal.Size = new System.Drawing.Size(728, 20);
-            this.WeeklyGoals_TB_FillInWeeklyGoal.TabIndex = 0;
-            // 
-            // WeeklyGoals_BTN_ShowAll
-            // 
-            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(854, 48);
-            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
-            this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_ShowAll.TabIndex = 6;
-            this.WeeklyGoals_BTN_ShowAll.Text = "Show All";
-            this.WeeklyGoals_BTN_ShowAll.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Sunday
-            // 
-            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(742, 48);
-            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
-            this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Sunday.TabIndex = 2;
-            this.WeeklyGoals_BTN_Sunday.Text = "Sunday";
-            this.WeeklyGoals_BTN_Sunday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Saturday
-            // 
-            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(630, 48);
-            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
-            this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Saturday.TabIndex = 2;
-            this.WeeklyGoals_BTN_Saturday.Text = "Saturday";
-            this.WeeklyGoals_BTN_Saturday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Friday
-            // 
-            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(518, 48);
-            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
-            this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Friday.TabIndex = 5;
-            this.WeeklyGoals_BTN_Friday.Text = "Friday";
-            this.WeeklyGoals_BTN_Friday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Thursday
-            // 
-            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(406, 48);
-            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
-            this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Thursday.TabIndex = 4;
-            this.WeeklyGoals_BTN_Thursday.Text = "Thursday";
-            this.WeeklyGoals_BTN_Thursday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Wednesday
-            // 
-            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(295, 48);
-            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
-            this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Wednesday.TabIndex = 3;
-            this.WeeklyGoals_BTN_Wednesday.Text = "Wednesday";
-            this.WeeklyGoals_BTN_Wednesday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Tuesday
-            // 
-            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(183, 48);
-            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
-            this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Tuesday.TabIndex = 2;
-            this.WeeklyGoals_BTN_Tuesday.Text = "Tuesday";
-            this.WeeklyGoals_BTN_Tuesday.UseVisualStyleBackColor = true;
-            // 
-            // WeeklyGoals_BTN_Monday
-            // 
-            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(71, 48);
-            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2);
-            this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
-            this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(112, 47);
-            this.WeeklyGoals_BTN_Monday.TabIndex = 1;
-            this.WeeklyGoals_BTN_Monday.Text = "Monday";
-            this.WeeklyGoals_BTN_Monday.UseVisualStyleBackColor = true;
             // 
             // panelDA_PA_NotificationsPanel
             // 
@@ -921,7 +768,7 @@
             // PanelDA_PB_UserImage
             // 
             this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
-            this.PanelDA_PB_UserImage.Image = global::Cinkie_feedback_fr.Properties.Resources.FcwaHO8aAAEKhqS;
+            this.PanelDA_PB_UserImage.Image = ((System.Drawing.Image)(resources.GetObject("PanelDA_PB_UserImage.Image")));
             this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
             this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
@@ -929,126 +776,6 @@
             this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PanelDA_PB_UserImage.TabIndex = 0;
             this.PanelDA_PB_UserImage.TabStop = false;
-            // 
-            // BGflmPull
-            // 
-            this.BGflmPull.BackColor = System.Drawing.Color.Silver;
-            this.BGflmPull.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYDRodeLetters;
-            this.BGflmPull.Location = new System.Drawing.Point(0, 10);
-            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
-            this.BGflmPull.Name = "BGflmPull";
-            this.BGflmPull.Size = new System.Drawing.Size(47, 45);
-            this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BGflmPull.TabIndex = 0;
-            this.BGflmPull.TabStop = false;
-            this.BGflmPull.Click += new System.EventHandler(this.FLMpbox_Click);
-            // 
-            // Login_Panel
-            // 
-            this.Login_Panel.BackColor = System.Drawing.Color.Silver;
-            this.Login_Panel.Controls.Add(this.PanelLogin_BT_Register);
-            this.Login_Panel.Controls.Add(this.LoginPanel_LB_Coeus);
-            this.Login_Panel.Controls.Add(this.PanelLogin_BT_Login);
-            this.Login_Panel.Controls.Add(this.PanelLogin_LLB_PasswordFOR);
-            this.Login_Panel.Controls.Add(this.LoginPanel_LB_Password);
-            this.Login_Panel.Controls.Add(this.PanelLogin_TB_Password);
-            this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
-            this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
-            this.Login_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
-            this.Login_Panel.Name = "Login_Panel";
-            this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
-            this.Login_Panel.TabIndex = 1;
-            // 
-            // PanelLogin_BT_Register
-            // 
-            this.PanelLogin_BT_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_BT_Register.Location = new System.Drawing.Point(784, 703);
-            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelLogin_BT_Register.Name = "PanelLogin_BT_Register";
-            this.PanelLogin_BT_Register.Size = new System.Drawing.Size(154, 46);
-            this.PanelLogin_BT_Register.TabIndex = 7;
-            this.PanelLogin_BT_Register.Text = "Register";
-            this.PanelLogin_BT_Register.UseVisualStyleBackColor = true;
-            this.PanelLogin_BT_Register.Click += new System.EventHandler(this.PanelLogin_BT_Register_Click);
-            // 
-            // LoginPanel_LB_Coeus
-            // 
-            this.LoginPanel_LB_Coeus.AutoSize = true;
-            this.LoginPanel_LB_Coeus.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPanel_LB_Coeus.Location = new System.Drawing.Point(892, 240);
-            this.LoginPanel_LB_Coeus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LoginPanel_LB_Coeus.Name = "LoginPanel_LB_Coeus";
-            this.LoginPanel_LB_Coeus.Size = new System.Drawing.Size(106, 36);
-            this.LoginPanel_LB_Coeus.TabIndex = 6;
-            this.LoginPanel_LB_Coeus.Text = "Coeus";
-            // 
-            // PanelLogin_BT_Login
-            // 
-            this.PanelLogin_BT_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_BT_Login.Location = new System.Drawing.Point(967, 703);
-            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelLogin_BT_Login.Name = "PanelLogin_BT_Login";
-            this.PanelLogin_BT_Login.Size = new System.Drawing.Size(154, 46);
-            this.PanelLogin_BT_Login.TabIndex = 5;
-            this.PanelLogin_BT_Login.Text = "Login";
-            this.PanelLogin_BT_Login.UseVisualStyleBackColor = true;
-            this.PanelLogin_BT_Login.Click += new System.EventHandler(this.PanelLogin_BT_Login_Click);
-            // 
-            // PanelLogin_LLB_PasswordFOR
-            // 
-            this.PanelLogin_LLB_PasswordFOR.AutoSize = true;
-            this.PanelLogin_LLB_PasswordFOR.Location = new System.Drawing.Point(793, 656);
-            this.PanelLogin_LLB_PasswordFOR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PanelLogin_LLB_PasswordFOR.Name = "PanelLogin_LLB_PasswordFOR";
-            this.PanelLogin_LLB_PasswordFOR.Size = new System.Drawing.Size(107, 13);
-            this.PanelLogin_LLB_PasswordFOR.TabIndex = 4;
-            this.PanelLogin_LLB_PasswordFOR.TabStop = true;
-            this.PanelLogin_LLB_PasswordFOR.Text = "Password Forgotten?";
-            this.PanelLogin_LLB_PasswordFOR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PanelLogin_LLB_PasswordFOR_LinkClicked);
-            // 
-            // LoginPanel_LB_Password
-            // 
-            this.LoginPanel_LB_Password.AutoSize = true;
-            this.LoginPanel_LB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginPanel_LB_Password.Location = new System.Drawing.Point(791, 573);
-            this.LoginPanel_LB_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LoginPanel_LB_Password.Name = "LoginPanel_LB_Password";
-            this.LoginPanel_LB_Password.Size = new System.Drawing.Size(78, 20);
-            this.LoginPanel_LB_Password.TabIndex = 3;
-            this.LoginPanel_LB_Password.Text = "Password";
-            // 
-            // PanelLogin_TB_Password
-            // 
-            this.PanelLogin_TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_TB_Password.Location = new System.Drawing.Point(784, 604);
-            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelLogin_TB_Password.Multiline = true;
-            this.PanelLogin_TB_Password.Name = "PanelLogin_TB_Password";
-            this.PanelLogin_TB_Password.PasswordChar = '*';
-            this.PanelLogin_TB_Password.Size = new System.Drawing.Size(337, 33);
-            this.PanelLogin_TB_Password.TabIndex = 2;
-            // 
-            // PanelLogin_LB_Email
-            // 
-            this.PanelLogin_LB_Email.AutoSize = true;
-            this.PanelLogin_LB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_LB_Email.Location = new System.Drawing.Point(791, 384);
-            this.PanelLogin_LB_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PanelLogin_LB_Email.Name = "PanelLogin_LB_Email";
-            this.PanelLogin_LB_Email.Size = new System.Drawing.Size(53, 20);
-            this.PanelLogin_LB_Email.TabIndex = 1;
-            this.PanelLogin_LB_Email.Text = "E-Mail";
-            // 
-            // PanelLogin_TB_Email
-            // 
-            this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelLogin_TB_Email.Location = new System.Drawing.Point(784, 418);
-            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelLogin_TB_Email.Multiline = true;
-            this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
-            this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
-            this.PanelLogin_TB_Email.TabIndex = 0;
             // 
             // PanelRE_PA_RegistryBG
             // 
@@ -1078,7 +805,7 @@
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentEmail);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentSurname);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentName);
-            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(2, 2);
+            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(0, 0);
             this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
             this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
@@ -1328,30 +1055,310 @@
             this.PanelRE_TB_RegisterStudentName.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentName.TabIndex = 1;
             // 
+            // PanelWG_PA_WeeklyGoalsBackground
+            // 
+            this.PanelWG_PA_WeeklyGoalsBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelWG_PA_WeeklyGoalsBackground.BackColor = System.Drawing.Color.Silver;
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.button1);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Monday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_TB_FillInWeeklyGoal);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Tuesday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_ShowAll);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Wednesday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Sunday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Thursday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Saturday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Friday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWG_PA_ShowWeeklyGoal);
+            this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(0, 0);
+            this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
+            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1329, 698);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 36);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Add Task";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_AddWeekGoal
+            // 
+            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1251, 698);
+            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
+            this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(76, 21);
+            this.WeeklyGoals_BTN_AddWeekGoal.TabIndex = 7;
+            this.WeeklyGoals_BTN_AddWeekGoal.Text = "Add Goal";
+            this.WeeklyGoals_BTN_AddWeekGoal.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_AddWeekGoal.Click += new System.EventHandler(this.WeeklyGoals_BTN_AddWeekGoal_Click);
+            // 
+            // WeeklyGoals_BTN_Monday
+            // 
+            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(520, 284);
+            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
+            this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Monday.TabIndex = 1;
+            this.WeeklyGoals_BTN_Monday.Text = "Monday";
+            this.WeeklyGoals_BTN_Monday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_TB_FillInWeeklyGoal
+            // 
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Location = new System.Drawing.Point(520, 700);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Name = "WeeklyGoals_TB_FillInWeeklyGoal";
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Size = new System.Drawing.Size(728, 20);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.TabIndex = 0;
+            // 
+            // WeeklyGoals_BTN_Tuesday
+            // 
+            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(632, 284);
+            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
+            this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Tuesday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Tuesday.Text = "Tuesday";
+            this.WeeklyGoals_BTN_Tuesday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_ShowAll
+            // 
+            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1303, 284);
+            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
+            this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_ShowAll.TabIndex = 6;
+            this.WeeklyGoals_BTN_ShowAll.Text = "Show All";
+            this.WeeklyGoals_BTN_ShowAll.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_ShowAll.Click += new System.EventHandler(this.WeeklyGoals_BTN_ShowAll_Click);
+            // 
+            // WeeklyGoals_BTN_Wednesday
+            // 
+            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(744, 284);
+            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
+            this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Wednesday.TabIndex = 3;
+            this.WeeklyGoals_BTN_Wednesday.Text = "Wednesday";
+            this.WeeklyGoals_BTN_Wednesday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Sunday
+            // 
+            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1191, 284);
+            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
+            this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Sunday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Sunday.Text = "Sunday";
+            this.WeeklyGoals_BTN_Sunday.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_Sunday.Click += new System.EventHandler(this.WeeklyGoals_BTN_Sunday_Click);
+            // 
+            // WeeklyGoals_BTN_Thursday
+            // 
+            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(855, 284);
+            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
+            this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Thursday.TabIndex = 4;
+            this.WeeklyGoals_BTN_Thursday.Text = "Thursday";
+            this.WeeklyGoals_BTN_Thursday.UseVisualStyleBackColor = true;
+            // 
+            // WeeklyGoals_BTN_Saturday
+            // 
+            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(1079, 284);
+            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
+            this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Saturday.TabIndex = 2;
+            this.WeeklyGoals_BTN_Saturday.Text = "Saturday";
+            this.WeeklyGoals_BTN_Saturday.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_Saturday.Click += new System.EventHandler(this.WeeklyGoals_BTN_Saturday_Click);
+            // 
+            // WeeklyGoals_BTN_Friday
+            // 
+            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(967, 284);
+            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2);
+            this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
+            this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(112, 47);
+            this.WeeklyGoals_BTN_Friday.TabIndex = 5;
+            this.WeeklyGoals_BTN_Friday.Text = "Friday";
+            this.WeeklyGoals_BTN_Friday.UseVisualStyleBackColor = true;
+            this.WeeklyGoals_BTN_Friday.Click += new System.EventHandler(this.WeeklyGoals_BTN_Friday_Click);
+            // 
+            // PanelWG_PA_ShowWeeklyGoal
+            // 
+            this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.ListViewWG_LW_DailyTasks);
+            this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
+            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(506, 330);
+            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
+            this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(909, 366);
+            this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
+            // 
+            // ListViewWG_LW_DailyTasks
+            // 
+            this.ListViewWG_LW_DailyTasks.HideSelection = false;
+            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(0, -2);
+            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
+            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
+            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
+            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
+            this.ListViewWG_LW_DailyTasks.Visible = false;
+            // 
+            // WeeklyGoals_LB_SetWeeklyGoal
+            // 
+            this.WeeklyGoals_LB_SetWeeklyGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(4, 5);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Name = "WeeklyGoals_LB_SetWeeklyGoal";
+            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(898, 236);
+            this.WeeklyGoals_LB_SetWeeklyGoal.TabIndex = 0;
+            this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Fill in your WeeklyGoal";
+            this.WeeklyGoals_LB_SetWeeklyGoal.Click += new System.EventHandler(this.WeeklyGoalClick);
+            // 
+            // BGflmPull
+            // 
+            this.BGflmPull.BackColor = System.Drawing.Color.Silver;
+            this.BGflmPull.Image = ((System.Drawing.Image)(resources.GetObject("BGflmPull.Image")));
+            this.BGflmPull.Location = new System.Drawing.Point(0, 10);
+            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
+            this.BGflmPull.Name = "BGflmPull";
+            this.BGflmPull.Size = new System.Drawing.Size(47, 45);
+            this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BGflmPull.TabIndex = 0;
+            this.BGflmPull.TabStop = false;
+            this.BGflmPull.Click += new System.EventHandler(this.FLMpbox_Click);
+            // 
+            // Login_Panel
+            // 
+            this.Login_Panel.BackColor = System.Drawing.Color.Silver;
+            this.Login_Panel.Controls.Add(this.PanelLogin_BT_Register);
+            this.Login_Panel.Controls.Add(this.LoginPanel_LB_Coeus);
+            this.Login_Panel.Controls.Add(this.PanelLogin_BT_Login);
+            this.Login_Panel.Controls.Add(this.PanelLogin_LLB_PasswordFOR);
+            this.Login_Panel.Controls.Add(this.LoginPanel_LB_Password);
+            this.Login_Panel.Controls.Add(this.PanelLogin_TB_Password);
+            this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
+            this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
+            this.Login_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Login_Panel.Name = "Login_Panel";
+            this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
+            this.Login_Panel.TabIndex = 1;
+            // 
+            // PanelLogin_BT_Register
+            // 
+            this.PanelLogin_BT_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_BT_Register.Location = new System.Drawing.Point(784, 703);
+            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_BT_Register.Name = "PanelLogin_BT_Register";
+            this.PanelLogin_BT_Register.Size = new System.Drawing.Size(154, 46);
+            this.PanelLogin_BT_Register.TabIndex = 7;
+            this.PanelLogin_BT_Register.Text = "Register";
+            this.PanelLogin_BT_Register.UseVisualStyleBackColor = true;
+            this.PanelLogin_BT_Register.Click += new System.EventHandler(this.PanelLogin_BT_Register_Click);
+            // 
+            // LoginPanel_LB_Coeus
+            // 
+            this.LoginPanel_LB_Coeus.AutoSize = true;
+            this.LoginPanel_LB_Coeus.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginPanel_LB_Coeus.Location = new System.Drawing.Point(892, 240);
+            this.LoginPanel_LB_Coeus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginPanel_LB_Coeus.Name = "LoginPanel_LB_Coeus";
+            this.LoginPanel_LB_Coeus.Size = new System.Drawing.Size(106, 36);
+            this.LoginPanel_LB_Coeus.TabIndex = 6;
+            this.LoginPanel_LB_Coeus.Text = "Coeus";
+            // 
+            // PanelLogin_BT_Login
+            // 
+            this.PanelLogin_BT_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_BT_Login.Location = new System.Drawing.Point(967, 703);
+            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_BT_Login.Name = "PanelLogin_BT_Login";
+            this.PanelLogin_BT_Login.Size = new System.Drawing.Size(154, 46);
+            this.PanelLogin_BT_Login.TabIndex = 5;
+            this.PanelLogin_BT_Login.Text = "Login";
+            this.PanelLogin_BT_Login.UseVisualStyleBackColor = true;
+            this.PanelLogin_BT_Login.Click += new System.EventHandler(this.PanelLogin_BT_Login_Click);
+            // 
+            // PanelLogin_LLB_PasswordFOR
+            // 
+            this.PanelLogin_LLB_PasswordFOR.AutoSize = true;
+            this.PanelLogin_LLB_PasswordFOR.Location = new System.Drawing.Point(793, 656);
+            this.PanelLogin_LLB_PasswordFOR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelLogin_LLB_PasswordFOR.Name = "PanelLogin_LLB_PasswordFOR";
+            this.PanelLogin_LLB_PasswordFOR.Size = new System.Drawing.Size(107, 13);
+            this.PanelLogin_LLB_PasswordFOR.TabIndex = 4;
+            this.PanelLogin_LLB_PasswordFOR.TabStop = true;
+            this.PanelLogin_LLB_PasswordFOR.Text = "Password Forgotten?";
+            this.PanelLogin_LLB_PasswordFOR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PanelLogin_LLB_PasswordFOR_LinkClicked);
+            // 
+            // LoginPanel_LB_Password
+            // 
+            this.LoginPanel_LB_Password.AutoSize = true;
+            this.LoginPanel_LB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginPanel_LB_Password.Location = new System.Drawing.Point(791, 573);
+            this.LoginPanel_LB_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginPanel_LB_Password.Name = "LoginPanel_LB_Password";
+            this.LoginPanel_LB_Password.Size = new System.Drawing.Size(78, 20);
+            this.LoginPanel_LB_Password.TabIndex = 3;
+            this.LoginPanel_LB_Password.Text = "Password";
+            // 
+            // PanelLogin_TB_Password
+            // 
+            this.PanelLogin_TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_TB_Password.Location = new System.Drawing.Point(784, 604);
+            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_TB_Password.Multiline = true;
+            this.PanelLogin_TB_Password.Name = "PanelLogin_TB_Password";
+            this.PanelLogin_TB_Password.PasswordChar = '*';
+            this.PanelLogin_TB_Password.Size = new System.Drawing.Size(337, 33);
+            this.PanelLogin_TB_Password.TabIndex = 2;
+            // 
+            // PanelLogin_LB_Email
+            // 
+            this.PanelLogin_LB_Email.AutoSize = true;
+            this.PanelLogin_LB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_LB_Email.Location = new System.Drawing.Point(791, 384);
+            this.PanelLogin_LB_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PanelLogin_LB_Email.Name = "PanelLogin_LB_Email";
+            this.PanelLogin_LB_Email.Size = new System.Drawing.Size(53, 20);
+            this.PanelLogin_LB_Email.TabIndex = 1;
+            this.PanelLogin_LB_Email.Text = "E-Mail";
+            // 
+            // PanelLogin_TB_Email
+            // 
+            this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelLogin_TB_Email.Location = new System.Drawing.Point(784, 418);
+            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogin_TB_Email.Multiline = true;
+            this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
+            this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
+            this.PanelLogin_TB_Email.TabIndex = 0;
+            // 
             // DigitalClockTimer
             // 
             this.DigitalClockTimer.Enabled = true;
             this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
-            // 
-            // FLMpbox
-            // 
-            this.FLMpbox.BackColor = System.Drawing.Color.Transparent;
-            this.FLMpbox.Location = new System.Drawing.Point(0, 0);
-            this.FLMpbox.Name = "FLMpbox";
-            this.FLMpbox.Size = new System.Drawing.Size(100, 50);
-            this.FLMpbox.TabIndex = 0;
-            this.FLMpbox.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
-            this.Controls.Add(this.Login_Panel);
-            this.Controls.Add(this.PanelRE_PA_RegistryBG);
-            this.Controls.Add(this.FLMpbox);
             this.Controls.Add(this.FLMpanel);
+            this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
+            this.Controls.Add(this.BGflmPull);
+            this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
+            this.Controls.Add(this.PanelRE_PA_RegistryBG);
+            this.Controls.Add(this.Login_Panel);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1359,22 +1366,20 @@
             this.FLMpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).EndInit();
             this.PanelDA_PA_DashBoardBackground.ResumeLayout(false);
-            this.PanelWG_PA_WeeklyGoalsBackground.ResumeLayout(false);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.ResumeLayout(false);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.PerformLayout();
-            this.PanelWG_PA_ShowWeeklyGoal.ResumeLayout(false);
             this.panelDA_PA_NotificationsPanel.ResumeLayout(false);
             this.PanelDA_PB_ScoreBoardPanel.ResumeLayout(false);
             this.panelDA_PA_DailyTasksPanel.ResumeLayout(false);
             this.PanelDA_PA_ProgressPanel.ResumeLayout(false);
             this.PanelDA_PA_UserInfoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PanelDA_PB_UserImage)).EndInit();
+            this.PanelRE_PA_RegistryBG.ResumeLayout(false);
+            this.PanelRE_PA_RegistryBG.PerformLayout();
+            this.PanelWG_PA_WeeklyGoalsBackground.ResumeLayout(false);
+            this.PanelWG_PA_WeeklyGoalsBackground.PerformLayout();
+            this.PanelWG_PA_ShowWeeklyGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
-            this.PanelRE_PA_RegistryBG.ResumeLayout(false);
-            this.PanelRE_PA_RegistryBG.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FLMpbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1396,7 +1401,6 @@
         private System.Windows.Forms.Button PanelFLM_BT_DashboardButton;
         private System.Windows.Forms.Button PanelFLM_BT_WeeklyGoalsButton;
         private System.Windows.Forms.Panel FLMpanel;
-        private System.Windows.Forms.PictureBox FLMpbox;
         private System.Windows.Forms.Panel PanelDA_PA_UserInfoPanel;
         private System.Windows.Forms.Panel PanelDA_PB_ScoreBoardPanel;
         private System.Windows.Forms.Panel panelDA_PA_DailyTasksPanel;
@@ -1427,7 +1431,7 @@
         private System.Windows.Forms.Label PanelDA_LB_ScoreboardScoreboard;
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardDate;
         private System.Windows.Forms.Label PanelDA_LA_ScoreboardTime;
-        private System.Windows.Forms.Button PanelFLM_BT_ProgressButton;
+        private System.Windows.Forms.Button PanelFLM_BT_FeedbackButton;
         private System.Windows.Forms.Button PanelFLM_BT_LogoutButton;
         private System.Windows.Forms.Panel panelDA_PA_NotificationsPanel;
         private System.Windows.Forms.Label panelDA_PA_NotificationsTitleLabel;
@@ -1442,8 +1446,6 @@
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardUserName1;
         private System.Windows.Forms.Panel PanelWG_PA_WeeklyGoalsBackground;
-
-        private System.Windows.Forms.Panel PanelWeeklyGoals_PN_CompleteWeeklyGoal;
         private System.Windows.Forms.Panel PanelWG_PA_ShowWeeklyGoal;
         private System.Windows.Forms.Label WeeklyGoals_LB_SetWeeklyGoal;
         private System.Windows.Forms.Button WeeklyGoals_BTN_AddWeekGoal;
@@ -1483,6 +1485,8 @@
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPostalcode;
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentStreet;
         private System.Windows.Forms.Button PanelLogin_BT_Register;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView ListViewWG_LW_DailyTasks;
     }
 }
 
