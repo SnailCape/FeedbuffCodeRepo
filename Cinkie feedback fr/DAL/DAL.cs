@@ -16,9 +16,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the students in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.Student> ReadStudents()
+        public List<FeedBUFClasses.Student> ReadStudents()
         {
-            List<Classes.Student> students = new List<Classes.Student>();
+            List<FeedBUFClasses.Student> students = new List<FeedBUFClasses.Student>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -46,7 +46,7 @@ namespace Cinkie_feedback_fr.DAL
                             string housenumber = dataReader[11].ToString();
                             string schoollocation = dataReader[12].ToString();
 
-                            students.Add(new Classes.Student(studentId, firstname, lastname, gender, email, phonenumber, postalCode,
+                            students.Add(new FeedBUFClasses.Student(studentId, firstname, lastname, gender, email, phonenumber, postalCode,
                                                              country, city, streetname, housenumber, schoollocation, false, classId));
                         }
                     }
@@ -61,9 +61,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the teachers in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.Teacher> ReadTeachers()
+        public List<FeedBUFClasses.Teacher> ReadTeachers()
         {
-            List<Classes.Teacher> teachers = new List<Classes.Teacher>();
+            List<FeedBUFClasses.Teacher> teachers = new List<FeedBUFClasses.Teacher>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -95,8 +95,8 @@ namespace Cinkie_feedback_fr.DAL
                             int studyUnitEC = Int32.Parse(dataReader[15].ToString());
                             int studyUnitHours = Int32.Parse(dataReader[16].ToString());
 
-                            Classes.StudyUnit studyunit = new Classes.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
-                            teachers.Add(new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname,
+                            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
+                            teachers.Add(new FeedBUFClasses.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname,
                                                              city, housenumber, schoolLocation, false, studyunit));
                         }
                     }
@@ -111,9 +111,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the classes in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.Class> ReadClasses()
+        public List<FeedBUFClasses.SchoolClass> ReadClasses()
         {
-            List<Classes.Class> classes = new List<Classes.Class>();
+            List<FeedBUFClasses.SchoolClass> classes = new List<FeedBUFClasses.SchoolClass>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -147,10 +147,10 @@ namespace Cinkie_feedback_fr.DAL
                             int studyUnitEC = Int32.Parse(dataReader[17].ToString());
                             int studyUnitHours = Int32.Parse(dataReader[18].ToString());
 
-                            Classes.StudyUnit studyUnit = new Classes.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
-                            Classes.Teacher teacher = new Classes.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname, city, housenumber, schoollocation, false, studyUnit);
+                            FeedBUFClasses.StudyUnit studyUnit = new FeedBUFClasses.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
+                            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher(teacherId, firstname, lastname, gender, email, phonenumber, postalCode, country, streetname, city, housenumber, schoollocation, false, studyUnit);
 
-                            classes.Add(new Classes.Class(classId, teacher, year));
+                            classes.Add(new FeedBUFClasses.SchoolClass(classId, teacher, year));
                         }
                     }
                     connection.Close();
@@ -164,9 +164,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the studyunits in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.StudyUnit> ReadStudyUnits()
+        public List<FeedBUFClasses.StudyUnit> ReadStudyUnits()
         {
-            List<Classes.StudyUnit> studyUnits = new List<Classes.StudyUnit>();
+            List<FeedBUFClasses.StudyUnit> studyUnits = new List<FeedBUFClasses.StudyUnit>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -180,7 +180,7 @@ namespace Cinkie_feedback_fr.DAL
                     {
                         while (dataReader.Read())
                         {
-                            studyUnits.Add(new Classes.StudyUnit(dataReader[0].ToString(), dataReader[1].ToString(),
+                            studyUnits.Add(new FeedBUFClasses.StudyUnit(dataReader[0].ToString(), dataReader[1].ToString(),
                                                                  dataReader[2].ToString(), Int32.Parse(dataReader[3].ToString()),
                                                                  Int32.Parse(dataReader[4].ToString())
                                                                  ));
@@ -197,9 +197,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the dailytasks in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.DailyTask> ReadDailyTasks()
+        public List<FeedBUFClasses.DailyTask> ReadDailyTasks()
         {
-            List<Classes.DailyTask> dailyTasks = new List<Classes.DailyTask>();
+            List<FeedBUFClasses.DailyTask> dailyTasks = new List<FeedBUFClasses.DailyTask>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -227,9 +227,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the weeklygoals in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.WeeklyGoal> ReadWeeklyGoals()
+        public List<FeedBUFClasses.WeeklyGoal> ReadWeeklyGoals()
         {
-            List<Classes.WeeklyGoal> weeklyGoals = new List<Classes.WeeklyGoal>();
+            List<FeedBUFClasses.WeeklyGoal> weeklyGoals = new List<FeedBUFClasses.WeeklyGoal>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -257,9 +257,9 @@ namespace Cinkie_feedback_fr.DAL
         /// Get a list of all the feedback in the database
         /// </summary>
         /// <returns></returns>
-        public List<Classes.Feedback> ReadFeedback()
+        public List<FeedBUFClasses.Feedback> ReadFeedback()
         {
-            List<Classes.Feedback> feedback = new List<Classes.Feedback>();
+            List<FeedBUFClasses.Feedback> feedback = new List<FeedBUFClasses.Feedback>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

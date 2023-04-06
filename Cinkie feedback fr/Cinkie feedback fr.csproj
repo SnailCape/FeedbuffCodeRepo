@@ -47,14 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Class.cs" />
-    <Compile Include="Classes\DailyTask.cs" />
-    <Compile Include="Classes\Student.cs" />
-    <Compile Include="Classes\StudyUnit.cs" />
-    <Compile Include="Classes\Teacher.cs" />
-    <Compile Include="Classes\WeeklyGoal.cs" />
     <Compile Include="DAL\DAL.cs" />
-    <Compile Include="Classes\Feedback.cs" />
+    <Compile Include="FeedBUFClasses\DailyTask.cs" />
+    <Compile Include="FeedBUFClasses\Feedback.cs" />
+    <Compile Include="FeedBUFClasses\SchoolClass.cs" />
+    <Compile Include="FeedBUFClasses\Student.cs" />
+    <Compile Include="FeedBUFClasses\StudyUnit.cs" />
+    <Compile Include="FeedBUFClasses\Teacher.cs" />
+    <Compile Include="FeedBUFClasses\WeeklyGoal.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
