@@ -14,28 +14,44 @@ namespace Cinkie_feedback_fr
     {
         public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
+        public Popup_FORM_DailyTasks PopUpDailyTasks;
 
         public Form1()
         {
             InitializeComponent();
-            //GetAllDataFromDatabase();
+            GetAllDataFromDatabase();
 
         }
 
         /// <summary>
         /// Collect all data from the database
         /// </summary>
-        /*private void GetAllDataFromDatabase()
+        private void GetAllDataFromDatabase()
         {
-            Classes.Class.GetClassesFromDB();
-            Classes.DailyTask.GetDailyTasksFromDB();
-            Classes.Feedback.GetFeedbackFromDB();
-            Classes.Student.GetStudentsFromDB();
-            Classes.StudyUnit.GetStudyUnitsFromDB();
-            Classes.Teacher.GetTeachersFromDB();
-            Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
+            // Make an instance of every object
+            FeedBUFClasses.DailyTask dailytask = new FeedBUFClasses.DailyTask();
+            FeedBUFClasses.Feedback feedback = new FeedBUFClasses.Feedback();
+            FeedBUFClasses.SchoolClass schoolclass = new FeedBUFClasses.SchoolClass();
+            FeedBUFClasses.Student student = new FeedBUFClasses.Student();
+            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit();
+            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher();
+            FeedBUFClasses.WeeklyGoal weeklygoal = new FeedBUFClasses.WeeklyGoal();
+
+            // Get all data
+            dailytask.GetDailyTasksFromDB();
+            feedback.GetFeedbackFromDB();
+            schoolclass.GetClassesFromDB();
+            student.GetStudentsFromDB();
+            studyunit.GetStudyUnitsFromDB();
+            teacher.GetTeachersFromDB();
+            weeklygoal.GetWeeklyGoalsFromDB();
+
+            // Connect incomplete data
+            student.ConnectStudentsWithClasses();
+            weeklygoal.ConnectGoalWithStudent();
+            dailytask.ConnectTaskWithGoal();
         }
-    */
+
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>
@@ -122,13 +138,10 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.Hide();
             FLMpanel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
+            PanelFB_PA_FeedbackBG.Hide();
 
         }
 
-        private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
@@ -144,6 +157,7 @@ namespace Cinkie_feedback_fr
         {
             PanelDA_PA_DashBoardBackground.Show();
             PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelFB_PA_FeedbackBG.Hide();
         }
 
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
@@ -152,26 +166,22 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.Show();
+            panelDA_PA_NotificationsPanel.BringToFront();
             BGflmPull.BringToFront();
             FLMpanel.BringToFront();
 
         }
-
-
-        private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
+        private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
         {
-            if (WeeklyGoals_TB_FillInWeeklyGoal.Text != "" && WeeklyGoals_LB_SetWeeklyGoal.Text != "Fill in your WeeklyGoal" && WeeklyGoals_TB_FillInWeeklyGoal.Text != "This field cannot be empty")
-            {
-                WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
-                WeeklyGoals_TB_FillInWeeklyGoal.Visible = false;
-                WeeklyGoals_BTN_AddWeekGoal.Visible= false;
-            }
-            else
-            {
-                WeeklyGoals_TB_FillInWeeklyGoal.Text = "This field cannot be empty";
-            }
-            
+            PanelFB_PA_FeedbackBG.Show();
+            PanelFB_PA_FeedbackBG.BringToFront();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelDA_PA_DashBoardBackground.Hide();
+            BGflmPull.BringToFront();
+            BGflmPull.Show();
+            FLMpanel.BringToFront();
         }
+
 
         private void WeeklyGoalClick(object sender, EventArgs e)
         {
@@ -235,43 +245,73 @@ namespace Cinkie_feedback_fr
 
         private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
         {
-            
-
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Monday");
         }
-
         private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Tuesday");
+
         }
 
         private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Wednesday");
         }
-
         private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Thursday");
         }
 
         private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Friday");
         }
 
         private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
         {
-           
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Saturday");
         }
 
         private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Sunday");
+
         }
 
         private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Show All");
+
         }
+
+        private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
+        {
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        
     }
 }

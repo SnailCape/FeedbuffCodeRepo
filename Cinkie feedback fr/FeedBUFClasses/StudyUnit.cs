@@ -16,6 +16,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public int HoursAmount { get; set; }
         public List<StudyUnit> listStudyUnits = new List<StudyUnit>();
 
+        public StudyUnit() { }
         public StudyUnit(string studyUnitId, string name, string department, int europeanCredits, int hoursAmount)
         {
             StudyUnitId = studyUnitId;

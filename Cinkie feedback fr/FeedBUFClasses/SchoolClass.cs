@@ -14,6 +14,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public int Year { get; set; }
         public List<SchoolClass> listClasses = new List<SchoolClass>();
 
+        public SchoolClass() { }
         public SchoolClass(int classId, Teacher teacher, int year)
         {
             ClassId = classId;

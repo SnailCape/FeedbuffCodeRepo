@@ -207,13 +207,23 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "";
+                    command.CommandText = "SELECT DAILYTASK.taskId, DAILYTASK.goalId, DAILYTASK.[status], DAILYTASK.tijdsduurVerwacht, DAILYTASK.tijdsduurRealistisch, DAILYTASK.typeTijdsduur, DAILYTASK.deadline, DAILYTASK.titel, DAILYTASK.omschrijving FROM DAILYTASK";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
                         while (dataReader.Read())
                         {
+                            int taskId = Int32.Parse(dataReader[0].ToString());
+                            int goalId = Int32.Parse(dataReader[1].ToString());
+                            string statusTask = dataReader[2].ToString();
+                            int expectedTime = Int32.Parse(dataReader[3].ToString());
+                            int realTime = Int32.Parse(dataReader[4].ToString());
+                            string typeTime = dataReader[5].ToString();
+                            string deadline = dataReader[6].ToString();
+                            string titelTask = dataReader[7].ToString();
+                            string descriptionTask = dataReader[8].ToString();
 
+                            dailyTasks.Add(new FeedBUFClasses.DailyTask(taskId, statusTask, titelTask, descriptionTask, goalId, expectedTime, realTime, typeTime));
                         }
                     }
                     connection.Close();
@@ -237,13 +247,26 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "";
+                    command.CommandText = "SELECT WEEKLYGOAL.goalId, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.omschrijving, WEEKLYGOAL.weeknummer, WEEKLYGOAL.studentId, WEEKLYGOAL.oeId, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM WEEKLYGOAL JOIN ONDERWIJSEENHEID ON WEEKLYGOAL.oeId = ONDERWIJSEENHEID.oeId";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
                         while (dataReader.Read())
                         {
+                            int goalId = Int32.Parse(dataReader[0].ToString());
+                            string status = dataReader[1].ToString();
+                            string titel = dataReader[2].ToString();
+                            string description = dataReader[3].ToString();
+                            int weeknumber = Int32.Parse(dataReader[4].ToString());
+                            int studentId = Int32.Parse(dataReader[5].ToString());
+                            string studyUnitId = dataReader[6].ToString();
+                            string studyUnitName = dataReader[7].ToString();
+                            string studyUnitDepartment = dataReader[8].ToString();
+                            int studyUnitEC = Int32.Parse(dataReader[9].ToString());
+                            int studyUnitHours = Int32.Parse(dataReader[10].ToString());
 
+                            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
+                            weeklyGoals.Add(new FeedBUFClasses.WeeklyGoal(goalId, weeknumber, titel, description, status, studyunit, studentId));
                         }
                     }
                     connection.Close();
@@ -267,13 +290,22 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "";
+                    command.CommandText = "SELECT FEEDBACK.feedbackId, FEEDBACK.oeId, FEEDBACK.omschrijving, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM FEEDBACK JOIN ONDERWIJSEENHEID ON FEEDBACK.oeId = ONDERWIJSEENHEID.oeId";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
                         while (dataReader.Read())
                         {
+                            int feedbackId = Int32.Parse(dataReader[0].ToString());
+                            string studyUnitId = dataReader[1].ToString();
+                            string description = dataReader[2].ToString();
+                            string name = dataReader[3].ToString();
+                            string department = dataReader[4].ToString();
+                            int EC = Int32.Parse(dataReader[5].ToString());
+                            int hours = Int32.Parse(dataReader[6].ToString());
 
+                            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(studyUnitId, name, department, EC, hours);
+                            feedback.Add(new FeedBUFClasses.Feedback(feedbackId, studyunit, description));
                         }
                     }
                     connection.Close();
