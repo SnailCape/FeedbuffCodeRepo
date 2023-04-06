@@ -12,7 +12,7 @@ namespace Cinkie_feedback_fr.Classes
         public int TeacherId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Age { get; set; }
+        public int Gender { get; set; }
         public string Email { get; set; }
         public string Phonenumber { get; set; }
         public string PostalCode { get; set; }
@@ -25,9 +25,8 @@ namespace Cinkie_feedback_fr.Classes
         public StudyUnit studyUnit { get; set; }
         public List<Teacher> listTeachers = new List<Teacher>();
 
-        public Teacher() { }
         public Teacher(int teacherId, string firstName, string lastName,
-                       int age, string email, string phonenumber,
+                       int gender, string email, string phonenumber,
                        string postalCode, string country, string streetname,
                        string city, string housenumber, string schoolLocation,
                        string loginStatus, StudyUnit studyUnit)
@@ -35,7 +34,7 @@ namespace Cinkie_feedback_fr.Classes
             TeacherId = teacherId;
             FirstName = firstName;
             LastName = lastName;
-            Age = age;
+            Gender = gender;
             Email = email;
             Phonenumber = phonenumber;
             PostalCode = postalCode;
@@ -51,12 +50,16 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of teachers from the database into the class
         /// </summary>
-        public void GetTeachersFromDB()
+        public static void GetTeachersFromDB()
         {
             listTeachers.Clear();
             listTeachers = dal.ReadTeachers();
         }
-
+        
+        /// <summary>
+        /// Get the list of teachers saved into the class
+        /// </summary>
+        /// <return></return>
         public List<Teacher> GetTeachersFromClass()
         {
             return listTeachers;

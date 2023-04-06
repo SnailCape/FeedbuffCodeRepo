@@ -25,10 +25,19 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of all feedback from the database into the class
         /// </summary>
-        public void GetFeedbackFromDB()
+        public static void GetFeedbackFromDB()
         {
             listFeedback.Clear();
             listFeedback = dal.ReadFeedback();
+        }
+
+        /// <summary>
+        /// Get the saved list of feedback from the class
+        /// </summary>
+        /// <return></return>
+        public List<Feedback> GetFeedbackFromClass()
+        {
+            return listFeedback;
         }
     }
 }

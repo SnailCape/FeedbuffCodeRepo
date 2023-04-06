@@ -33,7 +33,7 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of weeklygoals from the database into the class
         /// </summary>
-        public void GetWeeklyGoalsFromDB()
+        public static void GetWeeklyGoalsFromDB()
         {
             listWeeklyGoals.Clear();
             listWeeklyGoals = dal.ReadWeeklyGoals();

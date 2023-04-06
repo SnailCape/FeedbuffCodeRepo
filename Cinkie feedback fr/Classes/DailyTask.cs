@@ -37,10 +37,19 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of dailytasks from the database into the class
         /// </summary>
-        public void GetDailyTasksFromDB()
+        public static void GetDailyTasksFromDB()
         {
             listDailyTasks.Clear();
             listDailyTasks = dal.ReadDailyTasks();
+        }
+
+        /// <summary>
+        /// Get the saved list of dailytasks from the class
+        /// </summary>
+        /// <return></return>
+        public List<DailyTask> GetDailyTasksFromClass()
+        {
+            return listDailyTasks;
         }
     }
 }

@@ -29,10 +29,19 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of studyunits from the database into the class
         /// </summary>
-        public void GetStudyUnitsFromDB()
+        public static void GetStudyUnitsFromDB()
         {
             listStudyUnits.Clear();
             listStudyUnits = dal.ReadStudyUnits();
+        }
+
+        /// <summary>
+        /// Get the saved list of studyunits from the class
+        /// </summary>
+        /// <return></return>
+        public List<StudyUnit> GetStudyUnitsFromClass()
+        {
+            return listStudyUnits;
         }
     }
 }

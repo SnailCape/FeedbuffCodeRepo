@@ -24,10 +24,19 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of classes from the database into the class
         /// </summary>
-        public void GetClassesFromDB()
+        public static void GetClassesFromDB()
         {
             listClasses.Clear();
             listClasses = dal.ReadClasses();
+        }
+
+        /// <summary>
+        /// Get the saved list of students from the class
+        /// </summary>
+        /// <return></return>
+        public List<Class> GetClassesFromClass()
+        {
+            return listClasses;
         }
     }
 }
