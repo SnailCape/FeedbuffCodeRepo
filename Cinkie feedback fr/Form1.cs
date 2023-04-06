@@ -78,6 +78,7 @@ namespace Cinkie_feedback_fr
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 PanelDA_PA_DashBoardBackground.BringToFront();
+                BGflmPull.BringToFront();
                 Login_Panel.Hide();
                 PanelRE_PA_RegistryBG.Hide();
                 FLMpanel.BringToFront();
@@ -129,7 +130,9 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.Show();
-            BGflmPull.Show();
+            BGflmPull.BringToFront();
+            FLMpbox.BringToFront();
+            
 
         }
 
@@ -184,7 +187,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.Show();
             PanelRE_PA_RegistryBG.SendToBack();
 
-        }
+            }
 
             private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
             {
