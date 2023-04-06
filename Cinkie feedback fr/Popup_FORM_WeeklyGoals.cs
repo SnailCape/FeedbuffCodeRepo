@@ -27,10 +27,5 @@ namespace Cinkie_feedback_fr
             
         }
 
-        //private void PopUpBoxClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    form1.Check = false;
-        //}
-
     }
 }

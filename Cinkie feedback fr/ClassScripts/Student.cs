@@ -29,7 +29,7 @@ namespace Cinkie_feedback_fr.Classes
         
         // Student object with class index
         public Student(int studentId, string firstName, string lastName,
-                       int gender, string email, string phonenumber,
+                       string gender, string email, string phonenumber,
                        string postalcode, string country, string city,
                        string streetname, string housenumber, string schoollocation,
                        bool loginstatus, int studentclassId) 
@@ -51,7 +51,7 @@ namespace Cinkie_feedback_fr.Classes
         }
         // Student object with class object
         public Student(int studentId, string firstName, string lastName,
-                       int gender, string email, string phonenumber,
+                       string gender, string email, string phonenumber,
                        string postalcode, string country, string city,
                        string streetname, string housenumber, string schoollocation,
                        bool loginstatus, Class studentclass)
@@ -75,7 +75,7 @@ namespace Cinkie_feedback_fr.Classes
         /// <summary>
         /// Save the list of students from the database into the class
         /// </summary>
-        public static void GetStudentsFromDB()
+        public void GetStudentsFromDB()
         {
             listStudents.Clear();
             listStudents = dal.ReadStudents();
