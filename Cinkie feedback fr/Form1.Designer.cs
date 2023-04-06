@@ -105,6 +105,7 @@
             this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
             this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
             this.WeeklyGoals_TB_FillInWeeklyGoal = new System.Windows.Forms.TextBox();
@@ -116,6 +117,7 @@
             this.WeeklyGoals_BTN_Saturday = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
             this.PanelWG_PA_ShowWeeklyGoal = new System.Windows.Forms.Panel();
+            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
             this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
             this.BGflmPull = new System.Windows.Forms.PictureBox();
             this.Login_Panel = new System.Windows.Forms.Panel();
@@ -128,8 +130,6 @@
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
-            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -1061,6 +1061,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelWG_PA_WeeklyGoalsBackground.BackColor = System.Drawing.Color.Silver;
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.ListViewWG_LW_DailyTasks);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.button1);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Monday);
@@ -1078,9 +1079,19 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1248, 823);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 36);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Add Task";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // WeeklyGoals_BTN_AddWeekGoal
             // 
-            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1251, 698);
+            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1148, 213);
             this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
             this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(76, 21);
@@ -1091,7 +1102,7 @@
             // 
             // WeeklyGoals_BTN_Monday
             // 
-            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(520, 284);
+            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(439, 409);
             this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
             this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(112, 47);
@@ -1101,7 +1112,7 @@
             // 
             // WeeklyGoals_TB_FillInWeeklyGoal
             // 
-            this.WeeklyGoals_TB_FillInWeeklyGoal.Location = new System.Drawing.Point(520, 700);
+            this.WeeklyGoals_TB_FillInWeeklyGoal.Location = new System.Drawing.Point(416, 214);
             this.WeeklyGoals_TB_FillInWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_TB_FillInWeeklyGoal.Name = "WeeklyGoals_TB_FillInWeeklyGoal";
             this.WeeklyGoals_TB_FillInWeeklyGoal.Size = new System.Drawing.Size(728, 20);
@@ -1109,7 +1120,7 @@
             // 
             // WeeklyGoals_BTN_Tuesday
             // 
-            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(632, 284);
+            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(551, 409);
             this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
             this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(112, 47);
@@ -1119,7 +1130,7 @@
             // 
             // WeeklyGoals_BTN_ShowAll
             // 
-            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1303, 284);
+            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1222, 409);
             this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
             this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(112, 47);
@@ -1130,7 +1141,7 @@
             // 
             // WeeklyGoals_BTN_Wednesday
             // 
-            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(744, 284);
+            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(663, 409);
             this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
             this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(112, 47);
@@ -1140,7 +1151,7 @@
             // 
             // WeeklyGoals_BTN_Sunday
             // 
-            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1191, 284);
+            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1110, 409);
             this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
             this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(112, 47);
@@ -1151,7 +1162,7 @@
             // 
             // WeeklyGoals_BTN_Thursday
             // 
-            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(855, 284);
+            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(774, 409);
             this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
             this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(112, 47);
@@ -1161,7 +1172,7 @@
             // 
             // WeeklyGoals_BTN_Saturday
             // 
-            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(1079, 284);
+            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(998, 409);
             this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
             this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(112, 47);
@@ -1172,7 +1183,7 @@
             // 
             // WeeklyGoals_BTN_Friday
             // 
-            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(967, 284);
+            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(886, 409);
             this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
             this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(112, 47);
@@ -1184,21 +1195,30 @@
             // PanelWG_PA_ShowWeeklyGoal
             // 
             this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
-            this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.ListViewWG_LW_DailyTasks);
             this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
-            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(506, 330);
+            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(410, 61);
             this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
             this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
-            this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(909, 366);
+            this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(924, 134);
             this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
+            // 
+            // ListViewWG_LW_DailyTasks
+            // 
+            this.ListViewWG_LW_DailyTasks.HideSelection = false;
+            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(433, 453);
+            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
+            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
+            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
+            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
+            this.ListViewWG_LW_DailyTasks.Visible = false;
             // 
             // WeeklyGoals_LB_SetWeeklyGoal
             // 
             this.WeeklyGoals_LB_SetWeeklyGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(4, 5);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(2, 5);
             this.WeeklyGoals_LB_SetWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeeklyGoals_LB_SetWeeklyGoal.Name = "WeeklyGoals_LB_SetWeeklyGoal";
-            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(898, 236);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(872, 146);
             this.WeeklyGoals_LB_SetWeeklyGoal.TabIndex = 0;
             this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Fill in your WeeklyGoal";
             this.WeeklyGoals_LB_SetWeeklyGoal.Click += new System.EventHandler(this.WeeklyGoalClick);
@@ -1328,33 +1348,13 @@
             this.DigitalClockTimer.Enabled = true;
             this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
             // 
-            // ListViewWG_LW_DailyTasks
-            // 
-            this.ListViewWG_LW_DailyTasks.HideSelection = false;
-            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(0, -2);
-            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
-            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
-            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
-            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
-            this.ListViewWG_LW_DailyTasks.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1329, 698);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add Task";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Controls.Add(this.FLMpanel);
+            this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Controls.Add(this.BGflmPull);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
