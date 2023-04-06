@@ -74,8 +74,6 @@ namespace Cinkie_feedback_fr
             else
             {
                 FLMpanel.Show();
-
-                
             }
 
         }
