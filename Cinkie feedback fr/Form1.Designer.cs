@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_ProgressButton = new System.Windows.Forms.Button();
@@ -160,7 +161,7 @@
             // 
             // PanelFLM_BT_LogoutButton
             // 
-            this.PanelFLM_BT_LogoutButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ExitIcon;
+            this.PanelFLM_BT_LogoutButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_LogoutButton.BackgroundImage")));
             this.PanelFLM_BT_LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_LogoutButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,7 +178,7 @@
             // 
             // PanelFLM_BT_ProgressButton
             // 
-            this.PanelFLM_BT_ProgressButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.ProgressIcon;
+            this.PanelFLM_BT_ProgressButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_ProgressButton.BackgroundImage")));
             this.PanelFLM_BT_ProgressButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_ProgressButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_ProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -193,7 +194,7 @@
             // 
             // PanelFLM_BT_WeeklyGoalsButton
             // 
-            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.pngegg;
+            this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_WeeklyGoalsButton.BackgroundImage")));
             this.PanelFLM_BT_WeeklyGoalsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_WeeklyGoalsButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_WeeklyGoalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -211,7 +212,7 @@
             // PanelFLM_BT_DashboardButton
             // 
             this.PanelFLM_BT_DashboardButton.BackColor = System.Drawing.Color.Red;
-            this.PanelFLM_BT_DashboardButton.BackgroundImage = global::Cinkie_feedback_fr.Properties.Resources.HomeIcon;
+            this.PanelFLM_BT_DashboardButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelFLM_BT_DashboardButton.BackgroundImage")));
             this.PanelFLM_BT_DashboardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanelFLM_BT_DashboardButton.FlatAppearance.BorderSize = 0;
             this.PanelFLM_BT_DashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -229,7 +230,7 @@
             // 
             // FLMpanelZUYD
             // 
-            this.FLMpanelZUYD.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYD1;
+            this.FLMpanelZUYD.Image = ((System.Drawing.Image)(resources.GetObject("FLMpanelZUYD.Image")));
             this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
             this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanelZUYD.Name = "FLMpanelZUYD";
@@ -765,7 +766,7 @@
             // PanelDA_PB_UserImage
             // 
             this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
-            this.PanelDA_PB_UserImage.Image = global::Cinkie_feedback_fr.Properties.Resources.FcwaHO8aAAEKhqS;
+            this.PanelDA_PB_UserImage.Image = ((System.Drawing.Image)(resources.GetObject("PanelDA_PB_UserImage.Image")));
             this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
             this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
@@ -1075,7 +1076,7 @@
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
             // WeeklyGoals_BTN_AddWeekGoal
-            //
+            // 
             this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1251, 698);
             this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
@@ -1201,7 +1202,7 @@
             // BGflmPull
             // 
             this.BGflmPull.BackColor = System.Drawing.Color.Silver;
-            this.BGflmPull.Image = global::Cinkie_feedback_fr.Properties.Resources.LogoZUYDRodeLetters;
+            this.BGflmPull.Image = ((System.Drawing.Image)(resources.GetObject("BGflmPull.Image")));
             this.BGflmPull.Location = new System.Drawing.Point(0, 10);
             this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
             this.BGflmPull.Name = "BGflmPull";
@@ -1460,7 +1461,6 @@
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPostalcode;
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentStreet;
         private System.Windows.Forms.Button PanelLogin_BT_Register;
-        private System.Windows.Forms.ListView ListViewWG_LW_DailyTasks;
     }
 }
 
