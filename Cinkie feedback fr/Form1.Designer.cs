@@ -246,7 +246,8 @@
             // PanelDA_PA_DashBoardBackground
             // 
             this.PanelDA_PA_DashBoardBackground.BackColor = System.Drawing.Color.Silver;
-            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
+            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelRE_PA_RegistryBG);
+            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.BGflmPull);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.panelDA_PA_NotificationsPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpPercentage);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_LA_TasksExpBar);
@@ -254,7 +255,6 @@
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.panelDA_PA_DailyTasksPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_ProgressPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_UserInfoPanel);
-            this.PanelDA_PA_DashBoardBackground.Controls.Add(this.BGflmPull);
             this.PanelDA_PA_DashBoardBackground.Location = new System.Drawing.Point(1, 0);
             this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_DashBoardBackground.Name = "PanelDA_PA_DashBoardBackground";
@@ -267,7 +267,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWeeklyGoals_PN_CompleteWeeklyGoal);
-            this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(-1, 0);
+            this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(0, 0);
             this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
             this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
@@ -285,7 +285,7 @@
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Wednesday);
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Tuesday);
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Controls.Add(this.WeeklyGoals_BTN_Monday);
-            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Location = new System.Drawing.Point(176, 101);
+            this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Location = new System.Drawing.Point(405, 168);
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Name = "PanelWeeklyGoals_PN_CompleteWeeklyGoal";
             this.PanelWeeklyGoals_PN_CompleteWeeklyGoal.Size = new System.Drawing.Size(1078, 518);
@@ -1053,6 +1053,7 @@
             // PanelRE_PA_RegistryBG
             // 
             this.PanelRE_PA_RegistryBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPostalcodeLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentUnitNumberLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCityLabel);
@@ -1078,7 +1079,7 @@
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentEmail);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentSurname);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentName);
-            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(2, 2);
+            this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(0, 0);
             this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
             this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
@@ -1347,11 +1348,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.FLMpanel);
+            this.Controls.Add(this.FLMpbox);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
-            this.Controls.Add(this.PanelRE_PA_RegistryBG);
-            this.Controls.Add(this.FLMpbox);
-            this.Controls.Add(this.FLMpanel);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

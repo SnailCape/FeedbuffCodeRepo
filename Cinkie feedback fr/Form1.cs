@@ -78,8 +78,8 @@ namespace Cinkie_feedback_fr
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 PanelDA_PA_DashBoardBackground.BringToFront();
-                Login_Panel.SendToBack();
-                PanelRE_PA_RegistryBG.SendToBack();
+                Login_Panel.Hide();
+                PanelRE_PA_RegistryBG.Hide();
                 FLMpanel.BringToFront();
                 PanelLogin_TB_Email.Text = "";
                 PanelLogin_TB_Password.Text = "";
@@ -96,7 +96,9 @@ namespace Cinkie_feedback_fr
         /// </summary>
         private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
+            Login_Panel.BringToFront();
             Login_Panel.Show();
+            PanelDA_PA_DashBoardBackground.Hide();
             FLMpanel.Hide();
         }
 
@@ -124,15 +126,27 @@ namespace Cinkie_feedback_fr
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
         {
             PanelDA_PA_DashBoardBackground.Hide();
+            PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
-            panelDA_PA_NotificationsPanel.BringToFront();
-            BGflmPull.BringToFront();
+            panelDA_PA_NotificationsPanel.Show();
+            BGflmPull.Show();
+
         }
 
 
         private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
         {
-            WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
+            if (WeeklyGoals_TB_FillInWeeklyGoal.Text != "" && WeeklyGoals_LB_SetWeeklyGoal.Text != "Fill in your WeeklyGoal" && WeeklyGoals_TB_FillInWeeklyGoal.Text != "This field cannot be empty")
+            {
+                WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
+                WeeklyGoals_TB_FillInWeeklyGoal.Visible = false;
+                WeeklyGoals_BTN_AddWeekGoal.Visible= false;
+            }
+            else
+            {
+                WeeklyGoals_TB_FillInWeeklyGoal.Text = "This field cannot be empty";
+            }
+            
         }
 
         private void WeeklyGoalClick(object sender, EventArgs e)
@@ -166,20 +180,24 @@ namespace Cinkie_feedback_fr
 
             private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
             {
-                PanelRE_PA_RegistryBG.Hide();
-                Login_Panel.Show();
-            }
+            
+            Login_Panel.Show();
+            PanelRE_PA_RegistryBG.SendToBack();
+
+        }
 
             private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
             {
                 PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
 
             }
+        
 
         private void PanelLogin_BT_Register_Click(object sender, EventArgs e)
         {
+            Login_Panel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
-            PanelRE_PA_RegistryBG.Show();
+            PanelRE_PA_RegistryBG.BringToFront();
         }
     }
 }
