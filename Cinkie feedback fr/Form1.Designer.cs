@@ -128,6 +128,8 @@
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.ListViewWG_LW_DailyTasks = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -1059,6 +1061,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelWG_PA_WeeklyGoalsBackground.BackColor = System.Drawing.Color.Silver;
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.button1);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Monday);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_TB_FillInWeeklyGoal);
@@ -1181,6 +1184,7 @@
             // PanelWG_PA_ShowWeeklyGoal
             // 
             this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
+            this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.ListViewWG_LW_DailyTasks);
             this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
             this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(506, 330);
             this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
@@ -1324,6 +1328,26 @@
             this.DigitalClockTimer.Enabled = true;
             this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
             // 
+            // ListViewWG_LW_DailyTasks
+            // 
+            this.ListViewWG_LW_DailyTasks.HideSelection = false;
+            this.ListViewWG_LW_DailyTasks.Location = new System.Drawing.Point(0, -2);
+            this.ListViewWG_LW_DailyTasks.Name = "ListViewWG_LW_DailyTasks";
+            this.ListViewWG_LW_DailyTasks.Size = new System.Drawing.Size(909, 368);
+            this.ListViewWG_LW_DailyTasks.TabIndex = 9;
+            this.ListViewWG_LW_DailyTasks.UseCompatibleStateImageBehavior = false;
+            this.ListViewWG_LW_DailyTasks.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1329, 698);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 36);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Add Task";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1461,6 +1485,8 @@
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentPostalcode;
         private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentStreet;
         private System.Windows.Forms.Button PanelLogin_BT_Register;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView ListViewWG_LW_DailyTasks;
     }
 }
 
