@@ -290,7 +290,7 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT FEEDBACK.feedbackId, FEEDBACK.oedId, FEEDBACK.omschrijving, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM FEEDBACK JOIN ONDERWIJSEENHEID ON FEEDBACK.oeId = ONDERWIJSEENHEID.oeId";
+                    command.CommandText = "SELECT FEEDBACK.feedbackId, FEEDBACK.oeId, FEEDBACK.omschrijving, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM FEEDBACK JOIN ONDERWIJSEENHEID ON FEEDBACK.oeId = ONDERWIJSEENHEID.oeId";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
