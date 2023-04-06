@@ -14,6 +14,7 @@ namespace Cinkie_feedback_fr
     {
         public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
+        public Popup_FORM_DailyTasks PopUpDailyTasks;
 
         public Form1()
         {
@@ -182,21 +183,6 @@ namespace Cinkie_feedback_fr
         }
 
 
-        private void WeeklyGoals_BTN_AddWeekGoal_Click(object sender, EventArgs e)
-        {
-            if (WeeklyGoals_TB_FillInWeeklyGoal.Text != "" && WeeklyGoals_LB_SetWeeklyGoal.Text != "Fill in your WeeklyGoal" && WeeklyGoals_TB_FillInWeeklyGoal.Text != "This field cannot be empty")
-            {
-                WeeklyGoals_LB_SetWeeklyGoal.Text = WeeklyGoals_TB_FillInWeeklyGoal.Text;
-                WeeklyGoals_TB_FillInWeeklyGoal.Visible = false;
-                WeeklyGoals_BTN_AddWeekGoal.Visible= false;
-            }
-            else
-            {
-                WeeklyGoals_TB_FillInWeeklyGoal.Text = "This field cannot be empty";
-            }
-            
-        }
-
         private void WeeklyGoalClick(object sender, EventArgs e)
         {
             if (Check == false)
@@ -259,43 +245,71 @@ namespace Cinkie_feedback_fr
 
         private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
         {
-            
-
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Monday");
         }
-
         private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Tuesday");
+
         }
 
         private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Wednesday");
         }
-
         private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Thursday");
         }
 
         private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Friday");
         }
 
         private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
         {
-           
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Saturday");
         }
 
         private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Sunday");
+
         }
 
         private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
         {
-            
+            WeekGoals_Listview_Tasks.Items.Clear();
+            WeekGoals_Listview_Tasks.Items.Add("Show All");
+
+        }
+
+        private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
+        {
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         

@@ -14,10 +14,11 @@ namespace Cinkie_feedback_fr
     {
         public Form1 form1;
 
-        public Popup_FORM_WeeklyGoals(Form frm)
+        public Popup_FORM_WeeklyGoals(Form1 frm)
         {
             InitializeComponent();
             this.Text = "Weekly Goal";
+            form1= frm;
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -27,5 +28,13 @@ namespace Cinkie_feedback_fr
             
         }
 
+        private void WG_BTN_Add_Click(object sender, EventArgs e)
+        {
+            form1.WeeklyGoals_LB_SetWeeklyGoal.Text = Goal_TB_Title.Text + " " + WG_TB_Description.Text;
+
+            this.Dispose();
+            Form1.Check = false;
+
+        }
     }
 }
