@@ -216,43 +216,43 @@ namespace Cinkie_feedback_fr
 
         private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
 
         }
 
         private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
 
         private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
 
         private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
 
         private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
 
         private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+           
         }
 
         private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
 
         private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
         {
-            ListViewWG_LW_DailyTasks.Visible = true;
+            
         }
     }
 }
