@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,38 +16,40 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public string Status { get; set; }
         public string Titel { get; set; }
         public string Description { get; set; }
-        public int TimeStampExpected { get; set; }
-        public int TimeStampRealtime { get; set; }
-        public string TimeStampType { get; set; }
-        public int Weeknumber { get; set; }
+        public string Time { get; set; }
+        public string Priority { get; set; }
+        public string Difficulty { get; set; }
+        public string Type { get; set; }
         public List<DailyTask> listDailyTasks = new List<DailyTask>();
 
         public DailyTask() { }
         public DailyTask(int dailyTaskId, string status, string titel, 
                          string description, WeeklyGoal weeklyGoal,
-                         int timeStampExpected, int timeStampRealtime, string timeStampType)
+                         string time, string priority, string difficulty, string type)
         {
             DailyTaskId = dailyTaskId;
             this.weeklyGoal = weeklyGoal;
             Status = status;
             Titel = titel;
             Description = description;
-            TimeStampExpected = timeStampExpected;
-            TimeStampRealtime = timeStampRealtime;
-            TimeStampType = timeStampType;
+            Time = time;
+            Priority = priority;
+            Difficulty = difficulty;
+            Type = type;
         }
         public DailyTask(int dailyTaskId, string status, string titel,
                          string description, int weeklyGoalId,
-                         int timeStampExpected, int timeStampRealtime, string timeStampType)
+                         string time, string priority, string difficulty, string type)
         {
             DailyTaskId = dailyTaskId;
             WeeklyGoalId = weeklyGoalId;
             Status = status;
             Titel = titel;
             Description = description;
-            TimeStampExpected = timeStampExpected;
-            TimeStampRealtime = timeStampRealtime;
-            TimeStampType = timeStampType;
+            Time = time;
+            Priority = priority;
+            Difficulty = difficulty;
+            Type = type;
         }
 
         /// <summary>
@@ -81,7 +84,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
                 {
                     if (task.WeeklyGoalId == goal.WeeklyGoalId)
                     {
-                        newListDailyTasks.Add(new DailyTask(task.DailyTaskId, task.Status, task.Titel, task.Description, goal, task.TimeStampExpected, task.TimeStampRealtime, task.TimeStampType));
+                        newListDailyTasks.Add(new DailyTask(task.DailyTaskId, task.Status, task.Titel, task.Description, goal, task.Time, task.Priority, task.Difficulty, task.Type));
                     }
                 }
             }

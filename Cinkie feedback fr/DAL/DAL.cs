@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Cinkie_feedback_fr.DAL
 {
@@ -26,7 +27,7 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT STUDENT.studentId, STUDENT.klasId, STUDENT.voornaam, STUDENT.achternaam, STUDENT.geslacht, STUDENT.emailadres, STUDENT.telefoonnummer, STUDENT.postcode, STUDENT.land, ADRES.stad, ADRES.straatnaam, ADRES.huisnummer, STUDENT.schoolLocatie FROM STUDENT JOIN ADRES ON STUDENT.postcode = ADRES.postcode";
+                    command.CommandText = "SELECT STUDENT.studentId, STUDENT.klasId, STUDENT.voornaam, STUDENT.achternaam, STUDENT.geslacht, STUDENT.emailadres, STUDENT.telefoonnummer, STUDENT.postcode, ADRES.land, ADRES.stad, ADRES.straatnaam, ADRES.huisnummer, STUDENT.schoolLocatie FROM STUDENT JOIN ADRES ON STUDENT.postcode = ADRES.postcode";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
@@ -207,7 +208,7 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT DAILYTASK.taskId, DAILYTASK.goalId, DAILYTASK.[status], DAILYTASK.tijdsduurVerwacht, DAILYTASK.tijdsduurRealistisch, DAILYTASK.typeTijdsduur, DAILYTASK.deadline, DAILYTASK.titel, DAILYTASK.omschrijving FROM DAILYTASK";
+                    command.CommandText = "SELECT DAILYTASK.taskId, DAILYTASK.goalId, DAILYTASK.[status], DAILYTASK.titel, DAILYTASK.tijdsduur, DAILYTASK.omschrijving, DAILYTASK.prioriteit, DAILYTASK.moeilijkheid, DAILYTASK.typeTaak FROM DAILYTASK";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
@@ -215,15 +216,15 @@ namespace Cinkie_feedback_fr.DAL
                         {
                             int taskId = Int32.Parse(dataReader[0].ToString());
                             int goalId = Int32.Parse(dataReader[1].ToString());
-                            string statusTask = dataReader[2].ToString();
-                            int expectedTime = Int32.Parse(dataReader[3].ToString());
-                            int realTime = Int32.Parse(dataReader[4].ToString());
-                            string typeTime = dataReader[5].ToString();
-                            string deadline = dataReader[6].ToString();
-                            string titelTask = dataReader[7].ToString();
-                            string descriptionTask = dataReader[8].ToString();
+                            string status = dataReader[2].ToString();
+                            string titel = dataReader[3].ToString();
+                            string time = dataReader[4].ToString();
+                            string description = dataReader[5].ToString();
+                            string priority = dataReader[6].ToString();
+                            string difficulty = dataReader[7].ToString();
+                            string type = dataReader[8].ToString();
 
-                            dailyTasks.Add(new FeedBUFClasses.DailyTask(taskId, statusTask, titelTask, descriptionTask, goalId, expectedTime, realTime, typeTime));
+                            dailyTasks.Add(new FeedBUFClasses.DailyTask(taskId, status, titel, description, goalId, time, priority, difficulty, type));
                         }
                     }
                     connection.Close();
@@ -247,26 +248,33 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT WEEKLYGOAL.goalId, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.omschrijving, WEEKLYGOAL.weeknummer, WEEKLYGOAL.studentId, WEEKLYGOAL.oeId, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM WEEKLYGOAL JOIN ONDERWIJSEENHEID ON WEEKLYGOAL.oeId = ONDERWIJSEENHEID.oeId";
+                    command.CommandText = "SELECT WEEKLYGOAL.goalId, WEEKLYGOAL.studentId, WEEKLYGOAL.agenda, WEEKLYGOAL.moeilijkheid, WEEKLYGOAL.notities, WEEKLYGOAL.omschrijving, WEEKLYGOAL.prioriteit, WEEKLYGOAL.startdatum, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.typeGoal, WEEKLYGOAL.weeknummer, WEEKLYGOAL.oeId, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM WEEKLYGOAL JOIN ONDERWIJSEENHEID ON WEEKLYGOAL.oeId = ONDERWIJSEENHEID.oeId";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {
                         while (dataReader.Read())
                         {
                             int goalId = Int32.Parse(dataReader[0].ToString());
-                            string status = dataReader[1].ToString();
-                            string titel = dataReader[2].ToString();
-                            string description = dataReader[3].ToString();
-                            int weeknumber = Int32.Parse(dataReader[4].ToString());
-                            int studentId = Int32.Parse(dataReader[5].ToString());
-                            string studyUnitId = dataReader[6].ToString();
-                            string studyUnitName = dataReader[7].ToString();
-                            string studyUnitDepartment = dataReader[8].ToString();
-                            int studyUnitEC = Int32.Parse(dataReader[9].ToString());
-                            int studyUnitHours = Int32.Parse(dataReader[10].ToString());
+                            int studentId = Int32.Parse(dataReader[1].ToString());
+                            string agenda = dataReader[2].ToString();
+                            string difficulty = dataReader[3].ToString();
+                            string notes = dataReader[4].ToString();
+                            string description = dataReader[5].ToString();
+                            string priority = dataReader[6].ToString();
+                            string startingdate = dataReader[7].ToString();
+                            string status = dataReader[8].ToString();
+                            string titel = dataReader[9].ToString();
+                            string goaltype = dataReader[10].ToString();
+                            int weeknumber = Int32.Parse(dataReader[11].ToString());
+                            string oeId = dataReader[12].ToString();
+                            string name = dataReader[13].ToString();
+                            string department = dataReader[14].ToString();
+                            int ec = Int32.Parse(dataReader[15].ToString());
+                            int hours = Int32.Parse(dataReader[16].ToString());
 
-                            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(studyUnitId, studyUnitName, studyUnitDepartment, studyUnitEC, studyUnitHours);
-                            weeklyGoals.Add(new FeedBUFClasses.WeeklyGoal(goalId, weeknumber, titel, description, status, studyunit, studentId));
+                            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(oeId,name, department, ec, hours);
+                            weeklyGoals.Add(new FeedBUFClasses.WeeklyGoal(goalId, weeknumber, titel, description, status, studyunit, studentId,
+                                                                          priority, difficulty, goaltype, startingdate, agenda, notes));
                         }
                     }
                     connection.Close();
