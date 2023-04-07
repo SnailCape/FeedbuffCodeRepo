@@ -60,7 +60,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
-            PanelWG_PA_WeeklyGoalsBackground.Hide();
+            
         }
 
         /// <summary>
@@ -93,7 +93,11 @@ namespace Cinkie_feedback_fr
             }
 
         }
-
+        /// <summary>
+        /// Rick Rolls the user if they were dumb enough to forget their password
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
