@@ -16,10 +16,36 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public string Status { get; set; }
         public StudyUnit studyUnit { get; set; }
         public Student student { get; set; }
+        public int StudentId { get; set; }
+        public string Priority { get; set; }
+        public string Difficulty { get; set; }
+        public string GoalType { get; set; }
+        public string StartingDate { get; set; }
+        public string Agenda { get; set; }
+        public string Notes { get; set; }
+
         public List<WeeklyGoal> listWeeklyGoals = new List<WeeklyGoal>();
 
-        public WeeklyGoal(int weeklyGoalId, int weeknumber, string titel, string description,
-                          string status, StudyUnit studyUnit, Student student)
+        public WeeklyGoal() { }
+        public WeeklyGoal(int weeklyGoalId, int weeknumber, string titel, string description, string status, StudyUnit studyunit,
+                          Student student, string priority, string difficulty, string goaltype, string startingdate, string agenda, string notes)
+        {
+            WeeklyGoalId = weeklyGoalId;
+            Weeknumber = weeknumber;
+            Titel = titel;
+            Description = description;
+            Status = status;
+            studyUnit = studyunit;
+            this.student = student;
+            Priority = priority;
+            Difficulty = difficulty;
+            GoalType = goaltype;
+            StartingDate = startingdate;
+            Agenda = agenda;
+            Notes = notes;
+        }
+        public WeeklyGoal(int weeklyGoalId, int weeknumber, string titel, string description, string status, StudyUnit studyUnit,
+                          int studentId, string priority, string difficulty, string goaltype, string startingdate, string agenda, string notes)
         {
             WeeklyGoalId = weeklyGoalId;
             Weeknumber = weeknumber;
@@ -27,7 +53,13 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             Description = description;
             Status = status;
             this.studyUnit = studyUnit;
-            this.student = student;
+            StudentId = studentId;
+            Priority = priority;
+            Difficulty = difficulty;
+            GoalType = goaltype;
+            StartingDate = startingdate;
+            Agenda = agenda;
+            Notes = notes;
         }
 
         /// <summary>
@@ -46,6 +78,29 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public List<WeeklyGoal> GetWeeklyGoalsFromClass()
         {
             return listWeeklyGoals;
+        }
+
+        /// <summary>
+        /// Connect the weekly goals to their corresponding students
+        /// </summary>
+        public void ConnectGoalWithStudent()
+        {
+            Student studentMain = new Student();
+            List<WeeklyGoal> newListWeeklyGoals = new List<WeeklyGoal>();
+
+            foreach (WeeklyGoal goal in listWeeklyGoals)
+            {
+                foreach (Student student in studentMain.GetStudentsFromClass())
+                {
+                    if (goal.StudentId == student.StudentId)
+                    {
+                        newListWeeklyGoals.Add(new WeeklyGoal(goal.WeeklyGoalId, goal.Weeknumber, goal.Titel, goal.Description, goal.Status, goal.studyUnit, student,
+                                                              goal.Priority, goal.Difficulty, goal.GoalType, goal.StartingDate, goal.Agenda, goal.Notes));
+                    }
+                }
+            }
+
+            listWeeklyGoals = newListWeeklyGoals;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public string Description { get; set; }
         public List<Feedback> listFeedback = new List<Feedback>();
 
-
+        public Feedback() { }
         public Feedback(int feedbackId, StudyUnit studyUnit, string description)
         {
             FeedbackId = feedbackId;

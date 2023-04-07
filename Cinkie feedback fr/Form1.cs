@@ -19,24 +19,39 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
-            //GetAllDataFromDatabase();
+            GetAllDataFromDatabase();
 
         }
 
         /// <summary>
         /// Collect all data from the database
         /// </summary>
-        /*private void GetAllDataFromDatabase()
+        private void GetAllDataFromDatabase()
         {
-            Classes.Class.GetClassesFromDB();
-            Classes.DailyTask.GetDailyTasksFromDB();
-            Classes.Feedback.GetFeedbackFromDB();
-            Classes.Student.GetStudentsFromDB();
-            Classes.StudyUnit.GetStudyUnitsFromDB();
-            Classes.Teacher.GetTeachersFromDB();
-            Classes.WeeklyGoal.GetWeeklyGoalsFromDB();
+            // Make an instance of every object
+            FeedBUFClasses.DailyTask dailytask = new FeedBUFClasses.DailyTask();
+            FeedBUFClasses.Feedback feedback = new FeedBUFClasses.Feedback();
+            FeedBUFClasses.SchoolClass schoolclass = new FeedBUFClasses.SchoolClass();
+            FeedBUFClasses.Student student = new FeedBUFClasses.Student();
+            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit();
+            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher();
+            FeedBUFClasses.WeeklyGoal weeklygoal = new FeedBUFClasses.WeeklyGoal();
+
+            // Get all data
+            dailytask.GetDailyTasksFromDB();
+            feedback.GetFeedbackFromDB();
+            schoolclass.GetClassesFromDB();
+            student.GetStudentsFromDB();
+            studyunit.GetStudyUnitsFromDB();
+            teacher.GetTeachersFromDB();
+            weeklygoal.GetWeeklyGoalsFromDB();
+
+            // Connect incomplete data
+            student.ConnectStudentsWithClasses();
+            weeklygoal.ConnectGoalWithStudent();
+            dailytask.ConnectTaskWithGoal();
         }
-    */
+
         /// <summary>
         /// On startup: Brings login panel to front (so its the first thing you see) and brings FLM panel to front (so it doesn't get prevented from popping up when needed)
         /// </summary>
@@ -45,7 +60,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
-            PanelWG_PA_WeeklyGoalsBackground.Hide();
+            
         }
 
         /// <summary>
@@ -78,7 +93,11 @@ namespace Cinkie_feedback_fr
             }
 
         }
-
+        /// <summary>
+        /// Rick Rolls the user if they were dumb enough to forget their password
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_LLB_PasswordFOR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
@@ -123,13 +142,10 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.Hide();
             FLMpanel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
+            PanelFB_PA_FeedbackBG.Hide();
 
         }
 
-        private void PanelDA_LA_UserCourse_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
@@ -145,6 +161,7 @@ namespace Cinkie_feedback_fr
         {
             PanelDA_PA_DashBoardBackground.Show();
             PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelFB_PA_FeedbackBG.Hide();
         }
 
         private void PanelFLM_BT_WeeklyGoalsButton_Click(object sender, EventArgs e)
@@ -153,9 +170,20 @@ namespace Cinkie_feedback_fr
             PanelWG_PA_WeeklyGoalsBackground.BringToFront();
             PanelWG_PA_WeeklyGoalsBackground.Show();
             panelDA_PA_NotificationsPanel.Show();
+            panelDA_PA_NotificationsPanel.BringToFront();
             BGflmPull.BringToFront();
             FLMpanel.BringToFront();
 
+        }
+        private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
+        {
+            PanelFB_PA_FeedbackBG.Show();
+            PanelFB_PA_FeedbackBG.BringToFront();
+            PanelWG_PA_WeeklyGoalsBackground.Hide();
+            PanelDA_PA_DashBoardBackground.Hide();
+            BGflmPull.BringToFront();
+            BGflmPull.Show();
+            FLMpanel.BringToFront();
         }
 
 
@@ -287,5 +315,7 @@ namespace Cinkie_feedback_fr
             }
 
         }
+
+        
     }
 }

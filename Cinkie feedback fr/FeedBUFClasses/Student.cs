@@ -26,6 +26,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public SchoolClass StudentClass { get; set; }
         public List<Student> listStudents = new List<Student>();
 
+        // Empty Student object
+        public Student() { }
         // Student object with class index
         public Student(int studentId, string firstName, string lastName,
                        string gender, string email, string phonenumber,
@@ -78,6 +80,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         {
             listStudents.Clear();
             listStudents = dal.ReadStudents();
+            ConnectStudentsWithClasses();
         }
 
         /// <summary>
@@ -94,7 +97,23 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// </summary>
         public void ConnectStudentsWithClasses()
         {
+            SchoolClass schoolClass = new SchoolClass();
+            List<Student> newListStudents = new List<Student>();
 
+            foreach (Student student in listStudents)
+            {
+                foreach (SchoolClass schoolclass in schoolClass.GetClassesFromClass())
+                {
+                    if (student.StudentClassId == schoolClass.ClassId)
+                    {
+                        newListStudents.Add(new Student(student.StudentId, student.FirstName, student.LastName, student.Gender, student.Email, student.Phonenumber,
+                                                        student.PostalCode, student.Country, student.City, student.Streetname, student.Housenumber, student.SchoolLocation,
+                                                        student.LoginStatus, schoolclass));
+                    }
+                }
+            }
+
+            listStudents = newListStudents;
         }
     }
 }
