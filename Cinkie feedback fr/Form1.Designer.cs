@@ -130,6 +130,9 @@
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelFB_PA_FeedbackBG = new System.Windows.Forms.Panel();
+            this.PanelFB_LB_ShowRegisteredFeedback = new System.Windows.Forms.ListBox();
+            this.PanelFB_BT_RegisterFeedback = new System.Windows.Forms.Button();
+            this.PanelFB_BT_ViewFeedback = new System.Windows.Forms.Button();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -144,6 +147,7 @@
             this.PanelWG_PA_ShowWeeklyGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
+            this.PanelFB_PA_FeedbackBG.SuspendLayout();
             this.SuspendLayout();
             // 
             // FLMpanel
@@ -156,7 +160,7 @@
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
             this.FLMpanel.Location = new System.Drawing.Point(1, 10);
-            this.FLMpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FLMpanel.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanel.Name = "FLMpanel";
             this.FLMpanel.Size = new System.Drawing.Size(126, 764);
             this.FLMpanel.TabIndex = 0;
@@ -170,7 +174,7 @@
             this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
-            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
             this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_LogoutButton.TabIndex = 4;
@@ -187,7 +191,7 @@
             this.PanelFLM_BT_FeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_FeedbackButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_FeedbackButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_FeedbackButton.Name = "PanelFLM_BT_FeedbackButton";
             this.PanelFLM_BT_FeedbackButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
@@ -204,7 +208,7 @@
             this.PanelFLM_BT_WeeklyGoalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_WeeklyGoalsButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_WeeklyGoalsButton.Location = new System.Drawing.Point(0, 200);
-            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_WeeklyGoalsButton.Name = "PanelFLM_BT_WeeklyGoalsButton";
             this.PanelFLM_BT_WeeklyGoalsButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_WeeklyGoalsButton.TabIndex = 2;
@@ -223,7 +227,7 @@
             this.PanelFLM_BT_DashboardButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 110);
-            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_DashboardButton.Name = "PanelFLM_BT_DashboardButton";
             this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_DashboardButton.TabIndex = 1;
@@ -235,7 +239,7 @@
             // 
             this.FLMpanelZUYD.Image = ((System.Drawing.Image)(resources.GetObject("FLMpanelZUYD.Image")));
             this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
-            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanelZUYD.Name = "FLMpanelZUYD";
             this.FLMpanelZUYD.Size = new System.Drawing.Size(123, 89);
             this.FLMpanelZUYD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +258,7 @@
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_ProgressPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_UserInfoPanel);
             this.PanelDA_PA_DashBoardBackground.Location = new System.Drawing.Point(1, 0);
-            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_DashBoardBackground.Name = "PanelDA_PA_DashBoardBackground";
             this.PanelDA_PA_DashBoardBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelDA_PA_DashBoardBackground.TabIndex = 0;
@@ -350,7 +354,7 @@
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardDate);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LB_ScoreboardScoreboard);
             this.PanelDA_PB_ScoreBoardPanel.Location = new System.Drawing.Point(1113, 417);
-            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_ScoreBoardPanel.Name = "PanelDA_PB_ScoreBoardPanel";
             this.PanelDA_PB_ScoreBoardPanel.Size = new System.Drawing.Size(403, 379);
             this.PanelDA_PB_ScoreBoardPanel.TabIndex = 4;
@@ -481,7 +485,7 @@
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksTask1);
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksDailyTasks);
             this.panelDA_PA_DailyTasksPanel.Location = new System.Drawing.Point(364, 418);
-            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(2);
             this.panelDA_PA_DailyTasksPanel.Name = "panelDA_PA_DailyTasksPanel";
             this.panelDA_PA_DailyTasksPanel.Size = new System.Drawing.Size(403, 379);
             this.panelDA_PA_DailyTasksPanel.TabIndex = 3;
@@ -639,7 +643,7 @@
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksInProgress);
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksTasks);
             this.PanelDA_PA_ProgressPanel.Location = new System.Drawing.Point(1113, 71);
-            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_ProgressPanel.Name = "PanelDA_PA_ProgressPanel";
             this.PanelDA_PA_ProgressPanel.Size = new System.Drawing.Size(403, 288);
             this.PanelDA_PA_ProgressPanel.TabIndex = 2;
@@ -724,7 +728,7 @@
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_LB_UserInfoName);
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_PB_UserImage);
             this.PanelDA_PA_UserInfoPanel.Location = new System.Drawing.Point(364, 82);
-            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_UserInfoPanel.Name = "PanelDA_PA_UserInfoPanel";
             this.PanelDA_PA_UserInfoPanel.Size = new System.Drawing.Size(403, 288);
             this.PanelDA_PA_UserInfoPanel.TabIndex = 1;
@@ -770,7 +774,7 @@
             this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
             this.PanelDA_PB_UserImage.Image = ((System.Drawing.Image)(resources.GetObject("PanelDA_PB_UserImage.Image")));
             this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
-            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
             this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(146, 228);
             this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -806,7 +810,7 @@
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentSurname);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentName);
             this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(0, 0);
-            this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
             this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
             this.PanelRE_PA_RegistryBG.TabIndex = 7;
@@ -854,7 +858,7 @@
             // PanelRE_TB_RegisterStudentUnitNumber
             // 
             this.PanelRE_TB_RegisterStudentUnitNumber.Location = new System.Drawing.Point(855, 488);
-            this.PanelRE_TB_RegisterStudentUnitNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentUnitNumber.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentUnitNumber.Name = "PanelRE_TB_RegisterStudentUnitNumber";
             this.PanelRE_TB_RegisterStudentUnitNumber.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentUnitNumber.TabIndex = 22;
@@ -862,7 +866,7 @@
             // PanelRE_TB_RegisterStudentCity
             // 
             this.PanelRE_TB_RegisterStudentCity.Location = new System.Drawing.Point(855, 446);
-            this.PanelRE_TB_RegisterStudentCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentCity.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentCity.Name = "PanelRE_TB_RegisterStudentCity";
             this.PanelRE_TB_RegisterStudentCity.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentCity.TabIndex = 21;
@@ -870,7 +874,7 @@
             // PanelRE_TB_RegisterStudentPostalcode
             // 
             this.PanelRE_TB_RegisterStudentPostalcode.Location = new System.Drawing.Point(855, 528);
-            this.PanelRE_TB_RegisterStudentPostalcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentPostalcode.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentPostalcode.Name = "PanelRE_TB_RegisterStudentPostalcode";
             this.PanelRE_TB_RegisterStudentPostalcode.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentPostalcode.TabIndex = 20;
@@ -878,7 +882,7 @@
             // PanelRE_TB_RegisterStudentStreet
             // 
             this.PanelRE_TB_RegisterStudentStreet.Location = new System.Drawing.Point(855, 406);
-            this.PanelRE_TB_RegisterStudentStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentStreet.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentStreet.Name = "PanelRE_TB_RegisterStudentStreet";
             this.PanelRE_TB_RegisterStudentStreet.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentStreet.TabIndex = 19;
@@ -899,7 +903,7 @@
             this.PanelRE_CMB_RegisterStudentCourse.Items.AddRange(new object[] {
             "HBO-ICT"});
             this.PanelRE_CMB_RegisterStudentCourse.Location = new System.Drawing.Point(855, 609);
-            this.PanelRE_CMB_RegisterStudentCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_CMB_RegisterStudentCourse.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_CMB_RegisterStudentCourse.Name = "PanelRE_CMB_RegisterStudentCourse";
             this.PanelRE_CMB_RegisterStudentCourse.Size = new System.Drawing.Size(284, 21);
             this.PanelRE_CMB_RegisterStudentCourse.TabIndex = 17;
@@ -908,7 +912,7 @@
             // PanelRE_BT_RegisterSave
             // 
             this.PanelRE_BT_RegisterSave.Location = new System.Drawing.Point(940, 728);
-            this.PanelRE_BT_RegisterSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_BT_RegisterSave.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_BT_RegisterSave.Name = "PanelRE_BT_RegisterSave";
             this.PanelRE_BT_RegisterSave.Size = new System.Drawing.Size(112, 27);
             this.PanelRE_BT_RegisterSave.TabIndex = 16;
@@ -934,7 +938,7 @@
             "Maastricht",
             "Geleen"});
             this.PanelRE_CMB_RegisterStudentLocation.Location = new System.Drawing.Point(855, 690);
-            this.PanelRE_CMB_RegisterStudentLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_CMB_RegisterStudentLocation.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_CMB_RegisterStudentLocation.Name = "PanelRE_CMB_RegisterStudentLocation";
             this.PanelRE_CMB_RegisterStudentLocation.Size = new System.Drawing.Size(284, 21);
             this.PanelRE_CMB_RegisterStudentLocation.TabIndex = 14;
@@ -953,7 +957,7 @@
             // PanelRE_LB_RegisterStudentNumber
             // 
             this.PanelRE_LB_RegisterStudentNumber.Location = new System.Drawing.Point(855, 568);
-            this.PanelRE_LB_RegisterStudentNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_LB_RegisterStudentNumber.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_LB_RegisterStudentNumber.Name = "PanelRE_LB_RegisterStudentNumber";
             this.PanelRE_LB_RegisterStudentNumber.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_LB_RegisterStudentNumber.TabIndex = 12;
@@ -967,7 +971,7 @@
             "Female",
             "Other"});
             this.PanelRE_CMB_RegisterStudentGender.Location = new System.Drawing.Point(855, 325);
-            this.PanelRE_CMB_RegisterStudentGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_CMB_RegisterStudentGender.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_CMB_RegisterStudentGender.Name = "PanelRE_CMB_RegisterStudentGender";
             this.PanelRE_CMB_RegisterStudentGender.Size = new System.Drawing.Size(284, 21);
             this.PanelRE_CMB_RegisterStudentGender.TabIndex = 11;
@@ -1026,7 +1030,7 @@
             // PanelRE_TB_RegisterStudentPhonenumber
             // 
             this.PanelRE_TB_RegisterStudentPhonenumber.Location = new System.Drawing.Point(855, 649);
-            this.PanelRE_TB_RegisterStudentPhonenumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentPhonenumber.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentPhonenumber.Name = "PanelRE_TB_RegisterStudentPhonenumber";
             this.PanelRE_TB_RegisterStudentPhonenumber.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentPhonenumber.TabIndex = 4;
@@ -1034,7 +1038,7 @@
             // PanelRE_TB_RegisterStudentEmail
             // 
             this.PanelRE_TB_RegisterStudentEmail.Location = new System.Drawing.Point(855, 365);
-            this.PanelRE_TB_RegisterStudentEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentEmail.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentEmail.Name = "PanelRE_TB_RegisterStudentEmail";
             this.PanelRE_TB_RegisterStudentEmail.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentEmail.TabIndex = 3;
@@ -1042,7 +1046,7 @@
             // PanelRE_TB_RegisterStudentSurname
             // 
             this.PanelRE_TB_RegisterStudentSurname.Location = new System.Drawing.Point(855, 282);
-            this.PanelRE_TB_RegisterStudentSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentSurname.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentSurname.Name = "PanelRE_TB_RegisterStudentSurname";
             this.PanelRE_TB_RegisterStudentSurname.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentSurname.TabIndex = 2;
@@ -1050,7 +1054,7 @@
             // PanelRE_TB_RegisterStudentName
             // 
             this.PanelRE_TB_RegisterStudentName.Location = new System.Drawing.Point(855, 244);
-            this.PanelRE_TB_RegisterStudentName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentName.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentName.Name = "PanelRE_TB_RegisterStudentName";
             this.PanelRE_TB_RegisterStudentName.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentName.TabIndex = 1;
@@ -1075,14 +1079,14 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWG_PA_ShowWeeklyGoal);
             this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(0, 0);
             this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
-            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(2396, 1275);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
             // WeekGoals_Listview_Tasks
             // 
             this.WeekGoals_Listview_Tasks.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeekGoals_Listview_Tasks.HideSelection = false;
-            this.WeekGoals_Listview_Tasks.Location = new System.Drawing.Point(382, 325);
+            this.WeekGoals_Listview_Tasks.Location = new System.Drawing.Point(528, 375);
             this.WeekGoals_Listview_Tasks.Name = "WeekGoals_Listview_Tasks";
             this.WeekGoals_Listview_Tasks.Size = new System.Drawing.Size(909, 374);
             this.WeekGoals_Listview_Tasks.TabIndex = 9;
@@ -1090,8 +1094,8 @@
             // 
             // WeekGoals_BTN_AddTask
             // 
-            this.WeekGoals_BTN_AddTask.Location = new System.Drawing.Point(1204, 703);
-            this.WeekGoals_BTN_AddTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeekGoals_BTN_AddTask.Location = new System.Drawing.Point(1350, 753);
+            this.WeekGoals_BTN_AddTask.Margin = new System.Windows.Forms.Padding(2);
             this.WeekGoals_BTN_AddTask.Name = "WeekGoals_BTN_AddTask";
             this.WeekGoals_BTN_AddTask.Size = new System.Drawing.Size(86, 36);
             this.WeekGoals_BTN_AddTask.TabIndex = 10;
@@ -1101,8 +1105,8 @@
             // 
             // WeeklyGoals_BTN_AddWeekGoal
             // 
-            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1154, 197);
-            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1300, 247);
+            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
             this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(76, 40);
             this.WeeklyGoals_BTN_AddWeekGoal.TabIndex = 7;
@@ -1112,8 +1116,8 @@
             // 
             // WeeklyGoals_BTN_Monday
             // 
-            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(388, 282);
-            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(534, 332);
+            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
             this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Monday.TabIndex = 1;
@@ -1123,8 +1127,8 @@
             // 
             // WeeklyGoals_BTN_Tuesday
             // 
-            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(500, 282);
-            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(646, 332);
+            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
             this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Tuesday.TabIndex = 2;
@@ -1134,8 +1138,8 @@
             // 
             // WeeklyGoals_BTN_ShowAll
             // 
-            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1171, 282);
-            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1317, 332);
+            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
             this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_ShowAll.TabIndex = 6;
@@ -1145,8 +1149,8 @@
             // 
             // WeeklyGoals_BTN_Wednesday
             // 
-            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(612, 282);
-            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(758, 332);
+            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
             this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Wednesday.TabIndex = 3;
@@ -1156,8 +1160,8 @@
             // 
             // WeeklyGoals_BTN_Sunday
             // 
-            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1059, 282);
-            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1205, 332);
+            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
             this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Sunday.TabIndex = 2;
@@ -1167,8 +1171,8 @@
             // 
             // WeeklyGoals_BTN_Thursday
             // 
-            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(723, 282);
-            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(869, 332);
+            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
             this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Thursday.TabIndex = 4;
@@ -1178,8 +1182,8 @@
             // 
             // WeeklyGoals_BTN_Saturday
             // 
-            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(947, 282);
-            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(1093, 332);
+            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
             this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Saturday.TabIndex = 2;
@@ -1189,8 +1193,8 @@
             // 
             // WeeklyGoals_BTN_Friday
             // 
-            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(835, 282);
-            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(981, 332);
+            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
             this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Friday.TabIndex = 5;
@@ -1202,8 +1206,8 @@
             // 
             this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
             this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
-            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(410, 61);
-            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(556, 111);
+            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
             this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
             this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(819, 134);
             this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
@@ -1224,7 +1228,7 @@
             this.BGflmPull.BackColor = System.Drawing.Color.Silver;
             this.BGflmPull.Image = ((System.Drawing.Image)(resources.GetObject("BGflmPull.Image")));
             this.BGflmPull.Location = new System.Drawing.Point(0, 10);
-            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
             this.BGflmPull.Name = "BGflmPull";
             this.BGflmPull.Size = new System.Drawing.Size(47, 45);
             this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1244,7 +1248,7 @@
             this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
             this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
             this.Login_Panel.TabIndex = 1;
@@ -1253,7 +1257,7 @@
             // 
             this.PanelLogin_BT_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_BT_Register.Location = new System.Drawing.Point(784, 703);
-            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_BT_Register.Name = "PanelLogin_BT_Register";
             this.PanelLogin_BT_Register.Size = new System.Drawing.Size(154, 46);
             this.PanelLogin_BT_Register.TabIndex = 7;
@@ -1276,7 +1280,7 @@
             // 
             this.PanelLogin_BT_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_BT_Login.Location = new System.Drawing.Point(967, 703);
-            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_BT_Login.Name = "PanelLogin_BT_Login";
             this.PanelLogin_BT_Login.Size = new System.Drawing.Size(154, 46);
             this.PanelLogin_BT_Login.TabIndex = 5;
@@ -1311,7 +1315,7 @@
             // 
             this.PanelLogin_TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_TB_Password.Location = new System.Drawing.Point(784, 604);
-            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_TB_Password.Multiline = true;
             this.PanelLogin_TB_Password.Name = "PanelLogin_TB_Password";
             this.PanelLogin_TB_Password.PasswordChar = '*';
@@ -1333,7 +1337,7 @@
             // 
             this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_TB_Email.Location = new System.Drawing.Point(784, 418);
-            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_TB_Email.Multiline = true;
             this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
@@ -1347,19 +1351,52 @@
             // PanelFB_PA_FeedbackBG
             // 
             this.PanelFB_PA_FeedbackBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_BT_ViewFeedback);
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_BT_RegisterFeedback);
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_LB_ShowRegisteredFeedback);
             this.PanelFB_PA_FeedbackBG.Location = new System.Drawing.Point(0, 0);
-            this.PanelFB_PA_FeedbackBG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFB_PA_FeedbackBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFB_PA_FeedbackBG.Name = "PanelFB_PA_FeedbackBG";
-            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1440, 878);
+            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1920, 1080);
             this.PanelFB_PA_FeedbackBG.TabIndex = 11;
+            // 
+            // PanelFB_LB_ShowRegisteredFeedback
+            // 
+            this.PanelFB_LB_ShowRegisteredFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_LB_ShowRegisteredFeedback.FormattingEnabled = true;
+            this.PanelFB_LB_ShowRegisteredFeedback.Location = new System.Drawing.Point(561, 310);
+            this.PanelFB_LB_ShowRegisteredFeedback.Name = "PanelFB_LB_ShowRegisteredFeedback";
+            this.PanelFB_LB_ShowRegisteredFeedback.Size = new System.Drawing.Size(862, 459);
+            this.PanelFB_LB_ShowRegisteredFeedback.TabIndex = 0;
+            // 
+            // PanelFB_BT_RegisterFeedback
+            // 
+            this.PanelFB_BT_RegisterFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_BT_RegisterFeedback.Location = new System.Drawing.Point(1304, 240);
+            this.PanelFB_BT_RegisterFeedback.Name = "PanelFB_BT_RegisterFeedback";
+            this.PanelFB_BT_RegisterFeedback.Size = new System.Drawing.Size(119, 64);
+            this.PanelFB_BT_RegisterFeedback.TabIndex = 1;
+            this.PanelFB_BT_RegisterFeedback.Text = "Register Feedback";
+            this.PanelFB_BT_RegisterFeedback.UseVisualStyleBackColor = false;
+            this.PanelFB_BT_RegisterFeedback.Click += new System.EventHandler(this.PanelFB_BT_RegisterFeedback_Click);
+            // 
+            // PanelFB_BT_ViewFeedback
+            // 
+            this.PanelFB_BT_ViewFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_BT_ViewFeedback.Location = new System.Drawing.Point(1163, 240);
+            this.PanelFB_BT_ViewFeedback.Name = "PanelFB_BT_ViewFeedback";
+            this.PanelFB_BT_ViewFeedback.Size = new System.Drawing.Size(119, 64);
+            this.PanelFB_BT_ViewFeedback.TabIndex = 2;
+            this.PanelFB_BT_ViewFeedback.Text = "View Feedback";
+            this.PanelFB_BT_ViewFeedback.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 846);
-            this.Controls.Add(this.PanelFB_PA_FeedbackBG);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
+            this.Controls.Add(this.PanelFB_PA_FeedbackBG);
             this.Controls.Add(this.BGflmPull);
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
@@ -1385,6 +1422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            this.PanelFB_PA_FeedbackBG.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1493,7 +1531,9 @@
         public System.Windows.Forms.Label WeeklyGoals_LB_SetWeeklyGoal;
         public System.Windows.Forms.ListView WeekGoals_Listview_Tasks;
         private System.Windows.Forms.Panel PanelFB_PA_FeedbackBG;
-
+        private System.Windows.Forms.Button PanelFB_BT_ViewFeedback;
+        private System.Windows.Forms.Button PanelFB_BT_RegisterFeedback;
+        private System.Windows.Forms.ListBox PanelFB_LB_ShowRegisteredFeedback;
     }
 }
 
