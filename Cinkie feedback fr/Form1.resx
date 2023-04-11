@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="FLMpanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelFLM_BT_LogoutButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PanelFLM_BT_LogoutButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -272,10 +278,13 @@
         YII=
 </value>
   </data>
+  <metadata name="PanelFLM_BT_FeedbackButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PanelFLM_BT_FeedbackButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAADVCAYAAAAM2Y9oAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAJ0NJREFUeF7tnQt4VcXV90kIIRACBBAQjyIXuVgqfoCI1pYKVLygUkFetbQqSi0o
+        vAAADrwBlbxySQAAJ0NJREFUeF7tnQt4VcXV90kIIRACBBAQjyIXuVgqfoCI1pYKVLygUkFetbQqSi0o
         3hB9tdUqtkUtRcQitijvqxaliqAVLw83BURuAq2gtCCCCnIz8CmXJORy3vWbvVfYOZwTwslJcsD1f571
         zJw5e8/Mnln/mTWzZ2bXMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgM
         BoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8Fg
@@ -446,10 +455,13 @@
         RK5CYII=
 </value>
   </data>
+  <metadata name="PanelFLM_BT_WeeklyGoalsButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PanelFLM_BT_WeeklyGoalsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAYAAADsEGyPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAnTRJREFUeF7s/Q/kv3e9P/B/HTOZmZmZzMxMJpOZSWZmMtkvyTEzmRxJMkkyyWQS
+        DAAACwwBP0AiyAAAnTRJREFUeF7s/Q/kv3e9P/B/HTOZmZmZzMxMJpOZSWZmMtkvyTEzmRxJMkkyyWQS
         kySTSSY5ZnIkR+aYI5MkkySZySQzmTkymclkJj/5/e6P97mer3Pttefns8/n9f7zel6v63bn1mc99zmn
         1/W6rvf1vK77+/rz//4/D30SAAAAYNG6gwAAAABL0h0EAAAAWJLuIAAAAMCSdAcBAAAAlqQ7CAAAALAk
         3UEAAACAJekOAgAAACxJdxAAAABgSbqDAAAAAEvSHQQAAABYku4gAKxZ8i/n0vv7AADsX3cQAA7RVFJc
@@ -1123,6 +1135,9 @@
         U7pWF4BMAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="PanelFLM_BT_DashboardButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PanelFLM_BT_DashboardButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
@@ -1343,10 +1358,13 @@
         AMtmkwAAYMk+dej/A1yt/BJqCyC0AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="FLMpanelZUYD.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FLMpanelZUYD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAncAAAKqCAYAAABYaniTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAWMxJREFUeF7tvYm3HFW5uP37Q761IIyZCRBCCEPCkDBDACHMo8ikBEQGAQEVkQuI
+        vAAADrwBlbxySQAAWMxJREFUeF7tvYm3HFW5uP37Q761IIyZCRBCCEPCkDBDACHMo8ikBEQGAQEVkQuI
         iMggEgGDIIgoEAQjCMg8Q4KQ0336zPM8Dz3sj129o8k5b1XXOae6e+/q51nrWXi992rOu2snT7qrdv2/
         rv9vF2WDAGAP0h5FN23/8Y/MqsJEGk47SZwZlsfGc083KwPb0v/8c+K8giTuAGAS0h5FNyXu/CHu7JK4
         kyHuACASpD2Kbkrc+UPc2SVxJ0PcAUAkSHsU3ZS484e4s0viToa4A4BIkPYouilx5w9xZ5fEnQxxBwCR
@@ -1728,6 +1746,27 @@
         uugu6v8H9W2PrE9WnyEAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="panelDA_PA_NotificationsPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelDA_LA_TasksExpPercentage.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelDA_LA_TasksExpBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelDA_PB_ScoreBoardPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelDA_PA_DailyTasksPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelDA_PA_ProgressPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelDA_PA_UserInfoPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PanelDA_PB_UserImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERET
@@ -2686,10 +2725,82 @@
         M1CBRX/qUGLbT3jiLt0eUetjiEJagf8Aww//2Q==
 </value>
   </data>
+  <metadata name="PanelRE_LB_StudentPostalcodeLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentUnitNumberLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentCityLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentStreetLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentUnitNumber.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentCity.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentPostalcode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentStreet.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentCourseLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_BT_RegisterSave.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentLocationLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_CMB_RegisterStudentLocation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentNumberLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_CMB_RegisterStudentGender.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_RegisterStudentNumber.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentGenderLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentPhoneNumberLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentEmailLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentSurnameLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_LB_StudentNameLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentPhonenumber.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentEmail.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentSurname.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelRE_TB_RegisterStudentName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="BGflmPull.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAncAAAKqCAYAAABYaniTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAUWlJREFUeF7t3XecbVV9/vHce7n30nuRckHEEUTUAIpBFAFjl6ASRE0sESPBgqLy
+        vAAADrwBlbxySQAAUWlJREFUeF7t3XecbVV9/vHce7n30nuRckHEEUTUAIpBFAFjl6ASRE0sESPBgqLy
         M0SNGAkx0UQ0RCPWqLFhiV1Rg8HeEFSkSRPpRUA6l5e/Z7HnOnv2edY+e+bsc85ae3/+eOcVlgpznu93
         zX2YOeWPfv/73yfhvJlVb5DfA5i6i90dRZ40z3+vzBdzTnOZYTo0j1Mq80HhWS6vOvZwGvTFU+6ANFDu
         OkTzpNzFUe4SonlQ7jzKHYCRUe46RPOk3MVR7hKieVDuPModgJFR7jpE86TcxVHuEqJ5UO48yh2AkVHu
@@ -3039,10 +3150,34 @@
         x4n7foB+Cd//w/fr8L01/OTtUDlIDpD7y0Zuf5Cj3//R/weXKObiCUKGNAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="PanelLogin_BT_Register.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LoginPanel_LB_Coeus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelLogin_BT_Login.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelLogin_LLB_PasswordFOR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LoginPanel_LB_Password.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelLogin_TB_Password.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelLogin_LB_Email.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PanelLogin_TB_Email.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DigitalClockTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>81</value>
+    <value>82</value>
   </metadata>
 </root>

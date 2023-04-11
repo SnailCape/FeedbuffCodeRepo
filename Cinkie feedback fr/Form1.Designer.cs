@@ -30,6 +30,82 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Monday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Test Monday 2");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Test Monday 3");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Test Monday 4");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Test Monday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Saturday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Test Saturday 2");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Test Saturday 3");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Test Saturday 4");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Test Saturday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Thursday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Test Thursday 2");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Test Thursday 3");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Test Thursday 4");
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Test Thursday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Friday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("Test Friday 2");
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("Test Friday 3");
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("Test Friday 4");
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("Test Friday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Wednesday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("Test Wednesday 3");
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("Test Wednesday 4");
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("Test Wednesday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Monday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Wednesday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Tuesday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Test Monday 2");
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
+            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("Thursday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("Friday Test1");
+            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem("Friday Test 2");
+            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem("Test Monday 3");
+            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem("Test Monday 4");
+            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem("Test Monday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Sunday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem("Test Sunday 2");
+            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem("Test Sunday 3");
+            System.Windows.Forms.ListViewItem listViewItem40 = new System.Windows.Forms.ListViewItem("Test Sunday 4");
+            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem("Test Sunday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Test Tuesday 1",
+            "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
+            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem("Test Tuesday 2");
+            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem("Test Tuesday 3");
+            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem("Test Tuesday 4");
+            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem("Test Tuesday 5");
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_FeedbackButton = new System.Windows.Forms.Button();
@@ -79,6 +155,7 @@
             this.PanelDA_LB_UserInfoName = new System.Windows.Forms.Label();
             this.PanelDA_PB_UserImage = new System.Windows.Forms.PictureBox();
             this.PanelRE_PA_RegistryBG = new System.Windows.Forms.Panel();
+            this.PanelRE_TB_RegisterStudentCountry = new System.Windows.Forms.TextBox();
             this.PanelRE_LB_StudentPostalcodeLabel = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentUnitNumberLabel = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentCityLabel = new System.Windows.Forms.Label();
@@ -88,13 +165,14 @@
             this.PanelRE_TB_RegisterStudentPostalcode = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentStreet = new System.Windows.Forms.TextBox();
             this.PanelRE_LB_StudentCourseLabel = new System.Windows.Forms.Label();
-            this.PanelRE_CMB_RegisterStudentCourse = new System.Windows.Forms.ComboBox();
+            this.PanelRE_CMB_RegisterStudentClass = new System.Windows.Forms.ComboBox();
             this.PanelRE_BT_RegisterSave = new System.Windows.Forms.Button();
             this.PanelRE_LB_StudentLocationLabel = new System.Windows.Forms.Label();
             this.PanelRE_CMB_RegisterStudentLocation = new System.Windows.Forms.ComboBox();
             this.PanelRE_LB_StudentNumberLabel = new System.Windows.Forms.Label();
-            this.PanelRE_LB_RegisterStudentNumber = new System.Windows.Forms.TextBox();
+            this.PanelRE_TB_RegisterStudentNumber = new System.Windows.Forms.TextBox();
             this.PanelRE_CMB_RegisterStudentGender = new System.Windows.Forms.ComboBox();
+            this.PanelRE_LB_RegisterStudentNumber = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentGenderLabel = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentPhoneNumberLabel = new System.Windows.Forms.Label();
             this.PanelRE_LB_StudentEmailLabel = new System.Windows.Forms.Label();
@@ -105,7 +183,16 @@
             this.PanelRE_TB_RegisterStudentSurname = new System.Windows.Forms.TextBox();
             this.PanelRE_TB_RegisterStudentName = new System.Windows.Forms.TextBox();
             this.PanelWG_PA_WeeklyGoalsBackground = new System.Windows.Forms.Panel();
-            this.WeekGoals_Listview_Tasks = new System.Windows.Forms.ListView();
+            this.WeeklygoalPanel_LV_Monday = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Saturday = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Thursday = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Friday = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Wednesday = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WeekGoals_BTN_AddTask = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_AddWeekGoal = new System.Windows.Forms.Button();
             this.WeeklyGoals_BTN_Monday = new System.Windows.Forms.Button();
@@ -118,6 +205,12 @@
             this.WeeklyGoals_BTN_Friday = new System.Windows.Forms.Button();
             this.PanelWG_PA_ShowWeeklyGoal = new System.Windows.Forms.Panel();
             this.WeeklyGoals_LB_SetWeeklyGoal = new System.Windows.Forms.Label();
+            this.WeeklyGoalPanel_LV_ShowAll = new System.Windows.Forms.ListView();
+            this.Monday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Sunday = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WeeklygoalPanel_LV_Tuesday = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BGflmPull = new System.Windows.Forms.PictureBox();
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.PanelLogin_BT_Register = new System.Windows.Forms.Button();
@@ -130,6 +223,9 @@
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
             this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
             this.PanelFB_PA_FeedbackBG = new System.Windows.Forms.Panel();
+            this.PanelFB_BT_ViewFeedback = new System.Windows.Forms.Button();
+            this.PanelFB_BT_RegisterFeedback = new System.Windows.Forms.Button();
+            this.PanelFB_LB_ShowRegisteredFeedback = new System.Windows.Forms.ListBox();
             this.FLMpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FLMpanelZUYD)).BeginInit();
             this.PanelDA_PA_DashBoardBackground.SuspendLayout();
@@ -144,6 +240,7 @@
             this.PanelWG_PA_ShowWeeklyGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).BeginInit();
             this.Login_Panel.SuspendLayout();
+            this.PanelFB_PA_FeedbackBG.SuspendLayout();
             this.SuspendLayout();
             // 
             // FLMpanel
@@ -156,7 +253,7 @@
             this.FLMpanel.Controls.Add(this.PanelFLM_BT_DashboardButton);
             this.FLMpanel.Controls.Add(this.FLMpanelZUYD);
             this.FLMpanel.Location = new System.Drawing.Point(1, 10);
-            this.FLMpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FLMpanel.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanel.Name = "FLMpanel";
             this.FLMpanel.Size = new System.Drawing.Size(126, 764);
             this.FLMpanel.TabIndex = 0;
@@ -170,7 +267,7 @@
             this.PanelFLM_BT_LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_LogoutButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_LogoutButton.Location = new System.Drawing.Point(-2, 694);
-            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_LogoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_LogoutButton.Name = "PanelFLM_BT_LogoutButton";
             this.PanelFLM_BT_LogoutButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_LogoutButton.TabIndex = 4;
@@ -187,7 +284,7 @@
             this.PanelFLM_BT_FeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_FeedbackButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_FeedbackButton.Location = new System.Drawing.Point(0, 284);
-            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_FeedbackButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_FeedbackButton.Name = "PanelFLM_BT_FeedbackButton";
             this.PanelFLM_BT_FeedbackButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_FeedbackButton.TabIndex = 3;
@@ -204,7 +301,7 @@
             this.PanelFLM_BT_WeeklyGoalsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFLM_BT_WeeklyGoalsButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_WeeklyGoalsButton.Location = new System.Drawing.Point(0, 200);
-            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_WeeklyGoalsButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_WeeklyGoalsButton.Name = "PanelFLM_BT_WeeklyGoalsButton";
             this.PanelFLM_BT_WeeklyGoalsButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_WeeklyGoalsButton.TabIndex = 2;
@@ -223,7 +320,7 @@
             this.PanelFLM_BT_DashboardButton.ForeColor = System.Drawing.Color.Transparent;
             this.PanelFLM_BT_DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PanelFLM_BT_DashboardButton.Location = new System.Drawing.Point(0, 110);
-            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFLM_BT_DashboardButton.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFLM_BT_DashboardButton.Name = "PanelFLM_BT_DashboardButton";
             this.PanelFLM_BT_DashboardButton.Size = new System.Drawing.Size(123, 63);
             this.PanelFLM_BT_DashboardButton.TabIndex = 1;
@@ -235,7 +332,7 @@
             // 
             this.FLMpanelZUYD.Image = ((System.Drawing.Image)(resources.GetObject("FLMpanelZUYD.Image")));
             this.FLMpanelZUYD.Location = new System.Drawing.Point(0, 10);
-            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FLMpanelZUYD.Margin = new System.Windows.Forms.Padding(2);
             this.FLMpanelZUYD.Name = "FLMpanelZUYD";
             this.FLMpanelZUYD.Size = new System.Drawing.Size(123, 89);
             this.FLMpanelZUYD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +351,7 @@
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_ProgressPanel);
             this.PanelDA_PA_DashBoardBackground.Controls.Add(this.PanelDA_PA_UserInfoPanel);
             this.PanelDA_PA_DashBoardBackground.Location = new System.Drawing.Point(1, 0);
-            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_DashBoardBackground.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_DashBoardBackground.Name = "PanelDA_PA_DashBoardBackground";
             this.PanelDA_PA_DashBoardBackground.Size = new System.Drawing.Size(1920, 1080);
             this.PanelDA_PA_DashBoardBackground.TabIndex = 0;
@@ -350,7 +447,7 @@
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LA_ScoreboardDate);
             this.PanelDA_PB_ScoreBoardPanel.Controls.Add(this.PanelDA_LB_ScoreboardScoreboard);
             this.PanelDA_PB_ScoreBoardPanel.Location = new System.Drawing.Point(1113, 417);
-            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PB_ScoreBoardPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_ScoreBoardPanel.Name = "PanelDA_PB_ScoreBoardPanel";
             this.PanelDA_PB_ScoreBoardPanel.Size = new System.Drawing.Size(403, 379);
             this.PanelDA_PB_ScoreBoardPanel.TabIndex = 4;
@@ -481,7 +578,7 @@
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksTask1);
             this.panelDA_PA_DailyTasksPanel.Controls.Add(this.PanelDA_LB_DailyTasksDailyTasks);
             this.panelDA_PA_DailyTasksPanel.Location = new System.Drawing.Point(364, 418);
-            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDA_PA_DailyTasksPanel.Margin = new System.Windows.Forms.Padding(2);
             this.panelDA_PA_DailyTasksPanel.Name = "panelDA_PA_DailyTasksPanel";
             this.panelDA_PA_DailyTasksPanel.Size = new System.Drawing.Size(403, 379);
             this.panelDA_PA_DailyTasksPanel.TabIndex = 3;
@@ -639,7 +736,7 @@
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksInProgress);
             this.PanelDA_PA_ProgressPanel.Controls.Add(this.PanelDA_LB_TasksTasks);
             this.PanelDA_PA_ProgressPanel.Location = new System.Drawing.Point(1113, 71);
-            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_ProgressPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_ProgressPanel.Name = "PanelDA_PA_ProgressPanel";
             this.PanelDA_PA_ProgressPanel.Size = new System.Drawing.Size(403, 288);
             this.PanelDA_PA_ProgressPanel.TabIndex = 2;
@@ -724,7 +821,7 @@
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_LB_UserInfoName);
             this.PanelDA_PA_UserInfoPanel.Controls.Add(this.PanelDA_PB_UserImage);
             this.PanelDA_PA_UserInfoPanel.Location = new System.Drawing.Point(364, 82);
-            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PA_UserInfoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PA_UserInfoPanel.Name = "PanelDA_PA_UserInfoPanel";
             this.PanelDA_PA_UserInfoPanel.Size = new System.Drawing.Size(403, 288);
             this.PanelDA_PA_UserInfoPanel.TabIndex = 1;
@@ -770,7 +867,7 @@
             this.PanelDA_PB_UserImage.BackColor = System.Drawing.Color.Transparent;
             this.PanelDA_PB_UserImage.Image = ((System.Drawing.Image)(resources.GetObject("PanelDA_PB_UserImage.Image")));
             this.PanelDA_PB_UserImage.Location = new System.Drawing.Point(14, 27);
-            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelDA_PB_UserImage.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDA_PB_UserImage.Name = "PanelDA_PB_UserImage";
             this.PanelDA_PB_UserImage.Size = new System.Drawing.Size(146, 228);
             this.PanelDA_PB_UserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -780,6 +877,7 @@
             // PanelRE_PA_RegistryBG
             // 
             this.PanelRE_PA_RegistryBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentCountry);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPostalcodeLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentUnitNumberLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCityLabel);
@@ -789,13 +887,14 @@
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentPostalcode);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentStreet);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentCourseLabel);
-            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentCourse);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentClass);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_BT_RegisterSave);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentLocationLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentLocation);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentNumberLabel);
-            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_RegisterStudentNumber);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentNumber);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_CMB_RegisterStudentGender);
+            this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_RegisterStudentNumber);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentGenderLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentPhoneNumberLabel);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_LB_StudentEmailLabel);
@@ -806,10 +905,18 @@
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentSurname);
             this.PanelRE_PA_RegistryBG.Controls.Add(this.PanelRE_TB_RegisterStudentName);
             this.PanelRE_PA_RegistryBG.Location = new System.Drawing.Point(0, 0);
-            this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_PA_RegistryBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_PA_RegistryBG.Name = "PanelRE_PA_RegistryBG";
             this.PanelRE_PA_RegistryBG.Size = new System.Drawing.Size(1920, 1080);
             this.PanelRE_PA_RegistryBG.TabIndex = 7;
+            // 
+            // PanelRE_TB_RegisterStudentCountry
+            // 
+            this.PanelRE_TB_RegisterStudentCountry.Location = new System.Drawing.Point(855, 208);
+            this.PanelRE_TB_RegisterStudentCountry.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelRE_TB_RegisterStudentCountry.Name = "PanelRE_TB_RegisterStudentCountry";
+            this.PanelRE_TB_RegisterStudentCountry.Size = new System.Drawing.Size(284, 20);
+            this.PanelRE_TB_RegisterStudentCountry.TabIndex = 27;
             // 
             // PanelRE_LB_StudentPostalcodeLabel
             // 
@@ -854,7 +961,7 @@
             // PanelRE_TB_RegisterStudentUnitNumber
             // 
             this.PanelRE_TB_RegisterStudentUnitNumber.Location = new System.Drawing.Point(855, 488);
-            this.PanelRE_TB_RegisterStudentUnitNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentUnitNumber.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentUnitNumber.Name = "PanelRE_TB_RegisterStudentUnitNumber";
             this.PanelRE_TB_RegisterStudentUnitNumber.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentUnitNumber.TabIndex = 22;
@@ -862,7 +969,7 @@
             // PanelRE_TB_RegisterStudentCity
             // 
             this.PanelRE_TB_RegisterStudentCity.Location = new System.Drawing.Point(855, 446);
-            this.PanelRE_TB_RegisterStudentCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentCity.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentCity.Name = "PanelRE_TB_RegisterStudentCity";
             this.PanelRE_TB_RegisterStudentCity.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentCity.TabIndex = 21;
@@ -870,7 +977,7 @@
             // PanelRE_TB_RegisterStudentPostalcode
             // 
             this.PanelRE_TB_RegisterStudentPostalcode.Location = new System.Drawing.Point(855, 528);
-            this.PanelRE_TB_RegisterStudentPostalcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentPostalcode.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentPostalcode.Name = "PanelRE_TB_RegisterStudentPostalcode";
             this.PanelRE_TB_RegisterStudentPostalcode.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentPostalcode.TabIndex = 20;
@@ -878,7 +985,7 @@
             // PanelRE_TB_RegisterStudentStreet
             // 
             this.PanelRE_TB_RegisterStudentStreet.Location = new System.Drawing.Point(855, 406);
-            this.PanelRE_TB_RegisterStudentStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentStreet.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentStreet.Name = "PanelRE_TB_RegisterStudentStreet";
             this.PanelRE_TB_RegisterStudentStreet.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentStreet.TabIndex = 19;
@@ -893,22 +1000,22 @@
             this.PanelRE_LB_StudentCourseLabel.TabIndex = 18;
             this.PanelRE_LB_StudentCourseLabel.Text = "Student course";
             // 
-            // PanelRE_CMB_RegisterStudentCourse
+            // PanelRE_CMB_RegisterStudentClass
             // 
-            this.PanelRE_CMB_RegisterStudentCourse.FormattingEnabled = true;
-            this.PanelRE_CMB_RegisterStudentCourse.Items.AddRange(new object[] {
+            this.PanelRE_CMB_RegisterStudentClass.FormattingEnabled = true;
+            this.PanelRE_CMB_RegisterStudentClass.Items.AddRange(new object[] {
             "HBO-ICT"});
-            this.PanelRE_CMB_RegisterStudentCourse.Location = new System.Drawing.Point(855, 609);
-            this.PanelRE_CMB_RegisterStudentCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.PanelRE_CMB_RegisterStudentCourse.Name = "PanelRE_CMB_RegisterStudentCourse";
-            this.PanelRE_CMB_RegisterStudentCourse.Size = new System.Drawing.Size(284, 21);
-            this.PanelRE_CMB_RegisterStudentCourse.TabIndex = 17;
-            this.PanelRE_CMB_RegisterStudentCourse.Click += new System.EventHandler(this.PanelRE_CMB_RegisterStudentCourse_Click);
+            this.PanelRE_CMB_RegisterStudentClass.Location = new System.Drawing.Point(855, 609);
+            this.PanelRE_CMB_RegisterStudentClass.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelRE_CMB_RegisterStudentClass.Name = "PanelRE_CMB_RegisterStudentClass";
+            this.PanelRE_CMB_RegisterStudentClass.Size = new System.Drawing.Size(284, 21);
+            this.PanelRE_CMB_RegisterStudentClass.TabIndex = 17;
+            this.PanelRE_CMB_RegisterStudentClass.Click += new System.EventHandler(this.PanelRE_CMB_RegisterStudentCourse_Click);
             // 
             // PanelRE_BT_RegisterSave
             // 
             this.PanelRE_BT_RegisterSave.Location = new System.Drawing.Point(940, 728);
-            this.PanelRE_BT_RegisterSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_BT_RegisterSave.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_BT_RegisterSave.Name = "PanelRE_BT_RegisterSave";
             this.PanelRE_BT_RegisterSave.Size = new System.Drawing.Size(112, 27);
             this.PanelRE_BT_RegisterSave.TabIndex = 16;
@@ -934,7 +1041,7 @@
             "Maastricht",
             "Geleen"});
             this.PanelRE_CMB_RegisterStudentLocation.Location = new System.Drawing.Point(855, 690);
-            this.PanelRE_CMB_RegisterStudentLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_CMB_RegisterStudentLocation.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_CMB_RegisterStudentLocation.Name = "PanelRE_CMB_RegisterStudentLocation";
             this.PanelRE_CMB_RegisterStudentLocation.Size = new System.Drawing.Size(284, 21);
             this.PanelRE_CMB_RegisterStudentLocation.TabIndex = 14;
@@ -950,13 +1057,12 @@
             this.PanelRE_LB_StudentNumberLabel.TabIndex = 13;
             this.PanelRE_LB_StudentNumberLabel.Text = "Student number";
             // 
-            // PanelRE_LB_RegisterStudentNumber
+            // PanelRE_TB_RegisterStudentNumber
             // 
-            this.PanelRE_LB_RegisterStudentNumber.Location = new System.Drawing.Point(855, 568);
-            this.PanelRE_LB_RegisterStudentNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.PanelRE_LB_RegisterStudentNumber.Name = "PanelRE_LB_RegisterStudentNumber";
-            this.PanelRE_LB_RegisterStudentNumber.Size = new System.Drawing.Size(284, 20);
-            this.PanelRE_LB_RegisterStudentNumber.TabIndex = 12;
+            this.PanelRE_TB_RegisterStudentNumber.Location = new System.Drawing.Point(855, 569);
+            this.PanelRE_TB_RegisterStudentNumber.Name = "PanelRE_TB_RegisterStudentNumber";
+            this.PanelRE_TB_RegisterStudentNumber.Size = new System.Drawing.Size(284, 20);
+            this.PanelRE_TB_RegisterStudentNumber.TabIndex = 28;
             // 
             // PanelRE_CMB_RegisterStudentGender
             // 
@@ -967,11 +1073,19 @@
             "Female",
             "Other"});
             this.PanelRE_CMB_RegisterStudentGender.Location = new System.Drawing.Point(855, 325);
-            this.PanelRE_CMB_RegisterStudentGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_CMB_RegisterStudentGender.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_CMB_RegisterStudentGender.Name = "PanelRE_CMB_RegisterStudentGender";
             this.PanelRE_CMB_RegisterStudentGender.Size = new System.Drawing.Size(284, 21);
             this.PanelRE_CMB_RegisterStudentGender.TabIndex = 11;
             this.PanelRE_CMB_RegisterStudentGender.Click += new System.EventHandler(this.PanelRE_CMB_RegisterGender_Click);
+            // 
+            // PanelRE_LB_RegisterStudentNumber
+            // 
+            this.PanelRE_LB_RegisterStudentNumber.Location = new System.Drawing.Point(855, 568);
+            this.PanelRE_LB_RegisterStudentNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelRE_LB_RegisterStudentNumber.Name = "PanelRE_LB_RegisterStudentNumber";
+            this.PanelRE_LB_RegisterStudentNumber.Size = new System.Drawing.Size(284, 20);
+            this.PanelRE_LB_RegisterStudentNumber.TabIndex = 12;
             // 
             // PanelRE_LB_StudentGenderLabel
             // 
@@ -1026,7 +1140,7 @@
             // PanelRE_TB_RegisterStudentPhonenumber
             // 
             this.PanelRE_TB_RegisterStudentPhonenumber.Location = new System.Drawing.Point(855, 649);
-            this.PanelRE_TB_RegisterStudentPhonenumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentPhonenumber.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentPhonenumber.Name = "PanelRE_TB_RegisterStudentPhonenumber";
             this.PanelRE_TB_RegisterStudentPhonenumber.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentPhonenumber.TabIndex = 4;
@@ -1034,7 +1148,7 @@
             // PanelRE_TB_RegisterStudentEmail
             // 
             this.PanelRE_TB_RegisterStudentEmail.Location = new System.Drawing.Point(855, 365);
-            this.PanelRE_TB_RegisterStudentEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentEmail.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentEmail.Name = "PanelRE_TB_RegisterStudentEmail";
             this.PanelRE_TB_RegisterStudentEmail.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentEmail.TabIndex = 3;
@@ -1042,7 +1156,7 @@
             // PanelRE_TB_RegisterStudentSurname
             // 
             this.PanelRE_TB_RegisterStudentSurname.Location = new System.Drawing.Point(855, 282);
-            this.PanelRE_TB_RegisterStudentSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentSurname.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentSurname.Name = "PanelRE_TB_RegisterStudentSurname";
             this.PanelRE_TB_RegisterStudentSurname.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentSurname.TabIndex = 2;
@@ -1050,7 +1164,7 @@
             // PanelRE_TB_RegisterStudentName
             // 
             this.PanelRE_TB_RegisterStudentName.Location = new System.Drawing.Point(855, 244);
-            this.PanelRE_TB_RegisterStudentName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelRE_TB_RegisterStudentName.Margin = new System.Windows.Forms.Padding(2);
             this.PanelRE_TB_RegisterStudentName.Name = "PanelRE_TB_RegisterStudentName";
             this.PanelRE_TB_RegisterStudentName.Size = new System.Drawing.Size(284, 20);
             this.PanelRE_TB_RegisterStudentName.TabIndex = 1;
@@ -1061,7 +1175,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelWG_PA_WeeklyGoalsBackground.BackColor = System.Drawing.Color.Silver;
-            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeekGoals_Listview_Tasks);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Monday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Saturday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Thursday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Friday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Wednesday);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeekGoals_BTN_AddTask);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_AddWeekGoal);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Monday);
@@ -1073,25 +1191,198 @@
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Saturday);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoals_BTN_Friday);
             this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.PanelWG_PA_ShowWeeklyGoal);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklyGoalPanel_LV_ShowAll);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Sunday);
+            this.PanelWG_PA_WeeklyGoalsBackground.Controls.Add(this.WeeklygoalPanel_LV_Tuesday);
             this.PanelWG_PA_WeeklyGoalsBackground.Location = new System.Drawing.Point(0, 0);
             this.PanelWG_PA_WeeklyGoalsBackground.Name = "PanelWG_PA_WeeklyGoalsBackground";
-            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelWG_PA_WeeklyGoalsBackground.Size = new System.Drawing.Size(3316, 1787);
             this.PanelWG_PA_WeeklyGoalsBackground.TabIndex = 8;
             // 
-            // WeekGoals_Listview_Tasks
+            // WeeklygoalPanel_LV_Monday
             // 
-            this.WeekGoals_Listview_Tasks.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.WeekGoals_Listview_Tasks.HideSelection = false;
-            this.WeekGoals_Listview_Tasks.Location = new System.Drawing.Point(382, 325);
-            this.WeekGoals_Listview_Tasks.Name = "WeekGoals_Listview_Tasks";
-            this.WeekGoals_Listview_Tasks.Size = new System.Drawing.Size(909, 374);
-            this.WeekGoals_Listview_Tasks.TabIndex = 9;
-            this.WeekGoals_Listview_Tasks.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Monday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Monday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            listViewGroup1.Header = "Monday";
+            listViewGroup1.Name = "Monday";
+            this.WeeklygoalPanel_LV_Monday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1});
+            this.WeeklygoalPanel_LV_Monday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Monday.HoverSelection = true;
+            listViewItem1.Group = listViewGroup1;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem1.Tag = "";
+            listViewItem2.Group = listViewGroup1;
+            listViewItem3.Group = listViewGroup1;
+            listViewItem4.Group = listViewGroup1;
+            listViewItem5.Group = listViewGroup1;
+            this.WeeklygoalPanel_LV_Monday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5});
+            this.WeeklygoalPanel_LV_Monday.Location = new System.Drawing.Point(494, 368);
+            this.WeeklygoalPanel_LV_Monday.Name = "WeeklygoalPanel_LV_Monday";
+            this.WeeklygoalPanel_LV_Monday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Monday.TabIndex = 11;
+            this.WeeklygoalPanel_LV_Monday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Monday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Monday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Saturday
+            // 
+            this.WeeklygoalPanel_LV_Saturday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Saturday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2});
+            listViewGroup2.Header = "Saturday";
+            listViewGroup2.Name = "Saturday";
+            this.WeeklygoalPanel_LV_Saturday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup2});
+            this.WeeklygoalPanel_LV_Saturday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Saturday.HoverSelection = true;
+            listViewItem6.Group = listViewGroup2;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem6.Tag = "";
+            listViewItem7.Group = listViewGroup2;
+            listViewItem8.Group = listViewGroup2;
+            listViewItem9.Group = listViewGroup2;
+            listViewItem10.Group = listViewGroup2;
+            this.WeeklygoalPanel_LV_Saturday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
+            this.WeeklygoalPanel_LV_Saturday.Location = new System.Drawing.Point(494, 368);
+            this.WeeklygoalPanel_LV_Saturday.Name = "WeeklygoalPanel_LV_Saturday";
+            this.WeeklygoalPanel_LV_Saturday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Saturday.TabIndex = 12;
+            this.WeeklygoalPanel_LV_Saturday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Saturday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Saturday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Thursday
+            // 
+            this.WeeklygoalPanel_LV_Thursday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Thursday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4});
+            listViewGroup3.Header = "Thursday";
+            listViewGroup3.Name = "Thursday";
+            this.WeeklygoalPanel_LV_Thursday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup3});
+            this.WeeklygoalPanel_LV_Thursday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Thursday.HoverSelection = true;
+            listViewItem11.Group = listViewGroup3;
+            listViewItem11.StateImageIndex = 0;
+            listViewItem11.Tag = "";
+            listViewItem12.Group = listViewGroup3;
+            listViewItem13.Group = listViewGroup3;
+            listViewItem14.Group = listViewGroup3;
+            listViewItem15.Group = listViewGroup3;
+            this.WeeklygoalPanel_LV_Thursday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15});
+            this.WeeklygoalPanel_LV_Thursday.Location = new System.Drawing.Point(494, 368);
+            this.WeeklygoalPanel_LV_Thursday.Name = "WeeklygoalPanel_LV_Thursday";
+            this.WeeklygoalPanel_LV_Thursday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Thursday.TabIndex = 14;
+            this.WeeklygoalPanel_LV_Thursday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Thursday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Thursday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Friday
+            // 
+            this.WeeklygoalPanel_LV_Friday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Friday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7});
+            listViewGroup4.Header = "Friday";
+            listViewGroup4.Name = "Friday";
+            this.WeeklygoalPanel_LV_Friday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup4});
+            this.WeeklygoalPanel_LV_Friday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Friday.HoverSelection = true;
+            listViewItem16.Group = listViewGroup4;
+            listViewItem16.StateImageIndex = 0;
+            listViewItem16.Tag = "";
+            listViewItem17.Group = listViewGroup4;
+            listViewItem18.Group = listViewGroup4;
+            listViewItem19.Group = listViewGroup4;
+            listViewItem20.Group = listViewGroup4;
+            this.WeeklygoalPanel_LV_Friday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20});
+            this.WeeklygoalPanel_LV_Friday.Location = new System.Drawing.Point(495, 368);
+            this.WeeklygoalPanel_LV_Friday.Name = "WeeklygoalPanel_LV_Friday";
+            this.WeeklygoalPanel_LV_Friday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Friday.TabIndex = 17;
+            this.WeeklygoalPanel_LV_Friday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Friday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Friday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Wednesday
+            // 
+            this.WeeklygoalPanel_LV_Wednesday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Wednesday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3});
+            listViewGroup5.Header = "Wednesday";
+            listViewGroup5.Name = "Wednesyday";
+            this.WeeklygoalPanel_LV_Wednesday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup5});
+            this.WeeklygoalPanel_LV_Wednesday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Wednesday.HoverSelection = true;
+            listViewItem21.Group = listViewGroup5;
+            listViewItem21.StateImageIndex = 0;
+            listViewItem21.Tag = "";
+            listViewItem22.Group = listViewGroup5;
+            listViewItem23.Group = listViewGroup5;
+            listViewItem24.Group = listViewGroup5;
+            listViewItem25.Group = listViewGroup5;
+            this.WeeklygoalPanel_LV_Wednesday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24,
+            listViewItem25});
+            this.WeeklygoalPanel_LV_Wednesday.Location = new System.Drawing.Point(494, 368);
+            this.WeeklygoalPanel_LV_Wednesday.Name = "WeeklygoalPanel_LV_Wednesday";
+            this.WeeklygoalPanel_LV_Wednesday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Wednesday.TabIndex = 13;
+            this.WeeklygoalPanel_LV_Wednesday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Wednesday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Wednesday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Width = 248;
             // 
             // WeekGoals_BTN_AddTask
             // 
-            this.WeekGoals_BTN_AddTask.Location = new System.Drawing.Point(1204, 703);
-            this.WeekGoals_BTN_AddTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeekGoals_BTN_AddTask.Location = new System.Drawing.Point(1311, 737);
+            this.WeekGoals_BTN_AddTask.Margin = new System.Windows.Forms.Padding(2);
             this.WeekGoals_BTN_AddTask.Name = "WeekGoals_BTN_AddTask";
             this.WeekGoals_BTN_AddTask.Size = new System.Drawing.Size(86, 36);
             this.WeekGoals_BTN_AddTask.TabIndex = 10;
@@ -1101,8 +1392,8 @@
             // 
             // WeeklyGoals_BTN_AddWeekGoal
             // 
-            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1154, 197);
-            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_AddWeekGoal.Location = new System.Drawing.Point(1261, 231);
+            this.WeeklyGoals_BTN_AddWeekGoal.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_AddWeekGoal.Name = "WeeklyGoals_BTN_AddWeekGoal";
             this.WeeklyGoals_BTN_AddWeekGoal.Size = new System.Drawing.Size(76, 40);
             this.WeeklyGoals_BTN_AddWeekGoal.TabIndex = 7;
@@ -1112,8 +1403,8 @@
             // 
             // WeeklyGoals_BTN_Monday
             // 
-            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(388, 282);
-            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Monday.Location = new System.Drawing.Point(495, 316);
+            this.WeeklyGoals_BTN_Monday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Monday.Name = "WeeklyGoals_BTN_Monday";
             this.WeeklyGoals_BTN_Monday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Monday.TabIndex = 1;
@@ -1123,8 +1414,8 @@
             // 
             // WeeklyGoals_BTN_Tuesday
             // 
-            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(500, 282);
-            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Tuesday.Location = new System.Drawing.Point(607, 316);
+            this.WeeklyGoals_BTN_Tuesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Tuesday.Name = "WeeklyGoals_BTN_Tuesday";
             this.WeeklyGoals_BTN_Tuesday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Tuesday.TabIndex = 2;
@@ -1134,8 +1425,8 @@
             // 
             // WeeklyGoals_BTN_ShowAll
             // 
-            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1171, 282);
-            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_ShowAll.Location = new System.Drawing.Point(1278, 316);
+            this.WeeklyGoals_BTN_ShowAll.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_ShowAll.Name = "WeeklyGoals_BTN_ShowAll";
             this.WeeklyGoals_BTN_ShowAll.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_ShowAll.TabIndex = 6;
@@ -1145,8 +1436,8 @@
             // 
             // WeeklyGoals_BTN_Wednesday
             // 
-            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(612, 282);
-            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Wednesday.Location = new System.Drawing.Point(719, 316);
+            this.WeeklyGoals_BTN_Wednesday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Wednesday.Name = "WeeklyGoals_BTN_Wednesday";
             this.WeeklyGoals_BTN_Wednesday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Wednesday.TabIndex = 3;
@@ -1156,8 +1447,8 @@
             // 
             // WeeklyGoals_BTN_Sunday
             // 
-            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1059, 282);
-            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Sunday.Location = new System.Drawing.Point(1166, 316);
+            this.WeeklyGoals_BTN_Sunday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Sunday.Name = "WeeklyGoals_BTN_Sunday";
             this.WeeklyGoals_BTN_Sunday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Sunday.TabIndex = 2;
@@ -1167,8 +1458,8 @@
             // 
             // WeeklyGoals_BTN_Thursday
             // 
-            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(723, 282);
-            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Thursday.Location = new System.Drawing.Point(830, 316);
+            this.WeeklyGoals_BTN_Thursday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Thursday.Name = "WeeklyGoals_BTN_Thursday";
             this.WeeklyGoals_BTN_Thursday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Thursday.TabIndex = 4;
@@ -1178,8 +1469,8 @@
             // 
             // WeeklyGoals_BTN_Saturday
             // 
-            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(947, 282);
-            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Saturday.Location = new System.Drawing.Point(1054, 316);
+            this.WeeklyGoals_BTN_Saturday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Saturday.Name = "WeeklyGoals_BTN_Saturday";
             this.WeeklyGoals_BTN_Saturday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Saturday.TabIndex = 2;
@@ -1189,8 +1480,8 @@
             // 
             // WeeklyGoals_BTN_Friday
             // 
-            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(835, 282);
-            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WeeklyGoals_BTN_Friday.Location = new System.Drawing.Point(942, 316);
+            this.WeeklyGoals_BTN_Friday.Margin = new System.Windows.Forms.Padding(2);
             this.WeeklyGoals_BTN_Friday.Name = "WeeklyGoals_BTN_Friday";
             this.WeeklyGoals_BTN_Friday.Size = new System.Drawing.Size(112, 47);
             this.WeeklyGoals_BTN_Friday.TabIndex = 5;
@@ -1202,8 +1493,8 @@
             // 
             this.PanelWG_PA_ShowWeeklyGoal.BackColor = System.Drawing.Color.DarkGray;
             this.PanelWG_PA_ShowWeeklyGoal.Controls.Add(this.WeeklyGoals_LB_SetWeeklyGoal);
-            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(410, 61);
-            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelWG_PA_ShowWeeklyGoal.Location = new System.Drawing.Point(517, 95);
+            this.PanelWG_PA_ShowWeeklyGoal.Margin = new System.Windows.Forms.Padding(2);
             this.PanelWG_PA_ShowWeeklyGoal.Name = "PanelWG_PA_ShowWeeklyGoal";
             this.PanelWG_PA_ShowWeeklyGoal.Size = new System.Drawing.Size(819, 134);
             this.PanelWG_PA_ShowWeeklyGoal.TabIndex = 8;
@@ -1214,17 +1505,157 @@
             this.WeeklyGoals_LB_SetWeeklyGoal.Location = new System.Drawing.Point(0, 0);
             this.WeeklyGoals_LB_SetWeeklyGoal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeeklyGoals_LB_SetWeeklyGoal.Name = "WeeklyGoals_LB_SetWeeklyGoal";
-            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(801, 134);
+            this.WeeklyGoals_LB_SetWeeklyGoal.Size = new System.Drawing.Size(817, 134);
             this.WeeklyGoals_LB_SetWeeklyGoal.TabIndex = 0;
-            this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Fill in your WeeklyGoal";
+            this.WeeklyGoals_LB_SetWeeklyGoal.Text = "Create or edit your weekly goal.";
+            this.WeeklyGoals_LB_SetWeeklyGoal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.WeeklyGoals_LB_SetWeeklyGoal.Click += new System.EventHandler(this.WeeklyGoalClick);
+            // 
+            // WeeklyGoalPanel_LV_ShowAll
+            // 
+            this.WeeklyGoalPanel_LV_ShowAll.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklyGoalPanel_LV_ShowAll.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Monday});
+            listViewGroup6.Header = "Monday";
+            listViewGroup6.Name = "Monday";
+            listViewGroup7.Header = "Tuesday";
+            listViewGroup7.Name = "Tuesday";
+            listViewGroup8.Header = "Wednesday";
+            listViewGroup8.Name = "Wednesday";
+            listViewGroup9.Header = "Thursday";
+            listViewGroup9.Name = "Thursday";
+            listViewGroup10.Header = "Friday";
+            listViewGroup10.Name = "Friday";
+            listViewGroup11.Header = "Saturday";
+            listViewGroup11.Name = "Saturday";
+            listViewGroup12.Header = "Sunday";
+            listViewGroup12.Name = "Sunday";
+            this.WeeklyGoalPanel_LV_ShowAll.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10,
+            listViewGroup11,
+            listViewGroup12});
+            this.WeeklyGoalPanel_LV_ShowAll.HideSelection = false;
+            this.WeeklyGoalPanel_LV_ShowAll.HoverSelection = true;
+            listViewItem26.Group = listViewGroup6;
+            listViewItem26.StateImageIndex = 0;
+            listViewItem26.Tag = "";
+            listViewItem27.Group = listViewGroup8;
+            listViewItem27.StateImageIndex = 0;
+            listViewItem28.Group = listViewGroup7;
+            listViewItem29.Group = listViewGroup6;
+            listViewItem30.Group = listViewGroup8;
+            listViewItem31.Group = listViewGroup9;
+            listViewItem32.Group = listViewGroup10;
+            listViewItem33.Group = listViewGroup10;
+            listViewItem34.Group = listViewGroup6;
+            listViewItem35.Group = listViewGroup6;
+            listViewItem36.Group = listViewGroup6;
+            this.WeeklyGoalPanel_LV_ShowAll.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem26,
+            listViewItem27,
+            listViewItem28,
+            listViewItem29,
+            listViewItem30,
+            listViewItem31,
+            listViewItem32,
+            listViewItem33,
+            listViewItem34,
+            listViewItem35,
+            listViewItem36});
+            this.WeeklyGoalPanel_LV_ShowAll.Location = new System.Drawing.Point(495, 368);
+            this.WeeklyGoalPanel_LV_ShowAll.Name = "WeeklyGoalPanel_LV_ShowAll";
+            this.WeeklyGoalPanel_LV_ShowAll.Size = new System.Drawing.Size(896, 365);
+            this.WeeklyGoalPanel_LV_ShowAll.TabIndex = 9;
+            this.WeeklyGoalPanel_LV_ShowAll.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklyGoalPanel_LV_ShowAll.UseCompatibleStateImageBehavior = false;
+            this.WeeklyGoalPanel_LV_ShowAll.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // Monday
+            // 
+            this.Monday.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Sunday
+            // 
+            this.WeeklygoalPanel_LV_Sunday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Sunday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6});
+            listViewGroup13.Header = "Sunday";
+            listViewGroup13.Name = "Sunday";
+            this.WeeklygoalPanel_LV_Sunday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup13});
+            this.WeeklygoalPanel_LV_Sunday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Sunday.HoverSelection = true;
+            listViewItem37.Group = listViewGroup13;
+            listViewItem37.StateImageIndex = 0;
+            listViewItem37.Tag = "";
+            listViewItem38.Group = listViewGroup13;
+            listViewItem39.Group = listViewGroup13;
+            listViewItem40.Group = listViewGroup13;
+            listViewItem41.Group = listViewGroup13;
+            this.WeeklygoalPanel_LV_Sunday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem37,
+            listViewItem38,
+            listViewItem39,
+            listViewItem40,
+            listViewItem41});
+            this.WeeklygoalPanel_LV_Sunday.Location = new System.Drawing.Point(495, 368);
+            this.WeeklygoalPanel_LV_Sunday.Name = "WeeklygoalPanel_LV_Sunday";
+            this.WeeklygoalPanel_LV_Sunday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Sunday.TabIndex = 16;
+            this.WeeklygoalPanel_LV_Sunday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Sunday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Sunday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Width = 248;
+            // 
+            // WeeklygoalPanel_LV_Tuesday
+            // 
+            this.WeeklygoalPanel_LV_Tuesday.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.WeeklygoalPanel_LV_Tuesday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5});
+            listViewGroup14.Header = "Tuesday";
+            listViewGroup14.Name = "Tuesday";
+            this.WeeklygoalPanel_LV_Tuesday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup14});
+            this.WeeklygoalPanel_LV_Tuesday.HideSelection = false;
+            this.WeeklygoalPanel_LV_Tuesday.HoverSelection = true;
+            listViewItem42.Group = listViewGroup14;
+            listViewItem42.StateImageIndex = 0;
+            listViewItem42.Tag = "";
+            listViewItem43.Group = listViewGroup14;
+            listViewItem44.Group = listViewGroup14;
+            listViewItem45.Group = listViewGroup14;
+            listViewItem46.Group = listViewGroup14;
+            this.WeeklygoalPanel_LV_Tuesday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem42,
+            listViewItem43,
+            listViewItem44,
+            listViewItem45,
+            listViewItem46});
+            this.WeeklygoalPanel_LV_Tuesday.Location = new System.Drawing.Point(495, 368);
+            this.WeeklygoalPanel_LV_Tuesday.Name = "WeeklygoalPanel_LV_Tuesday";
+            this.WeeklygoalPanel_LV_Tuesday.Size = new System.Drawing.Size(896, 365);
+            this.WeeklygoalPanel_LV_Tuesday.TabIndex = 15;
+            this.WeeklygoalPanel_LV_Tuesday.TileSize = new System.Drawing.Size(9, 9);
+            this.WeeklygoalPanel_LV_Tuesday.UseCompatibleStateImageBehavior = false;
+            this.WeeklygoalPanel_LV_Tuesday.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Width = 248;
             // 
             // BGflmPull
             // 
             this.BGflmPull.BackColor = System.Drawing.Color.Silver;
             this.BGflmPull.Image = ((System.Drawing.Image)(resources.GetObject("BGflmPull.Image")));
             this.BGflmPull.Location = new System.Drawing.Point(0, 10);
-            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BGflmPull.Margin = new System.Windows.Forms.Padding(2);
             this.BGflmPull.Name = "BGflmPull";
             this.BGflmPull.Size = new System.Drawing.Size(47, 45);
             this.BGflmPull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1244,7 +1675,7 @@
             this.Login_Panel.Controls.Add(this.PanelLogin_LB_Email);
             this.Login_Panel.Controls.Add(this.PanelLogin_TB_Email);
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Login_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(1920, 1080);
             this.Login_Panel.TabIndex = 1;
@@ -1253,7 +1684,7 @@
             // 
             this.PanelLogin_BT_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_BT_Register.Location = new System.Drawing.Point(784, 703);
-            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_BT_Register.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_BT_Register.Name = "PanelLogin_BT_Register";
             this.PanelLogin_BT_Register.Size = new System.Drawing.Size(154, 46);
             this.PanelLogin_BT_Register.TabIndex = 7;
@@ -1276,7 +1707,7 @@
             // 
             this.PanelLogin_BT_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_BT_Login.Location = new System.Drawing.Point(967, 703);
-            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_BT_Login.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_BT_Login.Name = "PanelLogin_BT_Login";
             this.PanelLogin_BT_Login.Size = new System.Drawing.Size(154, 46);
             this.PanelLogin_BT_Login.TabIndex = 5;
@@ -1311,7 +1742,7 @@
             // 
             this.PanelLogin_TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_TB_Password.Location = new System.Drawing.Point(784, 604);
-            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_TB_Password.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_TB_Password.Multiline = true;
             this.PanelLogin_TB_Password.Name = "PanelLogin_TB_Password";
             this.PanelLogin_TB_Password.PasswordChar = '*';
@@ -1333,7 +1764,7 @@
             // 
             this.PanelLogin_TB_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelLogin_TB_Email.Location = new System.Drawing.Point(784, 418);
-            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogin_TB_Email.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogin_TB_Email.Multiline = true;
             this.PanelLogin_TB_Email.Name = "PanelLogin_TB_Email";
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
@@ -1347,24 +1778,60 @@
             // PanelFB_PA_FeedbackBG
             // 
             this.PanelFB_PA_FeedbackBG.BackColor = System.Drawing.Color.Silver;
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_BT_ViewFeedback);
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_BT_RegisterFeedback);
+            this.PanelFB_PA_FeedbackBG.Controls.Add(this.PanelFB_LB_ShowRegisteredFeedback);
             this.PanelFB_PA_FeedbackBG.Location = new System.Drawing.Point(0, 0);
-            this.PanelFB_PA_FeedbackBG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelFB_PA_FeedbackBG.Margin = new System.Windows.Forms.Padding(2);
             this.PanelFB_PA_FeedbackBG.Name = "PanelFB_PA_FeedbackBG";
-            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1440, 878);
+            this.PanelFB_PA_FeedbackBG.Size = new System.Drawing.Size(1904, 1044);
             this.PanelFB_PA_FeedbackBG.TabIndex = 11;
+            // 
+            // PanelFB_BT_ViewFeedback
+            // 
+            this.PanelFB_BT_ViewFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_BT_ViewFeedback.Location = new System.Drawing.Point(1140, 280);
+            this.PanelFB_BT_ViewFeedback.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFB_BT_ViewFeedback.Name = "PanelFB_BT_ViewFeedback";
+            this.PanelFB_BT_ViewFeedback.Size = new System.Drawing.Size(89, 52);
+            this.PanelFB_BT_ViewFeedback.TabIndex = 2;
+            this.PanelFB_BT_ViewFeedback.Text = "View Feedback";
+            this.PanelFB_BT_ViewFeedback.UseVisualStyleBackColor = false;
+            // 
+            // PanelFB_BT_RegisterFeedback
+            // 
+            this.PanelFB_BT_RegisterFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_BT_RegisterFeedback.Location = new System.Drawing.Point(1246, 280);
+            this.PanelFB_BT_RegisterFeedback.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFB_BT_RegisterFeedback.Name = "PanelFB_BT_RegisterFeedback";
+            this.PanelFB_BT_RegisterFeedback.Size = new System.Drawing.Size(89, 52);
+            this.PanelFB_BT_RegisterFeedback.TabIndex = 1;
+            this.PanelFB_BT_RegisterFeedback.Text = "Register Feedback";
+            this.PanelFB_BT_RegisterFeedback.UseVisualStyleBackColor = false;
+            this.PanelFB_BT_RegisterFeedback.Click += new System.EventHandler(this.PanelFB_BT_RegisterFeedback_Click);
+            // 
+            // PanelFB_LB_ShowRegisteredFeedback
+            // 
+            this.PanelFB_LB_ShowRegisteredFeedback.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelFB_LB_ShowRegisteredFeedback.FormattingEnabled = true;
+            this.PanelFB_LB_ShowRegisteredFeedback.Location = new System.Drawing.Point(689, 337);
+            this.PanelFB_LB_ShowRegisteredFeedback.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelFB_LB_ShowRegisteredFeedback.Name = "PanelFB_LB_ShowRegisteredFeedback";
+            this.PanelFB_LB_ShowRegisteredFeedback.Size = new System.Drawing.Size(648, 368);
+            this.PanelFB_LB_ShowRegisteredFeedback.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 846);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.PanelFB_PA_FeedbackBG);
             this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
-            this.Controls.Add(this.BGflmPull);
-            this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
+            this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.FLMpanel);
+            this.Controls.Add(this.BGflmPull);
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1385,6 +1852,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BGflmPull)).EndInit();
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            this.PanelFB_PA_FeedbackBG.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1471,14 +1939,15 @@
         private System.Windows.Forms.Label PanelRE_LB_StudentEmailLabel;
         private System.Windows.Forms.Label PanelRE_LB_StudentPhoneNumberLabel;
         private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentGender;
+        private System.Windows.Forms.Label PanelRE_LB_RegisterStudentNumber;
         private System.Windows.Forms.Label PanelRE_LB_StudentGenderLabel;
-        private System.Windows.Forms.TextBox PanelRE_LB_RegisterStudentNumber;
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentNumber;
         private System.Windows.Forms.Label PanelRE_LB_StudentNumberLabel;
         private System.Windows.Forms.Label PanelRE_LB_StudentLocationLabel;
         private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentLocation;
         private System.Windows.Forms.Button PanelRE_BT_RegisterSave;
         private System.Windows.Forms.Label PanelRE_LB_StudentCourseLabel;
-        private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentCourse;
+        private System.Windows.Forms.ComboBox PanelRE_CMB_RegisterStudentClass;
         private System.Windows.Forms.Label PanelRE_LB_StudentPostalcodeLabel;
         private System.Windows.Forms.Label PanelRE_LB_StudentUnitNumberLabel;
         private System.Windows.Forms.Label PanelRE_LB_StudentCityLabel;
@@ -1491,8 +1960,31 @@
 
         private System.Windows.Forms.Button WeekGoals_BTN_AddTask;
         public System.Windows.Forms.Label WeeklyGoals_LB_SetWeeklyGoal;
-        public System.Windows.Forms.ListView WeekGoals_Listview_Tasks;
+        public System.Windows.Forms.ListView WeeklyGoalPanel_LV_ShowAll;
         private System.Windows.Forms.Panel PanelFB_PA_FeedbackBG;
+
+        private System.Windows.Forms.TextBox PanelRE_TB_RegisterStudentCountry;
+
+
+        private System.Windows.Forms.ColumnHeader Monday;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Monday;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Friday;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Wednesday;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Sunday;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Tuesday;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Thursday;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        public System.Windows.Forms.ListView WeeklygoalPanel_LV_Saturday;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+
+        private System.Windows.Forms.Button PanelFB_BT_ViewFeedback;
+        private System.Windows.Forms.Button PanelFB_BT_RegisterFeedback;
+        private System.Windows.Forms.ListBox PanelFB_LB_ShowRegisteredFeedback;
 
     }
 }
