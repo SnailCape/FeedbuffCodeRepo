@@ -16,6 +16,7 @@ namespace Cinkie_feedback_fr
         public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
+        public Popup_FORM_Feedback PopUpRegisterFeedback;
 
         public Form1()
         {
@@ -61,7 +62,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
-            
+
         }
 
         /// <summary>
@@ -179,8 +180,12 @@ namespace Cinkie_feedback_fr
             panelDA_PA_NotificationsPanel.BringToFront();
             BGflmPull.BringToFront();
             FLMpanel.BringToFront();
+            Visable_Week();
+            WeeklyGoalPanel_LV_ShowAll.BringToFront();
+            WeeklyGoalPanel_LV_ShowAll.Visible = true;
 
         }
+
         private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
         {
             PanelFB_PA_FeedbackBG.Show();
@@ -211,6 +216,7 @@ namespace Cinkie_feedback_fr
 
             }
         }
+
         /// <summary>
         /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
         /// </summary>
@@ -275,6 +281,28 @@ namespace Cinkie_feedback_fr
             PanelRE_CMB_RegisterStudentClass.DroppedDown = true;
         }
         
+
+
+        private void PanelFB_BT_RegisterFeedback_Click(object sender, EventArgs e)
+        {
+            if (Check == false)
+            {
+                Popup_FORM_Feedback PopUpBox = new Popup_FORM_Feedback(this);
+                PopUpBox.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+        }
+        
         /// <summary>
         /// Brings you to the "account registration" panel 
         /// </summary>
@@ -290,51 +318,67 @@ namespace Cinkie_feedback_fr
 
         private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Monday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Monday.BringToFront();
+            WeeklygoalPanel_LV_Monday.Visible = true;
         }
         private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Tuesday");
-
+            Visable_Week();
+            WeeklygoalPanel_LV_Tuesday.BringToFront();
+            WeeklygoalPanel_LV_Tuesday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Wednesday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Wednesday.BringToFront();
+            WeeklygoalPanel_LV_Wednesday.Visible= true;
         }
         private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Thursday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Thursday.BringToFront();
+            WeeklygoalPanel_LV_Thursday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Friday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Friday.BringToFront();
+            WeeklygoalPanel_LV_Friday.Visible= true;
         }
 
         private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Saturday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Saturday.BringToFront();
+            WeeklygoalPanel_LV_Saturday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Sunday");
-
+            Visable_Week();
+            WeeklygoalPanel_LV_Sunday.BringToFront();
+            WeeklygoalPanel_LV_Sunday.Visible= true;
         }
 
         private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Show All");
+            Visable_Week();
+            WeeklyGoalPanel_LV_ShowAll.Visible = true;
+        }
 
+        private void Visable_Week()
+        {
+            WeeklygoalPanel_LV_Monday.Visible = false;
+            WeeklygoalPanel_LV_Tuesday.Visible = false;
+            WeeklygoalPanel_LV_Wednesday.Visible = false;
+            WeeklygoalPanel_LV_Thursday.Visible = false;
+            WeeklygoalPanel_LV_Friday.Visible = false;
+            WeeklygoalPanel_LV_Saturday.Visible = false;
+            WeeklygoalPanel_LV_Sunday.Visible = false;
+            WeeklyGoalPanel_LV_ShowAll.Visible=false;
         }
 
         private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
@@ -357,6 +401,6 @@ namespace Cinkie_feedback_fr
 
         }
 
-        
+       
     }
 }
