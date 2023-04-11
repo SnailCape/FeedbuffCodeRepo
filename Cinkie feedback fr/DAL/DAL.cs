@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace Cinkie_feedback_fr.DAL
 {
@@ -13,23 +12,6 @@ namespace Cinkie_feedback_fr.DAL
     {
         public string connectionString = "Data Source=localhost;Initial Catalog=COEUS_DB;Integrated Security=True";
         public DAL() { }
-
-        /// <summary>
-        /// Add a new student to the database
-        /// </summary>
-        public void CreateNewStudent(FeedBUFClasses.Student student)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand())
-                {
-                    // Couldn't fix it
-                    // Moet student en adres opslaan
-                }
-                connection.Close();
-            }
-        }
 
         /// <summary>
         /// Get a list of all the students in the database
@@ -339,16 +321,6 @@ namespace Cinkie_feedback_fr.DAL
             }
 
             return feedback;
-        }
-
-        /// <summary>
-        /// Method for error messages
-        /// </summary>
-        private void ErrorMessage(Exception ex)
-        {
-            string message = $"Error bij Database!\n*{ex.Message}*";
-            string title = "Error";
-            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

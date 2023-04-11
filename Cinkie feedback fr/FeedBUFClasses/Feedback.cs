@@ -39,29 +39,5 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         {
             return listFeedback;
         }
-
-        /// <summary>
-        /// Create new feedback and add it to the list AND database
-        /// </summary>
-        public void CreateFeedback()
-        {
-
-        }
-
-        /// <summary>
-        /// Delete feedback based on id from the list AND database
-        /// </summary>
-        public void DeleteFeedback()
-        {
-
-        }
-
-        /// <summary>
-        /// Update feedback from the list AND database
-        /// </summary>
-        public void UpdateFeedback()
-        {
-
-        }
     }
 }

@@ -91,31 +91,5 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
 
             listDailyTasks = newListDailyTasks;
         }
-
-        /// <summary>
-        /// Create a new daily task and add it to the list AND database
-        /// </summary>
-        public void CreateDailyTask()
-        {
-
-        }
-
-        /// <summary>
-        /// Delete a daily task based on id from the list AND database
-        /// </summary>
-        public void DeleteDailyTask()
-        {
-
-        }
-
-        /// <summary>
-        /// Update a daily task from the list AND database
-        /// </summary>
-        public void UpdateDailyTask()
-        {
-
-        }
-
-
     }
 }

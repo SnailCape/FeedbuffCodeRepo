@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -114,19 +114,6 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             }
 
             listStudents = newListStudents;
-        }
-
-        /// <summary>
-        /// Add a new student to the list and to the database
-        /// </summary>
-        public void CreateStudent(Student student)
-        {
-            // Add the new student to the database --> Not complete yet
-            dal.CreateNewStudent(student);
-            // Add student to the list of students
-            listStudents.Add(student);
-            // Connect all students in the list of students to their classes
-            ConnectStudentsWithClasses();
         }
     }
 }
