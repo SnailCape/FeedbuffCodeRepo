@@ -102,5 +102,29 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
 
             listWeeklyGoals = newListWeeklyGoals;
         }
+
+        /// <summary>
+        /// Create a new weekly goal and add it to the list AND database
+        /// </summary>
+        public void CreateWeeklyGoal()
+        {
+
+        }
+
+        /// <summary>
+        /// Delete a weekly goal based on id from the list AND database
+        /// </summary>
+        public void DeleteWeeklyGoal()
+        {
+
+        }
+
+        /// <summary>
+        /// Update a weekly goal from the list AND database
+        /// </summary>
+        public void UpdateWeeklyGoal()
+        {
+
+        }
     }
 }
