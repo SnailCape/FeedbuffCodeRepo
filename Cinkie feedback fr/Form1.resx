@@ -275,7 +275,9 @@
   <data name="PanelFLM_BT_FeedbackButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAADVCAYAAAAM2Y9oAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAJ0NJREFUeF7tnQt4VcXV90kIIRACBBAQjyIXuVgqfoCI1pYKVLygUkFetbQqSi0o
+
+        vAAADrwBlbxySQAAJ0NJREFUeF7tnQt4VcXV90kIIRACBBAQjyIXuVgqfoCI1pYKVLygUkFetbQqSi0o
+
         3hB9tdUqtkUtRcQitijvqxaliqAVLw83BURuAq2gtCCCCnIz8CmXJORy3vWbvVfYOZwTwslJcsD1f571
         zJw5e8/Mnln/mTWzZ2bXMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgM
         BoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8Fg
@@ -1346,7 +1348,9 @@
   <data name="FLMpanelZUYD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAncAAAKqCAYAAABYaniTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAWMxJREFUeF7tvYm3HFW5uP37Q761IIyZCRBCCEPCkDBDACHMo8ikBEQGAQEVkQuI
+
+        vAAADrwBlbxySQAAWMxJREFUeF7tvYm3HFW5uP37Q761IIyZCRBCCEPCkDBDACHMo8ikBEQGAQEVkQuI
+
         iMggEgGDIIgoEAQjCMg8Q4KQ0336zPM8Dz3sj129o8k5b1XXOae6e+/q51nrWXi992rOu2snT7qrdv2/
         rv9vF2WDAGAP0h5FN23/8Y/MqsJEGk47SZwZlsfGc083KwPb0v/8c+K8giTuAGAS0h5FNyXu/CHu7JK4
         kyHuACASpD2Kbkrc+UPc2SVxJ0PcAUAkSHsU3ZS484e4s0viToa4A4BIkPYouilx5w9xZ5fEnQxxBwCR
