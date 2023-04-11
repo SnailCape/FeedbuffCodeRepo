@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinkie_feedback_fr.FeedBUFClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,11 @@ namespace Cinkie_feedback_fr
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
         }
 
+        /// <summary>
+        /// Logs the user into the system if they use the correct combination of email and password
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_BT_Login_Click(object sender, EventArgs e)
         {
             string message = @"Invalid Email or Password." + Environment.NewLine + "Check if your password and email are correct!" + Environment.NewLine + Environment.NewLine + "Please try again";
@@ -211,6 +217,72 @@ namespace Cinkie_feedback_fr
             }
         }
 
+        /// <summary>
+        /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
+        }
+
+        private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
+        }
+        
+        /// <summary>
+        /// Save the new Student 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
+        {
+            // Has not been completed yet --> Needs to send data to the database
+
+            int studentId = Int32.Parse(PanelRE_TB_RegisterStudentNumber.Text);
+            string firstname = PanelRE_TB_RegisterStudentName.Text;
+            string lastname = PanelRE_TB_RegisterStudentSurname.Text;
+            string gender = "";
+            if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "male")
+            {
+                gender = "M";
+            }
+            else if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "female")
+            {
+                gender = "V";
+            }
+            else if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "other")
+            {
+                gender = "O";
+            }
+            string email = PanelRE_TB_RegisterStudentEmail.Text;
+            string phonenumber = PanelRE_TB_RegisterStudentPhonenumber.Text;
+            string postalcode = PanelRE_TB_RegisterStudentPostalcode.Text;
+            string country = PanelRE_TB_RegisterStudentCountry.Text;
+            string city = PanelRE_TB_RegisterStudentCity.Text;
+            string street = PanelRE_TB_RegisterStudentStreet.Text;
+            string housenumber = PanelRE_TB_RegisterStudentUnitNumber.Text;
+            string schoollocation = PanelRE_CMB_RegisterStudentLocation.Text;
+            int studentclassid = Int32.Parse(PanelRE_CMB_RegisterStudentClass.Text);
+
+            Student student = new Student(studentId, firstname, lastname, gender, email, phonenumber, postalcode, country, city,
+                                          street, housenumber, schoollocation, false, studentclassid);
+
+            student.CreateStudent(student);
+
+            Login_Panel.Show();
+            PanelRE_PA_RegistryBG.SendToBack();
+        }
+
+        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentClass.DroppedDown = true;
+        }
+        
+
+
         private void PanelFB_BT_RegisterFeedback_Click(object sender, EventArgs e)
         {
             if (Check == false)
@@ -230,40 +302,7 @@ namespace Cinkie_feedback_fr
 
             }
         }
-
-
-        /// <summary>
-        /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
-
-        {
-            PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
-        }
-
-
-        private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
-        {
-            PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
-        }
-
-        private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
-        {
-
-            Login_Panel.Show();
-            PanelRE_PA_RegistryBG.SendToBack();
-
-        }
-
-
-        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
-        {
-            PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
-
-        }
-
+        
         /// <summary>
         /// Brings you to the "account registration" panel 
         /// </summary>
