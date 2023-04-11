@@ -15,6 +15,7 @@ namespace Cinkie_feedback_fr
         public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
+        public Popup_FORM_Feedback PopUpRegisterFeedback;
 
         public Form1()
         {
@@ -175,6 +176,7 @@ namespace Cinkie_feedback_fr
             FLMpanel.BringToFront();
 
         }
+
         private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
         {
             PanelFB_PA_FeedbackBG.Show();
@@ -205,12 +207,32 @@ namespace Cinkie_feedback_fr
 
             }
         }
-            /// <summary>
-            /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
-            private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
+        private void PanelFB_BT_RegisterFeedback_Click(object sender, EventArgs e)
+        {
+            if (Check == false)
+            {
+                Popup_FORM_Feedback PopUpBox = new Popup_FORM_Feedback(this);
+                PopUpBox.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+        }
+
+        /// <summary>
+        /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
             {
                 PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
             }
@@ -222,10 +244,8 @@ namespace Cinkie_feedback_fr
 
             private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
             {
-            
             Login_Panel.Show();
             PanelRE_PA_RegistryBG.SendToBack();
-
             }
 
             private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
@@ -316,6 +336,6 @@ namespace Cinkie_feedback_fr
 
         }
 
-        
+       
     }
 }
