@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinkie_feedback_fr.FeedBUFClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Cinkie_feedback_fr
         public static bool Check = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
+        public Popup_FORM_Feedback PopUpRegisterFeedback;
 
         public Form1()
         {
@@ -60,7 +62,7 @@ namespace Cinkie_feedback_fr
             Login_Panel.BringToFront();
             FLMpanel.Hide();
             FLMpanel.BringToFront();
-            
+
         }
 
         /// <summary>
@@ -107,6 +109,11 @@ namespace Cinkie_feedback_fr
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
         }
 
+        /// <summary>
+        /// Logs the user into the system if they use the correct combination of email and password
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelLogin_BT_Login_Click(object sender, EventArgs e)
         {
             string message = @"Invalid Email or Password." + Environment.NewLine + "Check if your password and email are correct!" + Environment.NewLine + Environment.NewLine + "Please try again";
@@ -173,8 +180,12 @@ namespace Cinkie_feedback_fr
             panelDA_PA_NotificationsPanel.BringToFront();
             BGflmPull.BringToFront();
             FLMpanel.BringToFront();
+            Visable_Week();
+            WeeklyGoalPanel_LV_ShowAll.BringToFront();
+            WeeklyGoalPanel_LV_ShowAll.Visible = true;
 
         }
+
         private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
         {
             PanelFB_PA_FeedbackBG.Show();
@@ -205,34 +216,92 @@ namespace Cinkie_feedback_fr
 
             }
         }
-            /// <summary>
-            /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
-            private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
-            {
-                PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
-            }
 
-            private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
-            {
-                PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
-            }
+        /// <summary>
+        /// A mass of combobox pulldowns so that whenever the user clicks on the comboboxes below it will drop down the options the user has
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelRE_CMB_RegisterGender_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentGender.DroppedDown = true;
+        }
 
-            private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
+        private void PanelRE_CMB_RegisterStudentLocation_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
+        }
+        
+        /// <summary>
+        /// Save the new Student 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PanelRE_BT_RegisterSave_Click(object sender, EventArgs e)
+        {
+            // Has not been completed yet --> Needs to send data to the database
+
+            int studentId = Int32.Parse(PanelRE_TB_RegisterStudentNumber.Text);
+            string firstname = PanelRE_TB_RegisterStudentName.Text;
+            string lastname = PanelRE_TB_RegisterStudentSurname.Text;
+            string gender = "";
+            if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "male")
             {
-            
+                gender = "M";
+            }
+            else if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "female")
+            {
+                gender = "V";
+            }
+            else if (PanelRE_CMB_RegisterStudentGender.Text.ToLower() == "other")
+            {
+                gender = "O";
+            }
+            string email = PanelRE_TB_RegisterStudentEmail.Text;
+            string phonenumber = PanelRE_TB_RegisterStudentPhonenumber.Text;
+            string postalcode = PanelRE_TB_RegisterStudentPostalcode.Text;
+            string country = PanelRE_TB_RegisterStudentCountry.Text;
+            string city = PanelRE_TB_RegisterStudentCity.Text;
+            string street = PanelRE_TB_RegisterStudentStreet.Text;
+            string housenumber = PanelRE_TB_RegisterStudentUnitNumber.Text;
+            string schoollocation = PanelRE_CMB_RegisterStudentLocation.Text;
+            int studentclassid = Int32.Parse(PanelRE_CMB_RegisterStudentClass.Text);
+
+            Student student = new Student(studentId, firstname, lastname, gender, email, phonenumber, postalcode, country, city,
+                                          street, housenumber, schoollocation, false, studentclassid);
+
+            student.CreateStudent(student);
+
             Login_Panel.Show();
             PanelRE_PA_RegistryBG.SendToBack();
+        }
 
-            }
+        private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+        {
+            PanelRE_CMB_RegisterStudentClass.DroppedDown = true;
+        }
+        
 
-            private void PanelRE_CMB_RegisterStudentCourse_Click(object sender, EventArgs e)
+
+        private void PanelFB_BT_RegisterFeedback_Click(object sender, EventArgs e)
+        {
+            if (Check == false)
             {
-                PanelRE_CMB_RegisterStudentCourse.DroppedDown = true;
+                Popup_FORM_Feedback PopUpBox = new Popup_FORM_Feedback(this);
+                PopUpBox.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
             }
+        }
         
         /// <summary>
         /// Brings you to the "account registration" panel 
@@ -249,51 +318,67 @@ namespace Cinkie_feedback_fr
 
         private void WeeklyGoals_BTN_Monday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Monday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Monday.BringToFront();
+            WeeklygoalPanel_LV_Monday.Visible = true;
         }
         private void WeeklyGoals_BTN_Tuesday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Tuesday");
-
+            Visable_Week();
+            WeeklygoalPanel_LV_Tuesday.BringToFront();
+            WeeklygoalPanel_LV_Tuesday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Wednesday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Wednesday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Wednesday.BringToFront();
+            WeeklygoalPanel_LV_Wednesday.Visible= true;
         }
         private void WeeklyGoals_BTN_Thursday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Thursday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Thursday.BringToFront();
+            WeeklygoalPanel_LV_Thursday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Friday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Friday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Friday.BringToFront();
+            WeeklygoalPanel_LV_Friday.Visible= true;
         }
 
         private void WeeklyGoals_BTN_Saturday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Saturday");
+            Visable_Week();
+            WeeklygoalPanel_LV_Saturday.BringToFront();
+            WeeklygoalPanel_LV_Saturday.Visible = true;
         }
 
         private void WeeklyGoals_BTN_Sunday_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Sunday");
-
+            Visable_Week();
+            WeeklygoalPanel_LV_Sunday.BringToFront();
+            WeeklygoalPanel_LV_Sunday.Visible= true;
         }
 
         private void WeeklyGoals_BTN_ShowAll_Click(object sender, EventArgs e)
         {
-            WeekGoals_Listview_Tasks.Items.Clear();
-            WeekGoals_Listview_Tasks.Items.Add("Show All");
+            Visable_Week();
+            WeeklyGoalPanel_LV_ShowAll.Visible = true;
+        }
 
+        private void Visable_Week()
+        {
+            WeeklygoalPanel_LV_Monday.Visible = false;
+            WeeklygoalPanel_LV_Tuesday.Visible = false;
+            WeeklygoalPanel_LV_Wednesday.Visible = false;
+            WeeklygoalPanel_LV_Thursday.Visible = false;
+            WeeklygoalPanel_LV_Friday.Visible = false;
+            WeeklygoalPanel_LV_Saturday.Visible = false;
+            WeeklygoalPanel_LV_Sunday.Visible = false;
+            WeeklyGoalPanel_LV_ShowAll.Visible=false;
         }
 
         private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
@@ -316,6 +401,6 @@ namespace Cinkie_feedback_fr
 
         }
 
-        
+       
     }
 }

@@ -67,6 +67,12 @@
     <Compile Include="Popup_FORM_DailyTasks.Designer.cs">
       <DependentUpon>Popup_FORM_DailyTasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popup_FORM_Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup_FORM_Feedback.Designer.cs">
+      <DependentUpon>Popup_FORM_Feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popup_FORM_WeeklyGoals.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popup_FORM_DailyTasks.resx">
       <DependentUpon>Popup_FORM_DailyTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup_FORM_Feedback.resx">
+      <DependentUpon>Popup_FORM_Feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popup_FORM_WeeklyGoals.resx">
       <DependentUpon>Popup_FORM_WeeklyGoals.cs</DependentUpon>
