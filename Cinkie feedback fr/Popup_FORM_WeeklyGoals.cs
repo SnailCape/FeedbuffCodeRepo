@@ -26,5 +26,10 @@ namespace Cinkie_feedback_fr
             this.Dispose();
             Form1.Check = false;
         }
+
+        private void PopUpForm_Weekly_TB_Description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

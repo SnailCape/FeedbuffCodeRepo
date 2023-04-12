@@ -400,7 +400,5 @@ namespace Cinkie_feedback_fr
             }
 
         }
-
-       
     }
 }

@@ -56,5 +56,6 @@
         #endregion
 
         private System.Windows.Forms.Button DailyTasks_BTN_Close;
+
     }
 }
