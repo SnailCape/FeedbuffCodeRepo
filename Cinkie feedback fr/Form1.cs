@@ -116,12 +116,23 @@ namespace Cinkie_feedback_fr
         /// <param name="e"></param>
         private void PanelLogin_BT_Login_Click(object sender, EventArgs e)
         {
-            string message = @"Invalid Email or Password." + Environment.NewLine + "Check if your password and email are correct!" + Environment.NewLine + Environment.NewLine + "Please try again";
-
+            string errorMessage = $"Invalid Email or Password.\nCheck if your password and email are correct!\n\nPlease try again";
             string title = "Invalid Credentials";
+
+            Student studentList = new Student();
 
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
+                // Log the user in
+                foreach (Student student in studentList.GetStudentsFromClass())
+                {
+                    if (student.Email == "2104321gocer@zuyd.nl")
+                    {
+                        student.LoginStatus = true;
+                    }
+                }
+
+                // Set every panel in the correct place
                 PanelDA_PA_DashBoardBackground.BringToFront();
                 PanelDA_PA_DashBoardBackground.Show();
                 BGflmPull.BringToFront();
@@ -133,7 +144,7 @@ namespace Cinkie_feedback_fr
             }
             else
             {
-                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PanelLogin_TB_Password.Text = "";
             }
         }
