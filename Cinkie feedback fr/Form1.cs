@@ -400,5 +400,15 @@ namespace Cinkie_feedback_fr
             }
 
         }
+
+        private void WeeklygoalPanel_LV_SelectedIndexChanged(object sender, ItemCheckedEventArgs e)
+        {
+            // Moet alle data opvragen voor de juiste dailytask
+        }
+
+        private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
+        {
+            // Gebruikt de data bij methode hieboven voor het openen van een popup (evt overbodig indien dubbel click ook kan)
+        }
     }
 }
