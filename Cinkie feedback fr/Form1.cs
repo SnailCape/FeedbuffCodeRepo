@@ -154,6 +154,17 @@ namespace Cinkie_feedback_fr
         /// </summary>
         private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
+            // Logs the logged in user out
+            Student studentList = new Student();
+            foreach (Student student in studentList.GetStudentsFromClass())
+            {
+                if (student.LoginStatus)
+                {
+                    student.LoginStatus = false;
+                }
+            }
+
+            // Set every panel in the correct place
             Login_Panel.BringToFront();
             Login_Panel.Show();
             PanelDA_PA_DashBoardBackground.Hide();
@@ -161,7 +172,6 @@ namespace Cinkie_feedback_fr
             FLMpanel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
             PanelFB_PA_FeedbackBG.Hide();
-
         }
 
 
