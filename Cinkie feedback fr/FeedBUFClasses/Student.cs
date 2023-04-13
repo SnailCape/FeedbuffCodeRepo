@@ -98,8 +98,6 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public void ConnectStudentsWithClasses()
         {
             SchoolClass schoolClass = new SchoolClass();
-            List<Student> newListStudents = new List<Student>();
-
             foreach (Student student in listStudents)
             {
                 foreach (SchoolClass schoolclass in schoolClass.GetClassesFromClass())
@@ -112,8 +110,6 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
                     }
                 }
             }
-
-            listStudents = newListStudents;
         }
 
         /// <summary>
