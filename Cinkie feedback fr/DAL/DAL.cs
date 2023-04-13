@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Cinkie_feedback_fr.FeedBUFClasses;
 
 namespace Cinkie_feedback_fr.DAL
 {
@@ -13,6 +14,8 @@ namespace Cinkie_feedback_fr.DAL
     {
         public string connectionString = "Data Source=localhost;Initial Catalog=COEUS_DB;Integrated Security=True";
         public DAL() { }
+
+        
 
         /// <summary>
         /// Add a new student to the database
@@ -290,6 +293,7 @@ namespace Cinkie_feedback_fr.DAL
                             int ec = Int32.Parse(dataReader[15].ToString());
                             int hours = Int32.Parse(dataReader[16].ToString());
 
+
                             FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit(oeId,name, department, ec, hours);
                             weeklyGoals.Add(new FeedBUFClasses.WeeklyGoal(goalId, weeknumber, titel, description, status, studyunit, studentId,
                                                                           priority, difficulty, goaltype, startingdate, agenda, notes));
@@ -300,6 +304,23 @@ namespace Cinkie_feedback_fr.DAL
             }
 
             return weeklyGoals;
+        }
+
+        public WeeklyGoal CreateWeeklyGoal(WeeklyGoal weeklyGoal)
+        {
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString= connectionString;
+                connection.Open();
+
+                using(SqlCommand command = new SqlCommand())
+                {
+                    command.Connection= connection;
+                    command.CommandText=string.Format("");
+                }
+            }
+
+            return weeklyGoal;
         }
 
         /// <summary>
@@ -316,7 +337,7 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "";
+                    command.CommandText = "SELECT FEEDBACK.feedbackId, FEEDBACK.oeId, FEEDBACK.omschrijving, ONDERWIJSEENHEID.naam, ONDERWIJSEENHEID.afdeling, ONDERWIJSEENHEID.europeanCredits, ONDERWIJSEENHEID.urenAantal FROM FEEDBACK JOIN ONDERWIJSEENHEID ON FEEDBACK.oeId = ONDERWIJSEENHEID.oeId";
 
                     using (SqlDataReader dataReader = command.ExecuteReader())
                     {

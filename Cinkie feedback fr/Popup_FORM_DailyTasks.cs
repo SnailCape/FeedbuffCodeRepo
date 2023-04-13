@@ -28,5 +28,17 @@ namespace Cinkie_feedback_fr
             Form1.Check = false;
 
         }
+
+        // hide close button
+        private const int WS_SYSMENU = 0x80000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style &= ~WS_SYSMENU;
+                return cp;
+            }
+        }
     }
 }
