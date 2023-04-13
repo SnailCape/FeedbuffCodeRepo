@@ -41,6 +41,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<StudyUnit> GetStudyUnitsFromClass()
         {
+            listStudyUnits.Clear();
+            listStudyUnits = dal.ReadStudyUnits();
             return listStudyUnits;
         }
     }

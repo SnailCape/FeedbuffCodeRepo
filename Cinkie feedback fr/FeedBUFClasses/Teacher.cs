@@ -63,6 +63,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<Teacher> GetTeachersFromClass()
         {
+            listTeachers.Clear();
+            listTeachers = dal.ReadTeachers();
             return listTeachers;
         }
     }
