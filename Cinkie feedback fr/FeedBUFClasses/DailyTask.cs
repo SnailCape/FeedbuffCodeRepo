@@ -67,6 +67,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<DailyTask> GetDailyTasksFromClass()
         {
+            listDailyTasks.Clear();
+            listDailyTasks = dal.ReadDailyTasks();
             return listDailyTasks;
         }
 
