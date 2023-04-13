@@ -33,28 +33,28 @@ namespace Cinkie_feedback_fr
 
             foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
             {
-                PopUpForm_Weekly_TB_WeekNr.Text = "Week: " + wg.Weeknumber.ToString();
+                PopUpFormWeekly_TB_WeekNr.Text = "Week: " + wg.Weeknumber.ToString();
                 //PopUpForm_Weekly_TB_Title.Text = wg.Titel.ToString();
                 //PopUpForm_Weekly_TB_Description.Text = wg.Description.ToString();
-                PopUpForm_Weekly_CB_Status.Text = wg.Status.ToString();
-                PopUpForm_Weekly_CB_Priority.Text = wg.Priority.ToString();
-                PopUpForm_Weekly_CB_Difficulty.Text = wg.Difficulty.ToString();
-                PopUpForm_Weekly_CB_Type.Text = wg.GoalType.ToString();
-                PopUpForm_Weekly_TB_Note.Text = wg.Notes.ToString();
+                PopUpFormWeekly_CB_Status.Text = wg.Status.ToString();
+                PopUpFormWeekly_CB_Priority.Text = wg.Priority.ToString();
+                PopUpFormWeekly_CB_Difficulty.Text = wg.Difficulty.ToString();
+                PopUpFormWeekly_CB_Type.Text = wg.GoalType.ToString();
+                PopUpFormWeekly_TB_Note.Text = wg.Notes.ToString();
 
                 switch (wg.Status)
                 {
 
                     case "done":
-                        PopUpForm_Weekly_CB_Status.SelectedIndex = 0;
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 0;
                         break;
 
                     case "inprogress":
-                        PopUpForm_Weekly_CB_Status.SelectedIndex = 1;
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 1;
                         break;
 
                     case "notstarted":
-                        PopUpForm_Weekly_CB_Status.SelectedIndex = 2;
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 2;
                         break;
                 }
 
@@ -82,10 +82,11 @@ namespace Cinkie_feedback_fr
             }
         }
 
-        private void PopUpForm_Weekly_TB_Description_TextChanged(object sender, EventArgs e)
+       
+
+        private void PopUpFormWeekly_TIME_StartDate_Tick(object sender, EventArgs e)
         {
-
-
+            this.PopUpFormWeekly_LB_Date.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

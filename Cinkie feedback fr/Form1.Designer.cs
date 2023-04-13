@@ -30,82 +30,82 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewGroup listViewGroup57 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem185 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Monday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem186 = new System.Windows.Forms.ListViewItem("Test Monday 2");
-            System.Windows.Forms.ListViewItem listViewItem187 = new System.Windows.Forms.ListViewItem("Test Monday 3");
-            System.Windows.Forms.ListViewItem listViewItem188 = new System.Windows.Forms.ListViewItem("Test Monday 4");
-            System.Windows.Forms.ListViewItem listViewItem189 = new System.Windows.Forms.ListViewItem("Test Monday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup58 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem190 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem("Test Monday 2");
+            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem("Test Monday 3");
+            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem("Test Monday 4");
+            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem("Test Monday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Saturday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem191 = new System.Windows.Forms.ListViewItem("Test Saturday 2");
-            System.Windows.Forms.ListViewItem listViewItem192 = new System.Windows.Forms.ListViewItem("Test Saturday 3");
-            System.Windows.Forms.ListViewItem listViewItem193 = new System.Windows.Forms.ListViewItem("Test Saturday 4");
-            System.Windows.Forms.ListViewItem listViewItem194 = new System.Windows.Forms.ListViewItem("Test Saturday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup59 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem195 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem53 = new System.Windows.Forms.ListViewItem("Test Saturday 2");
+            System.Windows.Forms.ListViewItem listViewItem54 = new System.Windows.Forms.ListViewItem("Test Saturday 3");
+            System.Windows.Forms.ListViewItem listViewItem55 = new System.Windows.Forms.ListViewItem("Test Saturday 4");
+            System.Windows.Forms.ListViewItem listViewItem56 = new System.Windows.Forms.ListViewItem("Test Saturday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem57 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Thursday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem196 = new System.Windows.Forms.ListViewItem("Test Thursday 2");
-            System.Windows.Forms.ListViewItem listViewItem197 = new System.Windows.Forms.ListViewItem("Test Thursday 3");
-            System.Windows.Forms.ListViewItem listViewItem198 = new System.Windows.Forms.ListViewItem("Test Thursday 4");
-            System.Windows.Forms.ListViewItem listViewItem199 = new System.Windows.Forms.ListViewItem("Test Thursday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup60 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem200 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem58 = new System.Windows.Forms.ListViewItem("Test Thursday 2");
+            System.Windows.Forms.ListViewItem listViewItem59 = new System.Windows.Forms.ListViewItem("Test Thursday 3");
+            System.Windows.Forms.ListViewItem listViewItem60 = new System.Windows.Forms.ListViewItem("Test Thursday 4");
+            System.Windows.Forms.ListViewItem listViewItem61 = new System.Windows.Forms.ListViewItem("Test Thursday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem62 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Friday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem201 = new System.Windows.Forms.ListViewItem("Test Friday 2");
-            System.Windows.Forms.ListViewItem listViewItem202 = new System.Windows.Forms.ListViewItem("Test Friday 3");
-            System.Windows.Forms.ListViewItem listViewItem203 = new System.Windows.Forms.ListViewItem("Test Friday 4");
-            System.Windows.Forms.ListViewItem listViewItem204 = new System.Windows.Forms.ListViewItem("Test Friday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup61 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem205 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem63 = new System.Windows.Forms.ListViewItem("Test Friday 2");
+            System.Windows.Forms.ListViewItem listViewItem64 = new System.Windows.Forms.ListViewItem("Test Friday 3");
+            System.Windows.Forms.ListViewItem listViewItem65 = new System.Windows.Forms.ListViewItem("Test Friday 4");
+            System.Windows.Forms.ListViewItem listViewItem66 = new System.Windows.Forms.ListViewItem("Test Friday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup19 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem67 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Wednesday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem206 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
-            System.Windows.Forms.ListViewItem listViewItem207 = new System.Windows.Forms.ListViewItem("Test Wednesday 3");
-            System.Windows.Forms.ListViewItem listViewItem208 = new System.Windows.Forms.ListViewItem("Test Wednesday 4");
-            System.Windows.Forms.ListViewItem listViewItem209 = new System.Windows.Forms.ListViewItem("Test Wednesday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup62 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup63 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup64 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup65 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup66 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup67 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup68 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem210 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem68 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
+            System.Windows.Forms.ListViewItem listViewItem69 = new System.Windows.Forms.ListViewItem("Test Wednesday 3");
+            System.Windows.Forms.ListViewItem listViewItem70 = new System.Windows.Forms.ListViewItem("Test Wednesday 4");
+            System.Windows.Forms.ListViewItem listViewItem71 = new System.Windows.Forms.ListViewItem("Test Wednesday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup20 = new System.Windows.Forms.ListViewGroup("Monday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup21 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup22 = new System.Windows.Forms.ListViewGroup("Wednesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup23 = new System.Windows.Forms.ListViewGroup("Thursday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup24 = new System.Windows.Forms.ListViewGroup("Friday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup25 = new System.Windows.Forms.ListViewGroup("Saturday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup26 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem72 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Monday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem211 = new System.Windows.Forms.ListViewItem("Wednesday Test 1");
-            System.Windows.Forms.ListViewItem listViewItem212 = new System.Windows.Forms.ListViewItem("Tuesday Test 1");
-            System.Windows.Forms.ListViewItem listViewItem213 = new System.Windows.Forms.ListViewItem("Test Monday 2");
-            System.Windows.Forms.ListViewItem listViewItem214 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
-            System.Windows.Forms.ListViewItem listViewItem215 = new System.Windows.Forms.ListViewItem("Thursday Test 1");
-            System.Windows.Forms.ListViewItem listViewItem216 = new System.Windows.Forms.ListViewItem("Friday Test1");
-            System.Windows.Forms.ListViewItem listViewItem217 = new System.Windows.Forms.ListViewItem("Friday Test 2");
-            System.Windows.Forms.ListViewItem listViewItem218 = new System.Windows.Forms.ListViewItem("Test Monday 3");
-            System.Windows.Forms.ListViewItem listViewItem219 = new System.Windows.Forms.ListViewItem("Test Monday 4");
-            System.Windows.Forms.ListViewItem listViewItem220 = new System.Windows.Forms.ListViewItem("Test Monday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup69 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem221 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem73 = new System.Windows.Forms.ListViewItem("Wednesday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem74 = new System.Windows.Forms.ListViewItem("Tuesday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem75 = new System.Windows.Forms.ListViewItem("Test Monday 2");
+            System.Windows.Forms.ListViewItem listViewItem76 = new System.Windows.Forms.ListViewItem("Test Wednesday 2");
+            System.Windows.Forms.ListViewItem listViewItem77 = new System.Windows.Forms.ListViewItem("Thursday Test 1");
+            System.Windows.Forms.ListViewItem listViewItem78 = new System.Windows.Forms.ListViewItem("Friday Test1");
+            System.Windows.Forms.ListViewItem listViewItem79 = new System.Windows.Forms.ListViewItem("Friday Test 2");
+            System.Windows.Forms.ListViewItem listViewItem80 = new System.Windows.Forms.ListViewItem("Test Monday 3");
+            System.Windows.Forms.ListViewItem listViewItem81 = new System.Windows.Forms.ListViewItem("Test Monday 4");
+            System.Windows.Forms.ListViewItem listViewItem82 = new System.Windows.Forms.ListViewItem("Test Monday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup27 = new System.Windows.Forms.ListViewGroup("Sunday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem83 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Sunday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem222 = new System.Windows.Forms.ListViewItem("Test Sunday 2");
-            System.Windows.Forms.ListViewItem listViewItem223 = new System.Windows.Forms.ListViewItem("Test Sunday 3");
-            System.Windows.Forms.ListViewItem listViewItem224 = new System.Windows.Forms.ListViewItem("Test Sunday 4");
-            System.Windows.Forms.ListViewItem listViewItem225 = new System.Windows.Forms.ListViewItem("Test Sunday 5");
-            System.Windows.Forms.ListViewGroup listViewGroup70 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem226 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem84 = new System.Windows.Forms.ListViewItem("Test Sunday 2");
+            System.Windows.Forms.ListViewItem listViewItem85 = new System.Windows.Forms.ListViewItem("Test Sunday 3");
+            System.Windows.Forms.ListViewItem listViewItem86 = new System.Windows.Forms.ListViewItem("Test Sunday 4");
+            System.Windows.Forms.ListViewItem listViewItem87 = new System.Windows.Forms.ListViewItem("Test Sunday 5");
+            System.Windows.Forms.ListViewGroup listViewGroup28 = new System.Windows.Forms.ListViewGroup("Tuesday", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem88 = new System.Windows.Forms.ListViewItem(new string[] {
             "Test Tuesday 1",
             "Dit is extra data"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.ButtonShadow, null);
-            System.Windows.Forms.ListViewItem listViewItem227 = new System.Windows.Forms.ListViewItem("Test Tuesday 2");
-            System.Windows.Forms.ListViewItem listViewItem228 = new System.Windows.Forms.ListViewItem("Test Tuesday 3");
-            System.Windows.Forms.ListViewItem listViewItem229 = new System.Windows.Forms.ListViewItem("Test Tuesday 4");
-            System.Windows.Forms.ListViewItem listViewItem230 = new System.Windows.Forms.ListViewItem("Test Tuesday 5");
+            System.Windows.Forms.ListViewItem listViewItem89 = new System.Windows.Forms.ListViewItem("Test Tuesday 2");
+            System.Windows.Forms.ListViewItem listViewItem90 = new System.Windows.Forms.ListViewItem("Test Tuesday 3");
+            System.Windows.Forms.ListViewItem listViewItem91 = new System.Windows.Forms.ListViewItem("Test Tuesday 4");
+            System.Windows.Forms.ListViewItem listViewItem92 = new System.Windows.Forms.ListViewItem("Test Tuesday 5");
             this.FLMpanel = new System.Windows.Forms.Panel();
             this.PanelFLM_BT_LogoutButton = new System.Windows.Forms.Button();
             this.PanelFLM_BT_FeedbackButton = new System.Windows.Forms.Button();
@@ -223,7 +223,7 @@
             this.PanelLogin_TB_Password = new System.Windows.Forms.TextBox();
             this.PanelLogin_LB_Email = new System.Windows.Forms.Label();
             this.PanelLogin_TB_Email = new System.Windows.Forms.TextBox();
-            this.DigitalClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.PanelDA_TIME_ScoreboardDateAndTime = new System.Windows.Forms.Timer(this.components);
             this.PanelFB_PA_FeedbackBG = new System.Windows.Forms.Panel();
             this.PanelFB_BT_ViewFeedback = new System.Windows.Forms.Button();
             this.PanelFB_BT_RegisterFeedback = new System.Windows.Forms.Button();
@@ -1231,25 +1231,25 @@
             this.WeeklygoalPanel_LV_Monday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Monday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            listViewGroup57.Header = "Monday";
-            listViewGroup57.Name = "Monday";
+            listViewGroup15.Header = "Monday";
+            listViewGroup15.Name = "Monday";
             this.WeeklygoalPanel_LV_Monday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup57});
+            listViewGroup15});
             this.WeeklygoalPanel_LV_Monday.HideSelection = false;
             this.WeeklygoalPanel_LV_Monday.HoverSelection = true;
-            listViewItem185.Group = listViewGroup57;
-            listViewItem185.StateImageIndex = 0;
-            listViewItem185.Tag = "";
-            listViewItem186.Group = listViewGroup57;
-            listViewItem187.Group = listViewGroup57;
-            listViewItem188.Group = listViewGroup57;
-            listViewItem189.Group = listViewGroup57;
+            listViewItem47.Group = listViewGroup15;
+            listViewItem47.StateImageIndex = 0;
+            listViewItem47.Tag = "";
+            listViewItem48.Group = listViewGroup15;
+            listViewItem49.Group = listViewGroup15;
+            listViewItem50.Group = listViewGroup15;
+            listViewItem51.Group = listViewGroup15;
             this.WeeklygoalPanel_LV_Monday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem185,
-            listViewItem186,
-            listViewItem187,
-            listViewItem188,
-            listViewItem189});
+            listViewItem47,
+            listViewItem48,
+            listViewItem49,
+            listViewItem50,
+            listViewItem51});
             this.WeeklygoalPanel_LV_Monday.Location = new System.Drawing.Point(494, 368);
             this.WeeklygoalPanel_LV_Monday.Name = "WeeklygoalPanel_LV_Monday";
             this.WeeklygoalPanel_LV_Monday.Size = new System.Drawing.Size(896, 365);
@@ -1267,25 +1267,25 @@
             this.WeeklygoalPanel_LV_Saturday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Saturday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
-            listViewGroup58.Header = "Saturday";
-            listViewGroup58.Name = "Saturday";
+            listViewGroup16.Header = "Saturday";
+            listViewGroup16.Name = "Saturday";
             this.WeeklygoalPanel_LV_Saturday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup58});
+            listViewGroup16});
             this.WeeklygoalPanel_LV_Saturday.HideSelection = false;
             this.WeeklygoalPanel_LV_Saturday.HoverSelection = true;
-            listViewItem190.Group = listViewGroup58;
-            listViewItem190.StateImageIndex = 0;
-            listViewItem190.Tag = "";
-            listViewItem191.Group = listViewGroup58;
-            listViewItem192.Group = listViewGroup58;
-            listViewItem193.Group = listViewGroup58;
-            listViewItem194.Group = listViewGroup58;
+            listViewItem52.Group = listViewGroup16;
+            listViewItem52.StateImageIndex = 0;
+            listViewItem52.Tag = "";
+            listViewItem53.Group = listViewGroup16;
+            listViewItem54.Group = listViewGroup16;
+            listViewItem55.Group = listViewGroup16;
+            listViewItem56.Group = listViewGroup16;
             this.WeeklygoalPanel_LV_Saturday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem190,
-            listViewItem191,
-            listViewItem192,
-            listViewItem193,
-            listViewItem194});
+            listViewItem52,
+            listViewItem53,
+            listViewItem54,
+            listViewItem55,
+            listViewItem56});
             this.WeeklygoalPanel_LV_Saturday.Location = new System.Drawing.Point(494, 368);
             this.WeeklygoalPanel_LV_Saturday.Name = "WeeklygoalPanel_LV_Saturday";
             this.WeeklygoalPanel_LV_Saturday.Size = new System.Drawing.Size(896, 365);
@@ -1303,25 +1303,25 @@
             this.WeeklygoalPanel_LV_Thursday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Thursday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4});
-            listViewGroup59.Header = "Thursday";
-            listViewGroup59.Name = "Thursday";
+            listViewGroup17.Header = "Thursday";
+            listViewGroup17.Name = "Thursday";
             this.WeeklygoalPanel_LV_Thursday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup59});
+            listViewGroup17});
             this.WeeklygoalPanel_LV_Thursday.HideSelection = false;
             this.WeeklygoalPanel_LV_Thursday.HoverSelection = true;
-            listViewItem195.Group = listViewGroup59;
-            listViewItem195.StateImageIndex = 0;
-            listViewItem195.Tag = "";
-            listViewItem196.Group = listViewGroup59;
-            listViewItem197.Group = listViewGroup59;
-            listViewItem198.Group = listViewGroup59;
-            listViewItem199.Group = listViewGroup59;
+            listViewItem57.Group = listViewGroup17;
+            listViewItem57.StateImageIndex = 0;
+            listViewItem57.Tag = "";
+            listViewItem58.Group = listViewGroup17;
+            listViewItem59.Group = listViewGroup17;
+            listViewItem60.Group = listViewGroup17;
+            listViewItem61.Group = listViewGroup17;
             this.WeeklygoalPanel_LV_Thursday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem195,
-            listViewItem196,
-            listViewItem197,
-            listViewItem198,
-            listViewItem199});
+            listViewItem57,
+            listViewItem58,
+            listViewItem59,
+            listViewItem60,
+            listViewItem61});
             this.WeeklygoalPanel_LV_Thursday.Location = new System.Drawing.Point(494, 368);
             this.WeeklygoalPanel_LV_Thursday.Name = "WeeklygoalPanel_LV_Thursday";
             this.WeeklygoalPanel_LV_Thursday.Size = new System.Drawing.Size(896, 365);
@@ -1339,25 +1339,25 @@
             this.WeeklygoalPanel_LV_Friday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Friday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7});
-            listViewGroup60.Header = "Friday";
-            listViewGroup60.Name = "Friday";
+            listViewGroup18.Header = "Friday";
+            listViewGroup18.Name = "Friday";
             this.WeeklygoalPanel_LV_Friday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup60});
+            listViewGroup18});
             this.WeeklygoalPanel_LV_Friday.HideSelection = false;
             this.WeeklygoalPanel_LV_Friday.HoverSelection = true;
-            listViewItem200.Group = listViewGroup60;
-            listViewItem200.StateImageIndex = 0;
-            listViewItem200.Tag = "";
-            listViewItem201.Group = listViewGroup60;
-            listViewItem202.Group = listViewGroup60;
-            listViewItem203.Group = listViewGroup60;
-            listViewItem204.Group = listViewGroup60;
+            listViewItem62.Group = listViewGroup18;
+            listViewItem62.StateImageIndex = 0;
+            listViewItem62.Tag = "";
+            listViewItem63.Group = listViewGroup18;
+            listViewItem64.Group = listViewGroup18;
+            listViewItem65.Group = listViewGroup18;
+            listViewItem66.Group = listViewGroup18;
             this.WeeklygoalPanel_LV_Friday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem200,
-            listViewItem201,
-            listViewItem202,
-            listViewItem203,
-            listViewItem204});
+            listViewItem62,
+            listViewItem63,
+            listViewItem64,
+            listViewItem65,
+            listViewItem66});
             this.WeeklygoalPanel_LV_Friday.Location = new System.Drawing.Point(495, 368);
             this.WeeklygoalPanel_LV_Friday.Name = "WeeklygoalPanel_LV_Friday";
             this.WeeklygoalPanel_LV_Friday.Size = new System.Drawing.Size(896, 365);
@@ -1375,25 +1375,25 @@
             this.WeeklygoalPanel_LV_Wednesday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Wednesday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3});
-            listViewGroup61.Header = "Wednesday";
-            listViewGroup61.Name = "Wednesyday";
+            listViewGroup19.Header = "Wednesday";
+            listViewGroup19.Name = "Wednesyday";
             this.WeeklygoalPanel_LV_Wednesday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup61});
+            listViewGroup19});
             this.WeeklygoalPanel_LV_Wednesday.HideSelection = false;
             this.WeeklygoalPanel_LV_Wednesday.HoverSelection = true;
-            listViewItem205.Group = listViewGroup61;
-            listViewItem205.StateImageIndex = 0;
-            listViewItem205.Tag = "";
-            listViewItem206.Group = listViewGroup61;
-            listViewItem207.Group = listViewGroup61;
-            listViewItem208.Group = listViewGroup61;
-            listViewItem209.Group = listViewGroup61;
+            listViewItem67.Group = listViewGroup19;
+            listViewItem67.StateImageIndex = 0;
+            listViewItem67.Tag = "";
+            listViewItem68.Group = listViewGroup19;
+            listViewItem69.Group = listViewGroup19;
+            listViewItem70.Group = listViewGroup19;
+            listViewItem71.Group = listViewGroup19;
             this.WeeklygoalPanel_LV_Wednesday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem205,
-            listViewItem206,
-            listViewItem207,
-            listViewItem208,
-            listViewItem209});
+            listViewItem67,
+            listViewItem68,
+            listViewItem69,
+            listViewItem70,
+            listViewItem71});
             this.WeeklygoalPanel_LV_Wednesday.Location = new System.Drawing.Point(494, 368);
             this.WeeklygoalPanel_LV_Wednesday.Name = "WeeklygoalPanel_LV_Wednesday";
             this.WeeklygoalPanel_LV_Wednesday.Size = new System.Drawing.Size(896, 365);
@@ -1543,56 +1543,56 @@
             this.WeeklyGoalPanel_LV_ShowAll.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklyGoalPanel_LV_ShowAll.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Monday});
-            listViewGroup62.Header = "Monday";
-            listViewGroup62.Name = "Monday";
-            listViewGroup63.Header = "Tuesday";
-            listViewGroup63.Name = "Tuesday";
-            listViewGroup64.Header = "Wednesday";
-            listViewGroup64.Name = "Wednesday";
-            listViewGroup65.Header = "Thursday";
-            listViewGroup65.Name = "Thursday";
-            listViewGroup66.Header = "Friday";
-            listViewGroup66.Name = "Friday";
-            listViewGroup67.Header = "Saturday";
-            listViewGroup67.Name = "Saturday";
-            listViewGroup68.Header = "Sunday";
-            listViewGroup68.Name = "Sunday";
+            listViewGroup20.Header = "Monday";
+            listViewGroup20.Name = "Monday";
+            listViewGroup21.Header = "Tuesday";
+            listViewGroup21.Name = "Tuesday";
+            listViewGroup22.Header = "Wednesday";
+            listViewGroup22.Name = "Wednesday";
+            listViewGroup23.Header = "Thursday";
+            listViewGroup23.Name = "Thursday";
+            listViewGroup24.Header = "Friday";
+            listViewGroup24.Name = "Friday";
+            listViewGroup25.Header = "Saturday";
+            listViewGroup25.Name = "Saturday";
+            listViewGroup26.Header = "Sunday";
+            listViewGroup26.Name = "Sunday";
             this.WeeklyGoalPanel_LV_ShowAll.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup62,
-            listViewGroup63,
-            listViewGroup64,
-            listViewGroup65,
-            listViewGroup66,
-            listViewGroup67,
-            listViewGroup68});
+            listViewGroup20,
+            listViewGroup21,
+            listViewGroup22,
+            listViewGroup23,
+            listViewGroup24,
+            listViewGroup25,
+            listViewGroup26});
             this.WeeklyGoalPanel_LV_ShowAll.HideSelection = false;
             this.WeeklyGoalPanel_LV_ShowAll.HoverSelection = true;
-            listViewItem210.Group = listViewGroup62;
-            listViewItem210.StateImageIndex = 0;
-            listViewItem210.Tag = "";
-            listViewItem211.Group = listViewGroup64;
-            listViewItem211.StateImageIndex = 0;
-            listViewItem212.Group = listViewGroup63;
-            listViewItem213.Group = listViewGroup62;
-            listViewItem214.Group = listViewGroup64;
-            listViewItem215.Group = listViewGroup65;
-            listViewItem216.Group = listViewGroup66;
-            listViewItem217.Group = listViewGroup66;
-            listViewItem218.Group = listViewGroup62;
-            listViewItem219.Group = listViewGroup62;
-            listViewItem220.Group = listViewGroup62;
+            listViewItem72.Group = listViewGroup20;
+            listViewItem72.StateImageIndex = 0;
+            listViewItem72.Tag = "";
+            listViewItem73.Group = listViewGroup22;
+            listViewItem73.StateImageIndex = 0;
+            listViewItem74.Group = listViewGroup21;
+            listViewItem75.Group = listViewGroup20;
+            listViewItem76.Group = listViewGroup22;
+            listViewItem77.Group = listViewGroup23;
+            listViewItem78.Group = listViewGroup24;
+            listViewItem79.Group = listViewGroup24;
+            listViewItem80.Group = listViewGroup20;
+            listViewItem81.Group = listViewGroup20;
+            listViewItem82.Group = listViewGroup20;
             this.WeeklyGoalPanel_LV_ShowAll.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem210,
-            listViewItem211,
-            listViewItem212,
-            listViewItem213,
-            listViewItem214,
-            listViewItem215,
-            listViewItem216,
-            listViewItem217,
-            listViewItem218,
-            listViewItem219,
-            listViewItem220});
+            listViewItem72,
+            listViewItem73,
+            listViewItem74,
+            listViewItem75,
+            listViewItem76,
+            listViewItem77,
+            listViewItem78,
+            listViewItem79,
+            listViewItem80,
+            listViewItem81,
+            listViewItem82});
             this.WeeklyGoalPanel_LV_ShowAll.Location = new System.Drawing.Point(495, 368);
             this.WeeklyGoalPanel_LV_ShowAll.Name = "WeeklyGoalPanel_LV_ShowAll";
             this.WeeklyGoalPanel_LV_ShowAll.Size = new System.Drawing.Size(896, 365);
@@ -1610,25 +1610,25 @@
             this.WeeklygoalPanel_LV_Sunday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Sunday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6});
-            listViewGroup69.Header = "Sunday";
-            listViewGroup69.Name = "Sunday";
+            listViewGroup27.Header = "Sunday";
+            listViewGroup27.Name = "Sunday";
             this.WeeklygoalPanel_LV_Sunday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup69});
+            listViewGroup27});
             this.WeeklygoalPanel_LV_Sunday.HideSelection = false;
             this.WeeklygoalPanel_LV_Sunday.HoverSelection = true;
-            listViewItem221.Group = listViewGroup69;
-            listViewItem221.StateImageIndex = 0;
-            listViewItem221.Tag = "";
-            listViewItem222.Group = listViewGroup69;
-            listViewItem223.Group = listViewGroup69;
-            listViewItem224.Group = listViewGroup69;
-            listViewItem225.Group = listViewGroup69;
+            listViewItem83.Group = listViewGroup27;
+            listViewItem83.StateImageIndex = 0;
+            listViewItem83.Tag = "";
+            listViewItem84.Group = listViewGroup27;
+            listViewItem85.Group = listViewGroup27;
+            listViewItem86.Group = listViewGroup27;
+            listViewItem87.Group = listViewGroup27;
             this.WeeklygoalPanel_LV_Sunday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem221,
-            listViewItem222,
-            listViewItem223,
-            listViewItem224,
-            listViewItem225});
+            listViewItem83,
+            listViewItem84,
+            listViewItem85,
+            listViewItem86,
+            listViewItem87});
             this.WeeklygoalPanel_LV_Sunday.Location = new System.Drawing.Point(495, 368);
             this.WeeklygoalPanel_LV_Sunday.Name = "WeeklygoalPanel_LV_Sunday";
             this.WeeklygoalPanel_LV_Sunday.Size = new System.Drawing.Size(896, 365);
@@ -1646,25 +1646,25 @@
             this.WeeklygoalPanel_LV_Tuesday.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklygoalPanel_LV_Tuesday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5});
-            listViewGroup70.Header = "Tuesday";
-            listViewGroup70.Name = "Tuesday";
+            listViewGroup28.Header = "Tuesday";
+            listViewGroup28.Name = "Tuesday";
             this.WeeklygoalPanel_LV_Tuesday.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup70});
+            listViewGroup28});
             this.WeeklygoalPanel_LV_Tuesday.HideSelection = false;
             this.WeeklygoalPanel_LV_Tuesday.HoverSelection = true;
-            listViewItem226.Group = listViewGroup70;
-            listViewItem226.StateImageIndex = 0;
-            listViewItem226.Tag = "";
-            listViewItem227.Group = listViewGroup70;
-            listViewItem228.Group = listViewGroup70;
-            listViewItem229.Group = listViewGroup70;
-            listViewItem230.Group = listViewGroup70;
+            listViewItem88.Group = listViewGroup28;
+            listViewItem88.StateImageIndex = 0;
+            listViewItem88.Tag = "";
+            listViewItem89.Group = listViewGroup28;
+            listViewItem90.Group = listViewGroup28;
+            listViewItem91.Group = listViewGroup28;
+            listViewItem92.Group = listViewGroup28;
             this.WeeklygoalPanel_LV_Tuesday.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem226,
-            listViewItem227,
-            listViewItem228,
-            listViewItem229,
-            listViewItem230});
+            listViewItem88,
+            listViewItem89,
+            listViewItem90,
+            listViewItem91,
+            listViewItem92});
             this.WeeklygoalPanel_LV_Tuesday.Location = new System.Drawing.Point(495, 368);
             this.WeeklygoalPanel_LV_Tuesday.Name = "WeeklygoalPanel_LV_Tuesday";
             this.WeeklygoalPanel_LV_Tuesday.Size = new System.Drawing.Size(896, 365);
@@ -1797,10 +1797,10 @@
             this.PanelLogin_TB_Email.Size = new System.Drawing.Size(337, 33);
             this.PanelLogin_TB_Email.TabIndex = 0;
             // 
-            // DigitalClockTimer
+            // PanelDA_TIME_ScoreboardDateAndTime
             // 
-            this.DigitalClockTimer.Enabled = true;
-            this.DigitalClockTimer.Tick += new System.EventHandler(this.DigitalClockTimer_Tick);
+            this.PanelDA_TIME_ScoreboardDateAndTime.Enabled = true;
+            this.PanelDA_TIME_ScoreboardDateAndTime.Tick += new System.EventHandler(this.PanelDA_TIME_ScoreboardDateAndTime_Tick);
             // 
             // PanelFB_PA_FeedbackBG
             // 
@@ -1852,16 +1852,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-
             this.Controls.Add(this.PanelDA_PA_DashBoardBackground);
             this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.FLMpanel);
             this.Controls.Add(this.BGflmPull);
             this.Controls.Add(this.PanelFB_PA_FeedbackBG);
-
             this.Controls.Add(this.PanelWG_PA_WeeklyGoalsBackground);
             this.Controls.Add(this.PanelRE_PA_RegistryBG);
-
             this.Name = "Form1";
             this.Text = "Coeus";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1941,7 +1938,7 @@
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification1;
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification3;
         private System.Windows.Forms.Label panelDA_PA_NotificationsNotification2;
-        private System.Windows.Forms.Timer DigitalClockTimer;
+        private System.Windows.Forms.Timer PanelDA_TIME_ScoreboardDateAndTime;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage3;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage2;
         private System.Windows.Forms.Label PanelDA_PB_ScoreBoardPercentage1;

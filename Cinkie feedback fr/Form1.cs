@@ -232,7 +232,7 @@ namespace Cinkie_feedback_fr
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
         /// </summary>
-        private void DigitalClockTimer_Tick(object sender, EventArgs e)
+        private void PanelDA_TIME_ScoreboardDateAndTime_Tick(object sender, EventArgs e)
         {
             this.PanelDA_LA_ScoreboardTime.Text = DateTime.Now.ToString("HH:mm");
             this.PanelDA_LA_ScoreboardDate.Text = DateTime.Now.ToString("dd/MM/yyyy");

@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PopUpFormWeekly_BTN_Save = new System.Windows.Forms.Button();
             this.PopUpFormWeekly_TB_Title = new System.Windows.Forms.TextBox();
             this.PopUpFormWeekly_TB_Description = new System.Windows.Forms.TextBox();
             this.PopUpFormWeekly_TBB_Agenda = new System.Windows.Forms.TextBox();
-            this.PopUpForm_Weekly_CB_Status = new System.Windows.Forms.ComboBox();
-            this.PopUpForm_Weekly_TB_Status = new System.Windows.Forms.TextBox();
+            this.PopUpFormWeekly_CB_Status = new System.Windows.Forms.ComboBox();
+            this.PopUpFormWeekly_TBB_Status = new System.Windows.Forms.TextBox();
             this.PopUpForm_Weekly_LB_Status = new System.Windows.Forms.Label();
-            this.PopUpForm_Weekly_CB_Priority = new System.Windows.Forms.ComboBox();
-            this.PopUpForm_Weekly_CB_Difficulty = new System.Windows.Forms.ComboBox();
-            this.PopUpForm_Weekly_CB_Type = new System.Windows.Forms.ComboBox();
+            this.PopUpFormWeekly_CB_Priority = new System.Windows.Forms.ComboBox();
+            this.PopUpFormWeekly_CB_Difficulty = new System.Windows.Forms.ComboBox();
+            this.PopUpFormWeekly_CB_Type = new System.Windows.Forms.ComboBox();
             this.PopUpForm_Weekly_CB_OE = new System.Windows.Forms.ComboBox();
             this.PopUpFormWeekly_TB_Note = new System.Windows.Forms.TextBox();
-            this.PopUpForm_Weekly_TB_WeekNr = new System.Windows.Forms.TextBox();
+            this.PopUpFormWeekly_TB_WeekNr = new System.Windows.Forms.TextBox();
             this.PopUpFormWeekly_BTN_Cancel = new System.Windows.Forms.Button();
-            this.PopUpFormWeekly_CB_Type = new System.Windows.Forms.ComboBox();
             this.PopUpFormWeekly_CB_OE = new System.Windows.Forms.ComboBox();
             this.PopUpFormWeekly_LB_Priority = new System.Windows.Forms.Label();
             this.PopUpFormWeekly_LB_Difficulty = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.PopUpFormWeekly_LB_NOTE = new System.Windows.Forms.Label();
             this.PopUpFormWeekly_LB_Agenda = new System.Windows.Forms.Label();
             this.PopUpFormWeekly_LB_Date = new System.Windows.Forms.Label();
+            this.PopUpFormWeekly_TIME_StartDate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PopUpFormWeekly_BTN_Save
@@ -100,33 +101,33 @@
             this.PopUpFormWeekly_TBB_Agenda.TabIndex = 8;
             this.PopUpFormWeekly_TBB_Agenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // PopUpForm_Weekly_CB_Status
+            // PopUpFormWeekly_CB_Status
             // 
-            this.PopUpForm_Weekly_CB_Status.BackColor = System.Drawing.SystemColors.Window;
-            this.PopUpForm_Weekly_CB_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PopUpForm_Weekly_CB_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PopUpForm_Weekly_CB_Status.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PopUpForm_Weekly_CB_Status.FormattingEnabled = true;
-            this.PopUpForm_Weekly_CB_Status.Items.AddRange(new object[] {
+            this.PopUpFormWeekly_CB_Status.BackColor = System.Drawing.SystemColors.Window;
+            this.PopUpFormWeekly_CB_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PopUpFormWeekly_CB_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopUpFormWeekly_CB_Status.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PopUpFormWeekly_CB_Status.FormattingEnabled = true;
+            this.PopUpFormWeekly_CB_Status.Items.AddRange(new object[] {
             "Done ✅",
             "In Progress 🔨",
             "Not Started ⏳"});
-            this.PopUpForm_Weekly_CB_Status.Location = new System.Drawing.Point(95, 254);
-            this.PopUpForm_Weekly_CB_Status.Margin = new System.Windows.Forms.Padding(2);
-            this.PopUpForm_Weekly_CB_Status.Name = "PopUpForm_Weekly_CB_Status";
-            this.PopUpForm_Weekly_CB_Status.Size = new System.Drawing.Size(119, 25);
-            this.PopUpForm_Weekly_CB_Status.TabIndex = 9;
+            this.PopUpFormWeekly_CB_Status.Location = new System.Drawing.Point(95, 254);
+            this.PopUpFormWeekly_CB_Status.Margin = new System.Windows.Forms.Padding(2);
+            this.PopUpFormWeekly_CB_Status.Name = "PopUpFormWeekly_CB_Status";
+            this.PopUpFormWeekly_CB_Status.Size = new System.Drawing.Size(119, 25);
+            this.PopUpFormWeekly_CB_Status.TabIndex = 9;
             // 
-            // PopUpForm_Weekly_TB_Status
+            // PopUpFormWeekly_TBB_Status
             // 
-            this.PopUpForm_Weekly_TB_Status.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PopUpForm_Weekly_TB_Status.Enabled = false;
-            this.PopUpForm_Weekly_TB_Status.Location = new System.Drawing.Point(19, 230);
-            this.PopUpForm_Weekly_TB_Status.Margin = new System.Windows.Forms.Padding(2);
-            this.PopUpForm_Weekly_TB_Status.Multiline = true;
-            this.PopUpForm_Weekly_TB_Status.Name = "PopUpForm_Weekly_TB_Status";
-            this.PopUpForm_Weekly_TB_Status.Size = new System.Drawing.Size(211, 227);
-            this.PopUpForm_Weekly_TB_Status.TabIndex = 10;
+            this.PopUpFormWeekly_TBB_Status.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PopUpFormWeekly_TBB_Status.Enabled = false;
+            this.PopUpFormWeekly_TBB_Status.Location = new System.Drawing.Point(19, 230);
+            this.PopUpFormWeekly_TBB_Status.Margin = new System.Windows.Forms.Padding(2);
+            this.PopUpFormWeekly_TBB_Status.Multiline = true;
+            this.PopUpFormWeekly_TBB_Status.Name = "PopUpFormWeekly_TBB_Status";
+            this.PopUpFormWeekly_TBB_Status.Size = new System.Drawing.Size(211, 227);
+            this.PopUpFormWeekly_TBB_Status.TabIndex = 10;
             // 
             // PopUpForm_Weekly_LB_Status
             // 
@@ -140,57 +141,57 @@
             this.PopUpForm_Weekly_LB_Status.TabIndex = 11;
             this.PopUpForm_Weekly_LB_Status.Text = "Status";
             // 
-            // PopUpForm_Weekly_CB_Priority
+            // PopUpFormWeekly_CB_Priority
             // 
-            this.PopUpForm_Weekly_CB_Priority.BackColor = System.Drawing.SystemColors.Window;
-            this.PopUpForm_Weekly_CB_Priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PopUpForm_Weekly_CB_Priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PopUpForm_Weekly_CB_Priority.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PopUpForm_Weekly_CB_Priority.FormattingEnabled = true;
-            this.PopUpForm_Weekly_CB_Priority.Items.AddRange(new object[] {
+            this.PopUpFormWeekly_CB_Priority.BackColor = System.Drawing.SystemColors.Window;
+            this.PopUpFormWeekly_CB_Priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PopUpFormWeekly_CB_Priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopUpFormWeekly_CB_Priority.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PopUpFormWeekly_CB_Priority.FormattingEnabled = true;
+            this.PopUpFormWeekly_CB_Priority.Items.AddRange(new object[] {
             "Urgent ⚠️",
             "High 🪂",
             "Medium 🐄",
             "Low 🐇"});
-            this.PopUpForm_Weekly_CB_Priority.Location = new System.Drawing.Point(95, 307);
-            this.PopUpForm_Weekly_CB_Priority.Margin = new System.Windows.Forms.Padding(2);
-            this.PopUpForm_Weekly_CB_Priority.Name = "PopUpForm_Weekly_CB_Priority";
-            this.PopUpForm_Weekly_CB_Priority.Size = new System.Drawing.Size(119, 25);
-            this.PopUpForm_Weekly_CB_Priority.TabIndex = 15;
+            this.PopUpFormWeekly_CB_Priority.Location = new System.Drawing.Point(95, 307);
+            this.PopUpFormWeekly_CB_Priority.Margin = new System.Windows.Forms.Padding(2);
+            this.PopUpFormWeekly_CB_Priority.Name = "PopUpFormWeekly_CB_Priority";
+            this.PopUpFormWeekly_CB_Priority.Size = new System.Drawing.Size(119, 25);
+            this.PopUpFormWeekly_CB_Priority.TabIndex = 15;
             // 
-            // PopUpForm_Weekly_CB_Difficulty
+            // PopUpFormWeekly_CB_Difficulty
             // 
-            this.PopUpForm_Weekly_CB_Difficulty.BackColor = System.Drawing.SystemColors.Window;
-            this.PopUpForm_Weekly_CB_Difficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PopUpForm_Weekly_CB_Difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PopUpForm_Weekly_CB_Difficulty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PopUpForm_Weekly_CB_Difficulty.FormattingEnabled = true;
-            this.PopUpForm_Weekly_CB_Difficulty.Items.AddRange(new object[] {
+            this.PopUpFormWeekly_CB_Difficulty.BackColor = System.Drawing.SystemColors.Window;
+            this.PopUpFormWeekly_CB_Difficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PopUpFormWeekly_CB_Difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopUpFormWeekly_CB_Difficulty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PopUpFormWeekly_CB_Difficulty.FormattingEnabled = true;
+            this.PopUpFormWeekly_CB_Difficulty.Items.AddRange(new object[] {
             "Hard 🦑",
             "Medium 🦍",
             "Low 🐇"});
-            this.PopUpForm_Weekly_CB_Difficulty.Location = new System.Drawing.Point(95, 359);
-            this.PopUpForm_Weekly_CB_Difficulty.Margin = new System.Windows.Forms.Padding(2);
-            this.PopUpForm_Weekly_CB_Difficulty.Name = "PopUpForm_Weekly_CB_Difficulty";
-            this.PopUpForm_Weekly_CB_Difficulty.Size = new System.Drawing.Size(119, 25);
-            this.PopUpForm_Weekly_CB_Difficulty.TabIndex = 16;
+            this.PopUpFormWeekly_CB_Difficulty.Location = new System.Drawing.Point(95, 359);
+            this.PopUpFormWeekly_CB_Difficulty.Margin = new System.Windows.Forms.Padding(2);
+            this.PopUpFormWeekly_CB_Difficulty.Name = "PopUpFormWeekly_CB_Difficulty";
+            this.PopUpFormWeekly_CB_Difficulty.Size = new System.Drawing.Size(119, 25);
+            this.PopUpFormWeekly_CB_Difficulty.TabIndex = 16;
             // 
-            // PopUpForm_Weekly_CB_Type
+            // PopUpFormWeekly_CB_Type
             // 
-            this.PopUpForm_Weekly_CB_Type.BackColor = System.Drawing.SystemColors.Window;
-            this.PopUpForm_Weekly_CB_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PopUpForm_Weekly_CB_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PopUpForm_Weekly_CB_Type.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PopUpForm_Weekly_CB_Type.FormattingEnabled = true;
-            this.PopUpForm_Weekly_CB_Type.Items.AddRange(new object[] {
+            this.PopUpFormWeekly_CB_Type.BackColor = System.Drawing.SystemColors.Window;
+            this.PopUpFormWeekly_CB_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PopUpFormWeekly_CB_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopUpFormWeekly_CB_Type.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PopUpFormWeekly_CB_Type.FormattingEnabled = true;
+            this.PopUpFormWeekly_CB_Type.Items.AddRange(new object[] {
             "Learning 📚",
             "Work 🔨",
             "Documentation 📃",
             "Lesson 🎓"});
-            this.PopUpForm_Weekly_CB_Type.Location = new System.Drawing.Point(95, 407);
-            this.PopUpForm_Weekly_CB_Type.Name = "PopUpForm_Weekly_CB_Type";
-            this.PopUpForm_Weekly_CB_Type.Size = new System.Drawing.Size(119, 25);
-            this.PopUpForm_Weekly_CB_Type.TabIndex = 34;
+            this.PopUpFormWeekly_CB_Type.Location = new System.Drawing.Point(95, 407);
+            this.PopUpFormWeekly_CB_Type.Name = "PopUpFormWeekly_CB_Type";
+            this.PopUpFormWeekly_CB_Type.Size = new System.Drawing.Size(119, 25);
+            this.PopUpFormWeekly_CB_Type.TabIndex = 34;
             // 
             // PopUpForm_Weekly_CB_OE
             // 
@@ -209,16 +210,16 @@
             this.PopUpFormWeekly_TB_Note.Size = new System.Drawing.Size(235, 101);
             this.PopUpFormWeekly_TB_Note.TabIndex = 32;
             // 
-            // PopUpForm_Weekly_TB_WeekNr
+            // PopUpFormWeekly_TB_WeekNr
             // 
-            this.PopUpForm_Weekly_TB_WeekNr.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PopUpForm_Weekly_TB_WeekNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PopUpForm_Weekly_TB_WeekNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PopUpForm_Weekly_TB_WeekNr.Location = new System.Drawing.Point(464, 29);
-            this.PopUpForm_Weekly_TB_WeekNr.Name = "PopUpForm_Weekly_TB_WeekNr";
-            this.PopUpForm_Weekly_TB_WeekNr.Size = new System.Drawing.Size(99, 17);
-            this.PopUpForm_Weekly_TB_WeekNr.TabIndex = 31;
-            this.PopUpForm_Weekly_TB_WeekNr.Text = "Blok 3 week 8";
+            this.PopUpFormWeekly_TB_WeekNr.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PopUpFormWeekly_TB_WeekNr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PopUpFormWeekly_TB_WeekNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopUpFormWeekly_TB_WeekNr.Location = new System.Drawing.Point(464, 29);
+            this.PopUpFormWeekly_TB_WeekNr.Name = "PopUpFormWeekly_TB_WeekNr";
+            this.PopUpFormWeekly_TB_WeekNr.Size = new System.Drawing.Size(99, 17);
+            this.PopUpFormWeekly_TB_WeekNr.TabIndex = 31;
+            this.PopUpFormWeekly_TB_WeekNr.Text = "Blok 3 week 8";
             // 
             // PopUpFormWeekly_BTN_Cancel
             // 
@@ -229,14 +230,6 @@
             this.PopUpFormWeekly_BTN_Cancel.TabIndex = 30;
             this.PopUpFormWeekly_BTN_Cancel.Text = "Cancel";
             this.PopUpFormWeekly_BTN_Cancel.UseVisualStyleBackColor = true;
-            // 
-            // PopUpFormWeekly_CB_Type
-            // 
-            this.PopUpFormWeekly_CB_Type.Location = new System.Drawing.Point(95, 407);
-            this.PopUpFormWeekly_CB_Type.Margin = new System.Windows.Forms.Padding(2);
-            this.PopUpFormWeekly_CB_Type.Name = "PopUpFormWeekly_CB_Type";
-            this.PopUpFormWeekly_CB_Type.Size = new System.Drawing.Size(119, 21);
-            this.PopUpFormWeekly_CB_Type.TabIndex = 17;
             // 
             // PopUpFormWeekly_CB_OE
             // 
@@ -357,6 +350,10 @@
             this.PopUpFormWeekly_LB_Date.TabIndex = 29;
             this.PopUpFormWeekly_LB_Date.Text = "Start date: 01/01/2000";
             // 
+            // PopUpFormWeekly_TIME_StartDate
+            // 
+            this.PopUpFormWeekly_TIME_StartDate.Tick += new System.EventHandler(this.PopUpFormWeekly_TIME_StartDate_Tick);
+            // 
             // Popup_FORM_WeeklyGoals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,12 +361,12 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(611, 577);
             this.Controls.Add(this.PopUpFormWeekly_BTN_Cancel);
-            this.Controls.Add(this.PopUpForm_Weekly_TB_WeekNr);
+            this.Controls.Add(this.PopUpFormWeekly_TB_WeekNr);
             this.Controls.Add(this.PopUpFormWeekly_TB_Note);
             this.Controls.Add(this.PopUpForm_Weekly_CB_OE);
-            this.Controls.Add(this.PopUpForm_Weekly_CB_Type);
-            this.Controls.Add(this.PopUpForm_Weekly_CB_Difficulty);
-            this.Controls.Add(this.PopUpForm_Weekly_CB_Priority);
+            this.Controls.Add(this.PopUpFormWeekly_CB_Type);
+            this.Controls.Add(this.PopUpFormWeekly_CB_Difficulty);
+            this.Controls.Add(this.PopUpFormWeekly_CB_Priority);
             this.Controls.Add(this.PopUpFormWeekly_LB_Date);
             this.Controls.Add(this.PopUpFormWeekly_LB_Agenda);
             this.Controls.Add(this.PopUpFormWeekly_LB_NOTE);
@@ -381,12 +378,12 @@
             this.Controls.Add(this.PopUpFormWeekly_LB_Difficulty);
             this.Controls.Add(this.PopUpFormWeekly_LB_Priority);
             this.Controls.Add(this.PopUpForm_Weekly_LB_Status);
-            this.Controls.Add(this.PopUpForm_Weekly_CB_Status);
+            this.Controls.Add(this.PopUpFormWeekly_CB_Status);
             this.Controls.Add(this.PopUpFormWeekly_TBB_Agenda);
             this.Controls.Add(this.PopUpFormWeekly_TB_Description);
             this.Controls.Add(this.PopUpFormWeekly_TB_Title);
             this.Controls.Add(this.PopUpFormWeekly_BTN_Save);
-            this.Controls.Add(this.PopUpForm_Weekly_TB_Status);
+            this.Controls.Add(this.PopUpFormWeekly_TBB_Status);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Popup_FORM_WeeklyGoals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -401,18 +398,16 @@
         private System.Windows.Forms.TextBox PopUpFormWeekly_TB_Title;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TB_Description;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Agenda;
-        private System.Windows.Forms.ComboBox PopUpForm_Weekly_CB_Status;
-        private System.Windows.Forms.TextBox PopUpForm_Weekly_TB_Status;
+        private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_Status;
+        private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Status;
         private System.Windows.Forms.Label PopUpForm_Weekly_LB_Status;
-        private System.Windows.Forms.TextBox PopUpFormWeekly_TB_Status;
-        private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_Type;
+       
 
-        private System.Windows.Forms.ComboBox PopUpForm_Weekly_CB_Priority;
-        private System.Windows.Forms.ComboBox PopUpForm_Weekly_CB_Difficulty;
-        private System.Windows.Forms.ComboBox PopUpForm_Weekly_CB_Type;
+        private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_Priority;
+        private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_Difficulty;
+        private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_Type;
         private System.Windows.Forms.ComboBox PopUpForm_Weekly_CB_OE;
-        private System.Windows.Forms.TextBox PopUpForm_Weekly_TB_Note;
-        private System.Windows.Forms.TextBox PopUpForm_Weekly_TB_WeekNr;
+        private System.Windows.Forms.TextBox PopUpFormWeekly_TB_WeekNr;
         private System.Windows.Forms.Button PopUpFormWeekly_BTN_Cancel;
 
         private System.Windows.Forms.Label PopUpFormWeekly_LB_Priority;
@@ -421,14 +416,11 @@
         private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_OE;
         private System.Windows.Forms.ComboBox PopUpFormWeekly_CB_OE;
         private System.Windows.Forms.Label PopUpFormWeekly_LB_OE;
-        private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Casus;
-        private System.Windows.Forms.Label PopUpFormWeekly_LB_Casus;
-        private System.Windows.Forms.TextBox PopUpFormWeekly_TB_Casus;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Note;
         private System.Windows.Forms.Label PopUpFormWeekly_LB_NOTE;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TB_Note;
         private System.Windows.Forms.Label PopUpFormWeekly_LB_Agenda;
         private System.Windows.Forms.Label PopUpFormWeekly_LB_Date;
-
+        private System.Windows.Forms.Timer PopUpFormWeekly_TIME_StartDate;
     }
 }
