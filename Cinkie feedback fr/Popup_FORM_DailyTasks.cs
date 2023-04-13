@@ -29,6 +29,7 @@ namespace Cinkie_feedback_fr
 
         }
 
+
         // hide close button
         private const int WS_SYSMENU = 0x80000;
         protected override CreateParams CreateParams
@@ -39,6 +40,12 @@ namespace Cinkie_feedback_fr
                 cp.Style &= ~WS_SYSMENU;
                 return cp;
             }
+
+        private void PopupDaily_BT_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Form1.Check = false;
+
         }
     }
 }
