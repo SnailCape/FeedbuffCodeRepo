@@ -34,8 +34,8 @@ namespace Cinkie_feedback_fr
             foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
             {
                 PopUpFormWeekly_TB_WeekNr.Text = "Week: " + wg.Weeknumber.ToString();
-                //PopUpForm_Weekly_TB_Title.Text = wg.Titel.ToString();
-                //PopUpForm_Weekly_TB_Description.Text = wg.Description.ToString();
+                PopUpFormWeekly_TB_Title.Text = wg.Titel.ToString();
+                PopUpFormWeekly_TB_Description.Text = wg.Description.ToString();
                 PopUpFormWeekly_CB_Status.Text = wg.Status.ToString();
                 PopUpFormWeekly_CB_Priority.Text = wg.Priority.ToString();
                 PopUpFormWeekly_CB_Difficulty.Text = wg.Difficulty.ToString();
