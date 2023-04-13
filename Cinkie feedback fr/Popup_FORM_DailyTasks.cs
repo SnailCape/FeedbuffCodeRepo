@@ -28,5 +28,11 @@ namespace Cinkie_feedback_fr
             Form1.Check = false;
 
         }
+
+        private void PopupDaily_BT_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Form1.Check = false;
+        }
     }
 }
