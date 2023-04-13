@@ -163,7 +163,11 @@ namespace Cinkie_feedback_fr
             this.PanelDA_LA_ScoreboardDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-
+        /// <summary>
+        /// Brings user to Dashboard panel and hides unnecesary elements
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PanelFLM_BT_DashboardButton_Click(object sender, EventArgs e)
         {
             PanelDA_PA_DashBoardBackground.Show();
