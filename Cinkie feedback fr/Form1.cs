@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,41 +18,11 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
+        Student activeStudent = new Student();
 
         public Form1()
         {
             InitializeComponent();
-            GetAllDataFromDatabase();
-
-        }
-
-        /// <summary>
-        /// Collect all data from the database
-        /// </summary>
-        private void GetAllDataFromDatabase()
-        {
-            // Make an instance of every object
-            FeedBUFClasses.DailyTask dailytask = new FeedBUFClasses.DailyTask();
-            FeedBUFClasses.Feedback feedback = new FeedBUFClasses.Feedback();
-            FeedBUFClasses.SchoolClass schoolclass = new FeedBUFClasses.SchoolClass();
-            FeedBUFClasses.Student student = new FeedBUFClasses.Student();
-            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit();
-            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher();
-            FeedBUFClasses.WeeklyGoal weeklygoal = new FeedBUFClasses.WeeklyGoal();
-
-            // Get all data
-            dailytask.GetDailyTasksFromDB();
-            feedback.GetFeedbackFromDB();
-            schoolclass.GetClassesFromDB();
-            student.GetStudentsFromDB();
-            studyunit.GetStudyUnitsFromDB();
-            teacher.GetTeachersFromDB();
-            weeklygoal.GetWeeklyGoalsFromDB();
-
-            // Connect incomplete data
-            student.ConnectStudentsWithClasses();
-            weeklygoal.ConnectGoalWithStudent();
-            dailytask.ConnectTaskWithGoal();
         }
 
         /// <summary>
@@ -95,6 +66,7 @@ namespace Cinkie_feedback_fr
             }
 
         }
+
         /// <summary>
         /// Rick Rolls the user if they were dumb enough to forget their password
         /// </summary>
@@ -119,16 +91,17 @@ namespace Cinkie_feedback_fr
             string errorMessage = $"Invalid Email or Password.\nCheck if your password and email are correct!\n\nPlease try again";
             string title = "Invalid Credentials";
 
-            Student studentList = new Student();
+            Student studenttemp = new Student();
 
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 // Log the user in
-                foreach (Student student in studentList.GetStudentsFromClass())
+                foreach (Student student in studenttemp.GetStudentsFromClass())
                 {
-                    if (student.Email == "2104321gocer@zuyd.nl")
+                    if (student.Email.ToLower() == "2202261funk@zuyd.nl")
                     {
-                        student.LoginStatus = true;
+                        activeStudent = student;
+                        activeStudent.LoginStatus = true;
                     }
                 }
 
@@ -141,6 +114,9 @@ namespace Cinkie_feedback_fr
                 FLMpanel.BringToFront();
                 PanelLogin_TB_Email.Text = "";
                 PanelLogin_TB_Password.Text = "";
+
+                // Sellect the correct data
+                PanelCorrectionToLoggedInUser();
             }
             else
             {
@@ -148,6 +124,84 @@ namespace Cinkie_feedback_fr
                 PanelLogin_TB_Password.Text = "";
             }
         }
+
+        /// <summary>
+        /// Sets all the correct data of the logged in user
+        /// </summary>
+        private void PanelCorrectionToLoggedInUser()
+        {
+            PanelDA_LB_UserInfoName.Text = activeStudent.FirstName + " " + activeStudent.LastName;
+            PanelDA_LB_UserInfoStudentNumber.Text = activeStudent.StudentId.ToString();
+            PanelDA_LB_UserCourse.Text = "HBO-ICT";
+
+            // Check all tasks from the user
+            DailyTask dailyTask = new DailyTask();
+            WeeklyGoal weeklyGoal = new WeeklyGoal();
+            List<DailyTask> taskList = new List<DailyTask>();
+
+            foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromClass())
+            {
+                // If goal belongs to the student
+                if (goal.student == activeStudent || goal.StudentId == activeStudent.StudentId)
+                {
+                    foreach (DailyTask task in dailyTask.GetDailyTasksFromClass())
+                    {
+                        // If task belongs to a task belonging to a student
+                        if (task.WeeklyGoalId == goal.WeeklyGoalId || task.weeklyGoal == goal)
+                        {
+                            taskList.Add(task);
+                        }
+                    }
+                }
+            }
+            PanelDA_LB_TasksTasksAmount.Text = taskList.Count.ToString();
+
+            int i = 0;
+            int j = 0;
+            foreach (DailyTask task in taskList)
+            {
+                if (task.Status.ToLower() == "in progress")
+                {
+                    i++;
+                }
+                else if (task.Status.ToLower() == "done")
+                {
+                    j++;
+                }
+            }
+            PanelDA_LB_TasksInProgressAmount.Text = i.ToString();
+            PanelDA_LB_TasksCompletedAmount.Text = j.ToString();
+
+            EXPCalculation(taskList);
+        }
+
+        /// <summary>
+        /// Method to calculate the percentage of completed tasks and apply it to the dashboard
+        /// </summary>
+        private void EXPCalculation(List<DailyTask> taskList)
+        {
+            // Calculate the total amount of tasks
+            int totaltasks = taskList.Count();
+
+            // Calculate the amount of tasks completed
+            int completedTasks = 0;
+            foreach (DailyTask task in taskList)
+            {
+                if (task.Status.ToLower() == "done")
+                {
+                    completedTasks++;
+                }
+            }
+
+            // Calculate the percentage of completed tasks
+            // List used isn't filled --> Where is the problem? Why is the list not filled?
+            int percentageCompletedTasks = (completedTasks * 100) / totaltasks;
+
+            // Calculate the width of the label based on the percentage of completed tasks
+            int usedWidth = 403 * (percentageCompletedTasks / 100);
+            PanelDA_LA_TasksExpPercentage.Width = usedWidth;
+        }
+    
 
         /// <summary>
         /// Hides the other panels and "logs" the user "out"
@@ -158,9 +212,9 @@ namespace Cinkie_feedback_fr
             Student studentList = new Student();
             foreach (Student student in studentList.GetStudentsFromClass())
             {
-                if (student.LoginStatus)
+                if (activeStudent.LoginStatus == true)
                 {
-                    student.LoginStatus = false;
+                    activeStudent.LoginStatus = false;
                 }
             }
 

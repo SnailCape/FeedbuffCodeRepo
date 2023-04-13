@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Cinkie_feedback_fr.FeedBUFClasses
 {
@@ -27,7 +28,23 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public List<Student> listStudents = new List<Student>();
 
         // Empty Student object
-        public Student() { }
+        public Student()
+        {
+            StudentId = 0;
+            FirstName = "";
+            LastName = "";
+            Gender = "";
+            Email = "";
+            Phonenumber = "";
+            PostalCode = "";
+            Country = "";
+            City = "";
+            Streetname = "";
+            Housenumber = "";
+            SchoolLocation = "";
+            LoginStatus = false;
+            StudentClassId = 0;
+        }
         // Student object with class index
         public Student(int studentId, string firstName, string lastName,
                        string gender, string email, string phonenumber,
@@ -76,11 +93,11 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Save the list of students from the database into the class
         /// </summary>
-        public void GetStudentsFromDB()
+        public List<Student> GetStudentsFromDB()
         {
             listStudents.Clear();
             listStudents = dal.ReadStudents();
-            ConnectStudentsWithClasses();
+            return listStudents;
         }
 
         /// <summary>
@@ -89,6 +106,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<Student> GetStudentsFromClass()
         {
+            listStudents.Clear();
+            listStudents = dal.ReadStudents();
+            ConnectStudentsWithClasses();
             return listStudents;
         }
 
@@ -100,13 +120,15 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             SchoolClass schoolClass = new SchoolClass();
             foreach (Student student in listStudents)
             {
+                schoolClass.GetClassesFromClass();
                 foreach (SchoolClass schoolclass in schoolClass.GetClassesFromClass())
                 {
                     if (student.StudentClassId == schoolClass.ClassId)
                     {
-                        newListStudents.Add(new Student(student.StudentId, student.FirstName, student.LastName, student.Gender, student.Email, student.Phonenumber,
-                                                        student.PostalCode, student.Country, student.City, student.Streetname, student.Housenumber, student.SchoolLocation,
-                                                        student.LoginStatus, schoolclass));
+                        listStudents.Remove(student);
+                        listStudents.Add(new Student(student.StudentId, student.FirstName, student.LastName, student.Gender, student.Email, student.Phonenumber,
+                                                     student.PostalCode, student.Country, student.City, student.Streetname, student.Housenumber, student.SchoolLocation,
+                                                     student.LoginStatus, schoolclass));
                     }
                 }
             }
@@ -119,10 +141,6 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         {
             // Add the new student to the database --> Not complete yet
             dal.CreateNewStudent(student);
-            // Add student to the list of students
-            listStudents.Add(student);
-            // Connect all students in the list of students to their classes
-            ConnectStudentsWithClasses();
         }
     }
 }

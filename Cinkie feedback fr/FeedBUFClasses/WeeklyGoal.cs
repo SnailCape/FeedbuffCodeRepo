@@ -65,10 +65,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Save the list of weeklygoals from the database into the class
         /// </summary>
-        public void GetWeeklyGoalsFromDB()
+        public List<WeeklyGoal> GetWeeklyGoalsFromDB()
         {
-            listWeeklyGoals.Clear();
-            listWeeklyGoals = dal.ReadWeeklyGoals();
+            return dal.ReadWeeklyGoals();
         }
 
         /// <summary>
@@ -77,6 +76,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <returns></returns>
         public List<WeeklyGoal> GetWeeklyGoalsFromClass()
         {
+            listWeeklyGoals.Clear();
+            listWeeklyGoals = dal.ReadWeeklyGoals();
+            ConnectGoalWithStudent();
             return listWeeklyGoals;
         }
 
@@ -86,21 +88,18 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public void ConnectGoalWithStudent()
         {
             Student studentMain = new Student();
-            List<WeeklyGoal> newListWeeklyGoals = new List<WeeklyGoal>();
-
-            foreach (WeeklyGoal goal in listWeeklyGoals)
+            foreach (WeeklyGoal goal in GetWeeklyGoalsFromDB())
             {
-                foreach (Student student in studentMain.GetStudentsFromClass())
+                foreach (Student student in studentMain.GetStudentsFromDB())
                 {
                     if (goal.StudentId == student.StudentId)
                     {
-                        newListWeeklyGoals.Add(new WeeklyGoal(goal.WeeklyGoalId, goal.Weeknumber, goal.Titel, goal.Description, goal.Status, goal.studyUnit, student,
+                        listWeeklyGoals.Remove(goal);
+                        listWeeklyGoals.Add(new WeeklyGoal(goal.WeeklyGoalId, goal.Weeknumber, goal.Titel, goal.Description, goal.Status, goal.studyUnit, student,
                                                               goal.Priority, goal.Difficulty, goal.GoalType, goal.StartingDate, goal.Agenda, goal.Notes));
                     }
                 }
             }
-
-            listWeeklyGoals = newListWeeklyGoals;
         }
 
         /// <summary>
