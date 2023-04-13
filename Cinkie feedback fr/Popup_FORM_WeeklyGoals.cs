@@ -34,8 +34,8 @@ namespace Cinkie_feedback_fr
             foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
             {
                 PopUpForm_Weekly_TB_WeekNr.Text = "Week: " + wg.Weeknumber.ToString();
-                PopUpForm_Weekly_TB_Title.Text = wg.Titel.ToString();
-                PopUpForm_Weekly_TB_Description.Text = wg.Description.ToString();
+                //PopUpForm_Weekly_TB_Title.Text = wg.Titel.ToString();
+                //PopUpForm_Weekly_TB_Description.Text = wg.Description.ToString();
                 PopUpForm_Weekly_CB_Status.Text = wg.Status.ToString();
                 PopUpForm_Weekly_CB_Priority.Text = wg.Priority.ToString();
                 PopUpForm_Weekly_CB_Difficulty.Text = wg.Difficulty.ToString();
@@ -80,6 +80,7 @@ namespace Cinkie_feedback_fr
                 cp.Style &= ~WS_SYSMENU;
                 return cp;
             }
+        }
 
         private void PopUpForm_Weekly_TB_Description_TextChanged(object sender, EventArgs e)
         {

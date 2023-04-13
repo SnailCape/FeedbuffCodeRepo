@@ -378,6 +378,7 @@
             this.Controls.Add(this.PopupDaily_BT_Save);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Popup_FORM_DailyTasks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popup_FORM_DailyTasks";
             this.ResumeLayout(false);
             this.PerformLayout();

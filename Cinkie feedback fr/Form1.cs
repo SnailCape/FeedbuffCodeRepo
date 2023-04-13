@@ -433,15 +433,47 @@ namespace Cinkie_feedback_fr
 
 
             WeeklyGoals_LB_SetWeeklyGoal.Text = "";
+        }
 
-        private void WeeklygoalPanel_LV_SelectedIndexChanged(object sender, ItemCheckedEventArgs e)
+        private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
         {
-            // Moet alle data opvragen voor de juiste dailytask
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
         }
 
         private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
         {
-            // Gebruikt de data bij methode hieboven voor het openen van een popup (evt overbodig indien dubbel click ook kan)
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
 
         }
     }
