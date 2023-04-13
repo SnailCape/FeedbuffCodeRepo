@@ -219,6 +219,9 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+
+            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
         }
 
         /// <summary>
@@ -385,12 +388,13 @@ namespace Cinkie_feedback_fr
             WeeklyGoalPanel_LV_ShowAll.Visible=false;
         }
 
-        private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
+        private void WeeklyGoalClick_View(object sender, EventArgs e)
         {
             if (Check == false)
             {
-                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
-                PopUpDailyTasks.Show(this);
+                Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
+                PopUpBox.Show(this);
+                PopUpBox.displayweeklygoal();
                 this.BringToFront();
                 Check = true;
                 this.Activate();
@@ -403,7 +407,32 @@ namespace Cinkie_feedback_fr
 
             }
 
+
+            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
+
         }
+
+
+        private void WeeklyGoalClick_Add(object sender, EventArgs e)
+        {
+            if (Check == false)
+            {
+                Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
+                PopUpBox.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
 
         private void WeeklygoalPanel_LV_SelectedIndexChanged(object sender, ItemCheckedEventArgs e)
         {
@@ -413,6 +442,7 @@ namespace Cinkie_feedback_fr
         private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
         {
             // Gebruikt de data bij methode hieboven voor het openen van een popup (evt overbodig indien dubbel click ook kan)
+
         }
     }
 }
