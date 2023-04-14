@@ -41,7 +41,9 @@ namespace Cinkie_feedback_fr
                 PopUpFormWeekly_CB_Difficulty.Text = wg.Difficulty.ToString();
                 PopUpFormWeekly_CB_Type.Text = wg.GoalType.ToString();
                 PopUpFormWeekly_TB_Note.Text = wg.Notes.ToString();
-
+                PopUpFormWeekly_CB_OE.Text = wg.studyUnit.StudyUnitId.ToString();
+                PopUpFormWeekly_LB_Date.Text = "Created: " + wg.StartingDate.ToString();
+                //
                 switch (wg.Status)
                 {
 
@@ -57,7 +59,78 @@ namespace Cinkie_feedback_fr
                         PopUpFormWeekly_CB_Status.SelectedIndex = 2;
                         break;
                 }
+                //
+                switch (wg.Difficulty)
+                {
 
+                    case "hard":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 0;
+                        break;
+
+                    case "medium":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 1;
+                        break;
+
+                    case "low":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 2;
+                        break;
+                }
+                //
+                switch (wg.Priority)
+                {
+
+                    case "urgent":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 0;
+                        break;
+
+                    case "high":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 1;
+                        break;
+
+                    case "medium":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 2;
+                        break;
+
+                    case "low":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 3;
+                        break;
+                }
+                //
+                switch (wg.GoalType)
+                {
+
+                    case "learning":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 0;
+                        break;
+
+                    case "work":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 1;
+                        break;
+
+                    case "documentation":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 2;
+                        break;
+
+                    case "lesson":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 3;
+                        break;
+                }
+
+                switch (wg.studyUnit.StudyUnitId)
+                {
+
+                    case "B1C2":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 0;
+                        break;
+
+                    case "B1A3":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 1;
+                        break;
+
+                    case "B1F3":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 2;
+                        break;
+                }
 
             }
         }   
