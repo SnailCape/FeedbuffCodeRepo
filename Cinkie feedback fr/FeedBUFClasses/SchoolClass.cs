@@ -29,6 +29,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         {
             listClasses.Clear();
             listClasses = dal.ReadClasses();
+            
         }
 
         /// <summary>
@@ -37,6 +38,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<SchoolClass> GetClassesFromClass()
         {
+            listClasses.Clear();
+            listClasses = dal.ReadClasses();
             return listClasses;
         }
     }

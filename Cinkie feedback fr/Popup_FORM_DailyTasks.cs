@@ -40,6 +40,7 @@ namespace Cinkie_feedback_fr
                 cp.Style &= ~WS_SYSMENU;
                 return cp;
             }
+        }
 
         private void PopupDaily_BT_Cancel_Click(object sender, EventArgs e)
         {

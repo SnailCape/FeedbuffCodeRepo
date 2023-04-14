@@ -5,9 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinkie_feedback_fr
 {
@@ -17,41 +20,12 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
+        Student activeStudent = new Student();
+        string selectedItem = "";
 
         public Form1()
         {
             InitializeComponent();
-            GetAllDataFromDatabase();
-
-        }
-
-        /// <summary>
-        /// Collect all data from the database
-        /// </summary>
-        private void GetAllDataFromDatabase()
-        {
-            // Make an instance of every object
-            FeedBUFClasses.DailyTask dailytask = new FeedBUFClasses.DailyTask();
-            FeedBUFClasses.Feedback feedback = new FeedBUFClasses.Feedback();
-            FeedBUFClasses.SchoolClass schoolclass = new FeedBUFClasses.SchoolClass();
-            FeedBUFClasses.Student student = new FeedBUFClasses.Student();
-            FeedBUFClasses.StudyUnit studyunit = new FeedBUFClasses.StudyUnit();
-            FeedBUFClasses.Teacher teacher = new FeedBUFClasses.Teacher();
-            FeedBUFClasses.WeeklyGoal weeklygoal = new FeedBUFClasses.WeeklyGoal();
-
-            // Get all data
-            dailytask.GetDailyTasksFromDB();
-            feedback.GetFeedbackFromDB();
-            schoolclass.GetClassesFromDB();
-            student.GetStudentsFromDB();
-            studyunit.GetStudyUnitsFromDB();
-            teacher.GetTeachersFromDB();
-            weeklygoal.GetWeeklyGoalsFromDB();
-
-            // Connect incomplete data
-            student.ConnectStudentsWithClasses();
-            weeklygoal.ConnectGoalWithStudent();
-            dailytask.ConnectTaskWithGoal();
         }
 
         /// <summary>
@@ -95,6 +69,7 @@ namespace Cinkie_feedback_fr
             }
 
         }
+
         /// <summary>
         /// Rick Rolls the user if they were dumb enough to forget their password
         /// </summary>
@@ -116,12 +91,24 @@ namespace Cinkie_feedback_fr
         /// <param name="e"></param>
         private void PanelLogin_BT_Login_Click(object sender, EventArgs e)
         {
-            string message = @"Invalid Email or Password." + Environment.NewLine + "Check if your password and email are correct!" + Environment.NewLine + Environment.NewLine + "Please try again";
-
+            string errorMessage = $"Invalid Email or Password.\nCheck if your password and email are correct!\n\nPlease try again";
             string title = "Invalid Credentials";
+
+            Student studenttemp = new Student();
 
             if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
+                // Log the user in
+                foreach (Student student in studenttemp.GetStudentsFromClass())
+                {
+                    if (student.Email.ToLower() == "2202261funk@zuyd.nl")
+                    {
+                        activeStudent = student;
+                        activeStudent.LoginStatus = true;
+                    }
+                }
+
+                // Set every panel in the correct place
                 PanelDA_PA_DashBoardBackground.BringToFront();
                 PanelDA_PA_DashBoardBackground.Show();
                 BGflmPull.BringToFront();
@@ -130,19 +117,111 @@ namespace Cinkie_feedback_fr
                 FLMpanel.BringToFront();
                 PanelLogin_TB_Email.Text = "";
                 PanelLogin_TB_Password.Text = "";
+
+                // Sellect the correct data
+                PanelCorrectionToLoggedInUser();
             }
             else
             {
-                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PanelLogin_TB_Password.Text = "";
             }
         }
+
+        /// <summary>
+        /// Sets all the correct data of the logged in user
+        /// </summary>
+        private void PanelCorrectionToLoggedInUser()
+        {
+            PanelDA_LB_UserInfoName.Text = activeStudent.FirstName + " " + activeStudent.LastName;
+            PanelDA_LB_UserInfoStudentNumber.Text = activeStudent.StudentId.ToString();
+            PanelDA_LB_UserCourse.Text = "HBO-ICT";
+
+            // Check all tasks from the user
+            DailyTask dailyTask = new DailyTask();
+            WeeklyGoal weeklyGoal = new WeeklyGoal();
+            List<DailyTask> taskList = new List<DailyTask>();
+
+            foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromClass())
+            {
+                // If goal belongs to the student
+                if (goal.student == activeStudent || goal.StudentId == activeStudent.StudentId)
+                {
+                    foreach (DailyTask task in dailyTask.GetDailyTasksFromClass())
+                    {
+                        // If task belongs to a task belonging to a student
+                        if (task.WeeklyGoalId == goal.WeeklyGoalId || task.weeklyGoal == goal)
+                        {
+                            taskList.Add(task);
+                        }
+                    }
+                }
+            }
+            PanelDA_LB_TasksTasksAmount.Text = taskList.Count.ToString();
+
+            int i = 0;
+            int j = 0;
+            foreach (DailyTask task in taskList)
+            {
+                if (task.Status.ToLower() == "in progress")
+                {
+                    i++;
+                }
+                else if (task.Status.ToLower() == "done")
+                {
+                    j++;
+                }
+            }
+            PanelDA_LB_TasksInProgressAmount.Text = i.ToString();
+            PanelDA_LB_TasksCompletedAmount.Text = j.ToString();
+
+            EXPCalculation(taskList);
+        }
+
+        /// <summary>
+        /// Method to calculate the percentage of completed tasks and apply it to the dashboard
+        /// </summary>
+        private void EXPCalculation(List<DailyTask> taskList)
+        {
+            // Calculate the total amount of tasks
+            int totaltasks = taskList.Count();
+
+            // Calculate the amount of tasks completed
+            int completedTasks = 0;
+            foreach (DailyTask task in taskList)
+            {
+                if (task.Status.ToLower() == "done")
+                {
+                    completedTasks++;
+                }
+            }
+
+            // Calculate the percentage of completed tasks
+            // List used isn't filled --> Where is the problem? Why is the list not filled?
+            int percentageCompletedTasks = (completedTasks * 100) / totaltasks;
+
+            // Calculate the width of the label based on the percentage of completed tasks
+            int usedWidth = 403 * (percentageCompletedTasks / 100);
+            PanelDA_LA_TasksExpPercentage.Width = usedWidth;
+        }
+
 
         /// <summary>
         /// Hides the other panels and "logs" the user "out"
         /// </summary>
         private void PanelFLM_BT_LogoutButton_Click(object sender, EventArgs e)
         {
+            // Logs the logged in user out
+            Student studentList = new Student();
+            foreach (Student student in studentList.GetStudentsFromClass())
+            {
+                if (activeStudent.LoginStatus == true)
+                {
+                    activeStudent.LoginStatus = false;
+                }
+            }
+
+            // Set every panel in the correct place
             Login_Panel.BringToFront();
             Login_Panel.Show();
             PanelDA_PA_DashBoardBackground.Hide();
@@ -150,14 +229,13 @@ namespace Cinkie_feedback_fr
             FLMpanel.Hide();
             PanelRE_PA_RegistryBG.BringToFront();
             PanelFB_PA_FeedbackBG.Hide();
-
         }
 
 
         /// <summary>
         /// Adds the date and time to the labels (currently at scoreboard)
         /// </summary>
-        private void DigitalClockTimer_Tick(object sender, EventArgs e)
+        private void PanelDA_TIME_ScoreboardDateAndTime_Tick(object sender, EventArgs e)
         {
             this.PanelDA_LA_ScoreboardTime.Text = DateTime.Now.ToString("HH:mm");
             this.PanelDA_LA_ScoreboardDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -187,8 +265,109 @@ namespace Cinkie_feedback_fr
             Visable_Week();
             WeeklyGoalPanel_LV_ShowAll.BringToFront();
             WeeklyGoalPanel_LV_ShowAll.Visible = true;
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
+            ShowCurrentWeeklyGoals();
+
+
+            if(WeeklyGoal_LBx_ViewGoals.Text == "")
+            {
+                ShowAllDailyTasks();
+                WeeklyGoalPanel_LV_ShowAll.BringToFront();
+            }
+        }
+
+        private void WeeklyGoal_BTN_ShowAllGoals_Click(object sender, EventArgs e)
+        {
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
+            ShowAllWeeklyGoals();
+            WeeklyGoal_BTN_Hide.BringToFront();
+            WeeklyGoal_BTN_Hide.Visible = true;
+        }
+
+        private void WeeklyGoal_BTN_Hide_Click(object sender, EventArgs e)
+        {
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
+            ShowCurrentWeeklyGoals();
+            WeeklyGoal_BTN_Hide.SendToBack();
+            WeeklyGoal_BTN_Hide.Visible = false;
 
         }
+
+        public void ShowAllDailyTasks()
+        {
+            WeeklyGoalPanel_LV_ShowAll.BringToFront();
+            DailyTask dailytasks = new DailyTask();
+            dailytasks.GetDailyTasksFromClass();
+            Student student = new Student();
+            foreach (Student s in student.GetStudentsFromClass())
+            {
+                if (s.StudentId == activeStudent.StudentId)
+                {
+                    foreach (DailyTask dt in dailytasks.GetDailyTasksFromClass())
+                    {
+                    ListViewItem item = WeeklyGoalPanel_LV_ShowAll.Items.Add(dt.Titel.ToString());
+                    item.SubItems.Add(dt.Status);
+                    WeeklyGoalPanel_LV_ShowAll.Groups[0].Items.Add(item);
+                    }
+                }
+            }
+        }
+    
+// show all weekly goals of the active student
+        public void ShowAllWeeklyGoals()
+        {
+            Student student = new Student();
+            WeeklyGoal weeklygoal = new WeeklyGoal();
+            List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
+
+            foreach (Student s in student.GetStudentsFromClass())
+            {
+                if (s.StudentId == activeStudent.StudentId)
+                {
+                    foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
+                    {
+                        if (wg.StudentId == s.StudentId)
+                        {
+                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
+                            int titleLength = 55 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+
+                            WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
+                        }
+                    }
+                }
+            }
+
+
+        }
+// show the current weekly goal of the active student
+        public void ShowCurrentWeeklyGoals()
+        {
+            Student student = new Student();
+            WeeklyGoal weeklygoal = new WeeklyGoal();
+            List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
+
+            foreach (Student s in student.GetStudentsFromClass())
+            {
+                if (s.StudentId == activeStudent.StudentId)
+                {
+                    foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
+                    {
+                        if (wg.StudentId == s.StudentId && wg.Status != "done")
+                        {
+                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
+                            int titleLength = 55 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+
+                            WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
+                        }
+                    }
+                }
+            }
+
+
+        }
+
 
         private void PanelFLM_BT_FeedbackButton_Click(object sender, EventArgs e)
         {
@@ -219,9 +398,6 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-
-            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
         }
 
         /// <summary>
@@ -238,7 +414,7 @@ namespace Cinkie_feedback_fr
         {
             PanelRE_CMB_RegisterStudentLocation.DroppedDown = true;
         }
-        
+
         /// <summary>
         /// Save the new Student 
         /// </summary>
@@ -287,7 +463,7 @@ namespace Cinkie_feedback_fr
         {
             PanelRE_CMB_RegisterStudentClass.DroppedDown = true;
         }
-        
+
 
 
         private void PanelFB_BT_RegisterFeedback_Click(object sender, EventArgs e)
@@ -309,7 +485,7 @@ namespace Cinkie_feedback_fr
 
             }
         }
-        
+
         /// <summary>
         /// Brings you to the "account registration" panel 
         /// </summary>
@@ -404,14 +580,9 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-
-            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
-
         }
-
+    
 
         private void WeeklyGoalClick_Add(object sender, EventArgs e)
         {
@@ -430,19 +601,56 @@ namespace Cinkie_feedback_fr
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
 
-
-            WeeklyGoals_LB_SetWeeklyGoal.Text = "";
-
-        private void WeeklygoalPanel_LV_SelectedIndexChanged(object sender, ItemCheckedEventArgs e)
+        private void WeekGoals_BTN_AddTask_Click(object sender, EventArgs e)
         {
-            // Moet alle data opvragen voor de juiste dailytask
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
         }
 
         private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
         {
-            // Gebruikt de data bij methode hieboven voor het openen van een popup (evt overbodig indien dubbel click ook kan)
+            if (Check == false)
+            {
+                Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
+                PopUpDailyTasks.Show(this);
+                this.BringToFront();
+                Check = true;
+                this.Activate();
+            }
+            else
+            {
+                string message = "A window is already opened.";
+                string title = "Warning!";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+
+
+        }
+        private void WeeklyGoalPanel_LV_ShowAll_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (WeeklyGoalPanel_LV_ShowAll.SelectedItems.Count > 0)
+            {
+                var item = WeeklyGoalPanel_LV_ShowAll.SelectedItems[0];
+                selectedItem = item.Text;
+            }
         }
     }
 }

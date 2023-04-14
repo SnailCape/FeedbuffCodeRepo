@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public string StartingDate { get; set; }
         public string Agenda { get; set; }
         public string Notes { get; set; }
+        
 
         public List<WeeklyGoal> listWeeklyGoals = new List<WeeklyGoal>();
 
@@ -43,6 +45,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             StartingDate = startingdate;
             Agenda = agenda;
             Notes = notes;
+            
+            
         }
         public WeeklyGoal(int weeklyGoalId, int weeknumber, string titel, string description, string status, StudyUnit studyUnit,
                           int studentId, string priority, string difficulty, string goaltype, string startingdate, string agenda, string notes)
@@ -60,15 +64,15 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             StartingDate = startingdate;
             Agenda = agenda;
             Notes = notes;
+            
         }
 
         /// <summary>
         /// Save the list of weeklygoals from the database into the class
         /// </summary>
-        public void GetWeeklyGoalsFromDB()
+        public List<WeeklyGoal> GetWeeklyGoalsFromDB()
         {
-            listWeeklyGoals.Clear();
-            listWeeklyGoals = dal.ReadWeeklyGoals();
+            return dal.ReadWeeklyGoals();
         }
 
         /// <summary>
@@ -77,6 +81,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <returns></returns>
         public List<WeeklyGoal> GetWeeklyGoalsFromClass()
         {
+            listWeeklyGoals.Clear();
+            listWeeklyGoals = dal.ReadWeeklyGoals();
+            ConnectGoalWithStudent();
             return listWeeklyGoals;
         }
 
@@ -86,21 +93,18 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public void ConnectGoalWithStudent()
         {
             Student studentMain = new Student();
-            List<WeeklyGoal> newListWeeklyGoals = new List<WeeklyGoal>();
-
-            foreach (WeeklyGoal goal in listWeeklyGoals)
+            foreach (WeeklyGoal goal in GetWeeklyGoalsFromDB())
             {
-                foreach (Student student in studentMain.GetStudentsFromClass())
+                foreach (Student student in studentMain.GetStudentsFromDB())
                 {
                     if (goal.StudentId == student.StudentId)
                     {
-                        newListWeeklyGoals.Add(new WeeklyGoal(goal.WeeklyGoalId, goal.Weeknumber, goal.Titel, goal.Description, goal.Status, goal.studyUnit, student,
+                        listWeeklyGoals.Remove(goal);
+                        listWeeklyGoals.Add(new WeeklyGoal(goal.WeeklyGoalId, goal.Weeknumber, goal.Titel, goal.Description, goal.Status, goal.studyUnit, student,
                                                               goal.Priority, goal.Difficulty, goal.GoalType, goal.StartingDate, goal.Agenda, goal.Notes));
                     }
                 }
             }
-
-            listWeeklyGoals = newListWeeklyGoals;
         }
 
         /// <summary>

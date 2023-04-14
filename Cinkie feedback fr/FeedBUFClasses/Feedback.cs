@@ -37,6 +37,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <return></return>
         public List<Feedback> GetFeedbackFromClass()
         {
+            listFeedback.Clear();
+            listFeedback = dal.ReadFeedback();
             return listFeedback;
         }
 
