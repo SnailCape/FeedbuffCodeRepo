@@ -236,9 +236,9 @@
             this.PopUpFormWeekly_CB_OE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PopUpFormWeekly_CB_OE.FormattingEnabled = true;
             this.PopUpFormWeekly_CB_OE.Items.AddRange(new object[] {
-            "B1F5",
-            "B1C3",
-            "B1A3"});
+            "B1C2",
+            "B1A3",
+            "B1F3"});
             this.PopUpFormWeekly_CB_OE.Location = new System.Drawing.Point(444, 244);
             this.PopUpFormWeekly_CB_OE.Margin = new System.Windows.Forms.Padding(2);
             this.PopUpFormWeekly_CB_OE.Name = "PopUpFormWeekly_CB_OE";
