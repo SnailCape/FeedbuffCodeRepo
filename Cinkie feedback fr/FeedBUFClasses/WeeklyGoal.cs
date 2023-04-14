@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         public string StartingDate { get; set; }
         public string Agenda { get; set; }
         public string Notes { get; set; }
+        
 
         public List<WeeklyGoal> listWeeklyGoals = new List<WeeklyGoal>();
 
@@ -43,6 +45,8 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             StartingDate = startingdate;
             Agenda = agenda;
             Notes = notes;
+            
+            
         }
         public WeeklyGoal(int weeklyGoalId, int weeknumber, string titel, string description, string status, StudyUnit studyUnit,
                           int studentId, string priority, string difficulty, string goaltype, string startingdate, string agenda, string notes)
@@ -60,6 +64,7 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
             StartingDate = startingdate;
             Agenda = agenda;
             Notes = notes;
+            
         }
 
         /// <summary>
