@@ -161,5 +161,11 @@ namespace Cinkie_feedback_fr
         {
             this.PopUpFormWeekly_LB_Date.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
+
+        private void PopUpFormWeekly_BTN_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Form1.Check = false;
+        }
     }
 }

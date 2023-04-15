@@ -230,6 +230,7 @@
             this.PopUpFormWeekly_BTN_Cancel.TabIndex = 30;
             this.PopUpFormWeekly_BTN_Cancel.Text = "Cancel";
             this.PopUpFormWeekly_BTN_Cancel.UseVisualStyleBackColor = true;
+            this.PopUpFormWeekly_BTN_Cancel.Click += new System.EventHandler(this.PopUpFormWeekly_BTN_Cancel_Click);
             // 
             // PopUpFormWeekly_CB_OE
             // 
