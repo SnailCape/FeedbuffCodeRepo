@@ -404,11 +404,11 @@
         private System.Windows.Forms.Label PopupDaily_LB_Status;
         private System.Windows.Forms.ComboBox PopupDaily_CB_Status;
         private System.Windows.Forms.TextBox PopupDaily_TB_Description;
-        private System.Windows.Forms.TextBox PopupDaily_TB_Title;
         private System.Windows.Forms.TextBox PopupFaily_TBB_Stats;
         private System.Windows.Forms.ComboBox PopupDaily_CB_WeeklyTask;
         private System.Windows.Forms.Label PopupDaily_LB_Time;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Note;
         private System.Windows.Forms.TextBox PopupDaily_TB_Time;
+        public System.Windows.Forms.TextBox PopupDaily_TB_Title;
     }
 }

@@ -665,6 +665,25 @@ namespace Cinkie_feedback_fr
             }
         }
 
+        public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
+        {
+            int id = 0;
+            DailyTask task = new DailyTask();
+            foreach (DailyTask t in task.GetDailyTasksFromClass())
+            {
+                if (selectedItem == t.Titel)
+                {
+                    id = t.DailyTaskId;
+                }
+            }
+            if (id !=0)
+            {
+                DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, difficulty,priority,type);
+                dailytask.UpdateDailyTask(task);
 
+                ShowAllDailyTasks();
+
+            }
+        }
     }
 }

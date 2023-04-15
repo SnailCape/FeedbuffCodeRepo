@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
 
 namespace Cinkie_feedback_fr
 {
@@ -29,7 +30,14 @@ namespace Cinkie_feedback_fr
             //create here the string for infomation display
             if (Form1.EditCheck == true)
             {
-                
+                foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
+                {
+                    if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
+                    {
+                        goalId = goal.WeeklyGoalId;
+                    }
+                }
+             form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else
             {
