@@ -25,6 +25,71 @@ namespace Cinkie_feedback_fr
             this.Text = "Daily Task";
             form1= frm;
         }
+
+        public void displaydailytask()
+        {
+
+                
+
+                switch (type)
+                {
+                    case ("Learning 📚"):
+                        status = "Learning";
+                        break;
+                    case ("Work 🔨"):
+                        status = "Work";
+                        break;
+                    case ("Lesson 🎓"):
+                        status = "Lesson";
+                        break;
+                    case ("Documentation 📃"):
+                        status = "Documentation";
+                        break;
+                }
+
+                switch (priority)
+                {
+                    case ("Urgent ⚠️"):
+                        priority = "urgent";
+                        break;
+                    case ("High 🪂"):
+                        priority = "high";
+                        break;
+                    case ("Medium 🐄"):
+                        priority = "medium";
+                        break;
+                    case ("Low 🐇"):
+                        priority = "low";
+                        break;
+                }
+
+                switch (difficulty)
+                {
+                    case ("Hard 🦑"):
+                        difficulty = "hard";
+                        break;
+                    case ("Medium 🦍"):
+                        difficulty = "medium";
+                        break;
+                    case ("Low 🐇"):
+                        difficulty = "low";
+                        break;
+                }
+
+                switch (status)
+                {
+                    case ("Done ✅"):
+                        status = "done";
+                        break;
+                    case ("In Progress 🔨"):
+                        status = "in progress";
+                        break;
+                    case ("Not Started ⏳"):
+                        status = "not started";
+                        break;
+                }
+            }
+        }
         private void DailyTasks_BTN_Close_Click(object sender, EventArgs e)
         {
             WeeklyGoal weeklyGoal = new WeeklyGoal();

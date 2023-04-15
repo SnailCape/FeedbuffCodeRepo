@@ -667,7 +667,7 @@ namespace Cinkie_feedback_fr
 
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
         {
-            ///probleem met type in task zetten, dal ontvangt niks.
+            ///probleem met type in task zetten, dal ontvangt niks. >> GEFIXED
             MessageBox.Show(type);
             int id = 0;
             DailyTask task = new DailyTask();
