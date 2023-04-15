@@ -17,6 +17,7 @@ namespace Cinkie_feedback_fr
     public partial class Form1 : Form
     {
         public static bool Check = false;
+        public static bool EditCheck = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
@@ -579,6 +580,7 @@ namespace Cinkie_feedback_fr
                 PopUpBox.Show(this);
                 PopUpBox.displayweeklygoal();
                 this.BringToFront();
+                EditCheck= true;
                 Check = true;
                 this.Activate();
             }
@@ -599,6 +601,7 @@ namespace Cinkie_feedback_fr
                 PopUpBox.Show(this);
                 this.BringToFront();
                 Check = true;
+                EditCheck = false;
                 this.Activate();
             }
             else
@@ -617,6 +620,7 @@ namespace Cinkie_feedback_fr
                 Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
                 PopUpDailyTasks.Show(this);
                 this.BringToFront();
+                EditCheck = false;
                 Check = true;
                 this.Activate();
             }
@@ -639,6 +643,7 @@ namespace Cinkie_feedback_fr
                 PopUpDailyTasks.Show(this);
                 this.BringToFront();
                 Check = true;
+                EditCheck = true;
                 this.Activate();
             }
             else
