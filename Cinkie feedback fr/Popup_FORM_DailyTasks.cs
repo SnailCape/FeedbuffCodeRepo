@@ -28,64 +28,90 @@ namespace Cinkie_feedback_fr
 
         public void displaydailytask()
         {
+            DailyTask dailyTask = new DailyTask();
+            dailyTask.GetDailyTasksFromDB();
 
-                
+            foreach (DailyTask dt in dailyTask.GetDailyTasksFromClass())
+            {
+                PopupDaily_TB_Title.Text = dt.Titel.ToString();
+                PopupDaily_TB_Description.Text = dt.Description.ToString();
+                PopupDaily_CB_Status.Text = dt.Status.ToString();
+                PopupDaily_CB_Priority.Text = dt.Priority.ToString();
+                PopupDaily_CB_Difficulty.Text = dt.Difficulty.ToString();
+                PopupDaily_CB_Type.Text = dt.Type.ToString();
+                //PopupDaily_CB_WeeklyTask.Text = dt.weeklyGoal.WeeklyGoalId.ToString();
+                PopupDaily_TB_Time.Text = dt.Time.ToString();
 
-                switch (type)
+
+                switch (dt.Status)
                 {
-                    case ("Learning 📚"):
-                        status = "Learning";
+
+                    case "done":
+                        PopupDaily_CB_Status.SelectedIndex = 0;
                         break;
-                    case ("Work 🔨"):
-                        status = "Work";
+
+                    case "inprogress":
+                        PopupDaily_CB_Status.SelectedIndex = 1;
                         break;
-                    case ("Lesson 🎓"):
-                        status = "Lesson";
-                        break;
-                    case ("Documentation 📃"):
-                        status = "Documentation";
+
+                    case "notstarted":
+                        PopupDaily_CB_Status.SelectedIndex = 2;
                         break;
                 }
-
-                switch (priority)
+                //
+                switch (dt.Difficulty)
                 {
-                    case ("Urgent ⚠️"):
-                        priority = "urgent";
+
+                    case "hard":
+                        PopupDaily_CB_Difficulty.SelectedIndex = 0;
                         break;
-                    case ("High 🪂"):
-                        priority = "high";
+
+                    case "medium":
+                        PopupDaily_CB_Difficulty.SelectedIndex = 1;
                         break;
-                    case ("Medium 🐄"):
-                        priority = "medium";
-                        break;
-                    case ("Low 🐇"):
-                        priority = "low";
+
+                    case "low":
+                        PopupDaily_CB_Difficulty.SelectedIndex = 2;
                         break;
                 }
-
-                switch (difficulty)
+                //
+                switch (dt.Priority)
                 {
-                    case ("Hard 🦑"):
-                        difficulty = "hard";
+
+                    case "urgent":
+                        PopupDaily_CB_Priority.SelectedIndex = 0;
                         break;
-                    case ("Medium 🦍"):
-                        difficulty = "medium";
+
+                    case "high":
+                        PopupDaily_CB_Priority.SelectedIndex = 1;
                         break;
-                    case ("Low 🐇"):
-                        difficulty = "low";
+
+                    case "medium":
+                        PopupDaily_CB_Priority.SelectedIndex = 2;
+                        break;
+
+                    case "low":
+                        PopupDaily_CB_Priority.SelectedIndex = 3;
                         break;
                 }
-
-                switch (status)
+                //
+                switch (dt.Type)
                 {
-                    case ("Done ✅"):
-                        status = "done";
+
+                    case "learning":
+                        PopupDaily_CB_Type.SelectedIndex = 0;
                         break;
-                    case ("In Progress 🔨"):
-                        status = "in progress";
+
+                    case "work":
+                        PopupDaily_CB_Type.SelectedIndex = 1;
                         break;
-                    case ("Not Started ⏳"):
-                        status = "not started";
+
+                    case "documentation":
+                        PopupDaily_CB_Type.SelectedIndex = 2;
+                        break;
+
+                    case "lesson":
+                        PopupDaily_CB_Type.SelectedIndex = 3;
                         break;
                 }
             }

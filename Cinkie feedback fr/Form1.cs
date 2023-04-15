@@ -641,6 +641,7 @@ namespace Cinkie_feedback_fr
             {
                 Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
                 PopUpDailyTasks.Show(this);
+                PopUpDailyTasks.displaydailytask();
                 this.BringToFront();
                 Check = true;
                 EditCheck = true;
