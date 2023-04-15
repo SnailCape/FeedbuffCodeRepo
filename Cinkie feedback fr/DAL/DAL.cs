@@ -362,9 +362,39 @@ namespace Cinkie_feedback_fr.DAL
             return feedback;
         }
 
-        /// <summary>
-        /// Method for error messages
-        /// </summary>
+        public void UpdateDailyTask(DailyTask task)
+        {
+
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using(SqlCommand command = new SqlCommand())
+                {
+                    
+                }
+            }
+        }
+
+        public void UpdateWeeklyGoal(WeeklyGoal weeklyGoal)
+        {
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+
+                }
+            }
+        }
+
+            /// <summary>
+            /// Method for error messages
+            /// </summary>
         private void ErrorMessage(Exception ex)
         {
             string message = $"Error bij Database!\n*{ex.Message}*";
