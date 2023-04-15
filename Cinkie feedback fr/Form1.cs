@@ -684,7 +684,7 @@ namespace Cinkie_feedback_fr
 
                 string message = dailytask.Type;
                 MessageBox.Show(message, "tester ifstatement form1");
-                dailytask.UpdateDailyTask(task);
+                dailytask.UpdateDailyTask(dailytask);
 
                 ShowAllDailyTasks();
 
