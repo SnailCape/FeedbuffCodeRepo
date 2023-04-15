@@ -41,6 +41,8 @@ namespace Cinkie_feedback_fr
             string weeklyGoalId = PopupDaily_CB_WeeklyTask.SelectedItem.ToString();
             int goalId = 0;
 
+            string message = type;
+            MessageBox.Show(message, "tester popupform");
             //create here the string for infomation display
             if (Form1.EditCheck == true)
             {
@@ -51,7 +53,7 @@ namespace Cinkie_feedback_fr
                         goalId = goal.WeeklyGoalId;
                     }
                 }
-                form1.WeeklyGoalPanel_LV_ShowAll.Clear();
+                form1.WeeklyGoalPanel_LV_ShowAll.Clear();                         
                 form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else

@@ -667,18 +667,25 @@ namespace Cinkie_feedback_fr
 
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
         {
+            MessageBox.Show(type);
             int id = 0;
             DailyTask task = new DailyTask();
             foreach (DailyTask t in task.GetDailyTasksFromClass())
             {
+               
                 if (selectedItem == t.Titel)
                 {
                     id = t.DailyTaskId;
                 }
             }
-            if (id !=0)
+            if (id != 0)
             {
+                
+                
                 DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, difficulty,priority,type);
+
+                string message = dailytask.Type;
+                MessageBox.Show(message, "tester ifstatement form1");
                 dailytask.UpdateDailyTask(task);
 
                 ShowAllDailyTasks();

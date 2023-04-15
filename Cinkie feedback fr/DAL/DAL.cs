@@ -362,8 +362,9 @@ namespace Cinkie_feedback_fr.DAL
             return feedback;
         }
 
-        public void UpdateDailyTask(DailyTask task)
+        public DailyTask UpdateDailyTask(DailyTask task)
         {
+            MessageBox.Show(task.Type, "Tester DAL");
 
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -383,11 +384,12 @@ namespace Cinkie_feedback_fr.DAL
                     command.Parameters.AddWithValue("@Titel", task.Titel);
                     command.Parameters.AddWithValue("@Status",task.Status);
                     command.Parameters.AddWithValue("@WeeklyGoalId", task.WeeklyGoalId);
-                    ReadDailyTasks();
+                    
                     try { command.ExecuteNonQuery(); }
                     catch(Exception ex) { ErrorMessage(ex); }
                 }
             }
+            return task;
         }
 
         public void UpdateWeeklyGoal(WeeklyGoal weeklyGoal)
