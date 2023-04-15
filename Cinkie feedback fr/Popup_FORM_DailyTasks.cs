@@ -51,7 +51,7 @@ namespace Cinkie_feedback_fr
                         goalId = goal.WeeklyGoalId;
                     }
                 }
-
+                form1.WeeklyGoalPanel_LV_ShowAll.Clear();
                 form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else
