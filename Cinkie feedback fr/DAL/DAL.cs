@@ -372,7 +372,20 @@ namespace Cinkie_feedback_fr.DAL
 
                 using(SqlCommand command = new SqlCommand())
                 {
-                    
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE DAILYTASK SET goalId = @WeeklyGoalId, status = @Status, titel = @Titel, tijdsduur = @Time , omschrijving = @Description, prioriteit = @Priority, moeilijkheid = @Difficulty , typeTaak = @Type WHERE taskId = @DailyTaskId;";
+                    command.Parameters.AddWithValue("@DailyTaskId", task.DailyTaskId);
+                    command.Parameters.AddWithValue("@Type", task.Type);
+                    command.Parameters.AddWithValue("@Difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@Priority", task.Priority);
+                    command.Parameters.AddWithValue("@Description", task.Description);
+                    command.Parameters.AddWithValue("@Time", task.Time);
+                    command.Parameters.AddWithValue("@Titel", task.Titel);
+                    command.Parameters.AddWithValue("@Status",task.Status);
+                    command.Parameters.AddWithValue("@WeeklyGoalId", task.WeeklyGoalId);
+                    ReadDailyTasks();
+                    try { command.ExecuteNonQuery(); }
+                    catch(Exception ex) { ErrorMessage(ex); }
                 }
             }
         }
@@ -387,7 +400,12 @@ namespace Cinkie_feedback_fr.DAL
 
                 using (SqlCommand command = new SqlCommand())
                 {
+                    command.Connection = connection;
+                    command.CommandText = "";
 
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); }
                 }
             }
         }

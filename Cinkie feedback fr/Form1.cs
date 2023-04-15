@@ -26,6 +26,13 @@ namespace Cinkie_feedback_fr
         public Form1()
         {
             InitializeComponent();
+            
+            if (Check == false)
+            {
+                ShowCurrentWeeklyGoals();
+                ShowAllDailyTasks();
+            }
+
         }
 
         /// <summary>
@@ -652,5 +659,7 @@ namespace Cinkie_feedback_fr
                 selectedItem = item.Text;
             }
         }
+
+
     }
 }

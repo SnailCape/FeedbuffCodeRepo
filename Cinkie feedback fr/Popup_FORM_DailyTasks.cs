@@ -23,9 +23,10 @@ namespace Cinkie_feedback_fr
         private void DailyTasks_BTN_Close_Click(object sender, EventArgs e)
         {
             //create here the string for infomation display
-            //form1.WeeklyGoals_LB_SetWeeklyGoal.Text
+            
             this.Dispose();
             Form1.Check = false;
+            
 
         }
 

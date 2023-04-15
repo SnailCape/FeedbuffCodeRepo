@@ -113,9 +113,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Update a daily task from the list AND database
         /// </summary>
-        public void UpdateDailyTask()
+        public void UpdateDailyTask(DailyTask task)
         {
-
+            dal.UpdateDailyTask(task);
         }
 
 
