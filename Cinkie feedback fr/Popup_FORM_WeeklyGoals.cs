@@ -140,11 +140,11 @@ namespace Cinkie_feedback_fr
         {
             string title = PopUpFormWeekly_TB_Title.Text;
             string description = PopUpFormWeekly_TB_Description.Text;
-            string status = PopUpFormWeekly_CB_Status.SelectedText;
-            string priority = PopUpFormWeekly_CB_Priority.SelectedText;
-            string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedText;
-            string type = PopUpFormWeekly_CB_Type.SelectedText;
-            string oe = PopUpFormWeekly_CB_OE.SelectedText;
+            string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
+            string priority = PopUpFormWeekly_CB_Priority.SelectedItem.ToString();
+            string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedItem.ToString();
+            string type = PopUpFormWeekly_CB_Type.SelectedItem.ToString();
+            string oe = PopUpFormWeekly_CB_OE.SelectedItem.ToString();
             string note = PopUpFormWeekly_TB_Note.Text;
             string agenda = PopUpFormWeekly_TB_WeekNr.Text;
             string startingdate = PopUpFormWeekly_LB_Date.Text;

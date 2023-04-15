@@ -680,7 +680,6 @@ namespace Cinkie_feedback_fr
                 if (su.StudyUnitId == oe)
                 {
                     studyunit = su;
-                    MessageBox.Show("The studyunit has been located!", "Studyunit found!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 

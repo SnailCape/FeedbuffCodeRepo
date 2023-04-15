@@ -43,15 +43,15 @@ namespace Cinkie_feedback_fr
             WeeklyGoal weeklyGoal = new WeeklyGoal();
 
             // Collect all data from form
-            string status = PopupDaily_CB_Status.SelectedText;
+            string status = PopupDaily_CB_Status.SelectedItem.ToString();
             string title = PopupDaily_TB_Title.Text;
             string description = PopupDaily_TB_Description.Text;
-            string oe = PopupDaily_CB_OE.SelectedText;
+            string oe = PopupDaily_CB_OE.SelectedItem.ToString();
             string time = PopupDaily_LB_Time.Text;
-            string priority = PopupDaily_CB_Priority.SelectedText;
-            string difficulty = PopupDaily_CB_Difficulty.SelectedText;
-            string type = PopupDaily_CB_Type.SelectedText;
-            string weeklyGoalId = PopupDaily_CB_WeeklyTask.SelectedText;
+            string priority = PopupDaily_CB_Priority.SelectedItem.ToString();
+            string difficulty = PopupDaily_CB_Difficulty.SelectedItem.ToString();
+            string type = PopupDaily_CB_Type.SelectedItem.ToString();
+            string weeklyGoalId = PopupDaily_CB_WeeklyTask.SelectedItem.ToString();
             int goalId = 0;
 
             // Set data to be able to be put in the database
@@ -115,11 +115,9 @@ namespace Cinkie_feedback_fr
 
             foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
             {
-                MessageBox.Show($"{weeklyGoalId}\n{goal.WeeklyGoalId}", "AAAAAAAAAHHHHHHHHH", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
                 {
                     goalId = goal.WeeklyGoalId;
-                    MessageBox.Show($"ID: {goal.WeeklyGoalId} | Titel: {goal.Titel}", $"{weeklyGoalId}", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
