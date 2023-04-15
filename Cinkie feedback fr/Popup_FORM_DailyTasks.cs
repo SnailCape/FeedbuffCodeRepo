@@ -27,6 +27,20 @@ namespace Cinkie_feedback_fr
         }
         private void DailyTasks_BTN_Close_Click(object sender, EventArgs e)
         {
+            WeeklyGoal weeklyGoal = new WeeklyGoal();
+
+            // Collect all data from form
+            string status = PopupDaily_CB_Status.SelectedItem.ToString();
+            string title = PopupDaily_TB_Title.Text;
+            string description = PopupDaily_TB_Description.Text;
+            //string oe = PopupDaily_CB_OE.SelectedItem.ToString();
+            string time = PopupDaily_LB_Time.Text;
+            string priority = PopupDaily_CB_Priority.SelectedItem.ToString();
+            string difficulty = PopupDaily_CB_Difficulty.SelectedItem.ToString();
+            string type = PopupDaily_CB_Type.SelectedItem.ToString();
+            string weeklyGoalId = PopupDaily_CB_WeeklyTask.SelectedItem.ToString();
+            int goalId = 0;
+
             //create here the string for infomation display
             if (Form1.EditCheck == true)
             {
@@ -37,7 +51,8 @@ namespace Cinkie_feedback_fr
                         goalId = goal.WeeklyGoalId;
                     }
                 }
-             form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
+
+                form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else
             {
