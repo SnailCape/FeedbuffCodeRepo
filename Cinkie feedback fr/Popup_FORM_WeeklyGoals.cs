@@ -138,6 +138,19 @@ namespace Cinkie_feedback_fr
         
         private void WG_BTN_Add_Click(object sender, EventArgs e)
         {
+            string title = PopUpFormWeekly_TB_Title.Text;
+            string description = PopUpFormWeekly_TB_Description.Text;
+            string status = PopUpFormWeekly_CB_Status.SelectedText;
+            string priority = PopUpFormWeekly_CB_Priority.SelectedText;
+            string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedText;
+            string type = PopUpFormWeekly_CB_Type.SelectedText;
+            string oe = PopUpFormWeekly_CB_OE.SelectedText;
+            string note = PopUpFormWeekly_TB_Note.Text;
+            string agenda = PopUpFormWeekly_TB_WeekNr.Text;
+            string startingdate = PopUpFormWeekly_LB_Date.Text;
+
+            form1.CreateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
+            
             this.Dispose();
             Form1.Check = false;
         }

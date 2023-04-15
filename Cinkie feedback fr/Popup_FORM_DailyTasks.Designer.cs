@@ -125,8 +125,8 @@
             this.PopupDaily_CB_OE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PopupDaily_CB_OE.FormattingEnabled = true;
             this.PopupDaily_CB_OE.Items.AddRange(new object[] {
-            "B1F5",
-            "B1C3",
+            "B1F3",
+            "B1C2",
             "B1A3"});
             this.PopupDaily_CB_OE.Location = new System.Drawing.Point(437, 228);
             this.PopupDaily_CB_OE.Margin = new System.Windows.Forms.Padding(2);
