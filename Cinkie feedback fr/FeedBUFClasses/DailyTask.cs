@@ -97,9 +97,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Create a new daily task and add it to the list AND database
         /// </summary>
-        public void CreateDailyTask()
+        public void CreateDailyTask(DailyTask task)
         {
-
+            dal.CreateDailyTask(task);
         }
 
         /// <summary>
