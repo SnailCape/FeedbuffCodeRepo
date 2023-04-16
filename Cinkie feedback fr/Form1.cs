@@ -746,6 +746,7 @@ namespace Cinkie_feedback_fr
                                     string time, string prio, string diff, string type)
         {
             DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
+            MessageBox.Show("Je bent nu in form1 create --> " + goalId.ToString(), "FORM1", MessageBoxButtons.OK);
             task.CreateDailyTask(task);
         }
 

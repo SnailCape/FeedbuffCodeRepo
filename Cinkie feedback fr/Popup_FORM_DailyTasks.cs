@@ -124,7 +124,7 @@ namespace Cinkie_feedback_fr
             string status = PopupDaily_CB_Status.SelectedItem.ToString();
             string title = PopupDaily_TB_Title.Text;
             string description = PopupDaily_TB_Description.Text;
-            //string oe = PopupDaily_CB_OE.SelectedItem.ToString();
+            string oe = PopupDaily_CB_OE.SelectedItem.ToString();
             string time = PopupDaily_LB_Time.Text;
             string priority = PopupDaily_CB_Priority.SelectedItem.ToString();
             string difficulty = PopupDaily_CB_Difficulty.SelectedItem.ToString();
@@ -132,33 +132,88 @@ namespace Cinkie_feedback_fr
             string weeklyGoalId = PopupDaily_CB_WeeklyTask.SelectedItem.ToString();
             int goalId = 0;
 
+            switch (type)
+            {
+                case ("Learning 📚"):
+                    status = "Learning";
+                    break;
+                case ("Work 🔨"):
+                    status = "Work";
+                    break;
+                case ("Lesson 🎓"):
+                    status = "Lesson";
+                    break;
+                case ("Documentation 📃"):
+                    status = "Documentation";
+                    break;
+            }
+
+            switch (priority)
+            {
+                case ("Urgent ⚠️"):
+                    priority = "urgent";
+                    break;
+                case ("High 🪂"):
+                    priority = "high";
+                    break;
+                case ("Medium 🐄"):
+                    priority = "medium";
+                    break;
+                case ("Low 🐇"):
+                    priority = "low";
+                    break;
+            }
+
+            switch (difficulty)
+            {
+                case ("Hard 🦑"):
+                    difficulty = "hard";
+                    break;
+                case ("Medium 🦍"):
+                    difficulty = "medium";
+                    break;
+                case ("Low 🐇"):
+                    difficulty = "low";
+                    break;
+            }
+
+            switch (status)
+            {
+                case ("Done ✅"):
+                    status = "done";
+                    break;
+                case ("In Progress 🔨"):
+                    status = "in progress";
+                    break;
+                case ("Not Started ⏳"):
+                    status = "not started";
+                    break;
+            }
+
+
+            foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
+            {
+                if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
+                {
+                    goalId = goal.WeeklyGoalId;
+                }
+            }
+
             //string message = type;
             //MessageBox.Show(message, "tester popupform");
             //create here the string for infomation display
             if (Form1.EditCheck == true)
             {
-                foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
-                {
-                    if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
-                    {
-                        goalId = goal.WeeklyGoalId;
-                    }
-                }
+                // Update
+                MessageBox.Show("Je bent nu in update", "UPDATE", MessageBoxButtons.OK);
                 form1.WeeklyGoalPanel_LV_ShowAll.Clear();                         
                 form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else
             {
-                // levi's create functie HIER: [zie hieronder] 
-                //foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
-                //{
-                  //  if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
-                   // {
-                    //    goalId = goal.WeeklyGoalId;
-                  //  }
-              //  }
-
-              //  form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
+                // Create
+                MessageBox.Show("Je bent nu in create", "CREATE", MessageBoxButtons.OK);
+                form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
 
             this.Dispose();
