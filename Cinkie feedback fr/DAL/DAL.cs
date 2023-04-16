@@ -265,7 +265,19 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = string.Format("");
+                    command.CommandText = "INSERT INTO DAILYTASK (goalId, [status], titel, tijdsduur, omschrijving, prioriteit, moeilijkheid, typeTaak) VALUES (@goalId, @status, @title, @time, @description, @priority, @difficulty, @type)";
+
+                    command.Parameters.AddWithValue("@goalId", task.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@status", task.Status);
+                    command.Parameters.AddWithValue("@title", task.Titel);
+                    command.Parameters.AddWithValue("@time", task.Time);
+                    command.Parameters.AddWithValue("@description", task.Description);
+                    command.Parameters.AddWithValue("@priority", task.Priority);
+                    command.Parameters.AddWithValue("@difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@type", task.Type);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); MessageBox.Show($"{task.WeeklyGoalId}", "goalId", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 }
                 connection.Close();
             }
