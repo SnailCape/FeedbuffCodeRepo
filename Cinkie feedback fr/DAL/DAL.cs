@@ -388,11 +388,12 @@ namespace Cinkie_feedback_fr.DAL
                     try { command.ExecuteNonQuery(); }
                     catch(Exception ex) { ErrorMessage(ex); }
                 }
+                connection.Close();
             }
             return task;
         }
 
-        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal)
+        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
         {
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -405,14 +406,15 @@ namespace Cinkie_feedback_fr.DAL
                     command.Connection = connection;
                     command.CommandText = "UPDATE WEEKLYGOAL SET weeknummer = '3', titel = 'welpoops', omschrijving = 'oops', status = 'inprogress', prioriteit = 'hoog', moeilijkheid = 'hoog', typeGoal = 'work', oeId = 'B1C2', notities = 'welp', startdatum = '19/12/2023' WHERE goalId = @goalId;";
                     command.Parameters.AddWithValue("",weeklyGoal.WeeklyGoalId);
-                    command.Parameters.AddWithValue("", weeklyGoal.Weeknumber);
+                    command.Parameters.AddWithValue("", student.StudentId);
+;                    command.Parameters.AddWithValue("", weeklyGoal.Weeknumber);
                     command.Parameters.AddWithValue("", weeklyGoal.Titel);
                     command.Parameters.AddWithValue("", weeklyGoal.Description);
                     command.Parameters.AddWithValue("", weeklyGoal.Status);
                     command.Parameters.AddWithValue("", weeklyGoal.Priority);
                     command.Parameters.AddWithValue("", weeklyGoal.Difficulty);
                     command.Parameters.AddWithValue("", weeklyGoal.GoalType);
-                    command.Parameters.AddWithValue("", weeklyGoal.studyUnit.StudyUnitId);
+                    command.Parameters.AddWithValue("", studyUnit.StudyUnitId);
                     command.Parameters.AddWithValue("", weeklyGoal.Notes);
                     command.Parameters.AddWithValue("", weeklyGoal.StartingDate);
 
@@ -421,6 +423,7 @@ namespace Cinkie_feedback_fr.DAL
                     try { command.ExecuteNonQuery(); }
                     catch (Exception ex) { ErrorMessage(ex); }
                 }
+                connection.Close();
             }
             return weeklyGoal;
         }
