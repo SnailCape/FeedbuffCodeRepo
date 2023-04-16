@@ -120,15 +120,15 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// </summary>
         public void DeleteWeeklyGoal()
         {
-
+            //delete weekly goals is no option.
         }
 
         /// <summary>
         /// Update a weekly goal from the list AND database
         /// </summary>
-        public void UpdateWeeklyGoal()
+        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal)
         {
-
+            return dal.UpdateWeeklyGoal(weeklyGoal);
         }
     }
 }

@@ -5,10 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinkie_feedback_fr
 {
@@ -138,6 +141,46 @@ namespace Cinkie_feedback_fr
         
         private void WG_BTN_Add_Click(object sender, EventArgs e)
         {
+            WeeklyGoal weeklyGoal = new WeeklyGoal();
+
+            string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
+            string title = PopUpFormWeekly_TB_Title.Text;
+            string description = PopUpFormWeekly_TB_Description.Text;
+            string date = PopUpFormWeekly_LB_Date.Text;
+            string priority = PopUpFormWeekly_CB_Priority.SelectedItem.ToString();
+            string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedItem.ToString();
+            string type = PopUpFormWeekly_CB_Type.SelectedItem.ToString();
+            string oe = PopUpFormWeekly_CB_OE.SelectedItem.ToString();
+            string note = PopUpFormWeekly_TB_Note.Text.ToString();
+            
+            int goalId = 0;
+
+            if (Form1.EditCheck == true)
+            {
+
+                foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
+                {
+                    if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
+                    {
+                        goalId = goal.WeeklyGoalId;
+                    }
+                }
+                form1.WeeklyGoal_LBx_ViewGoals.ClearSelected();
+                form1.UpdateDailyTask(status, title, description, goalId, date, oe, note, priority, difficulty, type);
+            }
+            else
+            {
+                // levi's create functie HIER: [zie hieronder] 
+                //foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
+                //{
+                //  if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
+                // {
+                //    goalId = goal.WeeklyGoalId;
+                //  }
+                //  }
+
+                //  form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
+            }
             this.Dispose();
             Form1.Check = false;
         }

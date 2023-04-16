@@ -669,7 +669,7 @@ namespace Cinkie_feedback_fr
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
         {
             ///probleem met type in task zetten, dal ontvangt niks. >> GEFIXED
-            MessageBox.Show(type);
+            //MessageBox.Show(type);
             int id = 0;
             DailyTask task = new DailyTask();
             foreach (DailyTask t in task.GetDailyTasksFromClass())
@@ -684,7 +684,7 @@ namespace Cinkie_feedback_fr
                 DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, difficulty,priority,type);
 
                 string message = dailytask.Type;
-                MessageBox.Show(message, "tester ifstatement form1");
+                //MessageBox.Show(message, "tester ifstatement form1");
                 dailytask.UpdateDailyTask(dailytask);
 
                 ShowAllDailyTasks();
