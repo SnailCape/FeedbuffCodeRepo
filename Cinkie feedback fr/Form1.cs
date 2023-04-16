@@ -493,8 +493,6 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
             }
         }
 
@@ -633,10 +631,7 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-
         }
 
 
@@ -657,10 +652,7 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-
         }
 
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)

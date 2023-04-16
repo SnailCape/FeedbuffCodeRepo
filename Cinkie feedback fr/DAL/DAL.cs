@@ -436,9 +436,6 @@ namespace Cinkie_feedback_fr.DAL
 
         public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
         {
-            string mes = $"{weeklyGoal.WeeklyGoalId}\n{weeklyGoal.Titel}\n{weeklyGoal.Description}\n{weeklyGoal.Status}\n{weeklyGoal.Priority}\n{weeklyGoal.Difficulty}\n{weeklyGoal.GoalType}\n{weeklyGoal.Notes}";
-            MessageBox.Show(mes, "Check wat hij laat zien");
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.ConnectionString = connectionString;

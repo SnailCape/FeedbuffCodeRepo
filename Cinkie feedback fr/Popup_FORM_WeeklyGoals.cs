@@ -42,7 +42,6 @@ namespace Cinkie_feedback_fr
                 {
                     weeklygoal = wg;
                     updateGoalId = wg.WeeklyGoalId;
-                    MessageBox.Show(updateGoalId.ToString(), "id");
                     break;
                 }
                 else if (Form1.selectedItem == "")
@@ -59,9 +58,6 @@ namespace Cinkie_feedback_fr
                 Dispose();
                 Form1.Check = false;
             }
-
-            string mes = $"{weeklygoal.Titel}\n{weeklygoal.Description}\n{weeklygoal.Status}\n{weeklygoal.Priority}\n{weeklygoal.Difficulty}\n{weeklygoal.GoalType}\n{weeklygoal.Notes}";
-            MessageBox.Show(mes, "Check wat hij laat zien");
 
             PopUpFormWeekly_TB_WeekNr.Text = weeklygoal.Agenda;
             PopUpFormWeekly_TB_Title.Text = weeklygoal.Titel;
@@ -247,13 +243,11 @@ namespace Cinkie_feedback_fr
             if (Form1.EditCheck == true)
             {
                 //update functie
-                MessageBox.Show("Update", "");
                 form1.UpdateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate, updateGoalId);
             }
             else
             {
                 // levi's create functie HIER: [zie hieronder] 
-                MessageBox.Show("Create", "");
                 form1.CreateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
             }
             this.Dispose();

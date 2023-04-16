@@ -237,8 +237,6 @@ namespace Cinkie_feedback_fr
                 }
             }
 
-            //string message = type;
-            //MessageBox.Show(message, "tester popupform");
             //create here the string for infomation display
             if (Form1.EditCheck == true)
             {
