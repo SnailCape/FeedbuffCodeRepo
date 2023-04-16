@@ -407,7 +407,7 @@ namespace Cinkie_feedback_fr.DAL
                     command.CommandText = "UPDATE WEEKLYGOAL SET studentId = @studentID, weeknummer = @weeknr, titel = @title, omschrijving = @description, status = @status, prioriteit = @prio, moeilijkheid = @difficulty, typeGoal = @goaltype, oeId = @oeID, notities = @notes, startdatum = @startingdate WHERE goalId = @goalId;";
                     command.Parameters.AddWithValue("@goalId", weeklyGoal.WeeklyGoalId);
                     command.Parameters.AddWithValue("@studentID", student.StudentId);
-;                    command.Parameters.AddWithValue("@weeknr", weeklyGoal.Weeknumber);
+;                   command.Parameters.AddWithValue("@weeknr", weeklyGoal.Weeknumber);
                     command.Parameters.AddWithValue("@title", weeklyGoal.Titel);
                     command.Parameters.AddWithValue("@description", weeklyGoal.Description);
                     command.Parameters.AddWithValue("@status", weeklyGoal.Status);
@@ -417,7 +417,8 @@ namespace Cinkie_feedback_fr.DAL
                     command.Parameters.AddWithValue("@oeID", studyUnit.StudyUnitId);
                     command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
                     command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
-
+                    string message = weeklyGoal.GoalType;
+                    MessageBox.Show(message, "tester dal");
 
 
                     try { command.ExecuteNonQuery(); }

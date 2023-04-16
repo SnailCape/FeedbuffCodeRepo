@@ -1229,6 +1229,7 @@
             this.WeeklyGoal_LBx_ViewGoals.Name = "WeeklyGoal_LBx_ViewGoals";
             this.WeeklyGoal_LBx_ViewGoals.Size = new System.Drawing.Size(867, 120);
             this.WeeklyGoal_LBx_ViewGoals.TabIndex = 21;
+            this.WeeklyGoal_LBx_ViewGoals.SelectedIndexChanged += new System.EventHandler(this.WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged);
             // 
             // WeekGoals_BTN_AddTask
             // 

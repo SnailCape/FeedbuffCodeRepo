@@ -136,55 +136,42 @@ namespace Cinkie_feedback_fr
                 }
 
             }
-        }   
+        }
 
-        
+
         private void WG_BTN_Add_Click(object sender, EventArgs e)
         {
-            WeeklyGoal weeklyGoal = new WeeklyGoal();
-
-            string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
+            string agenda = PopUpFormWeekly_TB_WeekNr.Text.ToString();
             string title = PopUpFormWeekly_TB_Title.Text;
             string description = PopUpFormWeekly_TB_Description.Text;
-            string date = PopUpFormWeekly_LB_Date.Text;
+            string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
             string priority = PopUpFormWeekly_CB_Priority.SelectedItem.ToString();
             string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedItem.ToString();
             string type = PopUpFormWeekly_CB_Type.SelectedItem.ToString();
             string oe = PopUpFormWeekly_CB_OE.SelectedItem.ToString();
             string note = PopUpFormWeekly_TB_Note.Text.ToString();
-            
-            int goalId = 0;
+            string startingdate = PopUpFormWeekly_LB_Date.Text;
+
+
 
             if (Form1.EditCheck == true)
             {
+                //update functie
+                string message = type;
+                MessageBox.Show(message, "tester popupform");
+                form1.UpdateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
 
-                foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
-                {
-                    if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
-                    {
-                        goalId = goal.WeeklyGoalId;
-                    }
-                }
-                form1.WeeklyGoal_LBx_ViewGoals.ClearSelected();
-                form1.UpdateDailyTask(status, title, description, goalId, date, oe, note, priority, difficulty, type);
             }
             else
             {
                 // levi's create functie HIER: [zie hieronder] 
-                //foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromDB())
-                //{
-                //  if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
-                // {
-                //    goalId = goal.WeeklyGoalId;
-                //  }
-                //  }
 
-                //  form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             this.Dispose();
             Form1.Check = false;
         }
 
+    
 
         // hide close button
         private const int WS_SYSMENU = 0x80000;

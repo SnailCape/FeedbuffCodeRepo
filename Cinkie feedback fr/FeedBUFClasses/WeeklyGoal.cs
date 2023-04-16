@@ -126,9 +126,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Update a weekly goal from the list AND database
         /// </summary>
-        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal)
+        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
         {
-            return dal.UpdateWeeklyGoal(weeklyGoal);
+            return dal.UpdateWeeklyGoal(weeklyGoal, student, studyUnit);
         }
     }
 }

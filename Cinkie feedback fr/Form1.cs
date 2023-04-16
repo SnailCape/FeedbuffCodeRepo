@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -580,8 +581,8 @@ namespace Cinkie_feedback_fr
                 PopUpBox.Show(this);
                 PopUpBox.displayweeklygoal();
                 this.BringToFront();
-                EditCheck= true;
                 Check = true;
+                EditCheck= true;
                 this.Activate();
             }
             else
@@ -666,6 +667,8 @@ namespace Cinkie_feedback_fr
             }
         }
 
+
+
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
         {
             ///probleem met type in task zetten, dal ontvangt niks. >> GEFIXED
@@ -683,13 +686,40 @@ namespace Cinkie_feedback_fr
             {
                 DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, difficulty,priority,type);
 
-                string message = dailytask.Type;
+                //string message = dailytask.Type;
                 //MessageBox.Show(message, "tester ifstatement form1");
                 dailytask.UpdateDailyTask(dailytask);
 
                 ShowAllDailyTasks();
 
             }
+        }
+        public void UpdateWeeklyGoal(string title, string description, string status, string priority, string difficulty, string type, string oe, string note, string agenda, string startingdate)
+        {
+            int weeknumber = 16;
+            int id = 0;
+            StudyUnit studyunit = new StudyUnit();
+            studyunit.GetStudyUnitsFromDB();
+
+            foreach (StudyUnit su in studyunit.listStudyUnits)
+            {
+                if(su.StudyUnitId == oe)
+                {
+                    studyunit = su;
+                }
+            }
+                WeeklyGoal weeklyGoal = new WeeklyGoal(id,weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
+
+                string message = weeklyGoal.GoalType;
+                MessageBox.Show(message, "tester id ifstatement form1");
+                weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
+                
+                ShowAllWeeklyGoals();           
+        }
+
+        private void WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox lb = (ListBox)sender;
         }
     }
 }

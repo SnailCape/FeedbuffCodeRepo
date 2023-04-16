@@ -58,7 +58,7 @@
             // 
             // PopUpFormWeekly_BTN_Save
             // 
-            this.PopUpFormWeekly_BTN_Save.Location = new System.Drawing.Point(478, 507);
+            this.PopUpFormWeekly_BTN_Save.Location = new System.Drawing.Point(479, 507);
             this.PopUpFormWeekly_BTN_Save.Margin = new System.Windows.Forms.Padding(2);
             this.PopUpFormWeekly_BTN_Save.Name = "PopUpFormWeekly_BTN_Save";
             this.PopUpFormWeekly_BTN_Save.Size = new System.Drawing.Size(104, 46);
@@ -223,7 +223,7 @@
             // 
             // PopUpFormWeekly_BTN_Cancel
             // 
-            this.PopUpFormWeekly_BTN_Cancel.Location = new System.Drawing.Point(370, 507);
+            this.PopUpFormWeekly_BTN_Cancel.Location = new System.Drawing.Point(371, 507);
             this.PopUpFormWeekly_BTN_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.PopUpFormWeekly_BTN_Cancel.Name = "PopUpFormWeekly_BTN_Cancel";
             this.PopUpFormWeekly_BTN_Cancel.Size = new System.Drawing.Size(104, 46);
