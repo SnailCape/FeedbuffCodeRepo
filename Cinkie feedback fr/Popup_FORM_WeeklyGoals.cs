@@ -28,13 +28,13 @@ namespace Cinkie_feedback_fr
             form1= frm;
         }
 
-        public void displayweeklygoal()
+        public void displayweeklygoal(object sender, EventArgs e)
         {
             ///
             //Show weekly goal information
             ///
             WeeklyGoal weeklygoal = new WeeklyGoal();
-            bool selected = true;
+            bool continueStatement = false;
 
             foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
             {
@@ -42,128 +42,125 @@ namespace Cinkie_feedback_fr
                 {
                     weeklygoal = wg;
                     updateGoalId = wg.WeeklyGoalId;
+                    continueStatement = true;
                     break;
                 }
-                else if (Form1.selectedItem == "")
+            }
+
+            if (continueStatement)
+            {
+                PopUpFormWeekly_TB_WeekNr.Text = weeklygoal.Agenda;
+                PopUpFormWeekly_TB_Title.Text = weeklygoal.Titel;
+                PopUpFormWeekly_TB_Description.Text = weeklygoal.Description;
+                PopUpFormWeekly_CB_Status.Text = weeklygoal.Status.ToString();
+                PopUpFormWeekly_CB_Priority.Text = weeklygoal.Priority.ToString();
+                PopUpFormWeekly_CB_Difficulty.Text = weeklygoal.Difficulty.ToString();
+                PopUpFormWeekly_CB_Type.Text = weeklygoal.GoalType.ToString();
+                PopUpFormWeekly_TB_Note.Text = weeklygoal.Notes.ToString();
+                PopUpFormWeekly_CB_OE.Text = weeklygoal.studyUnit.StudyUnitId.ToString();
+                PopUpFormWeekly_LB_Date.Text = weeklygoal.StartingDate.ToString();
+                //
+                switch (weeklygoal.Status.ToLower())
                 {
-                    string message = "You have not selected a goal that you want to edit.\nPlease select a goal before pressing this button.";
-                    string title = "No Item Selected";
-                    MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    selected = false;
+
+                    case "done":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 0;
+                        break;
+
+                    case "in progress":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 1;
+                        break;
+
+                    case "inprogress":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 1;
+                        break;
+
+                    case "not started":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 2;
+                        break;
+
+                    case "notstarted":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 2;
+                        break;
+                }
+                //
+                switch (weeklygoal.Difficulty.ToLower())
+                {
+
+                    case "hard":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 0;
+                        break;
+
+                    case "medium":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 1;
+                        break;
+
+                    case "low":
+                        PopUpFormWeekly_CB_Difficulty.SelectedIndex = 2;
+                        break;
+                }
+                //
+                switch (weeklygoal.Priority.ToLower())
+                {
+
+                    case "urgent":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 0;
+                        break;
+
+                    case "high":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 1;
+                        break;
+
+                    case "medium":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 2;
+                        break;
+
+                    case "low":
+                        PopUpFormWeekly_CB_Priority.SelectedIndex = 3;
+                        break;
+                }
+                //
+                switch (weeklygoal.GoalType.ToLower())
+                {
+
+                    case "learning":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 0;
+                        break;
+
+                    case "work":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 1;
+                        break;
+
+                    case "documentation":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 2;
+                        break;
+
+                    case "lesson":
+                        PopUpFormWeekly_CB_Type.SelectedIndex = 3;
+                        break;
+                }
+
+                switch (weeklygoal.studyUnit.StudyUnitId.ToLower())
+                {
+
+                    case "b1c2":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 0;
+                        break;
+
+                    case "b1a3":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 1;
+                        break;
+
+                    case "b1f3":
+                        PopUpFormWeekly_CB_OE.SelectedIndex = 2;
+                        break;
                 }
             }
-
-            if (selected == false)
+            else
             {
-                Dispose();
-                Form1.Check = false;
-            }
-
-            PopUpFormWeekly_TB_WeekNr.Text = weeklygoal.Agenda;
-            PopUpFormWeekly_TB_Title.Text = weeklygoal.Titel;
-            PopUpFormWeekly_TB_Description.Text = weeklygoal.Description;
-            PopUpFormWeekly_CB_Status.Text = weeklygoal.Status.ToString();
-            PopUpFormWeekly_CB_Priority.Text = weeklygoal.Priority.ToString();
-            PopUpFormWeekly_CB_Difficulty.Text = weeklygoal.Difficulty.ToString();
-            PopUpFormWeekly_CB_Type.Text = weeklygoal.GoalType.ToString();
-            PopUpFormWeekly_TB_Note.Text = weeklygoal.Notes.ToString();
-            PopUpFormWeekly_CB_OE.Text = weeklygoal.studyUnit.StudyUnitId.ToString();
-            PopUpFormWeekly_LB_Date.Text = weeklygoal.StartingDate.ToString();
-            //
-            switch (weeklygoal.Status.ToLower())
-            {
-
-                case "done":
-                    PopUpFormWeekly_CB_Status.SelectedIndex = 0;
-                    break;
-
-                case "in progress":
-                    PopUpFormWeekly_CB_Status.SelectedIndex = 1;
-                    break;
-
-                case "inprogress":
-                    PopUpFormWeekly_CB_Status.SelectedIndex = 1;
-                    break;
-
-                case "not started":
-                    PopUpFormWeekly_CB_Status.SelectedIndex = 2;
-                    break;
-
-                case "notstarted":
-                    PopUpFormWeekly_CB_Status.SelectedIndex = 2;
-                    break;
-            }
-            //
-            switch (weeklygoal.Difficulty.ToLower())
-            {
-
-                case "hard":
-                    PopUpFormWeekly_CB_Difficulty.SelectedIndex = 0;
-                    break;
-
-                case "medium":
-                    PopUpFormWeekly_CB_Difficulty.SelectedIndex = 1;
-                    break;
-
-                case "low":
-                    PopUpFormWeekly_CB_Difficulty.SelectedIndex = 2;
-                    break;
-            }
-            //
-            switch (weeklygoal.Priority.ToLower())
-            {
-
-                case "urgent":
-                    PopUpFormWeekly_CB_Priority.SelectedIndex = 0;
-                    break;
-
-                case "high":
-                    PopUpFormWeekly_CB_Priority.SelectedIndex = 1;
-                    break;
-
-                case "medium":
-                    PopUpFormWeekly_CB_Priority.SelectedIndex = 2;
-                    break;
-
-                case "low":
-                    PopUpFormWeekly_CB_Priority.SelectedIndex = 3;
-                    break;
-            }
-            //
-            switch (weeklygoal.GoalType.ToLower())
-            {
-
-                case "learning":
-                    PopUpFormWeekly_CB_Type.SelectedIndex = 0;
-                    break;
-
-                case "work":
-                    PopUpFormWeekly_CB_Type.SelectedIndex = 1;
-                    break;
-
-                case "documentation":
-                    PopUpFormWeekly_CB_Type.SelectedIndex = 2;
-                    break;
-
-                case "lesson":
-                    PopUpFormWeekly_CB_Type.SelectedIndex = 3;
-                    break;
-            }
-
-            switch (weeklygoal.studyUnit.StudyUnitId.ToLower())
-            {
-
-                case "b1c2":
-                    PopUpFormWeekly_CB_OE.SelectedIndex = 0;
-                    break;
-
-                case "b1a3":
-                    PopUpFormWeekly_CB_OE.SelectedIndex = 1;
-                    break;
-
-                case "b1f3":
-                    PopUpFormWeekly_CB_OE.SelectedIndex = 2;
-                    break;
+                string message = "You have not selected a goal that you want to edit.\nPlease select a goal before pressing this button.\n\nPlease cancel this goal";
+                string title = "No Item Selected";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

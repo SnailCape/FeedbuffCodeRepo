@@ -34,7 +34,6 @@ namespace Cinkie_feedback_fr
                 ShowCurrentWeeklyGoals();
                 ShowAllDailyTasks();
             }
-
         }
 
         /// <summary>
@@ -105,7 +104,7 @@ namespace Cinkie_feedback_fr
 
             Student studenttemp = new Student();
 
-            if (PanelLogin_TB_Email.Text == "" && PanelLogin_TB_Password.Text == "")
+            if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 // Log the user in
                 foreach (Student student in studenttemp.GetStudentsFromClass())
@@ -347,8 +346,7 @@ namespace Cinkie_feedback_fr
                     }
                 }
             }
-
-
+            selectedItem = "";
         }
 // show the current weekly goal of the active student
         public void ShowCurrentWeeklyGoals()
@@ -376,8 +374,7 @@ namespace Cinkie_feedback_fr
                     }
                 }
             }
-
-
+            selectedItem = "";
         }
 
 
@@ -580,7 +577,7 @@ namespace Cinkie_feedback_fr
             {
                 Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
                 PopUpBox.Show(this);
-                PopUpBox.displayweeklygoal();
+                PopUpBox.displayweeklygoal(sender, e);
                 this.BringToFront();
                 Check = true;
                 EditCheck= true;
@@ -695,7 +692,7 @@ namespace Cinkie_feedback_fr
 
             weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
 
-            ShowAllWeeklyGoals();
+            ShowCurrentWeeklyGoals();
         }
 
         /// <summary>
@@ -729,6 +726,7 @@ namespace Cinkie_feedback_fr
                                                    priority, difficulty, type, startingdate, agenda, note);
 
             weeklygoal.CreateWeeklyGoal(weeklygoal, activeStudent, studyunit);
+            ShowCurrentWeeklyGoals();
         }
 
         public void CreateDailyTask(string status, string title, string desc, int goalId,
@@ -736,6 +734,7 @@ namespace Cinkie_feedback_fr
         {
             DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
             task.CreateDailyTask(task);
+            ShowAllDailyTasks();
         }
 
         private void WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged(object sender, EventArgs e)
