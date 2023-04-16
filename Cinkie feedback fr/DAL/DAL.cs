@@ -404,19 +404,19 @@ namespace Cinkie_feedback_fr.DAL
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "UPDATE WEEKLYGOAL SET weeknummer = '3', titel = 'welpoops', omschrijving = 'oops', status = 'inprogress', prioriteit = 'hoog', moeilijkheid = 'hoog', typeGoal = 'work', oeId = 'B1C2', notities = 'welp', startdatum = '19/12/2023' WHERE goalId = @goalId;";
-                    command.Parameters.AddWithValue("",weeklyGoal.WeeklyGoalId);
-                    command.Parameters.AddWithValue("", student.StudentId);
-;                    command.Parameters.AddWithValue("", weeklyGoal.Weeknumber);
-                    command.Parameters.AddWithValue("", weeklyGoal.Titel);
-                    command.Parameters.AddWithValue("", weeklyGoal.Description);
-                    command.Parameters.AddWithValue("", weeklyGoal.Status);
-                    command.Parameters.AddWithValue("", weeklyGoal.Priority);
-                    command.Parameters.AddWithValue("", weeklyGoal.Difficulty);
-                    command.Parameters.AddWithValue("", weeklyGoal.GoalType);
-                    command.Parameters.AddWithValue("", studyUnit.StudyUnitId);
-                    command.Parameters.AddWithValue("", weeklyGoal.Notes);
-                    command.Parameters.AddWithValue("", weeklyGoal.StartingDate);
+                    command.CommandText = "UPDATE WEEKLYGOAL SET studentId = @studentID, weeknummer = @weeknr, titel = @title, omschrijving = @description, status = @status, prioriteit = @prio, moeilijkheid = @difficulty, typeGoal = @goaltype, oeId = @oeID, notities = @notes, startdatum = @startingdate WHERE goalId = @goalId;";
+                    command.Parameters.AddWithValue("@goalId", weeklyGoal.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@studentID", student.StudentId);
+;                    command.Parameters.AddWithValue("@weeknr", weeklyGoal.Weeknumber);
+                    command.Parameters.AddWithValue("@title", weeklyGoal.Titel);
+                    command.Parameters.AddWithValue("@description", weeklyGoal.Description);
+                    command.Parameters.AddWithValue("@status", weeklyGoal.Status);
+                    command.Parameters.AddWithValue("@prio", weeklyGoal.Priority);
+                    command.Parameters.AddWithValue("@difficulty", weeklyGoal.Difficulty);
+                    command.Parameters.AddWithValue("@goaltype", weeklyGoal.GoalType);
+                    command.Parameters.AddWithValue("@oeID", studyUnit.StudyUnitId);
+                    command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
+                    command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
 
 
 
