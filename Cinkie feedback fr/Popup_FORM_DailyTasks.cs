@@ -23,6 +23,7 @@ namespace Cinkie_feedback_fr
         {
             InitializeComponent();
 
+
             WeeklyGoal weeklygoal = new WeeklyGoal();
             foreach (WeeklyGoal goal in weeklygoal.GetWeeklyGoalsFromClass())
             {
@@ -153,6 +154,14 @@ namespace Cinkie_feedback_fr
                     break;
             }
         }
+
+        
+        /// <summary>
+        /// The save and exit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void DailyTasks_BTN_Close_Click(object sender, EventArgs e)
         {
             WeeklyGoal weeklyGoal = new WeeklyGoal();
@@ -238,6 +247,7 @@ namespace Cinkie_feedback_fr
             }
 
             //create here the string for infomation display
+
             if (Form1.EditCheck == true)
             {
                 // Update
@@ -255,11 +265,13 @@ namespace Cinkie_feedback_fr
             Form1.EditCheck = false;
             
 
+
         }
 
 
         // hide close button
         private const int WS_SYSMENU = 0x80000;
+
         protected override CreateParams CreateParams
         {
             get

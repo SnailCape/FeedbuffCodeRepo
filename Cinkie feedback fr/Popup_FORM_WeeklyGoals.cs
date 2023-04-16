@@ -167,7 +167,9 @@ namespace Cinkie_feedback_fr
 
         private void WG_BTN_Add_Click(object sender, EventArgs e)
         {
+
             string agenda = PopUpFormWeekly_TB_WeekNr.Text.ToString();
+
             string title = PopUpFormWeekly_TB_Title.Text;
             string description = PopUpFormWeekly_TB_Description.Text;
             string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
@@ -175,6 +177,7 @@ namespace Cinkie_feedback_fr
             string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedItem.ToString();
             string type = PopUpFormWeekly_CB_Type.SelectedItem.ToString();
             string oe = PopUpFormWeekly_CB_OE.SelectedItem.ToString();
+
             string note = PopUpFormWeekly_TB_Note.Text.ToString();
             string startingdate = PopUpFormWeekly_LB_Date.Text;
 
@@ -247,6 +250,7 @@ namespace Cinkie_feedback_fr
                 // levi's create functie HIER: [zie hieronder] 
                 form1.CreateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
             }
+
             this.Dispose();
             Form1.Check = false;
             Form1.EditCheck = false;

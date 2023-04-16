@@ -284,6 +284,37 @@ namespace Cinkie_feedback_fr.DAL
         }
 
         /// <summary>
+        /// Create a new task in the database
+        /// </summary>
+        public void CreateDailyTask(DailyTask task)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO DAILYTASK (goalId, [status], titel, tijdsduur, omschrijving, prioriteit, moeilijkheid, typeTaak) VALUES (@goalId, @status, @title, @time, @description, @priority, @difficulty, @type)";
+
+                    command.Parameters.AddWithValue("@goalId", task.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@status", task.Status);
+                    command.Parameters.AddWithValue("@title", task.Titel);
+                    command.Parameters.AddWithValue("@time", task.Time);
+                    command.Parameters.AddWithValue("@description", task.Description);
+                    command.Parameters.AddWithValue("@priority", task.Priority);
+                    command.Parameters.AddWithValue("@difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@type", task.Type);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); MessageBox.Show($"{task.WeeklyGoalId}", "goalId", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                }
+                connection.Close();
+            }
+        }
+
+        /// <summary>
         /// Get a list of all the weeklygoals in the database
         /// </summary>
         /// <returns></returns>
@@ -334,6 +365,15 @@ namespace Cinkie_feedback_fr.DAL
             return weeklyGoals;
         }
 
+
+        /// <summary>
+        /// Create a new weekly goal in the database
+        /// </summary>
+        /// <param name="weeklyGoal"></param>
+        /// <param name="student"></param>
+        /// <param name="studyunit"></param>
+        /// <returns></returns>
+
         public void CreateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyunit)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -343,7 +383,9 @@ namespace Cinkie_feedback_fr.DAL
 
                 using (SqlCommand command = new SqlCommand())
                 {
+
                     command.Connection = connection;
+
                     command.CommandText = "INSERT INTO WEEKLYGOAL (WEEKLYGOAL.studentId, WEEKLYGOAL.oeId, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.omschrijving, WEEKLYGOAL.weeknummer, WEEKLYGOAL.prioriteit, WEEKLYGOAL.moeilijkheid, WEEKLYGOAL.typeGoal, WEEKLYGOAL.startdatum, WEEKLYGOAL.agenda, WEEKLYGOAL.notities) VALUES (@studentId, @oeId, @status, @title, @description, @weeknumber, @priority, @difficulty, @type, @startingdate, @agenda, @notes)";
 
                     command.Parameters.AddWithValue("@studentId", student.StudentId);
