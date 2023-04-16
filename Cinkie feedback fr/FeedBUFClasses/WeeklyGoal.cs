@@ -110,9 +110,9 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Create a new weekly goal and add it to the list AND database
         /// </summary>
-        public WeeklyGoal CreateWeeklyGoal(WeeklyGoal weeklyGoal)
+        public void CreateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit unit)
         {
-            return dal.CreateWeeklyGoal(weeklyGoal);
+            dal.CreateWeeklyGoal(weeklyGoal, student, unit);
         }
 
         /// <summary>

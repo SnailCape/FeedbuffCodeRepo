@@ -255,6 +255,22 @@ namespace Cinkie_feedback_fr.DAL
             return dailyTasks;
         }
 
+        public void CreateDailyTask(DailyTask task)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = string.Format("");
+                }
+                connection.Close();
+            }
+        }
+
         /// <summary>
         /// Get a list of all the weeklygoals in the database
         /// </summary>
@@ -306,7 +322,7 @@ namespace Cinkie_feedback_fr.DAL
             return weeklyGoals;
         }
 
-        public WeeklyGoal CreateWeeklyGoal(WeeklyGoal weeklyGoal)
+        public void CreateWeeklyGoal(WeeklyGoal goal, Student student, StudyUnit unit)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -318,9 +334,8 @@ namespace Cinkie_feedback_fr.DAL
                     command.Connection= connection;
                     command.CommandText=string.Format("");
                 }
+                connection.Close();
             }
-
-            return weeklyGoal;
         }
 
         /// <summary>
