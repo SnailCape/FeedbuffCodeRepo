@@ -169,6 +169,7 @@ namespace Cinkie_feedback_fr
             }
             this.Dispose();
             Form1.Check = false;
+            Form1.EditCheck = false;
         }
 
     

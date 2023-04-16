@@ -417,8 +417,10 @@ namespace Cinkie_feedback_fr.DAL
                     command.Parameters.AddWithValue("@oeID", studyUnit.StudyUnitId);
                     command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
                     command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
+                    
                     string message = weeklyGoal.GoalType;
-                    MessageBox.Show(message, "tester dal");
+                    string message2 = weeklyGoal.Titel;
+                    MessageBox.Show(message + message2, "tester dal");
 
 
                     try { command.ExecuteNonQuery(); }

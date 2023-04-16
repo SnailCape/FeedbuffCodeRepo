@@ -658,16 +658,6 @@ namespace Cinkie_feedback_fr
 
 
         }
-        private void WeeklyGoalPanel_LV_ShowAll_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (WeeklyGoalPanel_LV_ShowAll.SelectedItems.Count > 0)
-            {
-                var item = WeeklyGoalPanel_LV_ShowAll.SelectedItems[0];
-                selectedItem = item.Text;
-            }
-        }
-
-
 
         public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
         {
@@ -708,18 +698,34 @@ namespace Cinkie_feedback_fr
                     studyunit = su;
                 }
             }
-                WeeklyGoal weeklyGoal = new WeeklyGoal(id,weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
+
+                WeeklyGoal weeklyGoal = new WeeklyGoal(id, weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
 
                 string message = weeklyGoal.GoalType;
                 MessageBox.Show(message, "tester id ifstatement form1");
                 weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
-                
-                ShowAllWeeklyGoals();           
+
+                ShowAllWeeklyGoals();
+             
         }
 
         private void WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListBox lb = (ListBox)sender;
+            if (WeeklyGoal_LBx_ViewGoals.SelectedIndex > 0)
+            {
+                var index = WeeklyGoal_LBx_ViewGoals.SelectedItems[0];
+                selectedItem = index.ToString();
+            }
+
         }
+        private void WeeklyGoalPanel_LV_ShowAll_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (WeeklyGoalPanel_LV_ShowAll.SelectedItems.Count > 0)
+            {
+                var item = WeeklyGoalPanel_LV_ShowAll.SelectedItems[0];
+                selectedItem = item.Text;
+            }
+        }
+
     }
 }
