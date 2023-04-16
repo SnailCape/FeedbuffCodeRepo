@@ -20,8 +20,9 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
-        Student activeStudent = new Student();
         string selectedItem = "";
+        Student activeStudent = new Student();
+        static Student activeStaticStudent = new Student();
 
         public Form1()
         {
@@ -96,7 +97,7 @@ namespace Cinkie_feedback_fr
 
             Student studenttemp = new Student();
 
-            if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
+            if (PanelLogin_TB_Email.Text == "" && PanelLogin_TB_Password.Text == "")
             {
                 // Log the user in
                 foreach (Student student in studenttemp.GetStudentsFromClass())
@@ -105,6 +106,7 @@ namespace Cinkie_feedback_fr
                     {
                         activeStudent = student;
                         activeStudent.LoginStatus = true;
+                        activeStaticStudent = activeStudent;
                     }
                 }
 
@@ -218,6 +220,7 @@ namespace Cinkie_feedback_fr
                 if (activeStudent.LoginStatus == true)
                 {
                     activeStudent.LoginStatus = false;
+                    activeStaticStudent = activeStudent;
                 }
             }
 
@@ -651,6 +654,46 @@ namespace Cinkie_feedback_fr
                 var item = WeeklyGoalPanel_LV_ShowAll.SelectedItems[0];
                 selectedItem = item.Text;
             }
+        }
+
+        /// <summary>
+        /// Create a new weekly goal
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="description"></param>
+        /// <param name="status"></param>
+        /// <param name="priority"></param>
+        /// <param name="difficulty"></param>
+        /// <param name="type"></param>
+        /// <param name="oe"></param>
+        /// <param name="note"></param>
+        public void CreateWeeklyGoal(string title, string description, string status, string priority,
+                                            string difficulty, string type, string oe, string note, string agenda, string startingdate)
+        {
+            int weeknumber = 16;
+
+            // collect individual data here and then create the object
+            StudyUnit studyunit = new StudyUnit();
+            studyunit.GetStudyUnitsFromDB();
+            foreach (StudyUnit su in studyunit.listStudyUnits)
+            {
+                if (su.StudyUnitId == oe)
+                {
+                    studyunit = su;
+                }
+            }
+
+            WeeklyGoal weeklygoal = new WeeklyGoal(0, weeknumber, title, description, status, studyunit, activeStudent.StudentId,
+                                                   priority, difficulty, type, startingdate, agenda, note);
+
+            weeklygoal.CreateWeeklyGoal(weeklygoal, activeStudent, studyunit);
+        }
+
+        public void CreateDailyTask(string status, string title, string desc, int goalId,
+                                    string time, string prio, string diff, string type)
+        {
+            DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
+            task.CreateDailyTask(task);
         }
     }
 }
