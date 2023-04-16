@@ -255,6 +255,65 @@ namespace Cinkie_feedback_fr.DAL
             return dailyTasks;
         }
 
+        public void DalCreateDailyTask(DailyTask task)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO DAILYTASK (goalId, [status], titel, tijdsduur, omschrijving, prioriteit, moeilijkheid, typeTaak) VALUES (@goalId, @status, @title, @time, @description, @priority, @difficulty, @type)";
+
+                    command.Parameters.AddWithValue("@goalId", task.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@status", task.Status);
+                    command.Parameters.AddWithValue("@title", task.Titel);
+                    command.Parameters.AddWithValue("@time", task.Time);
+                    command.Parameters.AddWithValue("@description", task.Description);
+                    command.Parameters.AddWithValue("@priority", task.Priority);
+                    command.Parameters.AddWithValue("@difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@type", task.Type);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); MessageBox.Show($"{task.WeeklyGoalId}", "goalId", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                }
+                connection.Close();
+            }
+        }
+
+        /// <summary>
+        /// Create a new task in the database
+        /// </summary>
+        public void CreateDailyTask(DailyTask task)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO DAILYTASK (goalId, [status], titel, tijdsduur, omschrijving, prioriteit, moeilijkheid, typeTaak) VALUES (@goalId, @status, @title, @time, @description, @priority, @difficulty, @type)";
+
+                    command.Parameters.AddWithValue("@goalId", task.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@status", task.Status);
+                    command.Parameters.AddWithValue("@title", task.Titel);
+                    command.Parameters.AddWithValue("@time", task.Time);
+                    command.Parameters.AddWithValue("@description", task.Description);
+                    command.Parameters.AddWithValue("@priority", task.Priority);
+                    command.Parameters.AddWithValue("@difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@type", task.Type);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); MessageBox.Show($"{task.WeeklyGoalId}", "goalId", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                }
+                connection.Close();
+            }
+        }
+
         /// <summary>
         /// Get a list of all the weeklygoals in the database
         /// </summary>
@@ -306,21 +365,47 @@ namespace Cinkie_feedback_fr.DAL
             return weeklyGoals;
         }
 
-        public WeeklyGoal CreateWeeklyGoal(WeeklyGoal weeklyGoal)
+
+        /// <summary>
+        /// Create a new weekly goal in the database
+        /// </summary>
+        /// <param name="weeklyGoal"></param>
+        /// <param name="student"></param>
+        /// <param name="studyunit"></param>
+        /// <returns></returns>
+
+        public void CreateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyunit)
         {
-            using(SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.ConnectionString= connectionString;
+                connection.ConnectionString = connectionString;
                 connection.Open();
 
-                using(SqlCommand command = new SqlCommand())
+                using (SqlCommand command = new SqlCommand())
                 {
-                    command.Connection= connection;
-                    command.CommandText=string.Format("");
-                }
-            }
 
-            return weeklyGoal;
+                    command.Connection = connection;
+
+                    command.CommandText = "INSERT INTO WEEKLYGOAL (WEEKLYGOAL.studentId, WEEKLYGOAL.oeId, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.omschrijving, WEEKLYGOAL.weeknummer, WEEKLYGOAL.prioriteit, WEEKLYGOAL.moeilijkheid, WEEKLYGOAL.typeGoal, WEEKLYGOAL.startdatum, WEEKLYGOAL.agenda, WEEKLYGOAL.notities) VALUES (@studentId, @oeId, @status, @title, @description, @weeknumber, @priority, @difficulty, @type, @startingdate, @agenda, @notes)";
+
+                    command.Parameters.AddWithValue("@studentId", student.StudentId);
+                    command.Parameters.AddWithValue("@oeId", studyunit.StudyUnitId);
+                    command.Parameters.AddWithValue("@status", weeklyGoal.Status);
+                    command.Parameters.AddWithValue("@title", weeklyGoal.Titel);
+                    command.Parameters.AddWithValue("@description", weeklyGoal.Description);
+                    command.Parameters.AddWithValue("@weeknumber", weeklyGoal.Weeknumber);
+                    command.Parameters.AddWithValue("@priority", weeklyGoal.Priority);
+                    command.Parameters.AddWithValue("@difficulty", weeklyGoal.Difficulty);
+                    command.Parameters.AddWithValue("@type", weeklyGoal.GoalType);
+                    command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
+                    command.Parameters.AddWithValue("@agenda", weeklyGoal.Agenda);
+                    command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); }
+                }
+                connection.Close();
+            }
         }
 
         /// <summary>
@@ -362,9 +447,70 @@ namespace Cinkie_feedback_fr.DAL
             return feedback;
         }
 
-        /// <summary>
-        /// Method for error messages
-        /// </summary>
+        public DailyTask UpdateDailyTask(DailyTask task)
+        {
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using(SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE DAILYTASK SET goalId = @WeeklyGoalId, status = @Status, titel = @Titel, tijdsduur = @Time , omschrijving = @Description, prioriteit = @Priority, moeilijkheid = @Difficulty , typeTaak = @type WHERE taskId = @DailyTaskId;";
+                    command.Parameters.AddWithValue("@DailyTaskId", task.DailyTaskId);
+                    command.Parameters.AddWithValue("@type", task.Type);
+                    command.Parameters.AddWithValue("@Difficulty", task.Difficulty);
+                    command.Parameters.AddWithValue("@Priority", task.Priority);
+                    command.Parameters.AddWithValue("@Description", task.Description);
+                    command.Parameters.AddWithValue("@Time", task.Time);
+                    command.Parameters.AddWithValue("@Titel", task.Titel);
+                    command.Parameters.AddWithValue("@Status",task.Status);
+                    command.Parameters.AddWithValue("@WeeklyGoalId", task.WeeklyGoalId);
+                    
+                    try { command.ExecuteNonQuery(); }
+                    catch(Exception ex) { ErrorMessage(ex); }
+                }
+                connection.Close();
+            }
+            return task;
+        }
+
+        public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.ConnectionString = connectionString;
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE WEEKLYGOAL SET studentId = @studentID, weeknummer = @weeknr, titel = @title, omschrijving = @description, status = @status, prioriteit = @prio, moeilijkheid = @difficulty, typeGoal = @goaltype, oeId = @oeID, notities = @notes, startdatum = @startingdate WHERE goalId = @goalId;";
+                    command.Parameters.AddWithValue("@goalId", weeklyGoal.WeeklyGoalId);
+                    command.Parameters.AddWithValue("@studentID", student.StudentId);
+;                   command.Parameters.AddWithValue("@weeknr", weeklyGoal.Weeknumber);
+                    command.Parameters.AddWithValue("@title", weeklyGoal.Titel);
+                    command.Parameters.AddWithValue("@description", weeklyGoal.Description);
+                    command.Parameters.AddWithValue("@status", weeklyGoal.Status);
+                    command.Parameters.AddWithValue("@prio", weeklyGoal.Priority);
+                    command.Parameters.AddWithValue("@difficulty", weeklyGoal.Difficulty);
+                    command.Parameters.AddWithValue("@goaltype", weeklyGoal.GoalType);
+                    command.Parameters.AddWithValue("@oeID", studyUnit.StudyUnitId);
+                    command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
+                    command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); }
+                }
+                connection.Close();
+            }
+            return weeklyGoal;
+        }
+
+            /// <summary>
+            /// Method for error messages
+            /// </summary>
         private void ErrorMessage(Exception ex)
         {
             string message = $"Error bij Database!\n*{ex.Message}*";

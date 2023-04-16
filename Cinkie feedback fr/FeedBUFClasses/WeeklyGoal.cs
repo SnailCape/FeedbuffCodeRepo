@@ -110,9 +110,11 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Create a new weekly goal and add it to the list AND database
         /// </summary>
-        public WeeklyGoal CreateWeeklyGoal(WeeklyGoal weeklyGoal)
+
+        public void CreateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit unit)
         {
-            return dal.CreateWeeklyGoal(weeklyGoal);
+            dal.CreateWeeklyGoal(weeklyGoal, student, unit);
+
         }
 
         /// <summary>
@@ -120,15 +122,15 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// </summary>
         public void DeleteWeeklyGoal()
         {
-
+            //delete weekly goals is no option.
         }
 
         /// <summary>
         /// Update a weekly goal from the list AND database
         /// </summary>
-        public void UpdateWeeklyGoal()
+        public void UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
         {
-
+            dal.UpdateWeeklyGoal(weeklyGoal, student, studyUnit);
         }
     }
 }
