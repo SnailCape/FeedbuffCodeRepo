@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -105,17 +106,18 @@ namespace Cinkie_feedback_fr.FeedBUFClasses
         /// <summary>
         /// Delete a daily task based on id from the list AND database
         /// </summary>
-        public void DeleteDailyTask()
+        public void DeleteDailyTask(int id)
         {
+            //delete by ID
 
         }
 
         /// <summary>
         /// Update a daily task from the list AND database
         /// </summary>
-        public void UpdateDailyTask()
+        public void UpdateDailyTask(DailyTask task)
         {
-
+            dal.UpdateDailyTask(task);
         }
 
 

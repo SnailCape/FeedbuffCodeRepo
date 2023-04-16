@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,16 +18,24 @@ namespace Cinkie_feedback_fr
     public partial class Form1 : Form
     {
         public static bool Check = false;
+        public static bool EditCheck = false;
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
-        string selectedItem = "";
+
         Student activeStudent = new Student();
-        static Student activeStaticStudent = new Student();
+        public static string selectedItem = "";
+
 
         public Form1()
         {
             InitializeComponent();
+            
+            if (Check == false)
+            {
+                ShowCurrentWeeklyGoals();
+                ShowAllDailyTasks();
+            }
         }
 
         /// <summary>
@@ -300,17 +309,17 @@ namespace Cinkie_feedback_fr
         {
             WeeklyGoalPanel_LV_ShowAll.BringToFront();
             DailyTask dailytasks = new DailyTask();
-            dailytasks.GetDailyTasksFromClass();
             Student student = new Student();
+
             foreach (Student s in student.GetStudentsFromClass())
             {
                 if (s.StudentId == activeStudent.StudentId)
                 {
                     foreach (DailyTask dt in dailytasks.GetDailyTasksFromClass())
                     {
-                    ListViewItem item = WeeklyGoalPanel_LV_ShowAll.Items.Add(dt.Titel.ToString());
-                    item.SubItems.Add(dt.Status);
-                    WeeklyGoalPanel_LV_ShowAll.Groups[0].Items.Add(item);
+                        ListViewItem item = WeeklyGoalPanel_LV_ShowAll.Items.Add(dt.Titel.ToString());
+                        item.SubItems.Add(dt.Status);
+                        WeeklyGoalPanel_LV_ShowAll.Groups[0].Items.Add(item);
                     }
                 }
             }
@@ -322,6 +331,7 @@ namespace Cinkie_feedback_fr
             Student student = new Student();
             WeeklyGoal weeklygoal = new WeeklyGoal();
             List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
 
             foreach (Student s in student.GetStudentsFromClass())
             {
@@ -331,17 +341,16 @@ namespace Cinkie_feedback_fr
                     {
                         if (wg.StudentId == s.StudentId)
                         {
-                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
-                            int titleLength = 55 - wg.Titel.ToString().Length;
-                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+                            int idlength = 25 - wg.WeeklyGoalId.ToString().Length;
+                            int titlelength = 80 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.WeeklyGoalId.ToString().PadRight(idlength)}\t|\t{wg.Titel.ToString().PadRight(titlelength)}\t|\t{wg.Status}";
 
                             WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
                         }
                     }
                 }
             }
-
-
+            selectedItem = "";
         }
 // show the current weekly goal of the active student
         public void ShowCurrentWeeklyGoals()
@@ -350,25 +359,26 @@ namespace Cinkie_feedback_fr
             WeeklyGoal weeklygoal = new WeeklyGoal();
             List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
 
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
+
             foreach (Student s in student.GetStudentsFromClass())
             {
                 if (s.StudentId == activeStudent.StudentId)
                 {
                     foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
                     {
-                        if (wg.StudentId == s.StudentId && wg.Status != "done")
+                        if (wg.StudentId == s.StudentId && wg.Status.ToLower() != "done")
                         {
-                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
-                            int titleLength = 55 - wg.Titel.ToString().Length;
-                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+                            int idlength = 25 - wg.WeeklyGoalId.ToString().Length;
+                            int titlelength = 80 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.WeeklyGoalId.ToString().PadRight(idlength)}\t|\t{wg.Titel.ToString().PadRight(titlelength)}\t|\t{wg.Status}";
 
                             WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
                         }
                     }
                 }
             }
-
-
+            selectedItem = "";
         }
 
 
@@ -484,8 +494,6 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
             }
         }
 
@@ -573,9 +581,10 @@ namespace Cinkie_feedback_fr
             {
                 Popup_FORM_WeeklyGoals PopUpBox = new Popup_FORM_WeeklyGoals(this);
                 PopUpBox.Show(this);
-                PopUpBox.displayweeklygoal();
+                PopUpBox.displayweeklygoal(sender, e);
                 this.BringToFront();
                 Check = true;
+                EditCheck= true;
                 this.Activate();
             }
             else
@@ -595,6 +604,7 @@ namespace Cinkie_feedback_fr
                 PopUpBox.Show(this);
                 this.BringToFront();
                 Check = true;
+                EditCheck = false;
                 this.Activate();
             }
             else
@@ -613,6 +623,7 @@ namespace Cinkie_feedback_fr
                 Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
                 PopUpDailyTasks.Show(this);
                 this.BringToFront();
+                EditCheck = false;
                 Check = true;
                 this.Activate();
             }
@@ -621,11 +632,9 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
-
         }
+
 
         private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
         {
@@ -633,8 +642,10 @@ namespace Cinkie_feedback_fr
             {
                 Popup_FORM_DailyTasks PopUpDailyTasks = new Popup_FORM_DailyTasks(this);
                 PopUpDailyTasks.Show(this);
+                PopUpDailyTasks.displaydailytask();
                 this.BringToFront();
                 Check = true;
+                EditCheck = true;
                 this.Activate();
             }
             else
@@ -642,11 +653,104 @@ namespace Cinkie_feedback_fr
                 string message = "A window is already opened.";
                 string title = "Warning!";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
+        {
+            ///probleem met type in task zetten, dal ontvangt niks. >> GEFIXED
+            //MessageBox.Show(type);
+            int id = 0;
+            DailyTask task = new DailyTask();
+            foreach (DailyTask t in task.GetDailyTasksFromClass())
+            {             
+                if (title == t.Titel)
+                {
+                    id = t.DailyTaskId;
+                }
             }
 
+            if (id != 0)
+            {
+                DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, priority, difficulty, type);
+                dailytask.UpdateDailyTask(dailytask);
+
+                ShowAllDailyTasks();
+            }
+        }
+        public void UpdateWeeklyGoal(string title, string description, string status, string priority, string difficulty, string type, string oe, string note, string agenda, string startingdate, int id)
+        {
+            int weeknumber = 16;
+            StudyUnit studyunit = new StudyUnit();
+            WeeklyGoal goal = new WeeklyGoal();
+
+            foreach (StudyUnit su in studyunit.GetStudyUnitsFromClass())
+            {
+                if(su.StudyUnitId == oe)
+                {
+                    studyunit = su;
+                }
+            }
+
+            WeeklyGoal weeklyGoal = new WeeklyGoal(id, weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
+
+            weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
+
+            ShowCurrentWeeklyGoals();
+        }
+
+        /// <summary>
+        /// Create a new weekly goal
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="description"></param>
+        /// <param name="status"></param>
+        /// <param name="priority"></param>
+        /// <param name="difficulty"></param>
+        /// <param name="type"></param>
+        /// <param name="oe"></param>
+        /// <param name="note"></param>
+        public void CreateWeeklyGoal(string title, string description, string status, string priority,
+                                            string difficulty, string type, string oe, string note, string agenda, string startingdate)
+        {
+            int weeknumber = 16;
+
+            // collect individual data here and then create the object
+            StudyUnit studyunit = new StudyUnit();
+            studyunit.GetStudyUnitsFromDB();
+            foreach (StudyUnit su in studyunit.listStudyUnits)
+            {
+                if (su.StudyUnitId == oe)
+                {
+                    studyunit = su;
+                }
+            }
+
+            WeeklyGoal weeklygoal = new WeeklyGoal(0, weeknumber, title, description, status, studyunit, activeStudent.StudentId,
+                                                   priority, difficulty, type, startingdate, agenda, note);
+
+            weeklygoal.CreateWeeklyGoal(weeklygoal, activeStudent, studyunit);
+            ShowCurrentWeeklyGoals();
+        }
+
+        public void CreateDailyTask(string status, string title, string desc, int goalId,
+                                    string time, string prio, string diff, string type)
+        {
+            DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
+            task.CreateDailyTask(task);
+            ShowAllDailyTasks();
+        }
+
+        private void WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (WeeklyGoal_LBx_ViewGoals.SelectedIndex > 0)
+            {
+                var index = WeeklyGoal_LBx_ViewGoals.SelectedItems[0];
+                selectedItem = index.ToString();
+            }
 
         }
+
         private void WeeklyGoalPanel_LV_ShowAll_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (WeeklyGoalPanel_LV_ShowAll.SelectedItems.Count > 0)
@@ -655,6 +759,7 @@ namespace Cinkie_feedback_fr
                 selectedItem = item.Text;
             }
         }
+
 
         /// <summary>
         /// Create a new weekly goal
@@ -695,5 +800,6 @@ namespace Cinkie_feedback_fr
             DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
             task.CreateDailyTask(task);
         }
+
     }
 }

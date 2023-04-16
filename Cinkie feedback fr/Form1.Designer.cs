@@ -1229,6 +1229,7 @@
             this.WeeklyGoal_LBx_ViewGoals.Name = "WeeklyGoal_LBx_ViewGoals";
             this.WeeklyGoal_LBx_ViewGoals.Size = new System.Drawing.Size(867, 120);
             this.WeeklyGoal_LBx_ViewGoals.TabIndex = 21;
+            this.WeeklyGoal_LBx_ViewGoals.SelectedIndexChanged += new System.EventHandler(this.WeeklyGoal_LBx_ViewGoals_SelectedIndexChanged);
             // 
             // WeekGoals_BTN_AddTask
             // 
@@ -1363,6 +1364,7 @@
             // 
             // WeeklyGoalPanel_LV_ShowAll
             // 
+            this.WeeklyGoalPanel_LV_ShowAll.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.WeeklyGoalPanel_LV_ShowAll.BackColor = System.Drawing.SystemColors.ControlDark;
             this.WeeklyGoalPanel_LV_ShowAll.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Monday});
@@ -1389,7 +1391,6 @@
             listViewGroup6,
             listViewGroup7});
             this.WeeklyGoalPanel_LV_ShowAll.HideSelection = false;
-            this.WeeklyGoalPanel_LV_ShowAll.HoverSelection = true;
             listViewItem1.Group = listViewGroup1;
             listViewItem1.StateImageIndex = 0;
             listViewItem1.Tag = "";
@@ -2026,9 +2027,9 @@
         private System.Windows.Forms.ListBox PanelFB_LB_ShowRegisteredFeedback;
         private System.Windows.Forms.Button WeekGoals_BTN_EditTask;
         private System.Windows.Forms.Button WeekGoals_BTN_AddTask;
-        private System.Windows.Forms.ListBox WeeklyGoal_LBx_ViewGoals;
         private System.Windows.Forms.Button WeeklyGoal_BTN_ShowAllGoals;
         private System.Windows.Forms.Button WeeklyGoal_BTN_Hide;
+        public System.Windows.Forms.ListBox WeeklyGoal_LBx_ViewGoals;
     }
 }
 

@@ -122,6 +122,10 @@
             // 
             // PopupDaily_CB_OE
             // 
+            this.PopupDaily_CB_OE.AutoCompleteCustomSource.AddRange(new string[] {
+            "B1F3",
+            "B1C2",
+            "B1A3"});
             this.PopupDaily_CB_OE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PopupDaily_CB_OE.FormattingEnabled = true;
             this.PopupDaily_CB_OE.Items.AddRange(new object[] {
@@ -304,10 +308,6 @@
             // 
             this.PopupDaily_CB_WeeklyTask.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PopupDaily_CB_WeeklyTask.FormattingEnabled = true;
-            this.PopupDaily_CB_WeeklyTask.Items.AddRange(new object[] {
-            "Pizza Maken",
-            "Iets Anders doen",
-            "Gamen"});
             this.PopupDaily_CB_WeeklyTask.Location = new System.Drawing.Point(437, 289);
             this.PopupDaily_CB_WeeklyTask.Margin = new System.Windows.Forms.Padding(2);
             this.PopupDaily_CB_WeeklyTask.Name = "PopupDaily_CB_WeeklyTask";
@@ -404,11 +404,11 @@
         private System.Windows.Forms.Label PopupDaily_LB_Status;
         private System.Windows.Forms.ComboBox PopupDaily_CB_Status;
         private System.Windows.Forms.TextBox PopupDaily_TB_Description;
-        private System.Windows.Forms.TextBox PopupDaily_TB_Title;
         private System.Windows.Forms.TextBox PopupFaily_TBB_Stats;
         private System.Windows.Forms.ComboBox PopupDaily_CB_WeeklyTask;
         private System.Windows.Forms.Label PopupDaily_LB_Time;
         private System.Windows.Forms.TextBox PopUpFormWeekly_TBB_Note;
         private System.Windows.Forms.TextBox PopupDaily_TB_Time;
+        public System.Windows.Forms.TextBox PopupDaily_TB_Title;
     }
 }

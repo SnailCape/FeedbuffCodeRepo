@@ -5,10 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinkie_feedback_fr
 {
@@ -16,43 +19,64 @@ namespace Cinkie_feedback_fr
     {
         public Form1 form1;
 
+        public int updateGoalId = 0;
+
         public Popup_FORM_WeeklyGoals(Form1 frm)
         {
             InitializeComponent();
             this.Text = "Weekly Goal";
             form1= frm;
-
         }
-        public void displayweeklygoal()
+
+        public void displayweeklygoal(object sender, EventArgs e)
         {
             ///
             //Show weekly goal information
             ///
             WeeklyGoal weeklygoal = new WeeklyGoal();
-            weeklygoal.GetWeeklyGoalsFromDB();
+            bool continueStatement = false;
 
             foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
             {
-                PopUpFormWeekly_TB_WeekNr.Text = "Week: " + wg.Weeknumber.ToString();
-                PopUpFormWeekly_TB_Title.Text = wg.Titel.ToString();
-                PopUpFormWeekly_TB_Description.Text = wg.Description.ToString();
-                PopUpFormWeekly_CB_Status.Text = wg.Status.ToString();
-                PopUpFormWeekly_CB_Priority.Text = wg.Priority.ToString();
-                PopUpFormWeekly_CB_Difficulty.Text = wg.Difficulty.ToString();
-                PopUpFormWeekly_CB_Type.Text = wg.GoalType.ToString();
-                PopUpFormWeekly_TB_Note.Text = wg.Notes.ToString();
-                PopUpFormWeekly_CB_OE.Text = wg.studyUnit.StudyUnitId.ToString();
-                PopUpFormWeekly_LB_Date.Text = "Created: " + wg.StartingDate.ToString();
+                if (Form1.selectedItem.Contains(wg.Titel) || Form1.selectedItem.Contains(wg.Description.ToString()))
+                {
+                    weeklygoal = wg;
+                    updateGoalId = wg.WeeklyGoalId;
+                    continueStatement = true;
+                    break;
+                }
+            }
+
+            if (continueStatement)
+            {
+                PopUpFormWeekly_TB_WeekNr.Text = weeklygoal.Agenda;
+                PopUpFormWeekly_TB_Title.Text = weeklygoal.Titel;
+                PopUpFormWeekly_TB_Description.Text = weeklygoal.Description;
+                PopUpFormWeekly_CB_Status.Text = weeklygoal.Status.ToString();
+                PopUpFormWeekly_CB_Priority.Text = weeklygoal.Priority.ToString();
+                PopUpFormWeekly_CB_Difficulty.Text = weeklygoal.Difficulty.ToString();
+                PopUpFormWeekly_CB_Type.Text = weeklygoal.GoalType.ToString();
+                PopUpFormWeekly_TB_Note.Text = weeklygoal.Notes.ToString();
+                PopUpFormWeekly_CB_OE.Text = weeklygoal.studyUnit.StudyUnitId.ToString();
+                PopUpFormWeekly_LB_Date.Text = weeklygoal.StartingDate.ToString();
                 //
-                switch (wg.Status)
+                switch (weeklygoal.Status.ToLower())
                 {
 
                     case "done":
                         PopUpFormWeekly_CB_Status.SelectedIndex = 0;
                         break;
 
+                    case "in progress":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 1;
+                        break;
+
                     case "inprogress":
                         PopUpFormWeekly_CB_Status.SelectedIndex = 1;
+                        break;
+
+                    case "not started":
+                        PopUpFormWeekly_CB_Status.SelectedIndex = 2;
                         break;
 
                     case "notstarted":
@@ -60,7 +84,7 @@ namespace Cinkie_feedback_fr
                         break;
                 }
                 //
-                switch (wg.Difficulty)
+                switch (weeklygoal.Difficulty.ToLower())
                 {
 
                     case "hard":
@@ -76,7 +100,7 @@ namespace Cinkie_feedback_fr
                         break;
                 }
                 //
-                switch (wg.Priority)
+                switch (weeklygoal.Priority.ToLower())
                 {
 
                     case "urgent":
@@ -96,7 +120,7 @@ namespace Cinkie_feedback_fr
                         break;
                 }
                 //
-                switch (wg.GoalType)
+                switch (weeklygoal.GoalType.ToLower())
                 {
 
                     case "learning":
@@ -116,28 +140,36 @@ namespace Cinkie_feedback_fr
                         break;
                 }
 
-                switch (wg.studyUnit.StudyUnitId)
+                switch (weeklygoal.studyUnit.StudyUnitId.ToLower())
                 {
 
-                    case "B1C2":
+                    case "b1c2":
                         PopUpFormWeekly_CB_OE.SelectedIndex = 0;
                         break;
 
-                    case "B1A3":
+                    case "b1a3":
                         PopUpFormWeekly_CB_OE.SelectedIndex = 1;
                         break;
 
-                    case "B1F3":
+                    case "b1f3":
                         PopUpFormWeekly_CB_OE.SelectedIndex = 2;
                         break;
                 }
-
             }
-        }   
+            else
+            {
+                string message = "You have not selected a goal that you want to edit.\nPlease select a goal before pressing this button.\n\nPlease cancel this goal";
+                string title = "No Item Selected";
+                MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-        
+
         private void WG_BTN_Add_Click(object sender, EventArgs e)
         {
+
+            string agenda = PopUpFormWeekly_TB_WeekNr.Text.ToString();
+
             string title = PopUpFormWeekly_TB_Title.Text;
             string description = PopUpFormWeekly_TB_Description.Text;
             string status = PopUpFormWeekly_CB_Status.SelectedItem.ToString();
@@ -145,16 +177,86 @@ namespace Cinkie_feedback_fr
             string difficulty = PopUpFormWeekly_CB_Difficulty.SelectedItem.ToString();
             string type = PopUpFormWeekly_CB_Type.SelectedItem.ToString();
             string oe = PopUpFormWeekly_CB_OE.SelectedItem.ToString();
-            string note = PopUpFormWeekly_TB_Note.Text;
-            string agenda = PopUpFormWeekly_TB_WeekNr.Text;
+
+            string note = PopUpFormWeekly_TB_Note.Text.ToString();
             string startingdate = PopUpFormWeekly_LB_Date.Text;
 
-            form1.CreateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
-            
+
+            switch (type)
+            {
+                case ("Learning 📚"):
+                    type = "Learning";
+                    break;
+                case ("Work 🔨"):
+                    type = "Work";
+                    break;
+                case ("Lesson 🎓"):
+                    type = "Lesson";
+                    break;
+                case ("Documentation 📃"):
+                    type = "Documentation";
+                    break;
+            }
+
+            switch (priority)
+            {
+                case ("Urgent ⚠️"):
+                    priority = "urgent";
+                    break;
+                case ("High 🪂"):
+                    priority = "high";
+                    break;
+                case ("Medium 🐄"):
+                    priority = "medium";
+                    break;
+                case ("Low 🐇"):
+                    priority = "low";
+                    break;
+            }
+
+            switch (difficulty)
+            {
+                case ("Hard 🦑"):
+                    difficulty = "hard";
+                    break;
+                case ("Medium 🦍"):
+                    difficulty = "medium";
+                    break;
+                case ("Low 🐇"):
+                    difficulty = "low";
+                    break;
+            }
+
+            switch (status)
+            {
+                case ("Done ✅"):
+                    status = "done";
+                    break;
+                case ("In Progress 🔨"):
+                    status = "in progress";
+                    break;
+                case ("Not Started ⏳"):
+                    status = "not started";
+                    break;
+            }
+
+            if (Form1.EditCheck == true)
+            {
+                //update functie
+                form1.UpdateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate, updateGoalId);
+            }
+            else
+            {
+                // levi's create functie HIER: [zie hieronder] 
+                form1.CreateWeeklyGoal(title, description, status, priority, difficulty, type, oe, note, agenda, startingdate);
+            }
+
             this.Dispose();
             Form1.Check = false;
+            Form1.EditCheck = false;
         }
 
+    
 
         // hide close button
         private const int WS_SYSMENU = 0x80000;
@@ -173,6 +275,12 @@ namespace Cinkie_feedback_fr
         private void PopUpFormWeekly_TIME_StartDate_Tick(object sender, EventArgs e)
         {
             this.PopUpFormWeekly_LB_Date.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void PopUpFormWeekly_BTN_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Form1.Check = false;
         }
     }
 }
