@@ -657,20 +657,10 @@ namespace Cinkie_feedback_fr
             }
         }
 
-        public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type)
+        public void UpdateDailyTask(string status, string title, string description, int goalId, string time, string difficulty, string priority, string type, int id)
         {
             ///probleem met type in task zetten, dal ontvangt niks. >> GEFIXED
             //MessageBox.Show(type);
-            int id = 0;
-            DailyTask task = new DailyTask();
-            foreach (DailyTask t in task.GetDailyTasksFromClass())
-            {             
-                if (title == t.Titel)
-                {
-                    id = t.DailyTaskId;
-                }
-            }
-
             if (id != 0)
             {
                 DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, priority, difficulty, type);
@@ -760,47 +750,5 @@ namespace Cinkie_feedback_fr
                 selectedItem = item.Text;
             }
         }
-
-
-        /// <summary>
-        /// Create a new weekly goal
-        /// </summary>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="status"></param>
-        /// <param name="priority"></param>
-        /// <param name="difficulty"></param>
-        /// <param name="type"></param>
-        /// <param name="oe"></param>
-        /// <param name="note"></param>
-        public void CreateWeeklyGoal(string title, string description, string status, string priority,
-                                            string difficulty, string type, string oe, string note, string agenda, string startingdate)
-        {
-            int weeknumber = 16;
-
-            // collect individual data here and then create the object
-            StudyUnit studyunit = new StudyUnit();
-            studyunit.GetStudyUnitsFromDB();
-            foreach (StudyUnit su in studyunit.listStudyUnits)
-            {
-                if (su.StudyUnitId == oe)
-                {
-                    studyunit = su;
-                }
-            }
-
-            WeeklyGoal weeklygoal = new WeeklyGoal(0, weeknumber, title, description, status, studyunit, activeStudent.StudentId,
-                                                   priority, difficulty, type, startingdate, agenda, note);
-
-            weeklygoal.CreateWeeklyGoal(weeklygoal, activeStudent, studyunit);
-        }
-
-        public void CreateDailyTask(string status, string title, string desc, int goalId,
-                                    string time, string prio, string diff, string type)
-        {
-            DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
-            task.CreateDailyTask(task);
-        }
-
     }
 }

@@ -19,6 +19,8 @@ namespace Cinkie_feedback_fr
     {
         public Form1 form1;
 
+        public int updateTaskId = 0;
+
         public Popup_FORM_DailyTasks(Form1 frm)
         {
             InitializeComponent();
@@ -45,6 +47,8 @@ namespace Cinkie_feedback_fr
                 if (dt.Titel == Form1.selectedItem)
                 {
                     dailyTask = dt;
+                    updateTaskId = dt.DailyTaskId;
+                    break;
                 }
             }
 
@@ -252,12 +256,12 @@ namespace Cinkie_feedback_fr
             {
                 // Update
                 form1.WeeklyGoalPanel_LV_ShowAll.Clear();
-                form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
+                form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type, updateTaskId);
             }
             else
             {
                 // Create
-                form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
+                form1.FormCreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
 
             this.Dispose();
