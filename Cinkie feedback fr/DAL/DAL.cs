@@ -255,7 +255,7 @@ namespace Cinkie_feedback_fr.DAL
             return dailyTasks;
         }
 
-        public void CreateDailyTask(DailyTask task)
+        public void DalCreateDailyTask(DailyTask task)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

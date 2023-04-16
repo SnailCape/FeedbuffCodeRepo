@@ -22,6 +22,7 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_WeeklyGoals PopUpBox;
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
+        static Student activeStaticStudent = new Student();
 
         Student activeStudent = new Student();
         public static string selectedItem = "";
@@ -106,7 +107,7 @@ namespace Cinkie_feedback_fr
 
             Student studenttemp = new Student();
 
-            if (PanelLogin_TB_Email.Text == "" && PanelLogin_TB_Password.Text == "")
+            if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
             {
                 // Log the user in
                 foreach (Student student in studenttemp.GetStudentsFromClass())
@@ -710,7 +711,7 @@ namespace Cinkie_feedback_fr
         /// <param name="type"></param>
         /// <param name="oe"></param>
         /// <param name="note"></param>
-        public void CreateWeeklyGoal(string title, string description, string status, string priority,
+        public void FormCreateWeeklyGoal(string title, string description, string status, string priority,
                                             string difficulty, string type, string oe, string note, string agenda, string startingdate)
         {
             int weeknumber = 16;
@@ -733,7 +734,7 @@ namespace Cinkie_feedback_fr
             ShowCurrentWeeklyGoals();
         }
 
-        public void CreateDailyTask(string status, string title, string desc, int goalId,
+        public void FormCreateDailyTask(string status, string title, string desc, int goalId,
                                     string time, string prio, string diff, string type)
         {
             DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
