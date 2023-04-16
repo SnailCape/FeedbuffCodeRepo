@@ -436,6 +436,8 @@ namespace Cinkie_feedback_fr.DAL
 
         public WeeklyGoal UpdateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyUnit)
         {
+            string mes = $"{weeklyGoal.WeeklyGoalId}\n{weeklyGoal.Titel}\n{weeklyGoal.Description}\n{weeklyGoal.Status}\n{weeklyGoal.Priority}\n{weeklyGoal.Difficulty}\n{weeklyGoal.GoalType}\n{weeklyGoal.Notes}";
+            MessageBox.Show(mes, "Check wat hij laat zien");
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -458,11 +460,6 @@ namespace Cinkie_feedback_fr.DAL
                     command.Parameters.AddWithValue("@oeID", studyUnit.StudyUnitId);
                     command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
                     command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
-                    
-                    string message = weeklyGoal.GoalType;
-                    string message2 = weeklyGoal.Titel;
-                    MessageBox.Show(message + "\n" + message2, "tester dal");
-
 
                     try { command.ExecuteNonQuery(); }
                     catch (Exception ex) { ErrorMessage(ex); }

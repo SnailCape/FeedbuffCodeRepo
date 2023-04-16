@@ -38,7 +38,6 @@ namespace Cinkie_feedback_fr
         {
             DailyTask dailyTask = new DailyTask();
             WeeklyGoal weeklyGoal = new WeeklyGoal();
-            dailyTask.GetDailyTasksFromDB();
 
             foreach (DailyTask dt in dailyTask.GetDailyTasksFromClass())
             {
@@ -245,7 +244,6 @@ namespace Cinkie_feedback_fr
             {
                 // Update
                 form1.WeeklyGoalPanel_LV_ShowAll.Clear();
-                MessageBox.Show(status, "Status");
                 form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else

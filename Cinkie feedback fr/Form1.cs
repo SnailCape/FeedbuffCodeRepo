@@ -306,17 +306,17 @@ namespace Cinkie_feedback_fr
         {
             WeeklyGoalPanel_LV_ShowAll.BringToFront();
             DailyTask dailytasks = new DailyTask();
-            dailytasks.GetDailyTasksFromClass();
             Student student = new Student();
+
             foreach (Student s in student.GetStudentsFromClass())
             {
                 if (s.StudentId == activeStudent.StudentId)
                 {
                     foreach (DailyTask dt in dailytasks.GetDailyTasksFromClass())
                     {
-                    ListViewItem item = WeeklyGoalPanel_LV_ShowAll.Items.Add(dt.Titel.ToString());
-                    item.SubItems.Add(dt.Status);
-                    WeeklyGoalPanel_LV_ShowAll.Groups[0].Items.Add(item);
+                        ListViewItem item = WeeklyGoalPanel_LV_ShowAll.Items.Add(dt.Titel.ToString());
+                        item.SubItems.Add(dt.Status);
+                        WeeklyGoalPanel_LV_ShowAll.Groups[0].Items.Add(item);
                     }
                 }
             }
@@ -328,6 +328,7 @@ namespace Cinkie_feedback_fr
             Student student = new Student();
             WeeklyGoal weeklygoal = new WeeklyGoal();
             List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
 
             foreach (Student s in student.GetStudentsFromClass())
             {
@@ -337,9 +338,9 @@ namespace Cinkie_feedback_fr
                     {
                         if (wg.StudentId == s.StudentId)
                         {
-                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
-                            int titleLength = 55 - wg.Titel.ToString().Length;
-                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+                            int idlength = 25 - wg.WeeklyGoalId.ToString().Length;
+                            int titlelength = 80 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.WeeklyGoalId.ToString().PadRight(idlength)}\t|\t{wg.Titel.ToString().PadRight(titlelength)}\t|\t{wg.Status}";
 
                             WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
                         }
@@ -356,17 +357,19 @@ namespace Cinkie_feedback_fr
             WeeklyGoal weeklygoal = new WeeklyGoal();
             List<WeeklyGoal> listgoal = new List<WeeklyGoal>();
 
+            WeeklyGoal_LBx_ViewGoals.Items.Clear();
+
             foreach (Student s in student.GetStudentsFromClass())
             {
                 if (s.StudentId == activeStudent.StudentId)
                 {
                     foreach (WeeklyGoal wg in weeklygoal.GetWeeklyGoalsFromClass())
                     {
-                        if (wg.StudentId == s.StudentId && wg.Status != "done")
+                        if (wg.StudentId == s.StudentId && wg.Status.ToLower() != "done")
                         {
-                            int descriptionLength = 55 - wg.WeeklyGoalId.ToString().Length;
-                            int titleLength = 55 - wg.Titel.ToString().Length;
-                            string dataGoals = $"{wg.Titel.ToString().PadRight(titleLength)}\t{wg.Description.ToString().PadRight(descriptionLength)}\t{wg.Status}";
+                            int idlength = 25 - wg.WeeklyGoalId.ToString().Length;
+                            int titlelength = 80 - wg.Titel.ToString().Length;
+                            string dataGoals = $"{wg.WeeklyGoalId.ToString().PadRight(idlength)}\t|\t{wg.Titel.ToString().PadRight(titlelength)}\t|\t{wg.Status}";
 
                             WeeklyGoal_LBx_ViewGoals.Items.Add(dataGoals);
                         }
@@ -682,14 +685,13 @@ namespace Cinkie_feedback_fr
                 ShowAllDailyTasks();
             }
         }
-        public void UpdateWeeklyGoal(string title, string description, string status, string priority, string difficulty, string type, string oe, string note, string agenda, string startingdate)
+        public void UpdateWeeklyGoal(string title, string description, string status, string priority, string difficulty, string type, string oe, string note, string agenda, string startingdate, int id)
         {
             int weeknumber = 16;
-            int id = 0;
             StudyUnit studyunit = new StudyUnit();
-            studyunit.GetStudyUnitsFromDB();
+            WeeklyGoal goal = new WeeklyGoal();
 
-            foreach (StudyUnit su in studyunit.listStudyUnits)
+            foreach (StudyUnit su in studyunit.GetStudyUnitsFromClass())
             {
                 if(su.StudyUnitId == oe)
                 {
@@ -699,8 +701,6 @@ namespace Cinkie_feedback_fr
 
             WeeklyGoal weeklyGoal = new WeeklyGoal(id, weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
 
-            string message = weeklyGoal.GoalType;
-            MessageBox.Show(message, "tester id ifstatement form1");
             weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
 
             ShowAllWeeklyGoals();
@@ -743,7 +743,6 @@ namespace Cinkie_feedback_fr
                                     string time, string prio, string diff, string type)
         {
             DailyTask task = new DailyTask(0, status, title, desc, goalId, time, prio, diff, type);
-            MessageBox.Show("Je bent nu in form1 create --> " + goalId.ToString(), "FORM1", MessageBoxButtons.OK);
             task.CreateDailyTask(task);
         }
 
