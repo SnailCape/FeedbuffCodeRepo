@@ -134,7 +134,6 @@ namespace Cinkie_feedback_fr
                         PopUpFormWeekly_CB_OE.SelectedIndex = 2;
                         break;
                 }
-
             }
         }
 

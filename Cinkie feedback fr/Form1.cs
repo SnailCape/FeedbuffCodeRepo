@@ -23,7 +23,7 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_DailyTasks PopUpDailyTasks;
         public Popup_FORM_Feedback PopUpRegisterFeedback;
         Student activeStudent = new Student();
-        string selectedItem = "";
+        public static string selectedItem = "";
 
         public Form1()
         {
@@ -105,7 +105,7 @@ namespace Cinkie_feedback_fr
 
             Student studenttemp = new Student();
 
-            if (PanelLogin_TB_Email.Text == "Test@zuyd.nl" && PanelLogin_TB_Password.Text == "Test123")
+            if (PanelLogin_TB_Email.Text == "" && PanelLogin_TB_Password.Text == "")
             {
                 // Log the user in
                 foreach (Student student in studenttemp.GetStudentsFromClass())
@@ -636,6 +636,7 @@ namespace Cinkie_feedback_fr
 
         }
 
+
         private void WeekGoals_BTN_EditTask_Click(object sender, EventArgs e)
         {
             if (Check == false)
@@ -667,21 +668,18 @@ namespace Cinkie_feedback_fr
             DailyTask task = new DailyTask();
             foreach (DailyTask t in task.GetDailyTasksFromClass())
             {             
-                if (selectedItem == t.Titel)
+                if (title == t.Titel)
                 {
                     id = t.DailyTaskId;
                 }
             }
+
             if (id != 0)
             {
-                DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, difficulty,priority,type);
-
-                //string message = dailytask.Type;
-                //MessageBox.Show(message, "tester ifstatement form1");
+                DailyTask dailytask = new DailyTask(id, status, title, description, goalId, time, priority, difficulty, type);
                 dailytask.UpdateDailyTask(dailytask);
 
                 ShowAllDailyTasks();
-
             }
         }
         public void UpdateWeeklyGoal(string title, string description, string status, string priority, string difficulty, string type, string oe, string note, string agenda, string startingdate)
@@ -699,14 +697,13 @@ namespace Cinkie_feedback_fr
                 }
             }
 
-                WeeklyGoal weeklyGoal = new WeeklyGoal(id, weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
+            WeeklyGoal weeklyGoal = new WeeklyGoal(id, weeknumber, title, description, status, studyunit, activeStudent.StudentId, priority, difficulty, type, startingdate, agenda, note);
 
-                string message = weeklyGoal.GoalType;
-                MessageBox.Show(message, "tester id ifstatement form1");
-                weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
+            string message = weeklyGoal.GoalType;
+            MessageBox.Show(message, "tester id ifstatement form1");
+            weeklyGoal.UpdateWeeklyGoal(weeklyGoal, activeStudent, studyunit);
 
-                ShowAllWeeklyGoals();
-             
+            ShowAllWeeklyGoals();
         }
 
         /// <summary>
@@ -759,6 +756,7 @@ namespace Cinkie_feedback_fr
             }
 
         }
+
         private void WeeklyGoalPanel_LV_ShowAll_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (WeeklyGoalPanel_LV_ShowAll.SelectedItems.Count > 0)

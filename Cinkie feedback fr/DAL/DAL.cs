@@ -334,17 +334,33 @@ namespace Cinkie_feedback_fr.DAL
             return weeklyGoals;
         }
 
-        public void CreateWeeklyGoal(WeeklyGoal goal, Student student, StudyUnit unit)
+        public void CreateWeeklyGoal(WeeklyGoal weeklyGoal, Student student, StudyUnit studyunit)
         {
-            using(SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.ConnectionString= connectionString;
+                connection.ConnectionString = connectionString;
                 connection.Open();
 
-                using(SqlCommand command = new SqlCommand())
+                using (SqlCommand command = new SqlCommand())
                 {
-                    command.Connection= connection;
-                    command.CommandText=string.Format("");
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO WEEKLYGOAL (WEEKLYGOAL.studentId, WEEKLYGOAL.oeId, WEEKLYGOAL.[status], WEEKLYGOAL.titel, WEEKLYGOAL.omschrijving, WEEKLYGOAL.weeknummer, WEEKLYGOAL.prioriteit, WEEKLYGOAL.moeilijkheid, WEEKLYGOAL.typeGoal, WEEKLYGOAL.startdatum, WEEKLYGOAL.agenda, WEEKLYGOAL.notities) VALUES (@studentId, @oeId, @status, @title, @description, @weeknumber, @priority, @difficulty, @type, @startingdate, @agenda, @notes)";
+
+                    command.Parameters.AddWithValue("@studentId", student.StudentId);
+                    command.Parameters.AddWithValue("@oeId", studyunit.StudyUnitId);
+                    command.Parameters.AddWithValue("@status", weeklyGoal.Status);
+                    command.Parameters.AddWithValue("@title", weeklyGoal.Titel);
+                    command.Parameters.AddWithValue("@description", weeklyGoal.Description);
+                    command.Parameters.AddWithValue("@weeknumber", weeklyGoal.Weeknumber);
+                    command.Parameters.AddWithValue("@priority", weeklyGoal.Priority);
+                    command.Parameters.AddWithValue("@difficulty", weeklyGoal.Difficulty);
+                    command.Parameters.AddWithValue("@type", weeklyGoal.GoalType);
+                    command.Parameters.AddWithValue("@startingdate", weeklyGoal.StartingDate);
+                    command.Parameters.AddWithValue("@agenda", weeklyGoal.Agenda);
+                    command.Parameters.AddWithValue("@notes", weeklyGoal.Notes);
+
+                    try { command.ExecuteNonQuery(); }
+                    catch (Exception ex) { ErrorMessage(ex); }
                 }
                 connection.Close();
             }
@@ -391,8 +407,6 @@ namespace Cinkie_feedback_fr.DAL
 
         public DailyTask UpdateDailyTask(DailyTask task)
         {
-            MessageBox.Show(task.Type, "Tester DAL");
-
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.ConnectionString = connectionString;
@@ -447,7 +461,7 @@ namespace Cinkie_feedback_fr.DAL
                     
                     string message = weeklyGoal.GoalType;
                     string message2 = weeklyGoal.Titel;
-                    MessageBox.Show(message + message2, "tester dal");
+                    MessageBox.Show(message + "\n" + message2, "tester dal");
 
 
                     try { command.ExecuteNonQuery(); }

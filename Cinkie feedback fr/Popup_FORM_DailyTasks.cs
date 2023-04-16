@@ -22,6 +22,14 @@ namespace Cinkie_feedback_fr
         public Popup_FORM_DailyTasks(Form1 frm)
         {
             InitializeComponent();
+
+            WeeklyGoal weeklygoal = new WeeklyGoal();
+            foreach (WeeklyGoal goal in weeklygoal.GetWeeklyGoalsFromClass())
+            {
+                PopupDaily_CB_WeeklyTask.Items.Add(goal.WeeklyGoalId + " "+ goal.Titel + " " + goal.GoalType);
+            }
+
+
             this.Text = "Daily Task";
             form1= frm;
         }
@@ -29,91 +37,121 @@ namespace Cinkie_feedback_fr
         public void displaydailytask()
         {
             DailyTask dailyTask = new DailyTask();
+            WeeklyGoal weeklyGoal = new WeeklyGoal();
             dailyTask.GetDailyTasksFromDB();
 
             foreach (DailyTask dt in dailyTask.GetDailyTasksFromClass())
             {
-                PopupDaily_TB_Title.Text = dt.Titel.ToString();
-                PopupDaily_TB_Description.Text = dt.Description.ToString();
-                PopupDaily_CB_Status.Text = dt.Status.ToString();
-                PopupDaily_CB_Priority.Text = dt.Priority.ToString();
-                PopupDaily_CB_Difficulty.Text = dt.Difficulty.ToString();
-                PopupDaily_CB_Type.Text = dt.Type.ToString();
-                //PopupDaily_CB_WeeklyTask.Text = dt.weeklyGoal.WeeklyGoalId.ToString();
-                PopupDaily_TB_Time.Text = dt.Time.ToString();
-
-
-                switch (dt.Status)
+                if (dt.Titel == Form1.selectedItem)
                 {
-
-                    case "done":
-                        PopupDaily_CB_Status.SelectedIndex = 0;
-                        break;
-
-                    case "inprogress":
-                        PopupDaily_CB_Status.SelectedIndex = 1;
-                        break;
-
-                    case "notstarted":
-                        PopupDaily_CB_Status.SelectedIndex = 2;
-                        break;
+                    dailyTask = dt;
                 }
-                //
-                switch (dt.Difficulty)
+            }
+
+            PopupDaily_TB_Title.Text = dailyTask.Titel.ToString();
+            PopupDaily_TB_Description.Text = dailyTask.Description.ToString();
+            PopupDaily_CB_Status.Text = dailyTask.Status.ToString();
+            PopupDaily_CB_Priority.Text = dailyTask.Priority.ToString();
+            PopupDaily_CB_Difficulty.Text = dailyTask.Difficulty.ToString();
+            PopupDaily_CB_Type.Text = dailyTask.Type.ToString();
+            PopupDaily_TB_Time.Text = dailyTask.Time.ToString();
+
+            foreach (WeeklyGoal goal in weeklyGoal.GetWeeklyGoalsFromClass())
+            {
+                if (goal.WeeklyGoalId == dailyTask.WeeklyGoalId)
                 {
-
-                    case "hard":
-                        PopupDaily_CB_Difficulty.SelectedIndex = 0;
-                        break;
-
-                    case "medium":
-                        PopupDaily_CB_Difficulty.SelectedIndex = 1;
-                        break;
-
-                    case "low":
-                        PopupDaily_CB_Difficulty.SelectedIndex = 2;
-                        break;
+                    weeklyGoal = goal;
                 }
-                //
-                switch (dt.Priority)
+            }
+
+            foreach (string item in PopupDaily_CB_WeeklyTask.Items)
+            {
+                if (item.Contains(weeklyGoal.Titel) || item.Contains(weeklyGoal.WeeklyGoalId.ToString()))
                 {
-
-                    case "urgent":
-                        PopupDaily_CB_Priority.SelectedIndex = 0;
-                        break;
-
-                    case "high":
-                        PopupDaily_CB_Priority.SelectedIndex = 1;
-                        break;
-
-                    case "medium":
-                        PopupDaily_CB_Priority.SelectedIndex = 2;
-                        break;
-
-                    case "low":
-                        PopupDaily_CB_Priority.SelectedIndex = 3;
-                        break;
+                    PopupDaily_CB_WeeklyTask.SelectedItem = item;
                 }
-                //
-                switch (dt.Type)
-                {
+            }
 
-                    case "learning":
-                        PopupDaily_CB_Type.SelectedIndex = 0;
-                        break;
+            PopupDaily_CB_OE.Text = weeklyGoal.studyUnit.StudyUnitId;
 
-                    case "work":
-                        PopupDaily_CB_Type.SelectedIndex = 1;
-                        break;
+            switch (dailyTask.Status.ToLower())
+            {
 
-                    case "documentation":
-                        PopupDaily_CB_Type.SelectedIndex = 2;
-                        break;
+                case "done":
+                    PopupDaily_CB_Status.SelectedIndex = 0;
+                    break;
 
-                    case "lesson":
-                        PopupDaily_CB_Type.SelectedIndex = 3;
-                        break;
-                }
+                case "in progress":
+                    PopupDaily_CB_Status.SelectedIndex = 1;
+                    break;
+
+                case "inprogress":
+                    PopupDaily_CB_Status.SelectedIndex = 1;
+                    break;
+
+                case "not started":
+                    PopupDaily_CB_Status.SelectedIndex = 2;
+                    break;
+
+                case "notstarted":
+                    PopupDaily_CB_Status.SelectedIndex = 2;
+                    break;
+            }
+            //
+            switch (dailyTask.Difficulty.ToLower())
+            {
+
+                case "hard":
+                    PopupDaily_CB_Difficulty.SelectedIndex = 0;
+                    break;
+
+                case "medium":
+                    PopupDaily_CB_Difficulty.SelectedIndex = 1;
+                    break;
+
+                case "low":
+                    PopupDaily_CB_Difficulty.SelectedIndex = 2;
+                    break;
+            }
+            //
+            switch (dailyTask.Priority.ToLower())
+            {
+
+                case "urgent":
+                    PopupDaily_CB_Priority.SelectedIndex = 0;
+                    break;
+
+                case "high":
+                    PopupDaily_CB_Priority.SelectedIndex = 1;
+                    break;
+
+                case "medium":
+                    PopupDaily_CB_Priority.SelectedIndex = 2;
+                    break;
+
+                case "low":
+                    PopupDaily_CB_Priority.SelectedIndex = 3;
+                    break;
+            }
+            //
+            switch (dailyTask.Type.ToLower())
+            {
+
+                case "learning":
+                    PopupDaily_CB_Type.SelectedIndex = 0;
+                    break;
+
+                case "work":
+                    PopupDaily_CB_Type.SelectedIndex = 1;
+                    break;
+
+                case "documentation":
+                    PopupDaily_CB_Type.SelectedIndex = 2;
+                    break;
+
+                case "lesson":
+                    PopupDaily_CB_Type.SelectedIndex = 3;
+                    break;
             }
         }
         private void DailyTasks_BTN_Close_Click(object sender, EventArgs e)
@@ -125,7 +163,7 @@ namespace Cinkie_feedback_fr
             string title = PopupDaily_TB_Title.Text;
             string description = PopupDaily_TB_Description.Text;
             string oe = PopupDaily_CB_OE.SelectedItem.ToString();
-            string time = PopupDaily_LB_Time.Text;
+            string time = PopupDaily_TB_Time.Text;
             string priority = PopupDaily_CB_Priority.SelectedItem.ToString();
             string difficulty = PopupDaily_CB_Difficulty.SelectedItem.ToString();
             string type = PopupDaily_CB_Type.SelectedItem.ToString();
@@ -135,16 +173,16 @@ namespace Cinkie_feedback_fr
             switch (type)
             {
                 case ("Learning 📚"):
-                    status = "Learning";
+                    type = "Learning";
                     break;
                 case ("Work 🔨"):
-                    status = "Work";
+                    type = "Work";
                     break;
                 case ("Lesson 🎓"):
-                    status = "Lesson";
+                    type = "Lesson";
                     break;
                 case ("Documentation 📃"):
-                    status = "Documentation";
+                    type = "Documentation";
                     break;
             }
 
@@ -196,6 +234,7 @@ namespace Cinkie_feedback_fr
                 if (weeklyGoalId.Contains(goal.WeeklyGoalId.ToString()))
                 {
                     goalId = goal.WeeklyGoalId;
+                    break;
                 }
             }
 
@@ -205,14 +244,13 @@ namespace Cinkie_feedback_fr
             if (Form1.EditCheck == true)
             {
                 // Update
-                MessageBox.Show("Je bent nu in update", "UPDATE", MessageBoxButtons.OK);
-                form1.WeeklyGoalPanel_LV_ShowAll.Clear();                         
+                form1.WeeklyGoalPanel_LV_ShowAll.Clear();
+                MessageBox.Show(status, "Status");
                 form1.UpdateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
             else
             {
                 // Create
-                MessageBox.Show("Je bent nu in create", "CREATE", MessageBoxButtons.OK);
                 form1.CreateDailyTask(status, title, description, goalId, time, priority, difficulty, type);
             }
 
